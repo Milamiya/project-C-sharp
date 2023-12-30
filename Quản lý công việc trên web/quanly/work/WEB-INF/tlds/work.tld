@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+        "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<!-- The tag library descriptor -->
+
+<taglib>
+
+    <!-- Basic library information -->
+    <tlibversion>1.0</tlibversion>
+    <jspversion>1.1</jspversion>
+    <shortname>XSLT Tags Library</shortname>
+    <uri>http://www.dinhgiang.com/</uri>
+
+    <info>
+	A simple tag library for processing XML input sources
+	with XML stylesheet transformations.
+    </info>
+
+
+    <!-- Apply XSL Transformations Tag -->
+    <tag>
+        <name>apply</name>
+        <tagclass>com.dinhgiang.taglibs.ApplyTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <info>
+        Apply the specified stylesheet to the specified XML input, both of
+        which may be acquired in a variety of manners depending upon
+        the optional attributes that are included.  Available attributes:
+
+        nameXml          Name of a bean (in any scope) that defines the
+                         source of the XML data to be transformed.  This
+                         bean must be of one of the following Java classes:
+                         String (containing the XML data itself)
+
+        nameXsl          Name of a bean (in any scope) that defines the
+                         source of the XSL stylesheet to be used.  This
+                         bean must be of one of the following Java classes:
+			 String (containing the stylesheet itself)
+
+        propertyXml	 If specified, the bean identified by "nameXml"
+                         is assumed to have a property whose getter method
+                         is called to define the XML data source, instead
+                         of interpreting that bean itself.
+
+        propertyXsl      If specified, the bean identified by "nameXsl"
+                         is assumed to have a property whose getter method
+                         is called to define the XSL stylesheet source, instead
+			 of interpreting that bean itself
+
+        xml              If specified, the context-relative path to an
+                         application resource containing the XML data.
+
+        xsl		 If specified, the context-relative path to an
+                         application resource containing the XSL stylesheet.
+        </info>
+        <attribute>
+            <name>nameXml</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>nameXsl</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            </attribute>
+        <attribute>
+            <name>propertyXml</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>propertyXsl</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>xml</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>xsl</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

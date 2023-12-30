@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E78788B-38AA-4925-8DA4-60731EE15CEB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLHS.DAL</RootNamespace>
+    <AssemblyName>QLHS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BangDiemDAL.cs" />
+    <Compile Include="ChuyenLopDAL.cs" />
+    <Compile Include="KhoiDAL.cs" />
+    <Compile Include="DatabaseConnect\ConnectData.cs" />
+    <Compile Include="GiaoVienDAL.cs" />
+    <Compile Include="HocSinhDAL.cs" />
+    <Compile Include="LoaiNguoiDungDAL.cs" />
+    <Compile Include="LopDAL.cs" />
+    <Compile Include="MonHocDAL.cs" />
+    <Compile Include="NamHocDAL.cs" />
+    <Compile Include="NguoiDungDAL.cs" />
+    <Compile Include="PhanLopDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuyDinhDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\QLHS.DTO.csproj">
+      <Project>{051D3B9C-A8C0-40E3-B5B3-F33D4789F859}</Project>
+      <Name>QLHS.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirstConnectDB\FirstConnectDB.csproj">
+      <Project>{82C3749C-81E4-4B71-AED0-523D2A08D8D4}</Project>
+      <Name>FirstConnectDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultilities\Utilities.csproj">
+      <Project>{5CD784F5-349E-4732-B31A-E68500B85C5B}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

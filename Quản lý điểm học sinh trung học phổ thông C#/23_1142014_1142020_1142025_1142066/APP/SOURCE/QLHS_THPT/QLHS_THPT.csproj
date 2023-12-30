@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9C917B0-D84F-41D6-838E-E8AB4119F8C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLHS</RootNamespace>
+    <AssemblyName>QLHS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\bin\QLHS.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\QLHS.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.BonusSkins.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.Data.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.OfficeSkins.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.Printing.v11.1.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.Utils.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.XtraBars.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.XtraEditors.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.XtraGrid.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.XtraLayout.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.XtraNavBar.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.XtraRichEdit.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.XtraTreeList.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\DevExpress.XtraWizard.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmBC_BangDiemHocKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBC_BangDiemHocKy.designer.cs">
+      <DependentUpon>FrmBC_BangDiemHocKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBC_TongKetHocKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBC_TongKetHocKy.Designer.cs">
+      <DependentUpon>FrmBC_TongKetHocKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBC_TongKetMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBC_TongKetMon.Designer.cs">
+      <DependentUpon>FrmBC_TongKetMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBangDiemMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBangDiemMonHoc.designer.cs">
+      <DependentUpon>FrmBangDiemMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoiMatKhau.Designer.cs">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiaoVien.Designer.cs">
+      <DependentUpon>FrmGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHocSinh.Designer.cs">
+      <DependentUpon>FrmHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLapDSLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLapDSLop.designer.cs">
+      <DependentUpon>FrmLapDSLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMonHoc.Designer.cs">
+      <DependentUpon>FrmMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNamHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNamHoc.Designer.cs">
+      <DependentUpon>FrmNamHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPhanLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhanLop.Designer.cs">
+      <DependentUpon>FrmPhanLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQLNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQLNguoiDung.Designer.cs">
+      <DependentUpon>FrmQLNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuyDinhDauNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuyDinhDauNam.Designer.cs">
+      <DependentUpon>FrmQuyDinhDauNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongTinChuongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongTinChuongTrinh.Designer.cs">
+      <DependentUpon>FrmThongTinChuongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTimHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTimHocSinh.Designer.cs">
+      <DependentUpon>FrmTimHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Report\DTO_TongKetHocKy.cs" />
+    <Compile Include="Report\rptBangDiemHocKy.cs">
+      <DependentUpon>rptBangDiemHocKy.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\DTO_BangDiemHocKy.cs" />
+    <Compile Include="Report\DTO_TongKetMon.cs" />
+    <Compile Include="Report\frmReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmReportView.Designer.cs">
+      <DependentUpon>frmReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptTongKetHocKy.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTongKetHocKy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTongKetMon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTongKetMon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="FrmBC_BangDiemHocKy.resx">
+      <DependentUpon>FrmBC_BangDiemHocKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBC_TongKetHocKy.resx">
+      <DependentUpon>FrmBC_TongKetHocKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBC_TongKetMon.resx">
+      <DependentUpon>FrmBC_TongKetMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBangDiemMonHoc.resx">
+      <DependentUpon>FrmBangDiemMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoiMatKhau.resx">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiaoVien.resx">
+      <DependentUpon>FrmGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHocSinh.resx">
+      <DependentUpon>FrmHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLapDSLop.resx">
+      <DependentUpon>FrmLapDSLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMonHoc.resx">
+      <DependentUpon>FrmMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNamHoc.resx">
+      <DependentUpon>FrmNamHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhanLop.resx">
+      <DependentUpon>FrmPhanLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQLNguoiDung.resx">
+      <DependentUpon>FrmQLNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuyDinhDauNam.resx">
+      <DependentUpon>FrmQuyDinhDauNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongTinChuongTrinh.resx">
+      <DependentUpon>FrmThongTinChuongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTimHocSinh.resx">
+      <DependentUpon>FrmTimHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptBangDiemHocKy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBangDiemHocKy.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmReportView.resx">
+      <DependentUpon>frmReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTongKetHocKy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTongKetHocKy.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTongKetMon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTongKetMon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\QLHS.BUS.csproj">
+      <Project>{699FBDC9-69B0-4B93-9D50-2385009A5465}</Project>
+      <Name>QLHS.BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\QLHS.DTO.csproj">
+      <Project>{051D3B9C-A8C0-40E3-B5B3-F33D4789F859}</Project>
+      <Name>QLHS.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirstConnectDB\FirstConnectDB.csproj">
+      <Project>{82C3749C-81E4-4B71-AED0-523D2A08D8D4}</Project>
+      <Name>FirstConnectDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultilities\Utilities.csproj">
+      <Project>{5CD784F5-349E-4732-B31A-E68500B85C5B}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\arrow.png" />
+    <Content Include="Resources\bangdiemhky.png" />
+    <Content Include="Resources\capnhat.png" />
+    <Content Include="Resources\cauhinhketnoi.png" />
+    <Content Include="Resources\chuyenlop.png" />
+    <Content Include="Resources\chuyenlop_lai.png" />
+    <Content Include="Resources\chuyenlop_large.png" />
+    <Content Include="Resources\chuyenlop_small.png" />
+    <None Include="Resources\chuyen_lop.png" />
+    <None Include="Resources\chuyen_loplai.png" />
+    <Content Include="Resources\dangnhap.png" />
+    <Content Include="Resources\dangnhap_small.png" />
+    <Content Include="Resources\dangxuat.png" />
+    <Content Include="Resources\dangxuatcontext.png" />
+    <Content Include="Resources\database.png" />
+    <Content Include="Resources\database_down.ico" />
+    <Content Include="Resources\database_up.ico" />
+    <Content Include="Resources\doimatkhau.png" />
+    <Content Include="Resources\dsgiaovien.png" />
+    <Content Include="Resources\dshocsinh.png" />
+    <Content Include="Resources\dslophoc.png" />
+    <Content Include="Resources\excel.png" />
+    <Content Include="Resources\giaovien.png" />
+    <Content Include="Resources\giupdo.png" />
+    <Content Include="Resources\hanhkiem.png" />
+    <Content Include="Resources\hocky.png" />
+    <Content Include="Resources\hocluc.png" />
+    <Content Include="Resources\hocsinh.png" />
+    <Content Include="Resources\home.png" />
+    <Content Include="Resources\huongdan.png" />
+    <None Include="Resources\huy.png" />
+    <Content Include="Resources\icon.ico" />
+    <Content Include="Resources\ketnoi_database.png" />
+    <Content Include="Resources\ketqua.png" />
+    <Content Include="Resources\khaibao_namhoc.png" />
+    <Content Include="Resources\khenthuong_kyluat.png" />
+    <Content Include="Resources\khoa.png" />
+    <Content Include="Resources\khoahoc.png" />
+    <Content Include="Resources\khoilop.png" />
+    <Content Include="Resources\kqcnamtheolop.png" />
+    <Content Include="Resources\kqcnamtheomon.png" />
+    <Content Include="Resources\kqhockytheolop.png" />
+    <Content Include="Resources\kqhockytheomon.png" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\line_bottom.png" />
+    <None Include="Resources\line_horizal.png" />
+    <None Include="Resources\line_left.png" />
+    <None Include="Resources\line_right.png" />
+    <None Include="Resources\line_top.png" />
+    <None Include="Resources\line_vertrical.png" />
+    <Content Include="Resources\login.png" />
+    <Content Include="Resources\login2.png" />
+    <Content Include="Resources\loginimage.png" />
+    <Content Include="Resources\lophoc.png" />
+    <Content Include="Resources\luuchuyenlop.png" />
+    <Content Include="Resources\monhoc.png" />
+    <Content Include="Resources\namhoc.png" />
+    <Content Include="Resources\narrow_down.png" />
+    <Content Include="Resources\narrow_up.png" />
+    <Content Include="Resources\next.png" />
+    <Content Include="Resources\nghenghiep.png" />
+    <Content Include="Resources\nhomnguoidung_small.png" />
+    <Content Include="Resources\nienkhoa.png" />
+    <Content Include="Resources\phancong.png" />
+    <Content Include="Resources\phancong_giaovien.png" />
+    <Content Include="Resources\phanlop.png" />
+    <Content Include="Resources\phuchoidulieu.png" />
+    <Content Include="Resources\print.png" />
+    <Content Include="Resources\pupils.png" />
+    <Content Include="Resources\qddotuoi.png" />
+    <Content Include="Resources\qdsiso.png" />
+    <Content Include="Resources\qdthangdiem.png" />
+    <Content Include="Resources\quanlynguoidung.png" />
+    <Content Include="Resources\quaylai_small.png" />
+    <Content Include="Resources\quydinh_diemcan.png" />
+    <Content Include="Resources\saoluudulieu.png" />
+    <Content Include="Resources\sapxep.png" />
+    <None Include="Resources\sua.png" />
+    <Content Include="Resources\thangdiem_small.png" />
+    <Content Include="Resources\them.png" />
+    <Content Include="Resources\them_medium.png" />
+    <Content Include="Resources\them_medium2.png" />
+    <Content Include="Resources\them_small.png" />
+    <Content Include="Resources\thoat.png" />
+    <Content Include="Resources\thoat_small.png" />
+    <Content Include="Resources\thongtinphanmem.png" />
+    <Content Include="Resources\timkiem.png" />
+    <Content Include="Resources\tracuugiaovien.png" />
+    <Content Include="Resources\tracuuhocsinh.png" />
+    <Content Include="Resources\tttruonghoc.png" />
+    <Content Include="Resources\xemdiem.png" />
+    <Content Include="Resources\xeploai.png" />
+    <Content Include="Resources\xoa_hs.png" />
+    <Content Include="Resources\xoa_large.png" />
+    <Content Include="Resources\xoa_medium.png" />
+    <Content Include="Resources\xoa_small.png" />
+    <Content Include="Resources\xuat_bcao.png" />
+    <None Include="Resources\timkiem_small.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

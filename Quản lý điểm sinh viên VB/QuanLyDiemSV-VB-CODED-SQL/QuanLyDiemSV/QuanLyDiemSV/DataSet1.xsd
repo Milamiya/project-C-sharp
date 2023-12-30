@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblkhoa" msprop:Generator_UserTableName="tblkhoa" msprop:Generator_RowDeletedName="tblkhoaRowDeleted" msprop:Generator_TableClassName="tblkhoaDataTable" msprop:Generator_RowChangedName="tblkhoaRowChanged" msprop:Generator_RowClassName="tblkhoaRow" msprop:Generator_RowChangingName="tblkhoaRowChanging" msprop:Generator_RowEvArgName="tblkhoaRowChangeEvent" msprop:Generator_RowEvHandlerName="tblkhoaRowChangeEventHandler" msprop:Generator_TablePropName="tblkhoa" msprop:Generator_TableVarName="tabletblkhoa" msprop:Generator_RowDeletingName="tblkhoaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAKHOA" msprop:Generator_UserColumnName="MAKHOA" msprop:Generator_ColumnPropNameInRow="MAKHOA" msprop:Generator_ColumnVarNameInTable="columnMAKHOA" msprop:Generator_ColumnPropNameInTable="MAKHOAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TENKHOA" msprop:Generator_UserColumnName="TENKHOA" msprop:Generator_ColumnPropNameInRow="TENKHOA" msprop:Generator_ColumnVarNameInTable="columnTENKHOA" msprop:Generator_ColumnPropNameInTable="TENKHOAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblmonhoc" msprop:Generator_UserTableName="tblmonhoc" msprop:Generator_RowDeletedName="tblmonhocRowDeleted" msprop:Generator_TableClassName="tblmonhocDataTable" msprop:Generator_RowChangedName="tblmonhocRowChanged" msprop:Generator_RowClassName="tblmonhocRow" msprop:Generator_RowChangingName="tblmonhocRowChanging" msprop:Generator_RowEvArgName="tblmonhocRowChangeEvent" msprop:Generator_RowEvHandlerName="tblmonhocRowChangeEventHandler" msprop:Generator_TablePropName="tblmonhoc" msprop:Generator_TableVarName="tabletblmonhoc" msprop:Generator_RowDeletingName="tblmonhocRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAMH" msprop:Generator_UserColumnName="MAMH" msprop:Generator_ColumnPropNameInRow="MAMH" msprop:Generator_ColumnVarNameInTable="columnMAMH" msprop:Generator_ColumnPropNameInTable="MAMHColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TENMH" msprop:Generator_UserColumnName="TENMH" msprop:Generator_ColumnPropNameInRow="TENMH" msprop:Generator_ColumnVarNameInTable="columnTENMH" msprop:Generator_ColumnPropNameInTable="TENMHColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SOTIET" msprop:Generator_UserColumnName="SOTIET" msprop:Generator_ColumnPropNameInRow="SOTIET" msprop:Generator_ColumnVarNameInTable="columnSOTIET" msprop:Generator_ColumnPropNameInTable="SOTIETColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblsinhvien" msprop:Generator_UserTableName="tblsinhvien" msprop:Generator_RowDeletedName="tblsinhvienRowDeleted" msprop:Generator_TableClassName="tblsinhvienDataTable" msprop:Generator_RowChangedName="tblsinhvienRowChanged" msprop:Generator_RowClassName="tblsinhvienRow" msprop:Generator_RowChangingName="tblsinhvienRowChanging" msprop:Generator_RowEvArgName="tblsinhvienRowChangeEvent" msprop:Generator_RowEvHandlerName="tblsinhvienRowChangeEventHandler" msprop:Generator_TablePropName="tblsinhvien" msprop:Generator_TableVarName="tabletblsinhvien" msprop:Generator_RowDeletingName="tblsinhvienRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MASV" msprop:Generator_UserColumnName="MASV" msprop:Generator_ColumnPropNameInRow="MASV" msprop:Generator_ColumnVarNameInTable="columnMASV" msprop:Generator_ColumnPropNameInTable="MASVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HOSV" msprop:Generator_UserColumnName="HOSV" msprop:Generator_ColumnPropNameInRow="HOSV" msprop:Generator_ColumnVarNameInTable="columnHOSV" msprop:Generator_ColumnPropNameInTable="HOSVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TENSV" msprop:Generator_UserColumnName="TENSV" msprop:Generator_ColumnPropNameInRow="TENSV" msprop:Generator_ColumnVarNameInTable="columnTENSV" msprop:Generator_ColumnPropNameInTable="TENSVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NGAYSINH" msprop:Generator_UserColumnName="NGAYSINH" msprop:Generator_ColumnPropNameInRow="NGAYSINH" msprop:Generator_ColumnVarNameInTable="columnNGAYSINH" msprop:Generator_ColumnPropNameInTable="NGAYSINHColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PHAI" msprop:Generator_UserColumnName="PHAI" msprop:Generator_ColumnPropNameInRow="PHAI" msprop:Generator_ColumnVarNameInTable="columnPHAI" msprop:Generator_ColumnPropNameInTable="PHAIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MAKHOA" msprop:Generator_UserColumnName="MAKHOA" msprop:Generator_ColumnPropNameInRow="MAKHOA" msprop:Generator_ColumnVarNameInTable="columnMAKHOA" msprop:Generator_ColumnPropNameInTable="MAKHOAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblketqua" msprop:Generator_UserTableName="tblketqua" msprop:Generator_RowDeletedName="tblketquaRowDeleted" msprop:Generator_TableClassName="tblketquaDataTable" msprop:Generator_RowChangedName="tblketquaRowChanged" msprop:Generator_RowClassName="tblketquaRow" msprop:Generator_RowChangingName="tblketquaRowChanging" msprop:Generator_RowEvArgName="tblketquaRowChangeEvent" msprop:Generator_RowEvHandlerName="tblketquaRowChangeEventHandler" msprop:Generator_TablePropName="tblketqua" msprop:Generator_TableVarName="tabletblketqua" msprop:Generator_RowDeletingName="tblketquaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MASV" msprop:Generator_UserColumnName="MASV" msprop:Generator_ColumnPropNameInRow="MASV" msprop:Generator_ColumnVarNameInTable="columnMASV" msprop:Generator_ColumnPropNameInTable="MASVColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MAMH" msprop:Generator_UserColumnName="MAMH" msprop:Generator_ColumnPropNameInRow="MAMH" msprop:Generator_ColumnVarNameInTable="columnMAMH" msprop:Generator_ColumnPropNameInTable="MAMHColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LANTHI" msprop:Generator_UserColumnName="LANTHI" msprop:Generator_ColumnPropNameInRow="LANTHI" msprop:Generator_ColumnVarNameInTable="columnLANTHI" msprop:Generator_ColumnPropNameInTable="LANTHIColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DIEM" msprop:Generator_UserColumnName="DIEM" msprop:Generator_ColumnPropNameInRow="DIEM" msprop:Generator_ColumnVarNameInTable="columnDIEM" msprop:Generator_ColumnPropNameInTable="DIEMColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

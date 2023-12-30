@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html xmlns="http://www.w3.org/TR/xhtml1/strict">
+    <%@ page language="java"
+        import="java.sql.Connection,
+                java.sql.ResultSet,
+                java.util.GregorianCalendar,
+                com.dinhgiang.utils.DBResults,
+                com.dinhgiang.beans.UserBean"
+        errorPage="error.jsp" %>
+    <%--
+        @author     : Dinh Le Giang
+        @date       : August 19, 2003
+        @description: Give Idea for your company.
+     --%>
+    <head>
+        <title>Giving Idea</title>
+        <link rel="stylesheet" href="../xslt/jobStyle.css" type="text/css" />
+        <script language="javascript" src="../xslt/jobScript.js"></script>
+    </head>
+    <body bgcolor="#FFFFFF" text="#000099">
+<%
+    UserBean user = (UserBean) session.getAttribute("user");
+    if (user != null) {
+
+    	Connection conPool = (Connection) session.getAttribute("conJobPool");
+        if (conPool != null) {
+            String sql = "select manv, tennv from nhanvien "
+                       + "where username='" + user.getUserId() + "'";
+	    ResultSet rs = DBResults.executeQuery(conPool, sql);
+	    if (rs.next()) {
+                String staffId = rs.getString(1);
+            	String staffName = rs.getString(2);
+
+                GregorianCalendar calendar = new GregorianCalendar();
+                int date = calendar.get(GregorianCalendar.DATE);
+                int month = calendar.get(GregorianCalendar.MONTH) + 1;
+                int year = calendar.get(GregorianCalendar.YEAR);
+                String fullday = "" + year + "/" + month + "/" + date;
+%>
+<!-- ../servlet/com.dinhgiang.servlets.GiveIdeaServlet dbGiveIdea.jsp -->
+        <form action="../servlet/GiveIdea" enctype="multipart/form-data" method="POST">
+            <h3 align="center">
+        	<font face="VNI-Times, VNI-Helve" color="#AA0000">Goùp YÙ Cho Coâng Ty</font>
+            </h3>
+            <table border="0" align="center">
+                <tr>
+                    <td><b><font face="VNI-Times">Maõ Goùp YÙ*:</font></b></td>
+		    <td>
+                        <input type="text" name="magy" size="5" value="00000" />
+                        <b><font face="VNI-Times">&nbsp;&nbsp;&nbsp;Ngaøy*:</font></b>&nbsp;&nbsp;&nbsp;<input type="text" name="ngay" size="10" value="<%= fullday %>" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><b><font face="VNI-Times">Teân Nhaân Vieân*:</font></b></td>
+                    <td>
+                    	<input type="hidden" name="manv" value="<%= staffId %>" />
+                    	<input type="text" name="name" value="<%= staffName %>" size="23" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b><font face="VNI-Times">Noäi Dung:</font></b></td>
+		    <td><textarea name="noidung" rows="3" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td><b><font face="VNI-Times">Keøm Taäp Tin:</font></b></td>
+                    <td>
+                        <input type="file" name="filename" size="32" />
+                    </td> <!-- name="subOK" disabled onchange="testUploadFile(filename, subOK)" -->
+                </tr>
+            </table>
+            <p align="center">
+	        <input type="submit" value="  OK   " />
+	    </p>
+        </form>
+<%
+            }
+	    rs.close();
+        }
+    }
+%>
+    </body>
+</html>

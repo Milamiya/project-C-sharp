@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LichCongTac", "LichCongTac\LichCongTac.csproj", "{6A19D359-D8E1-45B8-BF3F-23B11C1B098F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualClock", "VirtualClockMG\VirtualClock.csproj", "{CDA0479A-1739-4359-88B2-442EFE16F945}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A19D359-D8E1-45B8-BF3F-23B11C1B098F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A19D359-D8E1-45B8-BF3F-23B11C1B098F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A19D359-D8E1-45B8-BF3F-23B11C1B098F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A19D359-D8E1-45B8-BF3F-23B11C1B098F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA0479A-1739-4359-88B2-442EFE16F945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA0479A-1739-4359-88B2-442EFE16F945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA0479A-1739-4359-88B2-442EFE16F945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA0479A-1739-4359-88B2-442EFE16F945}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

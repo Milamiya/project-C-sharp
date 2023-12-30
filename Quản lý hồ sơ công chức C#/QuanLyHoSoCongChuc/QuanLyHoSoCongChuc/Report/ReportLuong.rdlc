@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>af44d19f-3407-4332-9af1-3b0af9227c30</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox5">
+        <Left>0.125in</Left>
+        <Top>0.125in</Top>
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <ZIndex>4</ZIndex>
+        <Width>4in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Tên cơ quan: UBND Huyện Tịnh Biên, An Giang</Value>
+      </Textbox>
+      <Textbox Name="textbox23">
+        <Left>0.125in</Left>
+        <Top>0.38542in</Top>
+        <ZIndex>3</ZIndex>
+        <Width>4in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Địa chỉ : Khóm Sơn Đông, TT Nhà Bàng, Tịnh Biên , AG</Value>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <Left>0.13542in</Left>
+        <Top>0.64583in</Top>
+        <ZIndex>2</ZIndex>
+        <Width>4.01042in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.23958in</Height>
+        <Value>Điện thoại: 0763740797</Value>
+      </Textbox>
+      <Textbox Name="textbox21">
+        <Left>3.25in</Left>
+        <Top>1.14583in</Top>
+        <rd:DefaultName>textbox21</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>4.72917in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>26pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.46875in</Height>
+        <Value>DANH SÁCH NHÂN VIÊN</Value>
+      </Textbox>
+      <Table Name="table1">
+        <Left>0.375in</Left>
+        <DataSetName>QuanLyHoSoCongChuc_BusinessObject_NhanVienInfo</DataSetName>
+        <Top>2in</Top>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox27">
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                          <Top>Solid</Top>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                          <Top>1pt</Top>
+                          <Left>1pt</Left>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                          <Top>Black</Top>
+                          <Left>Black</Left>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=RowNumber(Nothing)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox28">
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!MaNhanVien.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="HoTen">
+                      <rd:DefaultName>HoTen</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!HoTen.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="GT">
+                      <rd:DefaultName>GT</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!GT.Value.TenGioiTinh</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="QueQuan">
+                      <rd:DefaultName>QueQuan</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!QueQuan.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ChucVu">
+                      <rd:DefaultName>ChucVu</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ChucVu.Value.TenChucVu</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="DonVi">
+                      <rd:DefaultName>DonVi</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!DonVi.Value.TenDonVi</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.26736in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox34">
+                      <ZIndex>13</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>STT</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox35">
+                      <ZIndex>12</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Mã nhân viên</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox36">
+                      <ZIndex>11</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Họ tên nhân viên</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox37">
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Giới tính</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox38">
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Địa chỉ</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox39">
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Chức vụ</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox40">
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Đơn vị</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.26736in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.5625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.55208in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.55208in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.65625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.47917in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.55208in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.55208in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.53472in</Height>
+      </Table>
+    </ReportItems>
+    <Height>2.80208in</Height>
+  </Body>
+  <rd:ReportID>3c154c2c-4e9c-4161-b062-b87a661f327f</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="QuanLyHoSoCongChuc_BusinessObject_NhanVienInfo">
+      <rd:DataSetInfo>
+        <rd:DataSetName>QuanLyHoSoCongChuc.BusinessObject</rd:DataSetName>
+        <rd:ObjectDataSourceType>QuanLyHoSoCongChuc.BusinessObject.NhanVienInfo, QuanLyHoSoCongChuc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>NhanVienInfo</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="BacLuong">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>BacLuong</DataField>
+        </Field>
+        <Field Name="ChenhLechBaoLuu">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChenhLechBaoLuu</DataField>
+        </Field>
+        <Field Name="ChucVu">
+          <rd:TypeName>QuanLyHoSoCongChuc.BusinessObject.ChucVuInfo</rd:TypeName>
+          <DataField>ChucVu</DataField>
+        </Field>
+        <Field Name="ChucVuCaoNhat">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChucVuCaoNhat</DataField>
+        </Field>
+        <Field Name="ChucVuDang">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChucVuDang</DataField>
+        </Field>
+        <Field Name="ChucVuDoanThe">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChucVuDoanThe</DataField>
+        </Field>
+        <Field Name="ChucVuHienTai">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChucVuHienTai</DataField>
+        </Field>
+        <Field Name="ChucVuKiemNhiem">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChucVuKiemNhiem</DataField>
+        </Field>
+        <Field Name="CongViecDuocGiao">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CongViecDuocGiao</DataField>
+        </Field>
+        <Field Name="CongViecVaoCoQuanHienNay">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CongViecVaoCoQuanHienNay</DataField>
+        </Field>
+        <Field Name="DangNghiBHXH">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DangNghiBHXH</DataField>
+        </Field>
+        <Field Name="DanToc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DanToc</DataField>
+        </Field>
+        <Field Name="DienThoaiDiDong">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DienThoaiDiDong</DataField>
+        </Field>
+        <Field Name="DienThoaiNhaRieng">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DienThoaiNhaRieng</DataField>
+        </Field>
+        <Field Name="DienUuTienCuaBanThan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DienUuTienCuaBanThan</DataField>
+        </Field>
+        <Field Name="DienUuTienGiaDinh">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DienUuTienGiaDinh</DataField>
+        </Field>
+        <Field Name="DoanVien">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DoanVien</DataField>
+        </Field>
+        <Field Name="DonVi">
+          <rd:TypeName>QuanLyHoSoCongChuc.BusinessObject.DonViInfo</rd:TypeName>
+          <DataField>DonVi</DataField>
+        </Field>
+        <Field Name="GioiTinh">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GioiTinh</DataField>
+        </Field>
+        <Field Name="GT">
+          <rd:TypeName>QuanLyHoSoCongChuc.BusinessObject.GioiTinhInfo</rd:TypeName>
+          <DataField>GT</DataField>
+        </Field>
+        <Field Name="HeSoLuong">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HeSoLuong</DataField>
+        </Field>
+        <Field Name="HeSoPhuCapChucVu">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HeSoPhuCapChucVu</DataField>
+        </Field>
+        <Field Name="HeSoPhuCapKhac">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HeSoPhuCapKhac</DataField>
+        </Field>
+        <Field Name="HeSoPhuCapKiemNhiem">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HeSoPhuCapKiemNhiem</DataField>
+        </Field>
+        <Field Name="HinhThucTuyenDung">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HinhThucTuyenDung</DataField>
+        </Field>
+        <Field Name="HoKhau">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HoKhau</DataField>
+        </Field>
+        <Field Name="HoTen">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HoTen</DataField>
+        </Field>
+        <Field Name="Huong85">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Huong85</DataField>
+        </Field>
+        <Field Name="LanBoNhiem">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>LanBoNhiem</DataField>
+        </Field>
+        <Field Name="LoaiCanBo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>LoaiCanBo</DataField>
+        </Field>
+        <Field Name="MaDonVi">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MaDonVi</DataField>
+        </Field>
+        <Field Name="MaNghach">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MaNghach</DataField>
+        </Field>
+        <Field Name="MaNhanVien">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MaNhanVien</DataField>
+        </Field>
+        <Field Name="MocTinhNangLuongLanSau">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MocTinhNangLuongLanSau</DataField>
+        </Field>
+        <Field Name="NangKhieu">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NangKhieu</DataField>
+        </Field>
+        <Field Name="NgayBatDauDonhBHXH">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayBatDauDonhBHXH</DataField>
+        </Field>
+        <Field Name="NgayBoNhiemChucVuHienTai">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayBoNhiemChucVuHienTai</DataField>
+        </Field>
+        <Field Name="NgayBoNhiemVaoNghach">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayBoNhiemVaoNghach</DataField>
+        </Field>
+        <Field Name="NgayCap">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayCap</DataField>
+        </Field>
+        <Field Name="NgayChinhThuc">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayChinhThuc</DataField>
+        </Field>
+        <Field Name="NgayHopDong">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayHopDong</DataField>
+        </Field>
+        <Field Name="NgayHuong">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayHuong</DataField>
+        </Field>
+        <Field Name="NgaySinh">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgaySinh</DataField>
+        </Field>
+        <Field Name="NgayThamGiaToChucCTXH">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayThamGiaToChucCTXH</DataField>
+        </Field>
+        <Field Name="NgayTuyenDung">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayTuyenDung</DataField>
+        </Field>
+        <Field Name="NgayVaoCoQuanHienNay">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayVaoCoQuanHienNay</DataField>
+        </Field>
+        <Field Name="NgayVaoDang">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayVaoDang</DataField>
+        </Field>
+        <Field Name="NghachCongChuc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NghachCongChuc</DataField>
+        </Field>
+        <Field Name="NoiCap">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NoiCap</DataField>
+        </Field>
+        <Field Name="NoiOHienTai">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NoiOHienTai</DataField>
+        </Field>
+        <Field Name="NoiSinh">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NoiSinh</DataField>
+        </Field>
+        <Field Name="PhuCapThamNienVuotKhung">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PhuCapThamNienVuotKhung</DataField>
+        </Field>
+        <Field Name="QueQuan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>QueQuan</DataField>
+        </Field>
+        <Field Name="SoCMND">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SoCMND</DataField>
+        </Field>
+        <Field Name="SoSoBHXH">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SoSoBHXH</DataField>
+        </Field>
+        <Field Name="TenGoiKhac">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TenGoiKhac</DataField>
+        </Field>
+        <Field Name="TenToChucCTXH">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TenToChucCTXH</DataField>
+        </Field>
+        <Field Name="ThanhPhanXuatThan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ThanhPhanXuatThan</DataField>
+        </Field>
+        <Field Name="TheoHocKhoaDTBD">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TheoHocKhoaDTBD</DataField>
+        </Field>
+        <Field Name="TinhTrangHonNhan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TinhTrangHonNhan</DataField>
+        </Field>
+        <Field Name="TonGiao">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TonGiao</DataField>
+        </Field>
+        <Field Name="TrinhDoChuyenMon">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TrinhDoChuyenMon</DataField>
+        </Field>
+        <Field Name="TrinhDoHocVan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TrinhDoHocVan</DataField>
+        </Field>
+        <Field Name="TrinhDoLyLuanChinhTri">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TrinhDoLyLuanChinhTri</DataField>
+        </Field>
+        <Field Name="TrinhDoNgoaiNgu">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TrinhDoNgoaiNgu</DataField>
+        </Field>
+        <Field Name="TrinhDoQuanLyNhaNuoc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TrinhDoQuanLyNhaNuoc</DataField>
+        </Field>
+        <Field Name="TrinhDoTinHoc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TrinhDoTinHoc</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>10.28124in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

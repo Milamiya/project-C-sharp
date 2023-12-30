@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--JBuilder XML Project-->
+<project>
+  <property category="idl" name="ProcessIDL" value="false" />
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.AppServerRunner" />
+  <property category="runtime.0" name="appserver.ejbJarsSaved" value="1" />
+  <property category="runtime.0" name="appserver.parameters" value="-jts -jns -jss -jdb" />
+  <property category="runtime.0" name="appserver.servername" value="ejbcontainer" />
+  <property category="runtime.0" name="appserver.vmparameters" value="-Dvbroker.agent.port=14000 -Djava.library.path=/Borland/AppServer/lib;/Borland/AppServer/bin" />
+  <property category="runtime.0" name="jsprunner.launchuri" value="/" />
+  <property category="sys" name="AuthorLabel" value="@author" />
+  <property category="sys" name="BackupPath" value="bak" />
+  <property category="sys" name="BeansInstantiate" value="false" />
+  <property category="sys" name="BraceStyle" value="0" />
+  <property category="sys" name="CheckStable" value="1" />
+  <property category="sys" name="Company" value="Tien Giang" />
+  <property category="sys" name="CompanyLabel" value="Company:" />
+  <property category="sys" name="Copyright" value="Copyright (c) 2003" />
+  <property category="sys" name="CopyrightLabel" value="Copyright:" />
+  <property category="sys" name="Description" value="JSP/SERVLET/XML/XSLT" />
+  <property category="sys" name="DescriptionLabel" value="Description:" />
+  <property category="sys" name="DocPath" value="doc" />
+  <property category="sys" name="EventMatch" value="false" />
+  <property category="sys" name="EventStyle" value="1" />
+  <property category="sys" name="ExcludeClassEnabled" value="0" />
+  <property category="sys" name="InstanceVisibility" value="0" />
+  <property category="sys" name="JDK" value="java 1.3.0_02" />
+  <property category="sys" name="LastTag" value="0" />
+  <property category="sys" name="Libraries" value="Tomcat 3.1 Servlet;BorlandXML;JDOM;Xalan;Xerces;XML4J;XmlBeans;XMLDBMS" />
+  <property category="sys" name="MakeStable" value="0" />
+  <property category="sys" name="OutPath" value="classes" />
+  <property category="sys" name="SourcePath" value="src" />
+  <property category="sys" name="Title" value="The Web Work" />
+  <property category="sys" name="TitleLabel" value="Title:" />
+  <property category="sys" name="Version" value="1.0" />
+  <property category="sys" name="VersionLabel" value="@version" />
+  <property category="sys" name="WorkingDirectory" value="." />
+  <property category="webserver" name="appIsWeb" value="1" />
+  <property category="webserver" name="servletEngine" value="Tomcat 3.1" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/taglibs/ApplyTag.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/servlets/CombineReportServlet.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/utils/ConnectionPool.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/utils/DBResults.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/utils/DriverUtilities.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/beans/FileUploaderBean.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/utils/FileUploaderStreamHandler.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/servlets/GiveIdeaServlet.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/utils/JobPool.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/beans/LoginBean.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/servlets/ReportProgressServlet.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/beans/UploadedFileBean.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/beans/UploaderBean.java" />
+  <file path="../../../../jakarta-tomcat/webapps/work/WEB-INF/src/com/dinhgiang/beans/UserBean.java" />
+  <file path="work.html" />
+</project>
+

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QLHS.BUS.BangDiemBUS">
+    <Position X="1" Y="10.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACBAAAAAEIAQAAACIAFAAAAKQAAAAIKAAAAAAM=</HashCode>
+      <FileName>BangDiemBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.ChuyenLopBUS">
+    <Position X="13.5" Y="10.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAIAgAAAAGAAAAAAIAAAAA=</HashCode>
+      <FileName>ChuyenLopBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.GiaoVienBUS">
+    <Position X="28.5" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAgAAAAIAAAAAABAAAACAAACAAAAAA=</HashCode>
+      <FileName>GiaoVienBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.HocKyBUS">
+    <Position X="14.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>HocKyBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.HocSinhBUS">
+    <Position X="4.75" Y="10.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAEAAAAAAAAAAAACAAAAAAAgAAgECAAAKAIAAABE=</HashCode>
+      <FileName>HocSinhBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.KhoiBUS">
+    <Position X="17" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAACAAIAAAAAAAAQEAAAAAE=</HashCode>
+      <FileName>KhoiBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.LoaiNguoiDungBUS">
+    <Position X="22.75" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LoaiNguoiDungBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.LopBUS">
+    <Position X="32" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgBAAAAAAQAAAAgAAAAAAAAAAAAAAAAEACAAAAIAAI=</HashCode>
+      <FileName>LopBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.MonHocBUS">
+    <Position X="7.5" Y="10.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAACAAAAEAAAAAAAAAAAAAAQAAAKAAAAAAAA=</HashCode>
+      <FileName>MonHocBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.NamHocBUS">
+    <Position X="19.75" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAQACAAAAAAAAAEAAAAAAAAAAAAAIAAgGIAAAAA=</HashCode>
+      <FileName>NamHocBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.NguoiDungBUS">
+    <Position X="25.5" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAACQQQAAAAAAAIAEgAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>NguoiDungBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.PhanLopBUS">
+    <Position X="35" Y="10.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AwAAAAAAAAQAAAAAAAAAgAABEEAIAEAAAAAAIBAAAAM=</HashCode>
+      <FileName>PhanLopBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.BUS.QuyDinhBUS">
+    <Position X="11" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEgAAAgAECAAAAkAAAAAAgAQAAAAAAAAAAAAABEAAAA=</HashCode>
+      <FileName>QuyDinhBUS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLHS.DAL.BangDiemDAL">
+    <Position X="1" Y="6" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.ChuyenLopDAL">
+    <Position X="13.5" Y="6" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.ConnectData">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.GiaoVienDAL">
+    <Position X="29" Y="6" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.HocSinhDAL">
+    <Position X="4.75" Y="6" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.KhoiDAL">
+    <Position X="17.25" Y="6" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.LoaiNguoiDungDAL">
+    <Position X="22.75" Y="6" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.LopDAL">
+    <Position X="32" Y="6" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.MonHocDAL">
+    <Position X="7.75" Y="6" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.NamHocDAL">
+    <Position X="20" Y="6" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.NguoiDungDAL">
+    <Position X="25.5" Y="6" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.PhanLopDAL">
+    <Position X="35" Y="6" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="QLHS.DAL.QuyDinhDAL">
+    <Position X="11" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

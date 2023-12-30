@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html xmlns="http://www.w3.org/TR/xhtml1/strict">
+    <!--
+        @author     : Dinh le Giang
+        @date       : August 14, 2003
+        @description: Preparing the parameters for refreshing database
+     -->
+    <head>
+        <title>Refreshing database</title>
+        <link rel="stylesheet" href="../xslt/jobStyle.css" type="text/css" />
+        <script language="JavaScript">
+    <!--
+	    var day = new Date();
+	    var y = day.getYear();
+            y = y < 1900 ? y + 1900 : y;
+	    var m = day.getMonth() + 1;
+	    var d = day.getDate();
+
+            function setDay(form) {
+	        enable(form);
+
+                form.year.value = "";
+		form.year.disabled = true;
+
+		form.start.value = y + "-" + m + "-01";
+		form.end.value = y + "-" + m + "-" + d;
+		return;
+	    }
+	    function setMonth(form) {
+		enable(form);
+		form.start.value = m - 1;
+		form.end.value = m;
+
+                form.year.disabled = false;
+                form.year.value = y - 1;
+		return;
+	    }
+	    function setYear(form) {
+		disable(form);
+		form.start.value = y - 1;
+		return;
+	    }
+	    function disable(form) {
+		form.end.value = "";
+		form.end.disabled = true;
+
+                form.year.value = "";
+		form.year.disabled = true;
+
+		return;
+	    }
+	    function enable(form) {
+		form.end.disabled = false;
+		return;
+	    }
+            function testCheck(form) {
+                form.submitRefresh.disabled = false;
+            }
+    //-->
+        </script>
+    </head>
+    <body bgcolor="#FFFFFF" text="#000099">
+        <form name="frmRefreshing" action="../jsp/refreshDatabase.jsp" method="post">
+	    <h3 align="center"><font face="VNI-Times, VNI-Helve" color="#AA0000">Laøm Töôi Cô Sôû Dö&otilde; Lieäu</font></h3>
+	    <table border="0" align="center">
+	        <tr>
+    	            <td>
+		        <b><font face="VNI-Times, VNI-Helve">Teân Cô Sôû Dö&otilde; Lieäu Môùi</font></b>
+	            </td>
+	        </tr>
+		<tr>
+	            <td>
+		        <input name="dbName" type="text" value="..._BackUp" size="28" />
+	            </td>
+	        </tr>
+		<tr>
+                    <td>
+		        <input type="radio" name="refresh" value="0" onclick="setDay(this.form); testCheck(this.form)" />
+	                <b><font face="VNI-Times, VNI-Helve">Töø Ngaøy Ñeán Ngaøy</font></b>
+		    </td>
+	        </tr>
+		<tr>
+		    <td>
+		        <input type="radio" name="refresh" value="1" onclick="setMonth(this.form); testCheck(this.form)" />
+	                <b><font face="VNI-Times, VNI-Helve">Töø Thaùng Ñeán Thaùng Cuûa Naêm</font></b>
+                        &nbsp;<input type="text" name="year" size="2" disabled />
+		    </td>
+                </tr>
+	        <tr>
+	            <td>
+		        <input type="radio" name="refresh" value="2" onclick="setYear(this.form); testCheck(this.form)" />
+		        <b><font face="VNI-Times, VNI-Helve">Troïn Naêm</font></b>
+	            </td>
+	        </tr>
+		<tr>
+	            <td>
+		        <input type="text" name="start" size="12" />
+			&nbsp;&nbsp;&nbsp;<input type="text" name="end" size="12" />
+		    </td>
+		</tr>
+	    </table>
+	    <p align="center">
+	        <input type="reset" name="resetRefresh" value="Reset" />
+		<input type="submit" name="submitRefresh" value="  OK   " disabled />
+	    </p>
+        </form>
+    </body>
+</html>

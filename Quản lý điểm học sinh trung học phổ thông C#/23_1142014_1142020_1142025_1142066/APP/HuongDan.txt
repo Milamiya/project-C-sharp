@@ -1,0 +1,29 @@
+﻿Yêu cầu sử dụng project:
+- Microsoft Visual Studio 2010
+- DevExpress 11.1 hoặc cao hơn
+Trường hợp sử dụng version cao hơn phải convert project:
++ Start menu => Developer Express v2011 vol X\Components\Tools\ProjectConverter
++ Brown đến thư mục .\APP\SOURCE
++ Ấn Convert để cập nhật assembler cho phiên bản hiện tại
+- Crystal Report for Visual Studio 2010
+- SQL Server Enterprise/Express 2005/2008/2012
+
+Subversion: 
+http://code.google.com/p/qlhs-hcmus/source/checkout
+
+Sử dụng chương trình:
+1/ Chạy .\EXE\QLHS_THPT.msi để tiến hành cài đặt
+2/ Click vào biểu tượng QL_HocSinh_THPT trên desktop
+3/ Chương trình sẽ khởi động form "Tự cấu hình kết nối" cho chương trình:
+  + Chọn hoặc gõ tên server
+  + Nhấn Kết nối
+  + Chọn database có sẵn hoặc tạo mới
+  + Nhấn tạo dữ liệu mẫu cho chương trình
+  + Nhấn lưu cấu hình
+4/ Chọn 1 trong các user sau đăng nhập vào chương trình:
+  + Quản trị viên (admin)
+  + Nguyễn Văn Đại (vandai) - Giáo vụ
+  + Nguyễn Duy Hà  (duyha) - Giáo viên
+  + Nguyễn Thị Mỷ Diện (mydien) - Hiệu trưởng
+  + Nguyễn Hồng Phú (hongphu) - Quản trị viên
+Mật khẩu cho tất cả user: 123

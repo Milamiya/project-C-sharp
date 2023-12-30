@@ -1,0 +1,29 @@
+/*Use database CongViec*/
+use CongViec;
+
+/*Add data into table NhanVien*/
+insert into NhanVien values('1', 1, 'Dinh Le Giang', '1980-10-13', '54C/1 No Trang Long, Q_Binh Thanh, TPHCM', 1, '5104861', 'dinhgiang', 'dinhgiang');
+insert into NhanVien values('2', 2, 'Truong Khac Phuc', '1978-12-25', '122/1 Tran Quoc Thao Phuong 7 Q 3, TPHCM', 1, '0903683504', 'truongphuc', 'truongphuc');
+insert into NhanVien values('3', 3, 'Chau Van Khanh', '1978-09-17', '54C/1 No Trang Long Phuong 7 Q Binh Thanh, TPHCM', 1, '5104861', 'chaukhanh', 'chaukhanh');
+
+/*Add data into table Group*/
+insert into Groups values(1, 'Administrator', '1', '2003-09-02');
+insert into Groups values(2, 'Manager', '2', '2003-09-02');
+insert into Groups values(3, 'Staff', '3', '2001-09-02');
+
+/*Add data into table Permissions*/
+insert into Permissions values(1, 'Cho pheùp caäp nhaät nhaân vieân', 'Administrator');
+insert into Permissions values(2, 'Cho pheùp caäp nhaät quyeàn', 'Administrator');
+insert into Permissions values(3, 'Cho pheùp caäp nhaät coâng vieâc', 'Manager');
+insert into Permissions values(6, 'Ñöôïc quyeàn phaân coâng coâng vieäc', 'Manager');
+insert into Permissions values(4, 'Cho pheùp baùo caùo tieán ñoä thöïc hieän', 'Staff');
+insert into Permissions values(5, 'Goùp yù - thaéc maéc veà coâng vieäc', 'Staff');
+
+
+/*Add data into table XepLoai*/
+insert into XepLoai values(1, 'A+', 'Xuaát saéc');
+insert into XepLoai values(2, 'A', 'Gioûi toát');
+insert into XepLoai values(4, 'B', 'Khaù');
+insert into XepLoai values(3, 'C', 'Trung Bình');
+insert into XepLoai values(5, 'D', 'Keùm - Coâng vieäc khoâng ñaït yeâu caàu');
+

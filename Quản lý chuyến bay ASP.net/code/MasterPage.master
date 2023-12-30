@@ -1,0 +1,192 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        &nbsp;
+        <table cellpadding="0px" cellspacing="0px" style="z-index: 100; left: 238px; position: absolute; top: 2px">
+            <tr style="width:900px">
+                <td colspan="6" style="width: 900px; height: 150px;">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/hinh anh/2 copy.png" /></td>
+            </tr>
+            <tr>
+                <td style="width: 141px; height:35px;">
+                    <img src="hinh%20anh/menu1.png" /></td>
+                <td style="width: 150px;height:35px;">
+                    <img src="hinh%20anh/menu1.png" /></td>
+                <td style="width: 150px;height:35px;">
+                    <img src="hinh%20anh/menu1.png" /></td>
+                <td style="width: 150px;height:35px;">
+                    <img src="hinh%20anh/menu1.png" /></td>
+                <td style="width: 150px;height:35px;">
+                    <img src="hinh%20anh/menu1.png" /></td>
+                <td style="width: 150px;height:35px;">
+                    <img src="hinh%20anh/menu1.png" /></td>
+            </tr>
+            <tr>
+                <td style="width: 141px">
+                    <asp:HyperLink ID="HyperLink1" runat="server" Style="z-index: 100; left: 41px; position: absolute;
+                        top: 158px" EnableTheming="True" Font-Bold="True" Font-Size="Larger" Font-Strikeout="False" Font-Underline="False" ForeColor="Black" NavigateUrl="~/trangchu.aspx">Trang chủ</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" Style="z-index: 101; left: 164px; position: absolute;
+                        top: 158px" Font-Bold="True" Font-Size="Larger" Width="133px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/timchuyenbay.aspx">Tìm chuyến bay</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" Style="z-index: 102; left: 335px; position: absolute;
+                        top: 157px" Font-Bold="True" Font-Size="Larger" Width="90px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/dangnhap.aspx">Đăng nhập</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink4" runat="server" Style="z-index: 103; left: 490px; position: absolute;
+                        top: 157px" Font-Bold="True" Font-Size="Larger" Width="86px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/gioithieu.aspx">Giới thiệu</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink5" runat="server" Style="z-index: 104; left: 647px; position: absolute;
+                        top: 159px" Font-Bold="True" Font-Size="Larger" Width="72px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/lienhe.aspx">Liên hệ</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink6" runat="server" Style="z-index: 106; left: 799px; position: absolute;
+                        top: 158px" Font-Bold="True" Font-Size="Larger" Width="74px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/hinhanh.aspx">Hình ảnh</asp:HyperLink>
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/hinh anh/rty.png" />
+                    <asp:Image ID="Image10" runat="server" ImageUrl="~/hinh anh/QCrong.png" Style="z-index: 102;
+                        left: 7px; position: absolute; top: 236px" />
+                </td>
+                <td colspan="4" rowspan="1" style="margin: top 0px;">
+                    <asp:Image ID="Image5" runat="server" ImageUrl="~/hinh anh/67.jpg" Style="z-index: 100;
+                        left: 155px; position: absolute; top: 191px" />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:Image ID="Image11" runat="server" ImageUrl="~/hinh anh/1.gif" Style="z-index: 101;
+                        left: 753px; position: absolute; top: 416px" Width="154px" />
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Style="z-index: 103;
+                        left: 38px; position: absolute; top: 447px" Text="Thoát" Width="72px" />
+                </td>
+                <td style="width: 150px">
+                    <asp:Image ID="Image3" runat="server" ImageUrl="~/hinh anh/images (1).jpg" Style="z-index: 100;
+                        left: 755px; position: absolute; top: 235px" />
+                    <asp:Image ID="Image4" runat="server" ImageUrl="~/hinh anh/QC.png" Style="z-index: 102;
+                        left: 760px; position: absolute; top: 191px" Width="140px" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 141px; height: 7px;">
+                    <asp:Image ID="Image12" runat="server" ImageUrl="~/hinh anh/4.gif" /></td>
+                <td style="width: 100px; height: 7px;">
+                    &nbsp; &nbsp;&nbsp;
+                    <asp:Image ID="Image7" runat="server" ImageUrl="~/hinh anh/QCrong.png" Style="z-index: 101;
+                        left: 6px; position: absolute; top: 280px" />
+                    <asp:Image ID="Image8" runat="server" ImageUrl="~/hinh anh/QCrong.png" Style="z-index: 102;
+                        left: 6px; position: absolute; top: 324px" />
+                    <asp:Image ID="Image9" runat="server" ImageUrl="~/hinh anh/QCrong.png" Style="z-index: 103;
+                        left: 6px; position: absolute; top: 369px" />
+                    <asp:HyperLink ID="HyperLink7" runat="server" Font-Bold="True" Font-Size="Larger"
+                        Style="z-index: 104; left: 43px; position: absolute; top: 245px" Width="74px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/dangky.aspx">Đăng ký</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink8" runat="server" Font-Bold="True" Font-Size="Larger"
+                        Style="z-index: 105; left: 19px; position: absolute; top: 289px" Width="112px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/doimatkhau.aspx">Đổi mật khẩu</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink9" runat="server" Font-Bold="True" Font-Size="Larger"
+                        Style="z-index: 106; left: 14px; position: absolute; top: 332px" Width="119px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/khachsan.aspx">Tìm khách sạn</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink11" runat="server" Font-Bold="True" Font-Size="Larger"
+                        Style="z-index: 107; left: 36px; position: absolute; top: 374px" Width="94px" Font-Underline="False" ForeColor="Black" NavigateUrl="~/khaosat.aspx">Khảo sát</asp:HyperLink>
+                    &nbsp;
+                    <asp:Image ID="Image13" runat="server" Height="125px" ImageUrl="~/hinh anh/2.gif"
+                        Style="z-index: 109; left: 755px; position: absolute; top: 612px" Width="151px" />
+                    <asp:Label ID="Label1" runat="server" Style="z-index: 110; left: 5px; position: absolute;
+                        top: 418px" Text="Chào bạn"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Style="z-index: 112; left: 68px; position: absolute;
+                        top: 418px" Text="Label" Width="68px"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 141px; height: 4px;">
+                    <asp:Image ID="Image14" runat="server" ImageUrl="~/hinh anh/3.gif" /></td>
+                <td style="width: 100px; height: 4px;">
+                    <asp:Image ID="Image15" runat="server" ImageUrl="~/hinh anh/5.jpg" Style="z-index: 100;
+                        left: 755px; position: absolute; top: 738px" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 141px; height: 39px;">
+                    <asp:Image ID="Image6" runat="server" Height="44px" ImageUrl="~/hinh anh/online.png"
+                        Width="149px" /></td>
+                <td style="width: 100px; height: 39px;">
+                    <asp:Image ID="Image16" runat="server" Height="39px" ImageUrl="~/hinh anh/truycap.png"
+                        Style="z-index: 100; left: 756px; position: absolute; top: 991px" Width="148px" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="height: 18px">
+                    <asp:Label ID="Label3" runat="server" style="z-index: 100; left: 70px; position: absolute; top: 1033px" Font-Bold="True"></asp:Label></td>
+            </tr>
+            <tr>
+                <td style="width: 141px; height: 131px;">
+                    <asp:Image ID="Image17" runat="server" ImageUrl="~/hinh anh/99.gif" Style="z-index: 100;
+                        left: 0px; position: absolute; top: 1072px" />
+                </td>
+                <td style="width: 100px; height: 131px;">
+                    <asp:Image ID="Image18" runat="server" Height="27px" ImageUrl="~/hinh anh/hoa.png"
+                        Style="z-index: 100; left: 770px; position: absolute; top: 1036px" Width="123px" /><asp:Image ID="Image19" runat="server" Height="27px" ImageUrl="~/hinh anh/hoa.png"
+                        Style="z-index: 101; left: 11px; position: absolute; top: 1035px" Width="123px" />
+                    <asp:Image ID="Image21" runat="server" ImageUrl="~/hinh anh/footer.png" Style="z-index: 102;
+                        left: 2px; position: absolute; top: 1450px" />
+                    <asp:Image ID="Image23" runat="server" ImageUrl="~/hinh anh/oto1.gif" Style="z-index: 103;
+                        left: 751px; position: absolute; top: 1070px" />
+                    <asp:Label ID="Label4" runat="server" Font-Underline="False" ForeColor="White" Style="z-index: 104;
+                        left: 277px; position: absolute; top: 1455px" Text="2011 - Khoa Thương Mại Điện Tử - Lớp CCTM03C - Nhóm 4"
+                        Width="396px"></asp:Label>
+                    <asp:Label ID="Label6" runat="server" ForeColor="White" Style="z-index: 106; left: 140px;
+                        position: absolute; top: 1477px" Text="GVHD: Nguyễn Thu Hương - SVTH: Phạm Ngọc Nguyên - Thái Thị Thương Thương - Lê Thị Tuyết Ngân"
+                        Width="653px"></asp:Label>
+                </td>
+                <td style="width: 100px; height: 131px;">
+                    <asp:Image ID="Image20" runat="server" ImageUrl="~/hinh anh/banner2 copy.png" Style="z-index: 100;
+                        left: 1px; position: absolute; top: 1300px" />
+                    <asp:Image ID="Image22" runat="server" Height="230px" ImageUrl="~/hinh anh/fghy.png"
+                        Style="z-index: 102; left: 0px; position: absolute; top: 1070px" />
+                </td>
+                <td style="width: 100px; height: 131px;">
+                </td>
+                <td style="width: 150px; height: 131px;">
+                </td>
+                <td style="width: 100px; height: 131px;">
+                    &nbsp;
+                    <asp:GridView ID="luottruycap" runat="server" AutoGenerateColumns="False" Width="1px" style="z-index: 100; left: 820px; position: absolute; top: 1033px" BorderColor="White" BorderStyle="None" Height="2px" ShowHeader="False">
+                        <Columns>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label5" runat="server" Text='<%# Eval("count") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        
+                    </asp:GridView>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 141px">
+                </td>
+                <td style="width: 100px">
+                </td>
+                <td style="width: 100px">
+                </td>
+                <td style="width: 100px">
+                </td>
+                <td style="width: 150px">
+                </td>
+                <td style="width: 100px">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 141px; height: 14px;">
+                </td>
+                <td style="width: 100px; height: 14px;">
+                </td>
+                <td style="width: 100px; height: 14px;">
+                </td>
+                <td style="width: 100px; height: 14px;">
+                </td>
+                <td style="width: 150px; height: 14px;">
+                </td>
+                <td style="width: 100px; height: 14px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

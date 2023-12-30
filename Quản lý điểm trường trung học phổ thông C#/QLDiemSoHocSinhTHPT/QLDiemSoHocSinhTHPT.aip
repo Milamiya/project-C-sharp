@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" CreateVersion="4.9.2" version="4.9.2" modules="freeware" RootPath="." Language="en">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="BannerBitmap" Value="default_banner.bmp" Type="1"/>
+    <ROW Property="DialogBitmap" Value="default_dialog.bmp" Type="1"/>
+    <ROW Property="Manufacturer" Value="AnhThu6th2" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{3D4B8C03-2561-43A8-B465-D8A494004303} "/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="QLDiemSoHocSinhTHPT_AnPhu" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{8B25EF05-FE3A-4DB1-82FD-39B8C411D267}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="BusinessObject_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="Busine~1|BusinessObject"/>
+    <ROW Directory="Controller_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="Contro~1|Controller"/>
+    <ROW Directory="Data_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="Data"/>
+    <ROW Directory="Debug_1_DIR" Directory_Parent="obj_DIR" DefaultDir="Debug"/>
+    <ROW Directory="Debug_DIR" Directory_Parent="bin_DIR" DefaultDir="Debug"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="GiaoDien_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="GiaoDien"/>
+    <ROW Directory="Properties_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="Proper~1|Properties"/>
+    <ROW Directory="QLDiemSoHocSinhTHPT_DIR" Directory_Parent="APPDIR" DefaultDir="QLDiem~1|QLDiemSoHocSinhTHPT"/>
+    <ROW Directory="Report_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="Report"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="TempPE_DIR" Directory_Parent="Debug_1_DIR" DefaultDir="TempPE"/>
+    <ROW Directory="ThuVien_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="ThuVien"/>
+    <ROW Directory="bin_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="bin"/>
+    <ROW Directory="obj_DIR" Directory_Parent="QLDiemSoHocSinhTHPT_DIR" DefaultDir="obj"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AssemblyInfo.cs" ComponentId="{F9313E79-935A-4B55-840A-2B368D60588A}" Directory_="Properties_DIR" Attributes="0" KeyPath="AssemblyInfo.cs" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\Properties"/>
+    <ROW Component="DanTocController.cs" ComponentId="{10643AE6-1645-42FC-B411-B3F1066112B3}" Directory_="Controller_DIR" Attributes="0" KeyPath="DanTocController.cs" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\Controller"/>
+    <ROW Component="DanTocData.cs" ComponentId="{D4EDF2CC-B25E-41A9-BA06-30D0A7060A42}" Directory_="Data_DIR" Attributes="0" KeyPath="DanTocData.cs" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\Data"/>
+    <ROW Component="DanTocInfo.cs" ComponentId="{DD837789-15DD-44F9-81B5-3F430569BCCC}" Directory_="BusinessObject_DIR" Attributes="0" KeyPath="DanTocInfo.cs" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\BusinessObject"/>
+    <ROW Component="DataGridViewCalendarColumn.cs" ComponentId="{ACF09DBB-8347-4B74-9EA2-70660BB102C2}" Directory_="ThuVien_DIR" Attributes="0" KeyPath="DataGridViewCalendarColumn.cs" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\ThuVien"/>
+    <ROW Component="DataService.cs" ComponentId="{4233BCE8-70A9-4E15-86CD-839676627A49}" Directory_="QLDiemSoHocSinhTHPT_DIR" Attributes="0" KeyPath="DataService.cs" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT"/>
+    <ROW Component="Properties.Resources.Designer.cs.dll" ComponentId="{0001D6CD-D42F-4E91-8A3D-230E08D7CA93}" Directory_="TempPE_DIR" Attributes="0" KeyPath="Properties.Resources.Designer.cs.dll" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll"/>
+    <ROW Component="QLDiemSoHocSinhTHPT.csproj.FileList.txt" ComponentId="{26136D31-3F34-44D4-97E3-D616C8DBB157}" Directory_="obj_DIR" Attributes="0" KeyPath="QLDiemSoHocSinhTHPT.csproj.FileList.txt" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\obj"/>
+    <ROW Component="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" ComponentId="{341C4E82-EFA8-4191-8243-4E1F4B037BEA}" Directory_="Debug_1_DIR" Attributes="0" KeyPath="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\obj\Debug"/>
+    <ROW Component="QLDiemSoHocSinhTHPT.exe" ComponentId="{FD293DB6-83A4-43B3-BD4F-35485CBFAEDA}" Directory_="Debug_DIR" Attributes="0" KeyPath="QLDiemSoHocSinhTHPT.exe" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\bin\Debug\QLDiemSoHocSinhTHPT.exe"/>
+    <ROW Component="QLDiemSoHocSinhTHPT.exe_1" ComponentId="{6570F5BC-0B40-42AE-984C-51659F55244E}" Directory_="Debug_1_DIR" Attributes="0" KeyPath="QLDiemSoHocSinhTHPT.exe_1" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.exe"/>
+    <ROW Component="QLDiemSoHocSinhTHPT.pdb" ComponentId="{52FE0393-2D1C-4924-AFAF-BAE310250521}" Directory_="Debug_DIR" Attributes="0" KeyPath="QLDiemSoHocSinhTHPT.pdb" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\bin\Debug"/>
+    <ROW Component="QLDiemSoHocSinhTHPT.sln" ComponentId="{A632B1B3-87BD-402C-A3FA-1421DA3A0004}" Directory_="APPDIR" Attributes="0" KeyPath="QLDiemSoHocSinhTHPT.sln" FullKeyPath="APPDIR"/>
+    <ROW Component="QLDiemSoHocSinhTHPT.vshost.exe" ComponentId="{0E0DE0C8-7DFC-4485-B9B5-784563B8B8CC}" Directory_="Debug_DIR" Attributes="0" KeyPath="QLDiemSoHocSinhTHPT.vshost.exe" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\bin\Debug\QLDiemSoHocSinhTHPT.vshost.exe"/>
+    <ROW Component="Report.rptDSGV.cs.dll" ComponentId="{E3AC26AC-0050-41E8-A83D-016BFAC8CB82}" Directory_="TempPE_DIR" Attributes="0" KeyPath="Report.rptDSGV.cs.dll" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\obj\Debug\TempPE\Report.rptDSGV.cs.dll"/>
+    <ROW Component="Report.rptDSHS.cs.dll" ComponentId="{B92FA869-430D-419A-8C81-140F92F4BC34}" Directory_="TempPE_DIR" Attributes="0" KeyPath="Report.rptDSHS.cs.dll" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\obj\Debug\TempPE\Report.rptDSHS.cs.dll"/>
+    <ROW Component="Report.rptKQHK_MonHoc.cs.dll" ComponentId="{206AD8AF-48BD-4470-B177-A7EC2CBD5739}" Directory_="TempPE_DIR" Attributes="0" KeyPath="Report.rptKQHK_MonHoc.cs.dll" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\obj\Debug\TempPE\Report.rptKQHK_MonHoc.cs.dll"/>
+    <ROW Component="XPExplorerBar.dll" ComponentId="{1AB6C229-7E5B-4D9C-9E8D-EE3CCFEEA24F}" Directory_="Debug_DIR" Attributes="0" KeyPath="XPExplorerBar.dll" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\bin\Debug\XPExplorerBar.dll"/>
+    <ROW Component="frmCapNhatPhanCong.cs" ComponentId="{1A50AE58-2007-4F1B-B9C7-E25292F05A04}" Directory_="GiaoDien_DIR" Attributes="0" KeyPath="frmCapNhatPhanCong.cs" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\GiaoDien"/>
+    <ROW Component="help.chm" ComponentId="{D77CB2FE-1B6E-4503-A976-95B30270F5AB}" Directory_="Debug_DIR" Attributes="0" KeyPath="help.chm" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\bin\Debug\help.chm"/>
+    <ROW Component="rptDSGV.cs" ComponentId="{21A1099D-81E2-4F2D-8996-D7800031DA93}" Directory_="Report_DIR" Attributes="0" KeyPath="rptDSGV.cs" FullKeyPath="APPDIR\QLDiemSoHocSinhTHPT\Report"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="help.chm QLDiemSoHocSinhTHPT.exe QLDiemSoHocSinhTHPT.pdb QLDiemSoHocSinhTHPT.vshost.exe XPExplorerBar.dll DanTocInfo.cs DanTocController.cs DanTocData.cs DataService.cs frmCapNhatPhanCong.cs QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache QLDiemSoHocSinhTHPT.exe_1 Properties.Resources.Designer.cs.dll Report.rptDSGV.cs.dll Report.rptDSHS.cs.dll Report.rptKQHK_MonHoc.cs.dll QLDiemSoHocSinhTHPT.csproj.FileList.txt AssemblyInfo.cs rptDSGV.cs DataGridViewCalendarColumn.cs QLDiemSoHocSinhTHPT.sln"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AssemblyInfo.cs" Component_="AssemblyInfo.cs" FileName="Assemb~1.cs|AssemblyInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Properties\AssemblyInfo.cs" SelfReg="false" Sequence="214"/>
+    <ROW File="DanTocController.cs" Component_="DanTocController.cs" FileName="DanToc~1.cs|DanTocController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\DanTocController.cs" SelfReg="false" Sequence="28"/>
+    <ROW File="DanTocData.cs" Component_="DanTocData.cs" FileName="DanToc~1.cs|DanTocData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\DanTocData.cs" SelfReg="false" Sequence="50"/>
+    <ROW File="DanTocInfo.cs" Component_="DanTocInfo.cs" FileName="DanToc~1.cs|DanTocInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\DanTocInfo.cs" SelfReg="false" Sequence="6"/>
+    <ROW File="DataGridViewCalendarColumn.cs" Component_="DataGridViewCalendarColumn.cs" FileName="DataGr~1.cs|DataGridViewCalendarColumn.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\ThuVien\DataGridViewCalendarColumn.cs" SelfReg="false" Sequence="236"/>
+    <ROW File="DataService.cs" Component_="DataService.cs" FileName="DataSe~1.cs|DataService.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\DataService.cs" SelfReg="false" Sequence="72"/>
+    <ROW File="DiemController.cs" Component_="DanTocController.cs" FileName="DiemCo~1.cs|DiemController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\DiemController.cs" SelfReg="false" Sequence="29"/>
+    <ROW File="DiemData.cs" Component_="DanTocData.cs" FileName="DiemData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\DiemData.cs" SelfReg="false" Sequence="51"/>
+    <ROW File="DiemInfo.cs" Component_="DanTocInfo.cs" FileName="DiemInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\DiemInfo.cs" SelfReg="false" Sequence="7"/>
+    <ROW File="GiaoVienController.cs" Component_="DanTocController.cs" FileName="GiaoVi~1.cs|GiaoVienController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\GiaoVienController.cs" SelfReg="false" Sequence="30"/>
+    <ROW File="GiaoVienData.cs" Component_="DanTocData.cs" FileName="GiaoVi~1.cs|GiaoVienData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\GiaoVienData.cs" SelfReg="false" Sequence="52"/>
+    <ROW File="GiaoVienInfo.cs" Component_="DanTocInfo.cs" FileName="GiaoVi~1.cs|GiaoVienInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\GiaoVienInfo.cs" SelfReg="false" Sequence="8"/>
+    <ROW File="HanhKiemController.cs" Component_="DanTocController.cs" FileName="HanhKi~1.cs|HanhKiemController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\HanhKiemController.cs" SelfReg="false" Sequence="31"/>
+    <ROW File="HanhKiemData.cs" Component_="DanTocData.cs" FileName="HanhKi~1.cs|HanhKiemData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\HanhKiemData.cs" SelfReg="false" Sequence="53"/>
+    <ROW File="HanhKiemInfo.cs" Component_="DanTocInfo.cs" FileName="HanhKi~1.cs|HanhKiemInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\HanhKiemInfo.cs" SelfReg="false" Sequence="9"/>
+    <ROW File="HocKyController.cs" Component_="DanTocController.cs" FileName="HocKyC~1.cs|HocKyController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\HocKyController.cs" SelfReg="false" Sequence="32"/>
+    <ROW File="HocKyData.cs" Component_="DanTocData.cs" FileName="HocKyD~1.cs|HocKyData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\HocKyData.cs" SelfReg="false" Sequence="54"/>
+    <ROW File="HocKyInfo.cs" Component_="DanTocInfo.cs" FileName="HocKyI~1.cs|HocKyInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\HocKyInfo.cs" SelfReg="false" Sequence="10"/>
+    <ROW File="HocLucController.cs" Component_="DanTocController.cs" FileName="HocLuc~1.cs|HocLucController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\HocLucController.cs" SelfReg="false" Sequence="33"/>
+    <ROW File="HocLucData.cs" Component_="DanTocData.cs" FileName="HocLuc~1.cs|HocLucData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\HocLucData.cs" SelfReg="false" Sequence="55"/>
+    <ROW File="HocLucInfo.cs" Component_="DanTocInfo.cs" FileName="HocLuc~1.cs|HocLucInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\HocLucInfo.cs" SelfReg="false" Sequence="11"/>
+    <ROW File="HocSinhController.cs" Component_="DanTocController.cs" FileName="HocSin~1.cs|HocSinhController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\HocSinhController.cs" SelfReg="false" Sequence="34"/>
+    <ROW File="HocSinhData.cs" Component_="DanTocData.cs" FileName="HocSin~1.cs|HocSinhData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\HocSinhData.cs" SelfReg="false" Sequence="56"/>
+    <ROW File="HocSinhInfo.cs" Component_="DanTocInfo.cs" FileName="HocSin~1.cs|HocSinhInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\HocSinhInfo.cs" SelfReg="false" Sequence="12"/>
+    <ROW File="KQCaNamMonHocController.cs" Component_="DanTocController.cs" FileName="KQCaNa~1.cs|KQCaNamMonHocController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\KQCaNamMonHocController.cs" SelfReg="false" Sequence="37"/>
+    <ROW File="KQCaNamMonHocData.cs" Component_="DanTocData.cs" FileName="KQCaNa~1.cs|KQCaNamMonHocData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\KQCaNamMonHocData.cs" SelfReg="false" Sequence="59"/>
+    <ROW File="KQCaNamMonHocInfo.cs" Component_="DanTocInfo.cs" FileName="KQCaNa~1.cs|KQCaNamMonHocInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\KQCaNamMonHocInfo.cs" SelfReg="false" Sequence="15"/>
+    <ROW File="KQHocKyMonHocController.cs" Component_="DanTocController.cs" FileName="KQHocK~1.cs|KQHocKyMonHocController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\KQHocKyMonHocController.cs" SelfReg="false" Sequence="38"/>
+    <ROW File="KQHocKyMonHocData.cs" Component_="DanTocData.cs" FileName="KQHocK~1.cs|KQHocKyMonHocData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\KQHocKyMonHocData.cs" SelfReg="false" Sequence="60"/>
+    <ROW File="KQHocKyMonHocInfo.cs" Component_="DanTocInfo.cs" FileName="KQHocK~1.cs|KQHocKyMonHocInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\KQHocKyMonHocInfo.cs" SelfReg="false" Sequence="16"/>
+    <ROW File="KetQuaController.cs" Component_="DanTocController.cs" FileName="KetQua~1.cs|KetQuaController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\KetQuaController.cs" SelfReg="false" Sequence="35"/>
+    <ROW File="KetQuaData.cs" Component_="DanTocData.cs" FileName="KetQua~1.cs|KetQuaData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\KetQuaData.cs" SelfReg="false" Sequence="57"/>
+    <ROW File="KetQuaInfo.cs" Component_="DanTocInfo.cs" FileName="KetQua~1.cs|KetQuaInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\KetQuaInfo.cs" SelfReg="false" Sequence="13"/>
+    <ROW File="KhoiLopController.cs" Component_="DanTocController.cs" FileName="KhoiLo~1.cs|KhoiLopController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\KhoiLopController.cs" SelfReg="false" Sequence="36"/>
+    <ROW File="KhoiLopData.cs" Component_="DanTocData.cs" FileName="KhoiLo~1.cs|KhoiLopData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\KhoiLopData.cs" SelfReg="false" Sequence="58"/>
+    <ROW File="KhoiLopInfo.cs" Component_="DanTocInfo.cs" FileName="KhoiLo~1.cs|KhoiLopInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\KhoiLopInfo.cs" SelfReg="false" Sequence="14"/>
+    <ROW File="LoaiDiemController.cs" Component_="DanTocController.cs" FileName="LoaiDi~1.cs|LoaiDiemController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\LoaiDiemController.cs" SelfReg="false" Sequence="39"/>
+    <ROW File="LoaiDiemData.cs" Component_="DanTocData.cs" FileName="LoaiDi~1.cs|LoaiDiemData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\LoaiDiemData.cs" SelfReg="false" Sequence="61"/>
+    <ROW File="LoaiDiemInfo.cs" Component_="DanTocInfo.cs" FileName="LoaiDi~1.cs|LoaiDiemInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\LoaiDiemInfo.cs" SelfReg="false" Sequence="17"/>
+    <ROW File="LoaiNguoiDungController.cs" Component_="DanTocController.cs" FileName="LoaiNg~1.cs|LoaiNguoiDungController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\LoaiNguoiDungController.cs" SelfReg="false" Sequence="40"/>
+    <ROW File="LoaiNguoiDungData.cs" Component_="DanTocData.cs" FileName="LoaiNg~1.cs|LoaiNguoiDungData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\LoaiNguoiDungData.cs" SelfReg="false" Sequence="62"/>
+    <ROW File="LoaiNguoiDungInfo.cs" Component_="DanTocInfo.cs" FileName="LoaiNg~1.cs|LoaiNguoiDungInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\LoaiNguoiDungInfo.cs" SelfReg="false" Sequence="18"/>
+    <ROW File="LopController.cs" Component_="DanTocController.cs" FileName="LopCon~1.cs|LopController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\LopController.cs" SelfReg="false" Sequence="41"/>
+    <ROW File="LopData.cs" Component_="DanTocData.cs" FileName="LopData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\LopData.cs" SelfReg="false" Sequence="63"/>
+    <ROW File="LopInfo.cs" Component_="DanTocInfo.cs" FileName="LopInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\LopInfo.cs" SelfReg="false" Sequence="19"/>
+    <ROW File="LopMonHocController.cs" Component_="DanTocController.cs" FileName="LopMon~1.cs|LopMonHocController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\LopMonHocController.cs" SelfReg="false" Sequence="42"/>
+    <ROW File="LopMonHocData.cs" Component_="DanTocData.cs" FileName="LopMon~1.cs|LopMonHocData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\LopMonHocData.cs" SelfReg="false" Sequence="64"/>
+    <ROW File="LopMonHocInfo.cs" Component_="DanTocInfo.cs" FileName="LopMon~1.cs|LopMonHocInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\LopMonHocInfo.cs" SelfReg="false" Sequence="20"/>
+    <ROW File="MonHocController.cs" Component_="DanTocController.cs" FileName="MonHoc~1.cs|MonHocController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\MonHocController.cs" SelfReg="false" Sequence="43"/>
+    <ROW File="MonHocData.cs" Component_="DanTocData.cs" FileName="MonHoc~1.cs|MonHocData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\MonHocData.cs" SelfReg="false" Sequence="65"/>
+    <ROW File="MonHocInfo.cs" Component_="DanTocInfo.cs" FileName="MonHoc~1.cs|MonHocInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\MonHocInfo.cs" SelfReg="false" Sequence="21"/>
+    <ROW File="NamHocController.cs" Component_="DanTocController.cs" FileName="NamHoc~1.cs|NamHocController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\NamHocController.cs" SelfReg="false" Sequence="44"/>
+    <ROW File="NamHocData.cs" Component_="DanTocData.cs" FileName="NamHoc~1.cs|NamHocData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\NamHocData.cs" SelfReg="false" Sequence="66"/>
+    <ROW File="NamHocInfo.cs" Component_="DanTocInfo.cs" FileName="NamHoc~1.cs|NamHocInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\NamHocInfo.cs" SelfReg="false" Sequence="22"/>
+    <ROW File="NgheNghiepController.cs" Component_="DanTocController.cs" FileName="NgheNg~1.cs|NgheNghiepController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\NgheNghiepController.cs" SelfReg="false" Sequence="45"/>
+    <ROW File="NgheNghiepData.cs" Component_="DanTocData.cs" FileName="NgheNg~1.cs|NgheNghiepData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\NgheNghiepData.cs" SelfReg="false" Sequence="67"/>
+    <ROW File="NgheNghiepInfo.cs" Component_="DanTocInfo.cs" FileName="NgheNg~1.cs|NgheNghiepInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\NgheNghiepInfo.cs" SelfReg="false" Sequence="23"/>
+    <ROW File="NguoiDungController.cs" Component_="DanTocController.cs" FileName="NguoiD~1.cs|NguoiDungController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\NguoiDungController.cs" SelfReg="false" Sequence="46"/>
+    <ROW File="NguoiDungData.cs" Component_="DanTocData.cs" FileName="NguoiD~1.cs|NguoiDungData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\NguoiDungData.cs" SelfReg="false" Sequence="68"/>
+    <ROW File="NguoiDungInfo.cs" Component_="DanTocInfo.cs" FileName="NguoiD~1.cs|NguoiDungInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\NguoiDungInfo.cs" SelfReg="false" Sequence="24"/>
+    <ROW File="PhanCongController.cs" Component_="DanTocController.cs" FileName="PhanCo~1.cs|PhanCongController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\PhanCongController.cs" SelfReg="false" Sequence="47"/>
+    <ROW File="PhanCongData.cs" Component_="DanTocData.cs" FileName="PhanCo~1.cs|PhanCongData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\PhanCongData.cs" SelfReg="false" Sequence="69"/>
+    <ROW File="PhanCongInfo.cs" Component_="DanTocInfo.cs" FileName="PhanCo~1.cs|PhanCongInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\PhanCongInfo.cs" SelfReg="false" Sequence="25"/>
+    <ROW File="PhanLopController.cs" Component_="DanTocController.cs" FileName="PhanLo~1.cs|PhanLopController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\PhanLopController.cs" SelfReg="false" Sequence="48"/>
+    <ROW File="PhanLopData.cs" Component_="DanTocData.cs" FileName="PhanLo~1.cs|PhanLopData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\PhanLopData.cs" SelfReg="false" Sequence="70"/>
+    <ROW File="PhanLopInfo.cs" Component_="DanTocInfo.cs" FileName="PhanLo~1.cs|PhanLopInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\PhanLopInfo.cs" SelfReg="false" Sequence="26"/>
+    <ROW File="Program.cs" Component_="DataService.cs" FileName="Program.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Program.cs" SelfReg="false" Sequence="213"/>
+    <ROW File="Properties.Resources.Designer.cs.dll" Component_="Properties.Resources.Designer.cs.dll" FileName="Proper~1.dll|Properties.Resources.Designer.cs.dll" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" SelfReg="false" Sequence="207"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmCapNhatPhanCong.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~1.res|QLDiemSoHocSinhTHPT.GiaoDien.frmCapNhatPhanCong.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmCapNhatPhanCong.resources" SelfReg="false" Sequence="168"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmChonLopThemHS.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~2.res|QLDiemSoHocSinhTHPT.GiaoDien.frmChonLopThemHS.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmChonLopThemHS.resources" SelfReg="false" Sequence="169"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmDSGiaoVien.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~6.res|QLDiemSoHocSinhTHPT.GiaoDien.frmDSGiaoVien.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmDSGiaoVien.resources" SelfReg="false" Sequence="173"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmDSHocSinh_Lop.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~7.res|QLDiemSoHocSinhTHPT.GiaoDien.frmDSHocSinh_Lop.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmDSHocSinh_Lop.resources" SelfReg="false" Sequence="174"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmDanToc.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~4.res|QLDiemSoHocSinhTHPT.GiaoDien.frmDanToc.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmDanToc.resources" SelfReg="false" Sequence="171"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmDangNhap.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~3.res|QLDiemSoHocSinhTHPT.GiaoDien.frmDangNhap.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmDangNhap.resources" SelfReg="false" Sequence="170"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmDoiMatKhau.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~5.res|QLDiemSoHocSinhTHPT.GiaoDien.frmDoiMatKhau.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmDoiMatKhau.resources" SelfReg="false" Sequence="172"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmGiaoVien.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~8.res|QLDiemSoHocSinhTHPT.GiaoDien.frmGiaoVien.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmGiaoVien.resources" SelfReg="false" Sequence="175"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmHanhKiem.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~9.res|QLDiemSoHocSinhTHPT.GiaoDien.frmHanhKiem.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmHanhKiem.resources" SelfReg="false" Sequence="176"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmHocKy.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~10.res|QLDiemSoHocSinhTHPT.GiaoDien.frmHocKy.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmHocKy.resources" SelfReg="false" Sequence="177"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmHocLuc.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~11.res|QLDiemSoHocSinhTHPT.GiaoDien.frmHocLuc.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmHocLuc.resources" SelfReg="false" Sequence="178"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmHocSinh.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~12.res|QLDiemSoHocSinhTHPT.GiaoDien.frmHocSinh.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmHocSinh.resources" SelfReg="false" Sequence="179"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmKetQua.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~13.res|QLDiemSoHocSinhTHPT.GiaoDien.frmKetQua.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmKetQua.resources" SelfReg="false" Sequence="180"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmKhoiLop.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~14.res|QLDiemSoHocSinhTHPT.GiaoDien.frmKhoiLop.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmKhoiLop.resources" SelfReg="false" Sequence="181"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmLoaiDiem.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~15.res|QLDiemSoHocSinhTHPT.GiaoDien.frmLoaiDiem.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmLoaiDiem.resources" SelfReg="false" Sequence="182"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmLop.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~16.res|QLDiemSoHocSinhTHPT.GiaoDien.frmLop.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmLop.resources" SelfReg="false" Sequence="183"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmLopMonHoc.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~17.res|QLDiemSoHocSinhTHPT.GiaoDien.frmLopMonHoc.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmLopMonHoc.resources" SelfReg="false" Sequence="184"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmMain.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~18.res|QLDiemSoHocSinhTHPT.GiaoDien.frmMain.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmMain.resources" SelfReg="false" Sequence="185"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmMonHoc.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~19.res|QLDiemSoHocSinhTHPT.GiaoDien.frmMonHoc.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmMonHoc.resources" SelfReg="false" Sequence="186"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmNamHoc.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~20.res|QLDiemSoHocSinhTHPT.GiaoDien.frmNamHoc.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmNamHoc.resources" SelfReg="false" Sequence="187"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmNgheNghiep.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~21.res|QLDiemSoHocSinhTHPT.GiaoDien.frmNgheNghiep.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmNgheNghiep.resources" SelfReg="false" Sequence="188"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmNguoiDung.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~22.res|QLDiemSoHocSinhTHPT.GiaoDien.frmNguoiDung.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmNguoiDung.resources" SelfReg="false" Sequence="189"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmNhapDiem.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~23.res|QLDiemSoHocSinhTHPT.GiaoDien.frmNhapDiem.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmNhapDiem.resources" SelfReg="false" Sequence="190"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmPhanCong.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~24.res|QLDiemSoHocSinhTHPT.GiaoDien.frmPhanCong.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmPhanCong.resources" SelfReg="false" Sequence="191"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmPhanLop.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~25.res|QLDiemSoHocSinhTHPT.GiaoDien.frmPhanLop.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmPhanLop.resources" SelfReg="false" Sequence="192"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmThemPhanCong.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~26.res|QLDiemSoHocSinhTHPT.GiaoDien.frmThemPhanCong.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmThemPhanCong.resources" SelfReg="false" Sequence="193"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmThongTinPhanMem.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~27.res|QLDiemSoHocSinhTHPT.GiaoDien.frmThongTinPhanMem.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmThongTinPhanMem.resources" SelfReg="false" Sequence="194"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmThongTinTruong.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~28.res|QLDiemSoHocSinhTHPT.GiaoDien.frmThongTinTruong.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmThongTinTruong.resources" SelfReg="false" Sequence="195"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmTimGiaoVien1.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~29.res|QLDiemSoHocSinhTHPT.GiaoDien.frmTimGiaoVien1.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmTimGiaoVien1.resources" SelfReg="false" Sequence="196"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmTimHocSinh1.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~30.res|QLDiemSoHocSinhTHPT.GiaoDien.frmTimHocSinh1.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmTimHocSinh1.resources" SelfReg="false" Sequence="197"/>
+    <ROW File="QLDiemSoHocSinhTHPT.GiaoDien.frmTonGiao.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~31.res|QLDiemSoHocSinhTHPT.GiaoDien.frmTonGiao.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.GiaoDien.frmTonGiao.resources" SelfReg="false" Sequence="198"/>
+    <ROW File="QLDiemSoHocSinhTHPT.Properties.Resources.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~32.res|QLDiemSoHocSinhTHPT.Properties.Resources.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.Properties.Resources.resources" SelfReg="false" Sequence="200"/>
+    <ROW File="QLDiemSoHocSinhTHPT.Report.rptDSGV.rpt" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~1.rpt|QLDiemSoHocSinhTHPT.Report.rptDSGV.rpt" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.Report.rptDSGV.rpt" SelfReg="false" Sequence="201"/>
+    <ROW File="QLDiemSoHocSinhTHPT.Report.rptDSHS.rpt" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~2.rpt|QLDiemSoHocSinhTHPT.Report.rptDSHS.rpt" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.Report.rptDSHS.rpt" SelfReg="false" Sequence="202"/>
+    <ROW File="QLDiemSoHocSinhTHPT.Report.rptFrmDSGV.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~33.res|QLDiemSoHocSinhTHPT.Report.rptFrmDSGV.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.Report.rptFrmDSGV.resources" SelfReg="false" Sequence="203"/>
+    <ROW File="QLDiemSoHocSinhTHPT.Report.rptFrmKQHK_MonHoc.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~34.res|QLDiemSoHocSinhTHPT.Report.rptFrmKQHK_MonHoc.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.Report.rptFrmKQHK_MonHoc.resources" SelfReg="false" Sequence="204"/>
+    <ROW File="QLDiemSoHocSinhTHPT.Report.rptFromDSHS.resources" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDie~35.res|QLDiemSoHocSinhTHPT.Report.rptFromDSHS.resources" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.Report.rptFromDSHS.resources" SelfReg="false" Sequence="205"/>
+    <ROW File="QLDiemSoHocSinhTHPT.Report.rptKQHK_MonHoc.rpt" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~3.rpt|QLDiemSoHocSinhTHPT.Report.rptKQHK_MonHoc.rpt" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.Report.rptKQHK_MonHoc.rpt" SelfReg="false" Sequence="206"/>
+    <ROW File="QLDiemSoHocSinhTHPT.csproj" Component_="DataService.cs" FileName="QLDiem~1.csp|QLDiemSoHocSinhTHPT.csproj" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\QLDiemSoHocSinhTHPT.csproj" SelfReg="false" Sequence="219"/>
+    <ROW File="QLDiemSoHocSinhTHPT.csproj.FileList.txt" Component_="QLDiemSoHocSinhTHPT.csproj.FileList.txt" FileName="QLDiem~1.txt|QLDiemSoHocSinhTHPT.csproj.FileList.txt" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\QLDiemSoHocSinhTHPT.csproj.FileList.txt" SelfReg="false" Sequence="211"/>
+    <ROW File="QLDiemSoHocSinhTHPT.csproj.FileListAbsolute.txt" Component_="QLDiemSoHocSinhTHPT.csproj.FileList.txt" FileName="QLDiem~2.txt|QLDiemSoHocSinhTHPT.csproj.FileListAbsolute.txt" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\QLDiemSoHocSinhTHPT.csproj.FileListAbsolute.txt" SelfReg="false" Sequence="212"/>
+    <ROW File="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~1.Cac|QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" SelfReg="false" Sequence="166"/>
+    <ROW File="QLDiemSoHocSinhTHPT.csproj.user" Component_="DataService.cs" FileName="QLDiem~1.use|QLDiemSoHocSinhTHPT.csproj.user" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\QLDiemSoHocSinhTHPT.csproj.user" SelfReg="false" Sequence="220"/>
+    <ROW File="QLDiemSoHocSinhTHPT.exe" Component_="QLDiemSoHocSinhTHPT.exe" FileName="QLDiem~1.exe|QLDiemSoHocSinhTHPT.exe" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\bin\Debug\QLDiemSoHocSinhTHPT.exe" SelfReg="false" Sequence="2"/>
+    <ROW File="QLDiemSoHocSinhTHPT.exe_1" Component_="QLDiemSoHocSinhTHPT.exe_1" FileName="QLDiem~1.exe|QLDiemSoHocSinhTHPT.exe" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.exe" SelfReg="false" Sequence="167"/>
+    <ROW File="QLDiemSoHocSinhTHPT.pdb" Component_="QLDiemSoHocSinhTHPT.pdb" FileName="QLDiem~1.pdb|QLDiemSoHocSinhTHPT.pdb" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\bin\Debug\QLDiemSoHocSinhTHPT.pdb" SelfReg="false" Sequence="3"/>
+    <ROW File="QLDiemSoHocSinhTHPT.pdb_1" Component_="QLDiemSoHocSinhTHPT.csproj.GenerateResource.Cache" FileName="QLDiem~1.pdb|QLDiemSoHocSinhTHPT.pdb" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\QLDiemSoHocSinhTHPT.pdb" SelfReg="false" Sequence="199"/>
+    <ROW File="QLDiemSoHocSinhTHPT.sln" Component_="QLDiemSoHocSinhTHPT.sln" FileName="QLDiem~1.sln|QLDiemSoHocSinhTHPT.sln" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT.sln" SelfReg="false" Sequence="238"/>
+    <ROW File="QLDiemSoHocSinhTHPT.suo" Component_="QLDiemSoHocSinhTHPT.sln" FileName="QLDiem~1.suo|QLDiemSoHocSinhTHPT.suo" Attributes="2" SourcePath="QLDiemSoHocSinhTHPT.suo" SelfReg="false" Sequence="239"/>
+    <ROW File="QLDiemSoHocSinhTHPT.vshost.exe" Component_="QLDiemSoHocSinhTHPT.vshost.exe" FileName="QLDiem~2.exe|QLDiemSoHocSinhTHPT.vshost.exe" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\bin\Debug\QLDiemSoHocSinhTHPT.vshost.exe" SelfReg="false" Sequence="4"/>
+    <ROW File="Report.rptDSGV.cs.dll" Component_="Report.rptDSGV.cs.dll" FileName="Report~1.dll|Report.rptDSGV.cs.dll" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\TempPE\Report.rptDSGV.cs.dll" SelfReg="false" Sequence="208"/>
+    <ROW File="Report.rptDSHS.cs.dll" Component_="Report.rptDSHS.cs.dll" FileName="Report~2.dll|Report.rptDSHS.cs.dll" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\TempPE\Report.rptDSHS.cs.dll" SelfReg="false" Sequence="209"/>
+    <ROW File="Report.rptKQHK_MonHoc.cs.dll" Component_="Report.rptKQHK_MonHoc.cs.dll" FileName="Report~3.dll|Report.rptKQHK_MonHoc.cs.dll" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\obj\Debug\TempPE\Report.rptKQHK_MonHoc.cs.dll" SelfReg="false" Sequence="210"/>
+    <ROW File="Resources.Designer.cs" Component_="AssemblyInfo.cs" FileName="Resour~1.cs|Resources.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Properties\Resources.Designer.cs" SelfReg="false" Sequence="215"/>
+    <ROW File="Resources.resx" Component_="AssemblyInfo.cs" FileName="Resour~1.res|Resources.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Properties\Resources.resx" SelfReg="false" Sequence="216"/>
+    <ROW File="Settings.Designer.cs" Component_="AssemblyInfo.cs" FileName="Settin~1.cs|Settings.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Properties\Settings.Designer.cs" SelfReg="false" Sequence="217"/>
+    <ROW File="Settings.settings" Component_="AssemblyInfo.cs" FileName="Settin~1.set|Settings.settings" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Properties\Settings.settings" SelfReg="false" Sequence="218"/>
+    <ROW File="TonGiaoController.cs" Component_="DanTocController.cs" FileName="TonGia~1.cs|TonGiaoController.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Controller\TonGiaoController.cs" SelfReg="false" Sequence="49"/>
+    <ROW File="TonGiaoData.cs" Component_="DanTocData.cs" FileName="TonGia~1.cs|TonGiaoData.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Data\TonGiaoData.cs" SelfReg="false" Sequence="71"/>
+    <ROW File="TonGiaoInfo.cs" Component_="DanTocInfo.cs" FileName="TonGia~1.cs|TonGiaoInfo.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\BusinessObject\TonGiaoInfo.cs" SelfReg="false" Sequence="27"/>
+    <ROW File="Utilities.cs" Component_="DataService.cs" FileName="Utilit~1.cs|Utilities.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Utilities.cs" SelfReg="false" Sequence="237"/>
+    <ROW File="XPExplorerBar.dll" Component_="XPExplorerBar.dll" FileName="XPExpl~1.dll|XPExplorerBar.dll" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\bin\Debug\XPExplorerBar.dll" SelfReg="false" Sequence="5"/>
+    <ROW File="frmCapNhatPhanCong.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmCap~1.cs|frmCapNhatPhanCong.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmCapNhatPhanCong.cs" SelfReg="false" Sequence="73"/>
+    <ROW File="frmCapNhatPhanCong.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmCap~2.cs|frmCapNhatPhanCong.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmCapNhatPhanCong.designer.cs" SelfReg="false" Sequence="74"/>
+    <ROW File="frmCapNhatPhanCong.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmCap~1.res|frmCapNhatPhanCong.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmCapNhatPhanCong.resx" SelfReg="false" Sequence="75"/>
+    <ROW File="frmChonLopThemHS.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmCho~1.cs|frmChonLopThemHS.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmChonLopThemHS.cs" SelfReg="false" Sequence="76"/>
+    <ROW File="frmChonLopThemHS.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmCho~2.cs|frmChonLopThemHS.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmChonLopThemHS.designer.cs" SelfReg="false" Sequence="77"/>
+    <ROW File="frmChonLopThemHS.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmCho~1.res|frmChonLopThemHS.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmChonLopThemHS.resx" SelfReg="false" Sequence="78"/>
+    <ROW File="frmDSGiaoVien.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDSG~1.cs|frmDSGiaoVien.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDSGiaoVien.cs" SelfReg="false" Sequence="88"/>
+    <ROW File="frmDSGiaoVien.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDSG~2.cs|frmDSGiaoVien.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDSGiaoVien.designer.cs" SelfReg="false" Sequence="89"/>
+    <ROW File="frmDSGiaoVien.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmDSG~1.res|frmDSGiaoVien.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDSGiaoVien.resx" SelfReg="false" Sequence="90"/>
+    <ROW File="frmDSHocSinh_Lop.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDSH~1.cs|frmDSHocSinh_Lop.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDSHocSinh_Lop.cs" SelfReg="false" Sequence="91"/>
+    <ROW File="frmDSHocSinh_Lop.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDSH~2.cs|frmDSHocSinh_Lop.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDSHocSinh_Lop.designer.cs" SelfReg="false" Sequence="92"/>
+    <ROW File="frmDSHocSinh_Lop.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmDSH~1.res|frmDSHocSinh_Lop.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDSHocSinh_Lop.resx" SelfReg="false" Sequence="93"/>
+    <ROW File="frmDanToc.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDan~3.cs|frmDanToc.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDanToc.cs" SelfReg="false" Sequence="82"/>
+    <ROW File="frmDanToc.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDan~4.cs|frmDanToc.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDanToc.designer.cs" SelfReg="false" Sequence="83"/>
+    <ROW File="frmDanToc.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmDan~2.res|frmDanToc.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDanToc.resx" SelfReg="false" Sequence="84"/>
+    <ROW File="frmDangNhap.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDan~2.cs|frmDangNhap.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDangNhap.Designer.cs" SelfReg="false" Sequence="80"/>
+    <ROW File="frmDangNhap.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDan~1.cs|frmDangNhap.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDangNhap.cs" SelfReg="false" Sequence="79"/>
+    <ROW File="frmDangNhap.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmDan~1.res|frmDangNhap.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDangNhap.resx" SelfReg="false" Sequence="81"/>
+    <ROW File="frmDoiMatKhau.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDoi~2.cs|frmDoiMatKhau.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDoiMatKhau.Designer.cs" SelfReg="false" Sequence="86"/>
+    <ROW File="frmDoiMatKhau.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmDoi~1.cs|frmDoiMatKhau.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDoiMatKhau.cs" SelfReg="false" Sequence="85"/>
+    <ROW File="frmDoiMatKhau.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmDoi~1.res|frmDoiMatKhau.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmDoiMatKhau.resx" SelfReg="false" Sequence="87"/>
+    <ROW File="frmGiaoVien.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmGia~2.cs|frmGiaoVien.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmGiaoVien.Designer.cs" SelfReg="false" Sequence="95"/>
+    <ROW File="frmGiaoVien.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmGia~1.cs|frmGiaoVien.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmGiaoVien.cs" SelfReg="false" Sequence="94"/>
+    <ROW File="frmGiaoVien.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmGia~1.res|frmGiaoVien.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmGiaoVien.resx" SelfReg="false" Sequence="96"/>
+    <ROW File="frmHanhKiem.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmHan~2.cs|frmHanhKiem.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHanhKiem.Designer.cs" SelfReg="false" Sequence="98"/>
+    <ROW File="frmHanhKiem.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmHan~1.cs|frmHanhKiem.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHanhKiem.cs" SelfReg="false" Sequence="97"/>
+    <ROW File="frmHanhKiem.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmHan~1.res|frmHanhKiem.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHanhKiem.resx" SelfReg="false" Sequence="99"/>
+    <ROW File="frmHocKy.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmHoc~1.cs|frmHocKy.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocKy.Designer.cs" SelfReg="false" Sequence="101"/>
+    <ROW File="frmHocKy.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmHocKy.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocKy.cs" SelfReg="false" Sequence="100"/>
+    <ROW File="frmHocKy.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmHoc~1.res|frmHocKy.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocKy.resx" SelfReg="false" Sequence="102"/>
+    <ROW File="frmHocLuc.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmHoc~3.cs|frmHocLuc.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocLuc.Designer.cs" SelfReg="false" Sequence="104"/>
+    <ROW File="frmHocLuc.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmHoc~2.cs|frmHocLuc.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocLuc.cs" SelfReg="false" Sequence="103"/>
+    <ROW File="frmHocLuc.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmHoc~2.res|frmHocLuc.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocLuc.resx" SelfReg="false" Sequence="105"/>
+    <ROW File="frmHocSinh.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmHoc~5.cs|frmHocSinh.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocSinh.Designer.cs" SelfReg="false" Sequence="107"/>
+    <ROW File="frmHocSinh.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmHoc~4.cs|frmHocSinh.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocSinh.cs" SelfReg="false" Sequence="106"/>
+    <ROW File="frmHocSinh.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmHoc~3.res|frmHocSinh.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmHocSinh.resx" SelfReg="false" Sequence="108"/>
+    <ROW File="frmKetQua.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmKet~2.cs|frmKetQua.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmKetQua.Designer.cs" SelfReg="false" Sequence="110"/>
+    <ROW File="frmKetQua.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmKet~1.cs|frmKetQua.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmKetQua.cs" SelfReg="false" Sequence="109"/>
+    <ROW File="frmKetQua.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmKet~1.res|frmKetQua.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmKetQua.resx" SelfReg="false" Sequence="111"/>
+    <ROW File="frmKhoiLop.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmKho~2.cs|frmKhoiLop.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmKhoiLop.Designer.cs" SelfReg="false" Sequence="113"/>
+    <ROW File="frmKhoiLop.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmKho~1.cs|frmKhoiLop.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmKhoiLop.cs" SelfReg="false" Sequence="112"/>
+    <ROW File="frmKhoiLop.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmKho~1.res|frmKhoiLop.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmKhoiLop.resx" SelfReg="false" Sequence="114"/>
+    <ROW File="frmLoaiDiem.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmLoa~2.cs|frmLoaiDiem.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLoaiDiem.Designer.cs" SelfReg="false" Sequence="116"/>
+    <ROW File="frmLoaiDiem.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmLoa~1.cs|frmLoaiDiem.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLoaiDiem.cs" SelfReg="false" Sequence="115"/>
+    <ROW File="frmLoaiDiem.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmLoa~1.res|frmLoaiDiem.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLoaiDiem.resx" SelfReg="false" Sequence="117"/>
+    <ROW File="frmLop.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmLop~1.cs|frmLop.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLop.Designer.cs" SelfReg="false" Sequence="119"/>
+    <ROW File="frmLop.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmLop.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLop.cs" SelfReg="false" Sequence="118"/>
+    <ROW File="frmLop.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmLop~1.res|frmLop.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLop.resx" SelfReg="false" Sequence="120"/>
+    <ROW File="frmLopMonHoc.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmLop~3.cs|frmLopMonHoc.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLopMonHoc.Designer.cs" SelfReg="false" Sequence="122"/>
+    <ROW File="frmLopMonHoc.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmLop~2.cs|frmLopMonHoc.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLopMonHoc.cs" SelfReg="false" Sequence="121"/>
+    <ROW File="frmLopMonHoc.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmLop~2.res|frmLopMonHoc.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmLopMonHoc.resx" SelfReg="false" Sequence="123"/>
+    <ROW File="frmMain.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmMai~1.cs|frmMain.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmMain.Designer.cs" SelfReg="false" Sequence="125"/>
+    <ROW File="frmMain.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmMain.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmMain.cs" SelfReg="false" Sequence="124"/>
+    <ROW File="frmMain.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmMai~1.res|frmMain.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmMain.resx" SelfReg="false" Sequence="126"/>
+    <ROW File="frmMonHoc.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmMon~2.cs|frmMonHoc.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmMonHoc.Designer.cs" SelfReg="false" Sequence="128"/>
+    <ROW File="frmMonHoc.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmMon~1.cs|frmMonHoc.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmMonHoc.cs" SelfReg="false" Sequence="127"/>
+    <ROW File="frmMonHoc.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmMon~1.res|frmMonHoc.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmMonHoc.resx" SelfReg="false" Sequence="129"/>
+    <ROW File="frmNamHoc.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmNam~2.cs|frmNamHoc.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNamHoc.Designer.cs" SelfReg="false" Sequence="131"/>
+    <ROW File="frmNamHoc.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmNam~1.cs|frmNamHoc.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNamHoc.cs" SelfReg="false" Sequence="130"/>
+    <ROW File="frmNamHoc.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmNam~1.res|frmNamHoc.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNamHoc.resx" SelfReg="false" Sequence="132"/>
+    <ROW File="frmNgheNghiep.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmNgh~2.cs|frmNgheNghiep.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNgheNghiep.Designer.cs" SelfReg="false" Sequence="134"/>
+    <ROW File="frmNgheNghiep.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmNgh~1.cs|frmNgheNghiep.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNgheNghiep.cs" SelfReg="false" Sequence="133"/>
+    <ROW File="frmNgheNghiep.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmNgh~1.res|frmNgheNghiep.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNgheNghiep.resx" SelfReg="false" Sequence="135"/>
+    <ROW File="frmNguoiDung.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmNgu~2.cs|frmNguoiDung.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNguoiDung.Designer.cs" SelfReg="false" Sequence="137"/>
+    <ROW File="frmNguoiDung.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmNgu~1.cs|frmNguoiDung.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNguoiDung.cs" SelfReg="false" Sequence="136"/>
+    <ROW File="frmNguoiDung.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmNgu~1.res|frmNguoiDung.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNguoiDung.resx" SelfReg="false" Sequence="138"/>
+    <ROW File="frmNhapDiem.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmNha~2.cs|frmNhapDiem.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNhapDiem.Designer.cs" SelfReg="false" Sequence="140"/>
+    <ROW File="frmNhapDiem.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmNha~1.cs|frmNhapDiem.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNhapDiem.cs" SelfReg="false" Sequence="139"/>
+    <ROW File="frmNhapDiem.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmNha~1.res|frmNhapDiem.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmNhapDiem.resx" SelfReg="false" Sequence="141"/>
+    <ROW File="frmPhanCong.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmPha~2.cs|frmPhanCong.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmPhanCong.Designer.cs" SelfReg="false" Sequence="143"/>
+    <ROW File="frmPhanCong.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmPha~1.cs|frmPhanCong.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmPhanCong.cs" SelfReg="false" Sequence="142"/>
+    <ROW File="frmPhanCong.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmPha~1.res|frmPhanCong.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmPhanCong.resx" SelfReg="false" Sequence="144"/>
+    <ROW File="frmPhanLop.Designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmPha~4.cs|frmPhanLop.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmPhanLop.Designer.cs" SelfReg="false" Sequence="146"/>
+    <ROW File="frmPhanLop.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmPha~3.cs|frmPhanLop.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmPhanLop.cs" SelfReg="false" Sequence="145"/>
+    <ROW File="frmPhanLop.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmPha~2.res|frmPhanLop.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmPhanLop.resx" SelfReg="false" Sequence="147"/>
+    <ROW File="frmThemPhanCong.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmThe~1.cs|frmThemPhanCong.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThemPhanCong.cs" SelfReg="false" Sequence="148"/>
+    <ROW File="frmThemPhanCong.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmThe~2.cs|frmThemPhanCong.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThemPhanCong.designer.cs" SelfReg="false" Sequence="149"/>
+    <ROW File="frmThemPhanCong.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmThe~1.res|frmThemPhanCong.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThemPhanCong.resx" SelfReg="false" Sequence="150"/>
+    <ROW File="frmThongTinPhanMem.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTho~1.cs|frmThongTinPhanMem.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThongTinPhanMem.cs" SelfReg="false" Sequence="151"/>
+    <ROW File="frmThongTinPhanMem.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTho~2.cs|frmThongTinPhanMem.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThongTinPhanMem.designer.cs" SelfReg="false" Sequence="152"/>
+    <ROW File="frmThongTinPhanMem.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmTho~1.res|frmThongTinPhanMem.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThongTinPhanMem.resx" SelfReg="false" Sequence="153"/>
+    <ROW File="frmThongTinTruong.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTho~3.cs|frmThongTinTruong.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThongTinTruong.cs" SelfReg="false" Sequence="154"/>
+    <ROW File="frmThongTinTruong.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTho~4.cs|frmThongTinTruong.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThongTinTruong.designer.cs" SelfReg="false" Sequence="155"/>
+    <ROW File="frmThongTinTruong.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmTho~2.res|frmThongTinTruong.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmThongTinTruong.resx" SelfReg="false" Sequence="156"/>
+    <ROW File="frmTimGiaoVien1.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTim~1.cs|frmTimGiaoVien1.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTimGiaoVien1.cs" SelfReg="false" Sequence="157"/>
+    <ROW File="frmTimGiaoVien1.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTim~2.cs|frmTimGiaoVien1.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTimGiaoVien1.designer.cs" SelfReg="false" Sequence="158"/>
+    <ROW File="frmTimGiaoVien1.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmTim~1.res|frmTimGiaoVien1.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTimGiaoVien1.resx" SelfReg="false" Sequence="159"/>
+    <ROW File="frmTimHocSinh1.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTim~3.cs|frmTimHocSinh1.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTimHocSinh1.cs" SelfReg="false" Sequence="160"/>
+    <ROW File="frmTimHocSinh1.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTim~4.cs|frmTimHocSinh1.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTimHocSinh1.designer.cs" SelfReg="false" Sequence="161"/>
+    <ROW File="frmTimHocSinh1.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmTim~2.res|frmTimHocSinh1.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTimHocSinh1.resx" SelfReg="false" Sequence="162"/>
+    <ROW File="frmTonGiao.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTon~1.cs|frmTonGiao.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTonGiao.cs" SelfReg="false" Sequence="163"/>
+    <ROW File="frmTonGiao.designer.cs" Component_="frmCapNhatPhanCong.cs" FileName="frmTon~2.cs|frmTonGiao.designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTonGiao.designer.cs" SelfReg="false" Sequence="164"/>
+    <ROW File="frmTonGiao.resx" Component_="frmCapNhatPhanCong.cs" FileName="frmTon~1.res|frmTonGiao.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\GiaoDien\frmTonGiao.resx" SelfReg="false" Sequence="165"/>
+    <ROW File="help.chm" Component_="help.chm" FileName="help.chm" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\bin\Debug\help.chm" SelfReg="false" Sequence="1"/>
+    <ROW File="rptDSGV.cs" Component_="rptDSGV.cs" FileName="rptDSGV.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptDSGV.cs" SelfReg="false" Sequence="221"/>
+    <ROW File="rptDSGV.rpt" Component_="rptDSGV.cs" FileName="rptDSGV.rpt" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptDSGV.rpt" SelfReg="false" Sequence="222"/>
+    <ROW File="rptDSHS.cs" Component_="rptDSGV.cs" FileName="rptDSHS.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptDSHS.cs" SelfReg="false" Sequence="223"/>
+    <ROW File="rptDSHS.rpt" Component_="rptDSGV.cs" FileName="rptDSHS.rpt" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptDSHS.rpt" SelfReg="false" Sequence="224"/>
+    <ROW File="rptFrmDSGV.Designer.cs" Component_="rptDSGV.cs" FileName="rptFrm~2.cs|rptFrmDSGV.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFrmDSGV.Designer.cs" SelfReg="false" Sequence="226"/>
+    <ROW File="rptFrmDSGV.cs" Component_="rptDSGV.cs" FileName="rptFrm~1.cs|rptFrmDSGV.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFrmDSGV.cs" SelfReg="false" Sequence="225"/>
+    <ROW File="rptFrmDSGV.resx" Component_="rptDSGV.cs" FileName="rptFrm~1.res|rptFrmDSGV.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFrmDSGV.resx" SelfReg="false" Sequence="227"/>
+    <ROW File="rptFrmKQHK_MonHoc.Designer.cs" Component_="rptDSGV.cs" FileName="rptFrm~4.cs|rptFrmKQHK_MonHoc.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFrmKQHK_MonHoc.Designer.cs" SelfReg="false" Sequence="229"/>
+    <ROW File="rptFrmKQHK_MonHoc.cs" Component_="rptDSGV.cs" FileName="rptFrm~3.cs|rptFrmKQHK_MonHoc.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFrmKQHK_MonHoc.cs" SelfReg="false" Sequence="228"/>
+    <ROW File="rptFrmKQHK_MonHoc.resx" Component_="rptDSGV.cs" FileName="rptFrm~2.res|rptFrmKQHK_MonHoc.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFrmKQHK_MonHoc.resx" SelfReg="false" Sequence="230"/>
+    <ROW File="rptFromDSHS.Designer.cs" Component_="rptDSGV.cs" FileName="rptFro~2.cs|rptFromDSHS.Designer.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFromDSHS.Designer.cs" SelfReg="false" Sequence="232"/>
+    <ROW File="rptFromDSHS.cs" Component_="rptDSGV.cs" FileName="rptFro~1.cs|rptFromDSHS.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFromDSHS.cs" SelfReg="false" Sequence="231"/>
+    <ROW File="rptFromDSHS.resx" Component_="rptDSGV.cs" FileName="rptFro~1.res|rptFromDSHS.resx" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptFromDSHS.resx" SelfReg="false" Sequence="233"/>
+    <ROW File="rptKQHK_MonHoc.cs" Component_="rptDSGV.cs" FileName="rptKQH~1.cs|rptKQHK_MonHoc.cs" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptKQHK_MonHoc.cs" SelfReg="false" Sequence="234"/>
+    <ROW File="rptKQHK_MonHoc.rpt" Component_="rptDSGV.cs" FileName="rptKQH~1.rpt|rptKQHK_MonHoc.rpt" Attributes="0" SourcePath="QLDiemSoHocSinhTHPT\Report\rptKQHK_MonHoc.rpt" SelfReg="false" Sequence="235"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;ui.ail&gt;"/>
+    <ROW Path="&lt;ui_en.ail&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="FolderDlg.aip" Path="&lt;FolderDlg.aip&gt;"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;StaticUIStrings.aip&gt;"/>
+    <ROW Fragment="UI.aip" Path="&lt;UI.aip&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;aicustact.dll&gt;"/>
+    <ROW Name="default_banner.bmp" SourcePath="&lt;default-banner.bmp&gt;"/>
+    <ROW Name="default_dialog.bmp" SourcePath="&lt;default-dialog.bmp&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="3"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="2"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="1" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="1" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="740"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="Not Installed" Sequence="1545"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1300"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="740"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="CabsLocation" value="0"/>
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="InstallationType" value="4"/>
+    <ATTRIBUTE name="Package" value="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="QLDiemSoHocSinhTHPT.exe" Directory_="DesktopFolder" Name="QLDiem~1.exe|QLDiemSoHocSinhTHPT.exe" Component_="QLDiemSoHocSinhTHPT.exe" Target="[#QLDiemSoHocSinhTHPT.exe]" Description="QLDiemSoHocSinhTHPT.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Debug_DIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>

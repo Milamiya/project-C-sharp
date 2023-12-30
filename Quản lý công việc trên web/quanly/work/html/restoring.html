@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html xmlns="http://www.w3.org/TR/xhtml1/strict">
+    <!--
+        @author     : Dinh Le Giang
+        @date       : June 14, 2001
+        @description: Preparing the parameters for refreshing database
+     -->
+    <head>
+        <title>Refreshing database</title>
+        <link rel="stylesheet" href="../xslt/jobStyle.css" type="text/css" />
+        <script language="JavaScript">
+    <!--
+      	function testCheck(form) {
+            if (form.restoreDB.value == "") {
+                form.submitRestore.disabled = true;
+            }
+            else {
+                form.submitRestore.disabled = false;
+            }
+        }
+    //-->
+        </script>
+    </head>
+    <body bgcolor="#FFFFFF" text="#000099">
+        <form name="frmRefreshing" action="../jsp/restoreDatabase.jsp" method="post">
+	    <h3 align="center"><font face="VNI-Times, VNI-Helve" color="#AA0000">Phuïc Hoài Cô Sôû Dö&otilde; Lieäu</font></h3>
+	    <table border="0" align="center" cellspacing="10">
+	        <tr>
+    	            <td>
+		        <b><font face="VNI-Times, VNI-Helve">CSDL Hieän Haønh: </font></b>
+	            </td>
+	            <td>
+		        <input name="currentDB" type="text" value="CongViec" size="20" disabled/>
+	            </td>
+	        </tr>
+	        <tr>
+    	            <td>
+		        <b><font face="VNI-Times, VNI-Helve">Phuïc Hoài Töø: </font></b>
+	            </td>
+	            <td>
+		        <input name="restoreDB" type="text" value="..._BackUp" size="20" onchange="testCheck(this.form)" />
+	            </td>
+	        </tr>
+	    </table>
+	    <p align="center">
+		<input type="submit" name="submitRestore" value="  OK   " disabled />
+	        <input type="reset" name="resetRestore" value="Reset" />
+	    </p>
+        </form>
+    </body>
+</html>
