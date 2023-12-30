@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0073)http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html -->
+<HTML><HEAD><TITLE>CS660: RedBlack, B-Trees</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><!-- This document was created from RTF source by rtftohtml version 2.7.5 then filtered -->
+<META content="MSHTML 6.00.2900.2604" name=GENERATOR></HEAD>
+<BODY>
+<H2><IMG alt=SDSU hspace=20 src="CS660 RedBlack, B-Trees_files/sdsu_logo_3.gif"> 
+CS660 Combinatorial Algorithms<BR>
+<CENTER>Fall Semester, 1996<BR>RedBlack, B-Trees </CENTER></H2>
+<CENTER><A 
+href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/index.html">[To Lecture 
+Notes Index]</A><BR>San Diego State University<I> -- This page last updated Oct 
+3, 1996</I> </CENTER><IMG height=6 alt=---------- 
+src="CS660 RedBlack, B-Trees_files/divider_red.gif" width="100%">
+<P>
+<CENTER>
+<H3>Contents of RedBlack, B-Trees </H3></CENTER><!-- This document was created from RTF source by rtftohtml version
+2.7.5 -->
+<OL>
+  <LI><A 
+  href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html#RTFToC1">References</A> 
+
+  <LI><A 
+  href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html#RTFToC2">Red-Black 
+  Trees</A>
+  <OL>
+    <LI><A 
+    href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html#RTFToC3">Inserting 
+    in Red-Black Tree</A> 
+    <LI><A 
+    href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html#RTFToC4">Deleting 
+    in a Red-Black Tree</A></LI></OL>
+  <LI><A 
+  href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html#RTFToC5">B-Trees, 
+  (a,b)-Trees</A>
+  <OL>
+    <LI><A 
+    href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html#RTFToC6">Insertion 
+    in a B-Tree</A> 
+    <LI><A 
+    href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html#RTFToC7">Deletion 
+    in a B-Tree</A> 
+    <LI><A 
+    href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/redBlack.html#RTFToC8">B-Trees 
+    and Red-Black Trees</A></LI></OL></LI></OL><!-- This document was created from RTF source by rtftohtml version
+2.7.5 -->
+<HR>
+
+<DIV align=right><PRE><A name=slide1>RedBlack, B-Trees Slide # 1</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide1.ram"><!slide1 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV>
+<CENTER>
+<H2><A name=RTFToC1>References</A></H2></CENTER><BR>Introduction to Algorithms, 
+Chapters 14, 19<BR><BR>If your web browser can run Java applets try the web 
+site:<BR><A href="http://langevin.usc.edu/">http://langevin.usc.edu/</A>. It 
+demonstrates additions and deletions to/from Red-Black trees and other types of 
+trees. 
+<HR>
+
+<DIV align=right><PRE><A name=slide2>RedBlack, B-Trees Slide # 2</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide2.ram"><!slide2 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV>
+<CENTER>
+<H3><A name=RTFToC2>Red-Black Trees </A></H3></CENTER><BR>A binary search tree 
+is a red-black tree if:<BR>
+<DL>
+  <DL>
+    <DT>1. Every node is either red or black 
+    <DT>
+    <DT>2. Every leaf (nil) is black 
+    <DT>
+    <DT>3. If a node is red, then both its children are black 
+    <DT>
+    <DT>4. Every simple path from a node to a descendant leaf contains the same 
+    number of black nodes</DT></DL></DL><BR>Black-height of a node x, bh(x), is the 
+number of black nodes on any path from x to a leaf, not counting x<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack1.gif"> </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide3>RedBlack, B-Trees Slide # 3</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide3.ram"><!slide3 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER></CENTER></B>Lemma 
+<DL>
+  <DL>
+    <DT>A red-black tree with n internal nodes has height at most 
+  2lg(n+1)</DT></DL></DL><BR><BR>proof 
+<DL>
+  <DL>
+    <DT>Show that subtree starting at x contains at least 2<SUP>bh(x)</SUP>-1 
+    internal nodes. By induction on height of x: 
+    <DT>
+    <DL>
+      <DT>if x is a leaf then bh(x) = 0, 2<SUP>bh(x)</SUP>-1 
+      <DT>
+      <DT>Assume x has height h, x's children have height h -1 
+      <DT>
+      <DT>x's children black-height is either bh(x) or bh(x) -1 
+      <DT>
+      <DT>By induction x's children subtree has 2<SUP>bh(x)-1</SUP>-1 internal 
+      nodes 
+      <DT>
+      <DT>So subtree starting at x contains 
+      <DT>
+      <DL>
+        <DT>2<SUP>bh(x)-1</SUP>-1 + 2<SUP>bh(x)-1</SUP>-1 + 1 = 
+        2<SUP>bh(x)</SUP>-1 internal nodes</DT></DL></DT></DL>
+    <DT>
+    <DT>let h = height of the tree rooted at x 
+    <DT>
+    <DT>bh(x) &gt;= h/2 
+    <DT>
+    <DT>So n &gt;= 2<SUP>h/2</SUP>-1 &lt;=&gt; n + 1 &gt;= 2<SUP>h/2</SUP> 
+    &lt;=&gt; lg(n+1) &gt;= h/2 
+    <DT>
+    <DT>h &lt;= 2lg(n+1) 
+    <DT></DT></DL></DL>
+<HR>
+
+<DIV align=right><PRE><A name=slide4>RedBlack, B-Trees Slide # 4</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide4.ram"><!slide4 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV>
+<CENTER>
+<H4><A name=RTFToC3>Inserting in Red-Black Tree </A></H4></CENTER><BR>Color the 
+node Red<BR>Insert as in a regular BST<BR>If have parent is red <BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack2.gif"> </CENTER><B>
+<CENTER>Case 1 </CENTER></B><BR>x is node of interest, x's uncle is Red<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack3.gif"> 
+</CENTER><BR><IMG src="CS660 RedBlack, B-Trees_files/redBlack4.gif"> 
+<CENTER>Decrease x's black height by one </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide5>RedBlack, B-Trees Slide # 5</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide5.ram"><!slide5 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER>Case 2 </CENTER></B><BR>x's uncle is Black, x is a Right child<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack5.gif"> 
+</CENTER><BR>Transform to case 3<BR><BR><B>
+<CENTER>Case 3 </CENTER></B><BR>x's uncle is Black, x is a Left child<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack6.gif"> 
+</CENTER>Terminal case, tree is Red-Black tree<BR><BR><BR>Insertion takes 
+O(lg(n)) time<BR>Requires at most two rotations 
+<HR>
+
+<DIV align=right><PRE><A name=slide6>RedBlack, B-Trees Slide # 6</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide6.ram"><!slide6 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV>
+<CENTER>
+<H4><A name=RTFToC4>Deleting in a Red-Black Tree </A></H4></CENTER><BR>Find node 
+to delete<BR>Delete node as in a regular BST<BR>Node to be deleted will have at 
+most one child<BR><BR>If we delete a Red node tree still is a Red-Black 
+tree<BR>Assume we delete a black node<BR><BR>Let x be the child of deleted 
+node<BR>If x is red, color it black and stop<BR><BR>If x is black mark it double 
+black and apply the following:<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack7.gif"> </CENTER><B>
+<CENTER>Case 1 </CENTER></B><BR>x's sibling is red 
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack8.gif"> </CENTER><BR>x 
+stays at same black height<BR>Transforms to case 2b then terminates 
+<HR>
+
+<DIV align=right><PRE><A name=slide7>RedBlack, B-Trees Slide # 7</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide7.ram"><!slide7 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER>Case 2a </CENTER></B><BR>x's sibling is black<BR>x's parent is black<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack9.gif"> 
+</CENTER><BR>Decreases x black height by one<BR><B>
+<CENTER>Case 2b </CENTER></B><BR>x's sibling is black<BR>x's parent is red<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack10.gif"> 
+</CENTER><BR>Terminal case, tree is Red-Black tree 
+<HR>
+
+<DIV align=right><PRE><A name=slide8>RedBlack, B-Trees Slide # 8</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide8.ram"><!slide8 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack11.gif"> 
+</CENTER></B><B>
+<CENTER>Case 3 </CENTER></B><BR>x's sibling is black<BR>x's parent is 
+either<BR>x's sibling's left child is red<BR>x's sibling's right child is 
+black<BR><BR><IMG src="CS660 RedBlack, B-Trees_files/redBlack12.gif"> 
+<CENTER>x stays at same black height </CENTER>Transforms to case 4<BR>
+<HR>
+
+<DIV align=right><PRE><A name=slide9>RedBlack, B-Trees Slide # 9</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide9.ram"><!slide9 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER>Case 4 </CENTER></B><BR>x's sibling is black<BR>x's parent is 
+either<BR>x's sibling's left child is either<BR>x's sibling's right child is 
+red<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack13.gif"> 
+</CENTER><BR>Terminal case, tree is Red-Black tree<BR><BR><BR><BR>Delete time is 
+O(lg(n))<BR>At most three rotations are done 
+<HR>
+
+<DIV align=right><PRE><A name=slide10>RedBlack, B-Trees Slide # 10</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide10.ram"><!slide10 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV>
+<CENTER>
+<H3><A name=RTFToC5>B-Trees, (a,b)-Trees </A></H3></CENTER><BR><B>
+<CENTER>(a,b)-Trees </CENTER></B><BR>Let a and b be integers with a &gt;= 2 and 
+2a-1 &lt;= b. A tree T is an (a,b)-tree if<BR><BR>a) All leaves of T have the 
+same depth<BR><BR>b) All internal nodes v of T satisfy c(v) &lt;= b<BR><BR>c) 
+All internal nodes v of T except the root satisfy c(v) &gt;= a<BR><BR>d) The 
+root of T satisfies c(v) &gt;= 2<BR><BR>c(v) = number of children of node 
+v<BR><BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack14.gif"> </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide11>RedBlack, B-Trees Slide # 11</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide11.ram"><!slide11 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER>B-Trees of degree t </CENTER></B><BR>A tree T is a B-Trees of degree t 
+if<BR><BR>a) All leaves of T have the same depth<BR><BR>b) All nodes of T except 
+the root have at least t-1 keys<BR><BR>c) All nodes of T except the root have at 
+most 2t-1 keys<BR><BR>d) The root of T at least one key<BR><BR>e) A node with n 
+keys has n+1 children<BR><BR>c(v) = number of children of node v<BR>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack15.gif"> </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide12>RedBlack, B-Trees Slide # 12</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide12.ram"><!slide12 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER></CENTER></B>Theorem. If n &gt;= 1, then for any n-key B-tree T of 
+height <I>h</I> and degree t &gt;= 2 then <SUB><IMG 
+src="CS660 RedBlack, B-Trees_files/redBlack16.gif"></SUB><BR><BR>proof. 
+<DL>
+  <DL>
+    <DT><SUB><IMG 
+  src="CS660 RedBlack, B-Trees_files/redBlack17.gif"></SUB></DT></DL></DL>so 
+<DL>
+  <DL>
+    <DT><SUB><IMG 
+  src="CS660 RedBlack, B-Trees_files/redBlack18.gif"></SUB></DT></DL></DL><BR>take 
+log of both sides.<BR>
+<HR>
+
+<DIV align=right><PRE><A name=slide13>RedBlack, B-Trees Slide # 13</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide13.ram"><!slide13 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER></CENTER></B>Theorem. The worst case search time on a n-key B-tree T of 
+degree t is O(lg(n)).<BR>
+<DL>
+  <DL>
+    <DT>A node in T has t-1 &lt;= K &lt;= 2t-1 keys in sorted order. 
+    <DT>
+    <DT>Worst case: 
+    <DT>
+    <DL>
+      <DT>K = t-1 for all nodes</DT></DL>
+    <DT>
+    <DL>
+      <DT>searching for X not in the tree</DT></DL>
+    <DT>
+    <DT>
+    <DT>Given a node, W, in T, how much work does it take to find the subtree of 
+    W that would contain X? 
+    <DT>
+    <DT>Using binary search it takes 
+    <DT><SUB><IMG src="CS660 RedBlack, B-Trees_files/redBlack19.gif"></SUB> = 
+    <SUB><IMG src="CS660 RedBlack, B-Trees_files/redBlack20.gif"></SUB>= 
+    <SUB><IMG src="CS660 RedBlack, B-Trees_files/redBlack21.gif"></SUB> 
+    comparisons 
+    <DT>
+    <DT>Since the height of the tree is in worst case <SUB><IMG 
+    src="CS660 RedBlack, B-Trees_files/redBlack22.gif"></SUB> the total amount 
+    of work is: 
+    <DT>
+    <DT><SUB><IMG 
+  src="CS660 RedBlack, B-Trees_files/redBlack23.gif"></SUB></DT></DL></DL>
+<HR>
+
+<DIV align=right><PRE><A name=slide14>RedBlack, B-Trees Slide # 14</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide14.ram"><!slide14 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV>
+<CENTER>
+<H4><A name=RTFToC6>Insertion in a B-Tree </A></H4></CENTER>
+<CENTER>Inserting X into B-tree T of degree t </CENTER><BR>A full node is one 
+that contains 2t-1 keys<BR><BR>1. Find the leaf that should contain X<BR><BR>2. 
+If the path from the root to the leaf contains a full node split the node when 
+you first search it. 
+<CENTER></CENTER><B>
+<CENTER>Example t = 2, Insert 25 </CENTER></B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack24.gif"> </CENTER>
+<CENTER>Full Node is split, Then insert 25 into subtree b </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack25.gif"> </CENTER><BR>3. 
+Insert X into the proper leaf 
+<HR>
+
+<DIV align=right><PRE><A name=slide15>RedBlack, B-Trees Slide # 15</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide15.ram"><!slide15 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER>Example t = 2, Insert 25 </CENTER></B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack26.gif"> </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack27.gif"> </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack28.gif"> </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack29.gif"> </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide16>RedBlack, B-Trees Slide # 16</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide16.ram"><!slide16 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV>
+<CENTER>
+<H4><A name=RTFToC7>Deletion in a B-Tree </A></H4></CENTER><B>
+<CENTER>Deleting X from B-tree T of degree t </CENTER></B><BR>A minimal node is 
+one that contains t-1 keys and is not the root<BR><BR>In the search path from 
+the root to node containing X, if you come across a minimal node add a key to 
+it.<BR><BR><BR>Case 3. Searching node W that does not contain X. Let c be the 
+child of W that would contain X.<BR><BR>Case 3a. if c has t-1 keys and a sibling 
+has t or more keys, steal a key from the sibling<BR><B>
+<CENTER>Example t = 2, Delete 250 </CENTER></B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack30.gif"> </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack31.gif"> </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide17>RedBlack, B-Trees Slide # 17</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide17.ram"><!slide17 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER></CENTER></B>Case 3b. if c has t-1 keys and all siblings have t-1 keys, 
+merge c with a sibling<BR><B>
+<CENTER>Example 1. t = 2, Delete 250 </CENTER></B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack32.gif"> </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack33.gif"> </CENTER><B>
+<CENTER>Example 2. t = 2, Delete 250 </CENTER></B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack34.gif"> </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack35.gif"> </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide18>RedBlack, B-Trees Slide # 18</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide18.ram"><!slide18 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER></CENTER></B>Case 2. Internal node W contains X. <BR><BR>Case 2a. If the 
+child y of W that precedes X in W has at least t keys, steal predecessor of 
+W<BR><B>
+<CENTER>Example 1. t = 2, Delete 50 </CENTER></B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack36.gif"> </CENTER>
+<CENTER>Now Delete 45w </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack37.gif"> </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide19>RedBlack, B-Trees Slide # 19</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide19.ram"><!slide19 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER></CENTER></B>Case 2b. If the child z of W that succeed X in W has at 
+least t keys, steal the successor of W<BR><B>
+<CENTER>Example 1. t = 2, Delete 30 </CENTER></B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack38.gif"> </CENTER>
+<CENTER>Now Delete 40w </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack39.gif"> </CENTER>
+<HR>
+
+<DIV align=right><PRE><A name=slide20>RedBlack, B-Trees Slide # 20</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide20.ram"><!slide20 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV><B>
+<CENTER></CENTER></B>Case 2c. If both children z and y of W that succeed 
+(follow) X in W have only t-1 keys, merge z and y<BR><B>
+<CENTER>Example t = 2, Delete 30 </CENTER></B>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack40.gif"> </CENTER>
+<CENTER>Now Delete 30w one lower level </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack41.gif"> 
+</CENTER><BR>Case 1. X is in node W a leaf. By case 3, W has at least t keys. 
+Remove X from W 
+<HR>
+
+<DIV align=right><PRE><A name=slide21>RedBlack, B-Trees Slide # 21</A><A href="http://www.eli.sdsu.edu/courses/fall96/cs660/notes/redBlack/slide21.ram"><!slide21 IMG SRC="http://www.eli.sdsu.edu/graphics/rafile.gif" BORDER=0 ALT="Listen Here!"></A></PRE></DIV>
+<CENTER>
+<H4><A name=RTFToC8>B-Trees and Red-Black Trees </A></H4></CENTER><BR>Theorem. A 
+Red-Black tree is a B-Tree with degree 2<BR><BR>proof: 
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack42.gif"> </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack43.gif"> </CENTER>
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/redBlack44.gif"> 
+</CENTER><BR>Must show: 
+<DL>
+  <DL>
+    <DT>
+    <DT>1. If a node is red, then both its children are black 
+    <DT></DT></DL></DL>2. Every simple path from a node to a descendant leaf 
+contains the same number of black nodes 
+<DL>
+  <DL>
+    <DT></DT></DL></DL><BR><BR><IMG height=6 alt=---------- 
+src="CS660 RedBlack, B-Trees_files/divider_red.gif" width="100%"> 
+<CENTER><IMG src="CS660 RedBlack, B-Trees_files/nph-counter.gif"> 
+</CENTER></BODY></HTML>

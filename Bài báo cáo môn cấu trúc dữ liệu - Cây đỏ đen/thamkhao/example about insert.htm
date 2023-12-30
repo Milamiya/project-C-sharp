@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0066)http://ciips.ee.uwa.edu.au/~morris/Year2/PLDS210/red_black_op.html -->
+<HTML><HEAD><TITLE>Data Structures and Algorithms: Red-Black Trees</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="Data Structures and Algorithms Course Notes,&#10;PLDS210 University of Western Australia" 
+name=description>
+<META content="data structures,algorithms,abstract data types " name=keywords>
+<META content="MSHTML 6.00.2900.2604" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#00c0f0>
+  <TBODY>
+  <TR bgColor=#00f0f0>
+    <TD align=right><FONT face=helvetica size=+1><I>Data Structures and 
+      Algorithms</I></FONT> </TD></TR>
+  <TR>
+    <TD><FONT face=helvetica size=+2><B>8.2 Red-Black Tree 
+      Operation</B></FONT> </TD></TR></TBODY></TABLE>
+<P>Here's an example of insertion into a red-black tree (taken from Cormen, 
+p269). 
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG src="example about insert_files/rb_tree1a.gif"></TD>
+    <TD>Here's the original tree ..<BR>Note that in the following diagrams, 
+      the black sentinel nodes have been omitted to keep the diagrams 
+  simple.</TD></TR>
+  <TR>
+    <TD><IMG src="example about insert_files/rb_tree_ins1.gif"></TD>
+    <TD>The tree insert routine has just been called to insert node "4" into 
+      the tree.
+      <P>This is no longer a red-black tree - there are two successive red nodes 
+      on the path<BR>11 - 2 - 7 - 5 - 4
+      <P>Mark the new node, x, and it's <B>uncle</B>, y.
+      <P>y is red, so we have case 1 ...</P></TD></TR>
+  <TR>
+    <TD><IMG src="example about insert_files/rb_tree_ins2.gif"></TD>
+    <TD>Change the colours of nodes 5, 7 and 8.</TD>
+    <P></P></TR>
+  <TR>
+    <TD><IMG src="example about insert_files/rb_tree_ins3.gif"></TD>
+    <TD>Move x up to its grandparent, 7. 
+      <P>x's parent (2) is still red, so this isn't a red-black tree yet. 
+      <P>Mark the uncle, y. 
+      <P>In this case, the uncle is black, so we have case 2 ...</P></TD></TR>
+  <TR>
+    <TD><IMG src="example about insert_files/rb_tree_ins4.gif"></TD>
+    <TD>Move x up and rotate left.</TD></TR>
+  <TR>
+    <TD><IMG src="example about insert_files/rb_tree_ins5.gif"></TD>
+    <TD>Still not a red-black tree .. the uncle is black, but x's parent is to 
+      the left ..</TD></TR>
+  <TR>
+    <TD><IMG src="example about insert_files/rb_tree_ins7.gif"></TD>
+    <TD>Change the colours of 7 and 11 and rotate right .. </TD>
+  <TR>
+    <TD><IMG src="example about insert_files/rb_tree_ins8.gif"></TD>
+    <TD>This is now a red-black tree, so we're finished! 
+      <P><B><I>O(</I>log<I>n)</I></B> time! </P></TD></TR></TBODY></TABLE>
+<P>
+<TABLE cellSpacing=4 cellPadding=5 width="100%" bgColor=#00f0f0>
+  <TBODY>
+  <TR>
+    <TD width="50%">Back to <A 
+      href="http://ciips.ee.uwa.edu.au/~morris/Year2/PLDS210/red_black.html">Red 
+      Black Trees</A></TD>
+    <TD>Back to the <A 
+      href="http://ciips.ee.uwa.edu.au/~morris/Year2/PLDS210/ds_ToC.html">Table 
+      of Contents</A> </TD></TR></TBODY></TABLE><SMALL>© <A 
+href="mailto:morris@ee.uwa.edu.au">John Morris</A>, 1998 
+</SMALL></P></BODY></HTML>
