@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D281580-85F2-4921-972C-DD2D1ADF3B42}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyCafe</RootNamespace>
+    <AssemblyName>QuanLyCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>coffee_mug.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Component\E_tb_Congdung.cs" />
+    <Compile Include="Business\Component\E_tb_CTHDB.cs" />
+    <Compile Include="Business\Component\E_tb_CTHDN.cs" />
+    <Compile Include="Business\Component\E_tb_HDB.cs" />
+    <Compile Include="Business\Component\E_tb_HDN.cs" />
+    <Compile Include="Business\Component\E_tb_Khachhang.cs" />
+    <Compile Include="Business\Component\E_tb_Loai.cs" />
+    <Compile Include="Business\Component\E_tb_NCC.cs" />
+    <Compile Include="Business\Component\E_tb_Nhanvien.cs" />
+    <Compile Include="Business\Component\E_tb_Que.cs" />
+    <Compile Include="Business\Component\E_tb_Sanpham.cs" />
+    <Compile Include="Business\Component\E_tb_User.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Congdung.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_CTHDB.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_CTHDN.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_HDB.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_HDN.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Khachhang.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Loai.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_NCC.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Nhanvien.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Que.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_Sanpham.cs" />
+    <Compile Include="Business\EntitiesClass\EC_tb_User.cs" />
+    <Compile Include="DataAccess\ConnectDB.cs" />
+    <Compile Include="DataAccess\SQL_tb_Khachhang.cs" />
+    <Compile Include="DataAccess\SQL_tb_Congdung.cs" />
+    <Compile Include="DataAccess\SQL_tb_CTHDB.cs" />
+    <Compile Include="DataAccess\SQL_tb_CTHDN.cs" />
+    <Compile Include="DataAccess\SQL_tb_HDB.cs" />
+    <Compile Include="DataAccess\SQL_tb_HDN.cs" />
+    <Compile Include="DataAccess\SQL_tb_Loai.cs" />
+    <Compile Include="DataAccess\SQL_tb_NCC.cs" />
+    <Compile Include="DataAccess\SQL_tb_Nhanvien.cs" />
+    <Compile Include="DataAccess\SQL_tb_Que.cs" />
+    <Compile Include="DataAccess\SQL_tb_Sanpham.cs" />
+    <Compile Include="DataAccess\SQL_tb_User.cs" />
+    <Compile Include="Presentation\fr_BC_Quy_HDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_HDB.Designer.cs">
+      <DependentUpon>fr_BC_Quy_HDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_KH.Designer.cs">
+      <DependentUpon>fr_BC_Quy_KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_BC_Quy_SP.Designer.cs">
+      <DependentUpon>fr_BC_Quy_SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Congdung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Congdung.Designer.cs">
+      <DependentUpon>fr_Congdung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_CTHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_CTHDB.Designer.cs">
+      <DependentUpon>fr_CTHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_CTHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_CTHDN.Designer.cs">
+      <DependentUpon>fr_CTHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_DangNhap.Designer.cs">
+      <DependentUpon>fr_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_HDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_HDB.Designer.cs">
+      <DependentUpon>fr_HDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_HDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_HDN.Designer.cs">
+      <DependentUpon>fr_HDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Ketnoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Ketnoi.Designer.cs">
+      <DependentUpon>fr_Ketnoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Khachhang.Designer.cs">
+      <DependentUpon>fr_Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Loai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Loai.Designer.cs">
+      <DependentUpon>fr_Loai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Main.Designer.cs">
+      <DependentUpon>fr_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_NCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_NCC.Designer.cs">
+      <DependentUpon>fr_NCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Nhanvien.Designer.cs">
+      <DependentUpon>fr_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Que.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Que.Designer.cs">
+      <DependentUpon>fr_Que.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Sanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Sanpham.Designer.cs">
+      <DependentUpon>fr_Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_Splash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_Splash_Screen.Designer.cs">
+      <DependentUpon>fr_Splash_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_TKHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_TKHDB.Designer.cs">
+      <DependentUpon>fr_TKHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\fr_TK_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\fr_TK_SP.Designer.cs">
+      <DependentUpon>fr_TK_SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\fr_BC_Quy_HDB.resx">
+      <DependentUpon>fr_BC_Quy_HDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_BC_Quy_KH.resx">
+      <DependentUpon>fr_BC_Quy_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_BC_Quy_SP.resx">
+      <DependentUpon>fr_BC_Quy_SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Congdung.resx">
+      <DependentUpon>fr_Congdung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_CTHDB.resx">
+      <DependentUpon>fr_CTHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_CTHDN.resx">
+      <DependentUpon>fr_CTHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_DangNhap.resx">
+      <DependentUpon>fr_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_HDB.resx">
+      <DependentUpon>fr_HDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_HDN.resx">
+      <DependentUpon>fr_HDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Ketnoi.resx">
+      <DependentUpon>fr_Ketnoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Khachhang.resx">
+      <DependentUpon>fr_Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Loai.resx">
+      <DependentUpon>fr_Loai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Main.resx">
+      <DependentUpon>fr_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_NCC.resx">
+      <DependentUpon>fr_NCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Nhanvien.resx">
+      <DependentUpon>fr_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Que.resx">
+      <DependentUpon>fr_Que.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Sanpham.resx">
+      <DependentUpon>fr_Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_Splash_Screen.resx">
+      <DependentUpon>fr_Splash_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_TKHDB.resx">
+      <DependentUpon>fr_TKHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\fr_TK_SP.resx">
+      <DependentUpon>fr_TK_SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1Them.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2Sua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3Xoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_update_product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram_v2_02 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_preferences_system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lorrygreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_ascend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XoaH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee_mug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="coffee_mug.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

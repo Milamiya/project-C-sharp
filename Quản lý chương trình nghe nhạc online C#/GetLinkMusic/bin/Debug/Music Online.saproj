@@ -1,0 +1,73 @@
+<SmartAssemblyProject ProjectId="{4ada8c45-c217-40b7-8846-9642573bbad9}" Version="2.0">
+    <MainAssemblyFileName>.\Music Online.exe</MainAssemblyFileName>
+    <Configuration Name="Release">
+        <ApplicationName />
+        <Destination DestinationFileName=".\MusicOnline.exe" />
+        <Assemblies>
+            <Assembly AssemblyName="AxInterop.WMPLib, Culture=neutral, PublicKeyToken=null">
+                <Merging Merge="1">
+                    <Pruning Prune="1">
+                        <Exclusion />
+                    </Pruning>
+                    <Obfuscation Obfuscate="1">
+                        <Exclusion />
+                    </Obfuscation>
+                    <ControlFlow Obfuscate="1" ObfuscationLevel="3" />
+                    <MemberRefsProxy Proxy="1" />
+                </Merging>
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="Interop.WMPLib, Culture=neutral, PublicKeyToken=null">
+                <Merging Merge="1">
+                    <Pruning Prune="1">
+                        <Exclusion />
+                    </Pruning>
+                    <Obfuscation Obfuscate="1">
+                        <Exclusion />
+                    </Obfuscation>
+                    <ControlFlow Obfuscate="1" ObfuscationLevel="3" />
+                    <MemberRefsProxy Proxy="1" />
+                </Merging>
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="DevComponents.DotNetBar2, Culture=neutral, PublicKeyToken=5fd520d36328f741">
+                <Merging Merge="0">
+                    <Pruning Prune="1">
+                        <Exclusion />
+                    </Pruning>
+                    <Obfuscation Obfuscate="1">
+                        <Exclusion />
+                    </Obfuscation>
+                    <ControlFlow Obfuscate="1" ObfuscationLevel="3" />
+                    <MemberRefsProxy Proxy="1" />
+                    <ResourcesCompression Compress="1" />
+                    <ResourcesPruning />
+                </Merging>
+                <Embedding Embed="1" GAC="1" />
+            </Assembly>
+            <Assembly AssemblyName="Music Online, Culture=neutral, PublicKeyToken=null">
+                <Merging>
+                    <ResourcesCompression Compress="1" />
+                    <MemberRefsProxy Proxy="1" />
+                    <Pruning Prune="1">
+                        <Exclusion />
+                    </Pruning>
+                    <Obfuscation Obfuscate="1">
+                        <Exclusion />
+                    </Obfuscation>
+                    <ControlFlow Obfuscate="1" ObfuscationLevel="3" />
+                    <ResourcesPruning />
+                </Merging>
+            </Assembly>
+        </Assemblies>
+        <Options>
+            <Obfuscation FieldsNameMangling="3" NameMangling="3" />
+            <ExceptionReporting />
+            <StrongNameSigning KeyFileName=".\key.snk" Sign="1" />
+            <OtherProtections AddMetadataStream="1" SuppressIldasm="1" />
+            <StringsEncoding />
+            <OtherOptimizations ManageMemory="1" SealClasses="1" />
+            <Debugging />
+        </Options>
+    </Configuration>
+</SmartAssemblyProject>

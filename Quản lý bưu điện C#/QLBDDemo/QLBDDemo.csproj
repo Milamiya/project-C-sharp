@@ -1,0 +1,291 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2605D302-6DD0-4166-A236-8531DA4E58C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBDDemo</RootNamespace>
+    <AssemblyName>QLBDDemo</AssemblyName>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCacDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCacDichVu.Designer.cs">
+      <DependentUpon>frmCacDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaoTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCacDichVu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCacDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoTaiKhoan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLiCuocGoi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQuanLiCuocGoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBuuGui.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyBuuGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlythucuoc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Quanlythucuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TacGia.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKiemVaThongKe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimKiemVaThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="frmQuanLiCuocGoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLiCuocGoi.Designer.cs">
+      <DependentUpon>frmQuanLiCuocGoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLBDDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBDDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBDDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBDDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBDDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBDDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBDDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBDDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBDDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBDDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBD_DataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBD_DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyBuuGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBuuGui.Designer.cs">
+      <DependentUpon>QuanLyBuuGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlythucuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quanlythucuoc.Designer.cs">
+      <DependentUpon>Quanlythucuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TacGia.Designer.cs">
+      <DependentUpon>TacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiemVaThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiemVaThongKe.Designer.cs">
+      <DependentUpon>TimKiemVaThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Icons\Smile.ico" />
+    <None Include="QLBDDataSet1.xsc">
+      <DependentUpon>QLBDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBDDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBDDataSet1.xss">
+      <DependentUpon>QLBDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet11.xsc">
+      <DependentUpon>QLBDDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBDDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBDDataSet11.xss">
+      <DependentUpon>QLBDDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet2.xsc">
+      <DependentUpon>QLBDDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBDDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBDDataSet2.xss">
+      <DependentUpon>QLBDDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet3.xsc">
+      <DependentUpon>QLBDDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBDDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBDDataSet3.xss">
+      <DependentUpon>QLBDDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet4.xsc">
+      <DependentUpon>QLBDDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLBDDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBDDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBDDataSet4.xss">
+      <DependentUpon>QLBDDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLBD_DataDataSet.xsc">
+      <DependentUpon>QLBD_DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBD_DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBD_DataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBD_DataDataSet.xss">
+      <DependentUpon>QLBD_DataDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QLBD_Data.MDF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="QLBD_Data_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>QLBD_Data.MDF</DependentUpon>
+    </Content>
+    <Content Include="users.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
