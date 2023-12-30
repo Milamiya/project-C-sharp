@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTTTH", "QLTTTH\QLTTTH.csproj", "{D5B0D31E-A195-4B55-B038-6DDE76A924D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clsDATABASE", "clsDATABASE\clsDATABASE.csproj", "{479FEE84-744E-4B47-94F4-BBDBC1D198E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5B0D31E-A195-4B55-B038-6DDE76A924D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B0D31E-A195-4B55-B038-6DDE76A924D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B0D31E-A195-4B55-B038-6DDE76A924D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B0D31E-A195-4B55-B038-6DDE76A924D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{479FEE84-744E-4B47-94F4-BBDBC1D198E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479FEE84-744E-4B47-94F4-BBDBC1D198E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479FEE84-744E-4B47-94F4-BBDBC1D198E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479FEE84-744E-4B47-94F4-BBDBC1D198E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

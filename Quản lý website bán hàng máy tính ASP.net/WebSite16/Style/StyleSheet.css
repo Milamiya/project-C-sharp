@@ -1,0 +1,637 @@
+﻿body 
+{
+	width:1280px;
+	 margin-top:0px;
+	   background-image:url('../image/background.jpg'); 
+}
+#mainbody
+{
+	width:1020px;background-color: #FFFFFF;
+	 position:absolute;
+	left:140px;
+	height:2000px;
+	top:0px;
+}
+.header
+{
+	margin-top:0px;
+ width:1000px;
+ height:160px;
+ background-color:White;
+  background-repeat:repeat-y;
+  
+}
+
+.headerleft
+{  position:absolute;
+   margin:20px;
+	
+	 width:100px;
+	 height:100px;
+  background-image:url('../image/logo.gif');
+   background-repeat:no-repeat;
+}
+.headerright
+{
+	width:800px;
+	height:158px;
+	margin-left:160px;
+	 position:absolute;
+	 top:1px;
+}
+dl, dt, dd, ul, li {
+margin: 0;
+padding: 0;
+list-style-type: none;
+z-index:2;
+position:relative;
+}
+#menu2
+{
+	margin-left:10px;
+	width:1000px;
+	height:30px;
+	background-image:url('../image/bg2.gif');
+	background-repeat:repeat;
+	z-index:1;
+}
+#menu2 li span a
+{
+	 z-index:1;
+	 color:White;
+	 position:absolute;
+}
+.menu2a
+{
+	color :#D2B48C;
+	text-decoration:none;
+	
+}
+.menu2a:hover
+{
+	color:White;
+}
+#menu dd {
+display: none;
+border: 1px solid gray;z-index:2;position:relative;
+}
+#menu li {
+text-align: center;
+  height:27px;
+	 background-color:Window;z-index:2;position:relative;border-width: thin; border-style: solid; border-color:Black;
+	 
+}
+#menu ul
+{
+	width:120px;
+}
+#menu li a
+{
+	color:Black;
+	float:left;
+	 width:auto;
+text-decoration: none;
+}
+
+ #menu dt span a {
+color: #D2B48C;
+text-decoration: none;
+display: block;
+height: 100%;
+
+border: 0 none;z-index:2;position:relative;}
+#menu li:hover
+{
+	background: #2f4f4f; 
+}
+#menu li a:hover
+{
+	color:White;
+}
+ #menu li a:focus,  #menu dt a:focus {
+background: #2f4f4f; color:White;
+}
+#menu dt span a:hover
+{
+	color:White;
+}
+
+#menu
+{
+	margin-left:10px;
+	 margin-top:0px;
+	width:1000px;
+	height:35px;
+	background-image:url('../image/bg-bubplastic1.gif');
+	background-repeat:repeat;
+z-index:2;position:relative;
+}
+#menu dl {
+float: left;
+line-height: 1.5em;
+width:80px;
+ color:#D2B48C;
+ margin:1px;
+	height: 30px;z-index:2;position:relative;
+	margin-top:4px;
+}
+#menu dt span {
+	display: block;
+	float: left;
+	width:80px;
+	 height:32px;
+	  margin-top:-1px;
+	  background-repeat:no-repeat;
+	  background-image: url('../image/bg-bubplastic-button1.gif');
+	
+	cursor: pointer;
+}
+
+#menu dt span:hover
+{
+	background: transparent url(image/bg-bubplastic-h-aqua.gif) top right no-repeat;
+}
+
+
+#menu dt 
+{
+cursor: pointer;
+text-align: center;
+font-weight:bold;
+ background-color:Transparent;
+	height: 27px;width: 80px;z-index:2;position:relative;
+	 margin-top:-1px;
+	 margin-left:1px;
+}
+
+#menu dl:hover { color:White;}
+#menu dt a:hover {background-color: #142129;background-image: url('../image/bg-bubplastic-h-aqua.gif'); }
+#menu dt:hover{  color:White;}
+#giohang
+{
+	 background-image: url('../image/giohang.gif');
+	 width:300px;
+	 height:27px;
+	 background-repeat:no-repeat;
+}
+.frame
+{
+	position:absolute;
+	width:980px;
+	background-color:#fff;
+	top:329px;
+	 height:240px;
+	left:14px;
+	 border-width: thin; border-style: solid; border-color: #FFCCFF #FFCCFF #CCFFFF #FFCCFF
+}
+
+.frameright
+{
+	border-left: thin solid #FFCCFF;
+	border-right: thin solid #FFCCFF;
+	border-top: thin solid #FFCCFF;
+	border-bottom: thin solid #CCFFFF;
+	position:absolute;
+	width:336px;
+		background-color:White;
+    height:235px;
+    left:660px;
+    top:273px;
+}
+
+.headerframeright
+{
+position:absolute;
+	left:650px;
+	top:236px;
+	width:251px;
+	height:50px;
+	background-image:url('../image/tieude2.bmp');
+	background-repeat:no-repeat;
+}
+#pKhuyenMai
+{
+	color:White;
+	padding:5px;
+}
+#mar
+{
+	/* margin-left:40px;
+	 margin-top:-163px;*/
+	 position:absolute;
+	 top:0px;
+	 left:42px;
+	 width:900px;
+	 height:240px;
+}
+.style1
+{/*
+	 border-width: thin; border-style: solid; border-color: #FFCCFF #FFCCFF #CCFFFF #FFCCFF;*/
+	
+	 width:225px;
+	 text-align:center;
+}
+
+#Select
+{
+	width:160px;
+}
+#SearchText
+{
+	margin-top:3px;
+}
+#SearchButton
+{
+	margin-top:1px;
+	margin-right:5px;
+}
+.Search
+{
+ width:500px;
+ height:30px;
+ left:500px;
+  top:4px;
+ color:White;
+ position:absolute;
+ 
+}
+.style2
+{ width:225px;
+  text-align:center;
+}
+.style3
+{
+	text-align:center;
+	width:225px;
+}
+#headerframe
+{
+	
+   position:absolute;
+   top:515px;
+	width:251px;
+	height:50px;
+	background-image:url('../image/tieude2.bmp');
+	background-repeat:no-repeat;
+	left:5px;
+    
+}
+#Headerlaptop
+{
+	position:absolute;
+     top:807px;
+	width:251px;
+	height:50px;
+	background-image:url('../image/tieude2.bmp');
+	background-repeat:no-repeat;
+	left:2px;
+}
+#Headerlaptopright
+{
+	 position:absolute;
+	 top:807px;
+	 width:760px;
+	 height:39px;
+	 background-color:#F5F5F5;
+	 left:252px;
+}
+
+#em	
+{
+	position:relative;
+	z-index:1;
+}
+.p
+{
+	position:absolute;
+	top:-5px;
+	left:15px;
+	color:white;
+	 font-size:16px;
+}
+#flash
+{
+	 position:absolute;
+	 width:655px;
+	 top:235px;
+	 height:277px;
+	  background-image:url('../image/29_bannercentrer_tb.swf');
+	   z-index:1;
+	 
+}
+#p:hover{ color:#66CDEA;}
+#nutbam1
+{
+	 background-image:url('../image/nutbam1.bmp');
+	 width:60px;
+	 height:80px;
+	  background-repeat:no-repeat;
+	   /*margin-top:80px;
+	    margin-left:-13px;*/
+	    position:absolute;
+	    left:-22px;
+	    top:80px;
+	    cursor:pointer;
+	    margin-left:10px;
+	    
+}
+#nutbam2
+{
+	background-image:url('../image/nutbam2.bmp');
+	width:60px;
+	height:80px;
+	background-repeat:no-repeat;
+	/*margin-top:-80px;
+  margin-left:638px;*/
+  position:absolute;
+  top:80px;
+  right:-18px;
+    cursor:pointer;
+}
+#sp1
+{
+	margin-top:-40px;
+	width:200px;
+	height:200px;
+	 background-color:Red;
+}
+#Laptop
+{
+	position:absolute;
+	top:845px;
+	 width:1000px;
+	 height:250px;
+	    border-width: thin; border-style: solid; border-color: #FFCCFF #FFCCFF #CCFFFF #FFCCFF;
+	    left:10px;
+}
+.dl
+{
+	background-image:url('../image/bgsanpham2.jpg');
+	    background-repeat:no-repeat;
+	    
+}
+#Computer
+{
+	position :absolute;
+	width:1000px;
+	height:250px;
+	top:1143px;
+	border-width: thin; border-style: solid; border-color: #FFCCFF #FFCCFF #CCFFFF #FFCCFF;
+	    left:10px;
+	
+}
+#HeaderComputer
+{
+		position:absolute;
+     top:1105px;
+	width:251px;
+	height:50px;
+	background-image:url('../image/tieude2.bmp');
+	background-repeat:no-repeat;
+	left:2px;
+}
+#Headercomputerright
+{
+	 position:absolute;
+	 top:1105px;
+	 width:760px;
+	 height:39px;
+	 background-color:#F5F5F5;
+	 left:252px;
+}
+#Tieudelinhkien
+{
+		position:absolute;
+     top:1407px;
+	width:251px;
+	height:50px;
+	background-image:url('../image/tieude2.bmp');
+	background-repeat:no-repeat;
+	left:2px;
+}
+#Tieudelinhkienright
+{
+	 position:absolute;
+	 top:1407px;
+	 width:760px;
+	 height:39px;
+	 background-color:#F5F5F5;
+	 left:252px;
+}
+#Linhkien
+{
+	position :absolute;
+	width:1000px;
+	height:250px;
+	top:1445px;
+	border-width: thin; border-style: solid; border-color: #FFCCFF #FFCCFF #CCFFFF #FFCCFF;
+	    left:10px;
+	
+}
+#cuoi
+{
+	background-image:url('../image/blue_background_025.jpg'); 
+	background-color:Red;
+	width:1000px;
+	height:280px;
+	position:absolute;
+	left:10px;
+	top:1715px;
+	
+}
+/*  ==================== help ====================  */
+#help{width:1000px; border:1px solid #e8ca96; background-color:Transparent;
+  
+}
+#help .content{background:url(images/red/bg_help.gif) repeat-x left top; 
+height:165px; margin-top:15px; overflow:hidden;
+}
+#help .content dl{float:left; width:195px; _display:inline; margin-bottom:6px;}
+#help .content dt{color:Black; font-weight:200; font-size:18px; font-family:Tahoma;
+padding-left:20px; margin-bottom:6px;
+}
+#help .content dd{padding-left:25px;}
+#help .content dd a{background:url(images/red/bg.gif) no-repeat 0 -218px; padding-left:15px;}
+
+/*  ==================== links ====================  */
+#links{width:958px; border:1px solid #e1e1e1; padding:10px; 
+text-align:left; margin-bottom:15px;
+}
+/*======================Trang master Quan Tri==================*/
+#menudoc
+{
+	position:absolute;
+	left:10px;
+	height:240px;
+	width:160px;
+	top:225px;
+z-index:1;
+}
+#menudoc dl {
+float: left;
+line-height: 1.5em;
+width: 13em;
+}
+#menudoc dt {
+cursor: pointer;
+text-align: center;
+font-weight: bold;
+background: #142129;
+margin: 1px;
+}
+#menudoc dd {
+display: none;
+border: 1px solid gray;
+}
+#menudoc li {
+text-align: center;
+background: #27343c;
+}
+#menudoc dt {color: #96a8b2;}
+#menudoc li a, #menudoc dt a {
+color: #96a8b2;
+text-decoration: none;
+display: block;
+height: 100%;
+border: 0 none;
+}
+#menudoc dt:hover { color: #FFFFFF;}
+#menudoc dt a:hover {background-color: #142129;}
+#menudoc li a:hover, #menudoc li a:focus,  #menudoc dt a:focus {
+background: #eee;
+}
+/*======================Trang Quan Tri Nhap SP==================*/
+#tieudenhap
+{
+	background-image:url('../image/tieude5.jpg');
+	width:268px;
+	height:50px;
+	 position:absolute;
+	 top:45px;
+	
+}
+#Nhap
+{
+	 width:750px;
+	 height:900px;
+	 border-width: thin; border-style: solid; border-color: #FFCCFF #FFCCFF #CCFFFF #FFCCFF;
+	 position:absolute;
+	 top:85px;
+	 left:10px;
+}
+#tieudevuanhap
+{
+	width:268px;
+	 height:50px;
+	 background-image:url('../image/tieude5.jpg');
+	 background-repeat:no-repeat;
+	 position:absolute;
+	  margin-left:-11px;
+	  margin-top:-8px;
+}
+#sanphamvuanhap
+{
+	 width:750px;
+	 height:320px;
+	border-top-style: solid; border-top-width: thin; border-top-color: #FFCCFF ;
+
+	 margin-top:39px;
+	  margin-left:0px;
+}
+#tieudetatcasanpham
+{
+	
+	width:268px;
+	 height:50px;
+	 background-image:url('../image/tieude5.jpg');
+	 background-repeat:no-repeat;
+	 position:absolute;
+	  margin-left:-11px;
+	  margin-top:0px;
+}
+#tatcasanpham
+{
+	 width:750px;
+	 height:320px;
+	border-top-style: solid; border-top-width: thin; border-top-color: #FFCCFF ;
+
+	 margin-top:39px;
+	  margin-left:0px;
+}
+/*======================Trang San Pham==================*/
+#tieudedssanpham
+{
+	width:268px;
+	 height:50px;
+	 background-image:url('../image/tieude5.jpg');
+	 background-repeat:no-repeat;
+ margin-left:9px;
+ position:absolute;
+ top:525px;
+}
+#dssanpham
+{
+	 border-left: thin solid #FFCCFF;
+	border-right: thin solid #FFCCFF;
+	border-top: thin solid #FFCCFF;
+	border-bottom: thin solid #CCFFFF;
+	width:720px;
+	 height:870px;
+	 	margin-top:0px;
+	 	margin-left:20px;
+	 	position:absolute;
+	top: 566px;
+	left: 1px;
+}
+
+#tieudeloctim
+{
+	width:242px;
+	height:42px;
+	margin-left:760px;
+	margin-top:-40px;
+	position:absolute;
+		 background-image:url('../image/loctim.jpg');
+}
+#loctim
+{
+	border-left: thin solid #FFCCFF;
+	border-right: thin solid #FFCCFF;
+	border-top: thin solid #FFCCFF;
+	border-bottom: thin solid #CCFFFF;
+	width:230px;
+	height:879px;
+		margin-top:-7px;
+		margin-left:760px;
+		position:absolute;
+	top: 565px;
+	left: 0px;
+}
+
+#tieudedssanphambenphai
+{
+	width:472px;
+	height:40px;
+	margin-left:270px;
+	
+	 background-color:#F5F5F5;
+}
+.Text
+{
+	
+}
+.Text :hover
+{
+	color:Red;
+}
+/*======================Trang ChiTietSanPham==================*/
+#tieudechitietthongso
+{
+		width:268px;
+	 height:50px;
+	 background-image:url('../image/tieude5.jpg');
+	 background-repeat:no-repeat;
+ margin-left:9px;
+ position:absolute;
+ top:340px;
+}

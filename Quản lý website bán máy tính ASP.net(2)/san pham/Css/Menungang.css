@@ -1,0 +1,32 @@
+﻿.menungang
+{
+	width: 100%;
+	height: 43px;
+	background-image: url( '../Image/menungang_mau.png' );			
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-topright:10px;	
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px;		
+}
+.meungangItem
+{
+	padding-top:10px;
+	height:100%;
+	margin-left:20px;
+	float:left;
+	color:White;	
+	font-size:13pt;
+}
+
+.meungangItem a
+{
+	color:White;
+	text-decoration:none;
+	font-size:13pt;
+	margin-left:10px;		
+	}
+
+.meungangItem a:hover
+{
+	text-decoration:underline;	
+}

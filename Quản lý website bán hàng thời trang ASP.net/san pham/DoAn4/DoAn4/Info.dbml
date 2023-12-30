@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Database" Class="InfoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_Account" Member="tbl_Accounts">
+    <Type Name="tbl_Account">
+      <Column Name="Account" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Power" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Customer" Member="tbl_Customers">
+    <Type Name="tbl_Customer">
+      <Column Name="[User]" Member="User" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Customer_tbl_Order" Member="tbl_Orders" ThisKey="User" OtherKey="Account" Type="tbl_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Import" Member="tbl_Imports">
+    <Type Name="tbl_Import">
+      <Column Name="Import_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Money" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Supplier_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Supplier_tbl_Import" Member="tbl_Supplier" ThisKey="Supplier_ID" Type="tbl_Supplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ImportDetail" Member="tbl_ImportDetails">
+    <Type Name="tbl_ImportDetail">
+      <Column Name="Import_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Product_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Price_Import" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Money" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="tbl_Product_tbl_ImportDetail" Member="tbl_Product" ThisKey="Product_ID" Type="tbl_Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Order" Member="tbl_Orders">
+    <Type Name="tbl_Order">
+      <Column Name="Order_ID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Account" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Pay_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Transport_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name_Received" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address_Received" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone_Received" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name_Pay" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address_Pay" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone_Pay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mesage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VAT_Gift" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SumWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VAT_Transport" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SumMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_Order_tbl_OrderDetial" Member="tbl_OrderDetials" OtherKey="Order_ID" Type="tbl_OrderDetial" />
+      <Association Name="tbl_Customer_tbl_Order" Member="tbl_Customer" ThisKey="Account" OtherKey="User" Type="tbl_Customer" IsForeignKey="true" />
+      <Association Name="tbl_Payment_tbl_Order" Member="tbl_Payment" ThisKey="Pay_ID" Type="tbl_Payment" IsForeignKey="true" />
+      <Association Name="tbl_Transport_tbl_Order" Member="tbl_Transport" ThisKey="Transport_ID" Type="tbl_Transport" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Payment" Member="tbl_Payments">
+    <Type Name="tbl_Payment">
+      <Column Name="Pay_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Pay_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Payment_tbl_Order" Member="tbl_Orders" OtherKey="Pay_ID" Type="tbl_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Producer" Member="tbl_Producers">
+    <Type Name="tbl_Producer">
+      <Column Name="Producer_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Producer_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Producer_tbl_Product" Member="tbl_Products" OtherKey="Producer_ID" Type="tbl_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_OrderDetial" Member="tbl_OrderDetials">
+    <Type Name="tbl_OrderDetial">
+      <Column Name="Order_ID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Product_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Price_Export" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Money" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_Order_tbl_OrderDetial" Member="tbl_Order" ThisKey="Order_ID" Type="tbl_Order" IsForeignKey="true" />
+      <Association Name="tbl_Product_tbl_OrderDetial" Member="tbl_Product" ThisKey="Product_ID" Type="tbl_Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Product" Member="tbl_Products">
+    <Type Name="tbl_Product">
+      <Column Name="Product_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Product_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Style_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Producer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Supplier_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Material" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Price_Import" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Price_Export" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Product_tbl_ImportDetail" Member="tbl_ImportDetails" OtherKey="Product_ID" Type="tbl_ImportDetail" />
+      <Association Name="tbl_Product_tbl_OrderDetial" Member="tbl_OrderDetials" OtherKey="Product_ID" Type="tbl_OrderDetial" />
+      <Association Name="tbl_Producer_tbl_Product" Member="tbl_Producer" ThisKey="Producer_ID" Type="tbl_Producer" IsForeignKey="true" />
+      <Association Name="tbl_Style_tbl_Product" Member="tbl_Style" ThisKey="Style_ID" Type="tbl_Style" IsForeignKey="true" />
+      <Association Name="tbl_Supplier_tbl_Product" Member="tbl_Supplier" ThisKey="Supplier_ID" Type="tbl_Supplier" IsForeignKey="true" />
+      <Association Name="tbl_Type_tbl_Product" Member="tbl_Type" ThisKey="Type_ID" Type="tbl_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Style" Member="tbl_Styles">
+    <Type Name="tbl_Style">
+      <Column Name="Style_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Style_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_Style_tbl_Product" Member="tbl_Products" OtherKey="Style_ID" Type="tbl_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Supplier" Member="tbl_Suppliers">
+    <Type Name="tbl_Supplier">
+      <Column Name="Supplier_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Supplier_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_Supplier_tbl_Import" Member="tbl_Imports" OtherKey="Supplier_ID" Type="tbl_Import" />
+      <Association Name="tbl_Supplier_tbl_Product" Member="tbl_Products" OtherKey="Supplier_ID" Type="tbl_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Transport" Member="tbl_Transports">
+    <Type Name="tbl_Transport">
+      <Column Name="Transport_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Transport_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Transport_tbl_Order" Member="tbl_Orders" OtherKey="Transport_ID" Type="tbl_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Type" Member="tbl_Types">
+    <Type Name="tbl_Type">
+      <Column Name="Type_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Type_tbl_Product" Member="tbl_Products" OtherKey="Type_ID" Type="tbl_Product" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ThongkeSP" Method="ThongkeSP">
+    <Parameter Name="loaisp" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="ThongkeSPResult">
+      <Column Name="Product_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Product_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Style_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Supplier_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Producer_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Price_Import" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Price_Export" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKHDNTheoNam" Method="TKHDNTheoNam">
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TKHDNTheoNamResult">
+      <Column Name="[Ngày nhập]" Member="Ngày_nhập" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Nhà cung cấp]" Member="Nhà_cung_cấp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKHDNTheoNgay" Method="TKHDNTheoNgay">
+    <Parameter Name="ngay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="TKHDNTheoNgayResult">
+      <Column Name="[Ngày nhập]" Member="Ngày_nhập" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Nhà cung cấp]" Member="Nhà_cung_cấp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKHDNTheoTG" Method="TKHDNTheoTG">
+    <Parameter Name="tungay" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="denngay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="TKHDNTheoTGResult">
+      <Column Name="[Ngày nhập]" Member="Ngày_nhập" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Nhà cung cấp]" Member="Nhà_cung_cấp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKSPbanchaytheonam" Method="TKSPbanchaytheonam">
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TKSPbanchaytheonamResult">
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Giá xuất]" Member="Giá_xuất" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Số lượng]" Member="Số_lượng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKSPbanchaytheongay" Method="TKSPbanchaytheongay">
+    <Parameter Name="ngay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="TKSPbanchaytheongayResult">
+      <Column Name="Ngày" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Giá xuất]" Member="Giá_xuất" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Số lượng]" Member="Số_lượng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKSPbanchaytheoTG" Method="TKSPbanchaytheoTG">
+    <Parameter Name="tungay" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="denngay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="TKSPbanchaytheoTGResult">
+      <Column Name="Ngày" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Giá xuất]" Member="Giá_xuất" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Số lượng]" Member="Số_lượng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TkDoanhthutheonam" Method="TkDoanhthutheonam">
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TkDoanhthutheonamResult">
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Giá nhập]" Member="Giá_nhập" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Giá xuất]" Member="Giá_xuất" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="[Số lượng]" Member="Số_lượng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TkDoanhthutheongay" Method="TkDoanhthutheongay">
+    <Parameter Name="ngay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="TkDoanhthutheongayResult">
+      <Column Name="[Ngày bán]" Member="Ngày_bán" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Giá nhập]" Member="Giá_nhập" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Giá xuất]" Member="Giá_xuất" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="[Số lượng]" Member="Số_lượng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TkDoanhthutheoTG" Method="TkDoanhthutheoTG">
+    <Parameter Name="tungay" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="denngay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="TkDoanhthutheoTGResult">
+      <Column Name="[Ngày bán]" Member="Ngày_bán" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã sản phẩm]" Member="Mã_sản_phẩm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Giá nhập]" Member="Giá_nhập" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Giá xuất]" Member="Giá_xuất" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="[Số lượng]" Member="Số_lượng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Thành tiền]" Member="Thành_tiền" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

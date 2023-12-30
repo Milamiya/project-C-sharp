@@ -1,0 +1,239 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.OleDb;
+
+namespace School._forms
+{
+    public partial class frmAttEmp : Form
+    {
+        public frmAttEmp()
+        {
+            InitializeComponent();
+        }
+        public string str = "";//get the value for form what do Modify/Add
+        string newID, editID;// newID for New ID  and editID for Delete & Edit
+        OleDbCommand cmdForm = new OleDbCommand();
+        _class.clsODBC clsCon = new School._class.clsODBC();
+        _class.cls_myFunctions clsmyFunction = new School._class.cls_myFunctions();
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmAttEmp_Load(object sender, EventArgs e)
+        {
+            if (str == "Adding")
+            {
+                this.lbl_Mode.Text = str;
+                btn_Edit.Visible = false;
+                btn_Delete.Visible = false;
+                side2.Visible = false;
+                side3.Visible = false;
+            }
+            else
+            {
+                if (str == "Modifying")
+                {
+                    this.lbl_Mode.Text = str;
+                    btn_Add.Visible = false;
+                    side1.Visible = false;
+                }
+            }
+            tab_Index();
+            combo_Emp();
+            this.comStatus.Items.Add("A");
+            this.comStatus.Items.Add("L");
+            this.comStatus.Items.Add("P");
+            this.comStatus.SelectedIndex = 2;
+            this.txtTime.Text = DateTime.Now .ToShortTimeString ();
+            list_Data();
+        }
+
+        private void tab_Index()
+        {
+            comEname.TabIndex = 0;
+            btnLink.TabIndex = 1;
+            comStatus.TabIndex = 2;
+            dpAe.TabIndex = 3;
+            txtTime.TabIndex = 4;
+            txtRemarks.TabIndex = 5;
+        }
+        private void combo_Emp()
+        {
+            clsCon.comboFill(this.comEname , "select emp_id,emp_name from employee where active=true", "employee", "emp_name", "emp_id");
+           
+        }
+        private void list_Data()
+        {
+            clsCon.list_DataView("select emp_id,emp_name,att_status,att_date,att_time,remarks from view_attemp", lstv_AttEmp);
+
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            save_EmpAtt();
+        }
+        private void save_EmpAtt()
+        {
+        if  (this.comEname.SelectedIndex == -1 || this.comStatus.SelectedIndex == -1)
+            {
+                MessageBox.Show("Class Name is required!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                try
+                {
+                    clsCon.cmdOpen(cmdForm);
+                    cmdForm.CommandText = "insert into att_emp(emp_id,att_date,att_status,att_time,remarks) values (?,?,?,?,?)";
+                    cmdForm.Parameters.Add("@emp_id", OleDbType.Char ).Value = this.comEname.SelectedValue ;
+                    cmdForm.Parameters.Add("@att_date", OleDbType.Date).Value = dpAe.Value;
+                    cmdForm.Parameters.Add("@att_status", OleDbType.Char).Value = this.comStatus.Text;
+                    cmdForm.Parameters.Add("@att_time", OleDbType.Char).Value = this.txtTime.Text;
+                    cmdForm.Parameters.Add("@remarks", OleDbType.Char).Value = this.txtRemarks.Text; clsCon.cmdClose(cmdForm);
+                    clsmyFunction.setMessageBox("Data Save Successfuly", 1);
+
+                }
+                catch (Exception exp)
+                {
+                    clsmyFunction.setCreateError(exp.Message);
+
+                }
+                finally
+                {
+                    clsCon.cn.Close();
+                }
+            }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            edit_AttEmp();
+            list_Data();
+        }
+
+        private void edit_AttEmp()
+        {
+            if (this.comEname .DropDownStyle == ComboBoxStyle.Simple || this.comStatus.DropDownStyle ==ComboBoxStyle.Simple )
+            {
+                MessageBox.Show("You Should Select a Employee Name and Status For Edit", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                OleDbTransaction tran;
+                if (comEname.SelectedIndex ==-1 || comStatus.SelectedIndex ==-1)
+                {
+
+
+                    MessageBox.Show("Some required Fields are Empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    //First delete the old record
+
+                    clsCon.cn.Open();
+                    tran = clsCon.cn.BeginTransaction();
+
+                    OleDbCommand cmdDelete = new OleDbCommand();
+                    cmdDelete.Connection = clsCon.cn;
+
+                    cmdDelete.CommandText = "delete * from att_emp where emp_id=?";
+                    cmdDelete.Transaction = tran;
+                    cmdDelete.Parameters.Add("@emp_id", OleDbType.Char).Value = "";
+                    cmdDelete.ExecuteNonQuery();
+                    cmdDelete.Parameters.Clear();
+                    cmdDelete.Dispose();
+
+                    
+                    try
+                    {
+                        OleDbCommand cmdSave = new OleDbCommand();
+                        cmdSave.Connection = clsCon.cn;
+                        cmdSave.CommandText = "insert into att_emp(emp_id,att_date,att_status,att_time,remarks) values (?,?,?,?,?)";
+                        cmdSave.Transaction = tran;
+                        cmdSave.Parameters.Add("@emp_id", OleDbType.Char).Value = this.comEname.SelectedValue;
+                        cmdSave.Parameters.Add("@att_date", OleDbType.Date).Value = dpAe.Value;
+                        cmdSave.Parameters.Add("@att_status", OleDbType.Char).Value = this.comStatus.Text;
+                        cmdSave.Parameters.Add("@att_time", OleDbType.Char).Value = this.txtTime.Text;
+                        cmdSave.Parameters.Add("@remarks", OleDbType.Char).Value = this.txtRemarks.Text; clsCon.cmdClose(cmdForm);
+
+                        cmdSave.ExecuteNonQuery();
+                        tran.Commit();
+                        clsmyFunction.setMessageBox("Data Edited Successfuly", 1);
+
+                    }
+                    catch (Exception exp)
+                    {
+                        tran.Rollback();
+                        clsmyFunction.setCreateError(exp.Message);
+                    }
+
+                    finally
+                    {
+                        if (this.clsCon.cn != null) this.clsCon.cn.Close();
+                    }
+                }
+
+            }
+
+
+
+
+        }
+
+        private void lstv_AttEmp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (str == "Modifying")
+            {
+                this.comEname .SelectedIndex = -1;
+                this.comStatus .SelectedIndex = -1;
+                this.comEname.Text = "";
+                this.comStatus.Text = "";
+                this.comEname.DropDownStyle = ComboBoxStyle.Simple;
+                this.comStatus.DropDownStyle = ComboBoxStyle.Simple;
+
+                cls_Con.connCheck();
+                OleDbCommand cmd = new OleDbCommand("select * from  view_attemp where emp_id='" + (this.lstv_AttEmp.Items[lstv_AttEmp.FocusedItem.Index].SubItems[0].Text.Trim()) + "' and att_date=#" + (this.lstv_AttEmp.Items[lstv_AttEmp.FocusedItem.Index].SubItems[0].Text.Trim()) + "#", cls_Con.cn);
+
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    strEdit = dr["emp_id"].ToString();                    
+                    this.com_cName.SelectedText = dr["c_name"].ToString();
+                    this.txtAddress.Text = dr["address"].ToString();
+                    this.txtContact.Text = dr["contact_no"].ToString();
+                    this.txt_Fname.Text = dr["f_name"].ToString();
+                    this.txtAge.Text = dr["age"].ToString();
+                    this.dp_Student.Value = Convert.ToDateTime(dr["d_birth"]);
+                    this.com_Sex.SelectedText = dr["sex"].ToString();
+                    this.txtRemarks.Text = dr["remarks"].ToString();
+                    this.txt_Mfee.Text = dr["m_fee"].ToString();
+                    this.chk_Active.Checked = Convert.ToBoolean(dr["active"]);
+
+                }
+                cls_Con.cn.Close();
+                dr.Close();
+                cmd.Dispose();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+       
+    }
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+      <siteMapNode url="HomePage.aspx" title="Trang chủ" description="">
+        <siteMapNode url="ProductDetails.aspx" title="Chi tiết sản phẩm"></siteMapNode>
+        <siteMapNode url="ProductbyManufacturer.aspx?Manufacturer=Asus" title="Asus"  description="" />
+        <siteMapNode url="ProductbyManufacturer.aspx?Manufacturer=Dell" title="Dell"  description="" />
+        <siteMapNode url="ProductbyManufacturer.aspx?Manufacturer=Acer" title="Acer"  description="" />
+        <siteMapNode url="ProductbyManufacturer.aspx?Manufacturer=Sony" title="Sony"  description="" />        
+        <siteMapNode url="News.aspx" title="Tin tức">
+            <siteMapNode url="NewsDetails.aspx" title="Chi tiết tin tức"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="Cart.aspx" title="Giỏ hàng"></siteMapNode>
+        <siteMapNode url="Components.aspx" title="Linh kiện máy tính">
+          <siteMapNode url="ComponentDetails.aspx" title="Chi tiết"></siteMapNode>
+          <siteMapNode url="ComponentbyCategories.aspx" title="Linh kiện theo hãng"></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="Registration.aspx" title="Đăng ký thành viên"></siteMapNode>
+        <siteMapNode url="LoginCustomer.aspx" title="Đăng nhập"></siteMapNode>        
+    </siteMapNode>
+</siteMap>

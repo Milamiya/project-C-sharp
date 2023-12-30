@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="DoAn4.Admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Quản trị</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #content
+        {
+            height: 127px;
+            width: 587px;
+        }
+        .style1
+        {
+            color: #000000;
+        }
+    </style>
+    <link href="../CSS/khung.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/Giaodien.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background-color: #FFFFFF">
+    <form id="form1" runat="server">
+    <div id="noidungAD" align="center" style="background-color: #FFFFFF; margin-top: 0px;">
+        <center>
+            <div style="height: 131px; margin-bottom: 0px; margin-top: 0px;">
+                <img src="../Banner/Anh%20Banner/banner1.bmp" 
+                    style="height: 130px; width: 995px" />
+            </div>
+            <div style="border-right: thin groove #FFFFFF; width: 995px;">
+                <div class="menu_traiAD" style="border-left-style: outset; border-left-width: thin;
+                    border-left-color: #C0C0C0; border-right-style: inset; border-right-width: thin;
+                    border-right-color: #C0C0C0;">
+                    <div class=" menunhanh" style="text-align: left; font-weight: bold; text-decoration: underline;">
+                        QUẢN LÝ TÀI KHOẢN</div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ThemTaikhoan.aspx" style="text-decoration: none;">
+                            Thêm tài khoản</a>
+                    </div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Doimatkhau.aspx" style="text-decoration: none;">
+                            Đổi mật khẩu</a>
+                    </div>
+                    <div class=" menunhanh" style="text-align: left; font-weight: bold; text-decoration: underline;">
+                        CẬP NHẬT</div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Nhaphang.aspx" style="text-decoration: none;">
+                            Nhập hàng</a>
+                    </div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="CapnhatSP.aspx" style="text-decoration: none;">
+                            Sản phẩm</a>
+                    </div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="CapnhatNCC.aspx" style="text-decoration: none;">
+                            Nhà cung cấp</a></div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="CapnhatMaloai.aspx" style="text-decoration: none;">
+                            Loại sản phẩm</a></div>
+                    <%--<div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="CapnhatSP.aspx" style="text-decoration: none;">
+                            Sản phẩm</a></div>--%>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="CapnhatPC.aspx" style="text-decoration: none;">
+                            Phong cách</a></div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="CapnhatHSX.aspx" style="text-decoration: none;">
+                            Hãng sản xuất</a></div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="CapnhatHTVC.aspx" style="text-decoration: none;">
+                            Hình thức vận chuyển</a></div>
+                    <div class=" menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="CapnhatHTTT.aspx" style="text-decoration: none;">
+                            Hình thức thanh toán</a></div>
+                            <div class=" menunhanh" style="text-align: left; background-repeat: repeat-x; font-weight: bold;
+                        text-decoration: underline;">
+                        DANH SÁCH HOÁ ĐƠN</div>
+                    <div class="menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DanhsachHD.aspx" style="text-decoration: none;">
+                            Danh sách</a></div>             
+                    <div class=" menunhanh" style="text-align: left; background-repeat: repeat-x; font-weight: bold;
+                        text-decoration: underline;">
+                        TÌM KIẾM</div>
+                    <div class="menunhanh">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TimkiemSP.aspx" style="text-decoration: none;">
+                            Sản phẩm</a></div>
+                    <div class="menunhanh">
+                        <a href="TimkiemNCC.aspx" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Nhà cung cấp</a></div>
+                    <div class=" menunhanh" style="text-align: left; font-weight: bold; text-decoration: underline;">
+                        THỐNG KÊ</div>
+                <div class="menunhanh">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ThongkeSP.aspx" style="text-decoration: none;">
+                        Sản phẩm</a></div>
+                <div class="menunhanh">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ThongkeNhaphang.aspx" style="text-decoration: none;">
+                        Hoá đơn nhập</a></div>
+                <div class="menunhanh">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ThongkeDoanhthu.aspx" style="text-decoration: none;">Doanh thu</a></div>
+                <div class=" menunhanh">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ThongkeSPbanchaynhat.aspx" style="text-decoration: none;">
+                        Sản phẩm bán chạy nhất</a></div>
+                <%--<div class=" menunhanh" style="text-align: left; font-weight: bold; text-decoration: underline;">
+                        DANH SÁCH</div>
+                <div class="menunhanh">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="DanhsachHD.aspx" style="text-decoration: none;">
+                        Hoá đơn</a></div>--%>
+                
+                </div>
+                <div id="contentAD">
+                    <div style="text-align: right; width: 605px; height: 20px; font-style: italic; color: #000000;">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                        </asp:ScriptManager>
+                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click1" ToolTip="Trở về Trang chủ">Thoát</asp:LinkButton>
+                    </div>
+                    <br />
+                    <div id="mainContentAD">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <br />
+                </div>
+                &nbsp;<div id="footder" 
+                    style="border-top: thin outset #C0C0C0; width: 995px">
+                    <address style="height: 83px; margin-top: 0px; color: #C0C0C0; width: 995px; background-image: url('../Banner/Anh%20Banner/chan%20trang.bmp');">
+                        <span class="style1" style="font-family: Cambria; font-size: medium; color: #000000">
+                            &nbsp;CỬA HÀNG THỜI TRANG THU PHƯƠNG<br />
+                            Nhóm thiết kế: Nguyễn Thị Diệu - Đinh Thị Ngân<br />
+                            Email: dieu182@gmail.com - dinhngan.tk61@gmail.com</span><br />
+                    </address>
+                </div>
+            </div>
+        </center>
+    </div>
+    </form>
+</body>
+</html>

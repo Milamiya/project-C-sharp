@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="Site1.master.cs" Inherits="PKT.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PKT Phone</title>
+    <link rel="shortcut icon" href="Img/Images/dt.ico">
+    <link rel="stylesheet" href="Img/style.css" type="text/css" />
+    <script type="text/javascript" src="banner_images/swfobject.js"></script>
+    <SCRIPT language="JavaScript1.2" src="Img/source.js"type="text/javascript"></SCRIPT>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/stickytooltip.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/stickytooltip.css" />
+</head>
+<body>
+    <DIV id="TipLayer" style="visibility:hidden;position:absolute;z-index:1000;top:-100"></DIV>
+	<SCRIPT language="JavaScript1.2" src="Img/Cac kieu.js" type="text/javascript"></SCRIPT>  
+
+	<div id="banner-1">
+	</div>
+	<div id="wrapper">
+    
+    	<div id="d-menu">
+        <ul id="menu">
+        <li style="background:url(Img/Images/menu_main1.png);"><a id="l1" href="index.aspx"></a></li>
+        <li style="background:url(Img/Images/menu_main2.png);"><a id="l2" href="gioithieu.aspx"></a></li>
+        <li style="background:url(Img/Images/menu_main3.png);"><a id="l3" href="khachhang_dangnhap.aspx"></a></li>
+        <li style="background:url(Img/Images/menu_main4.png);"><a id="l4" href="timkiem.aspx"></a></li>
+        <li style="background:url(Img/Images/menu_main5.png);"><a id="l5" href="baohanh.aspx"></a></li>
+        <li style="background:url(Img/Images/menu_main6.png);"><a id="l6" href="gopy.aspx"></a></li>
+       	<li style="background:url(Img/Images/menu_main7.png);"><a id="l7" href="giohang.aspx"></a></li>
+        </ul>
+        </div>
+        <div id="status"> 
+            <div id="status-left"> Thông báo: <MARQUEE WIDTH="80%"> Chào mừng bạn đến với <a href="index.aspx" target="_blank">PKT Phone</a>. Bạn hãy <a href="dangky.aspx" target="_blank">đăng ký</a> để được phục vụ tốt hơn. Chúc bạn lựa chọn được sản phẩm ưng ý.</MARQUEE> </div>
+            <div id="banner-text">
+            <asp:Label ID="name" runat="server"></asp:Label>
+            <asp:hyperlink id="home" runat="server">| Home</asp:hyperlink>
+            <asp:hyperlink id="exit" runat="server">| Exit</asp:hyperlink>
+            <asp:hyperlink id="login" runat="server">| Đăng ký</asp:hyperlink>
+            </div> 
+        </div>
+        <div id="main">
+            <div id="banner-2">
+                <div id="flashcontent">
+                    <script type="text/javascript">
+                        var so = new SWFObject("banner_images/banner.swf", "mymovie", "960", "300", "2");
+                        so.addParam("menu", "false");
+                        so.write("flashcontent");
+                    </script>
+                </div>
+            </div>
+            <div id="columnleft">
+            	<div id="left"> <img src="Img/Images/mTK.png"/> 
+					<div id="left-1"><div id="left-2">
+                    <form id="form1" runat="server">
+                    	<p>
+                            <asp:TextBox ID="key" runat="server" Width="146px" AutoPostBack="True" 
+                                ontextchanged="key_TextChanged"></asp:TextBox>
+                        </p>
+                        <p>
+                        	<asp:DropDownList ID="ManuID" runat="server" AutoPostBack="True" 
+                                onselectedindexchanged="ManuID_SelectedIndexChanged">
+                            </asp:DropDownList>
+                       </p>
+                       <p>
+                        	<asp:DropDownList ID="PriceFrom" runat="server" AutoPostBack="True" 
+                                onselectedindexchanged="FriceFrom_SelectedIndexChanged">
+                                <asp:ListItem Value="0">Giá Từ...</asp:ListItem>
+                                <asp:ListItem>1000000</asp:ListItem>
+                                <asp:ListItem>2000000</asp:ListItem>
+                                <asp:ListItem>3000000</asp:ListItem>
+                            </asp:DropDownList>
+                       </p>
+                       <p>
+                        	<asp:DropDownList ID="PriceTo" runat="server" AutoPostBack="True" 
+                                onselectedindexchanged="PriceTo_SelectedIndexChanged">
+                                <asp:ListItem Value="0">Giá đến...</asp:ListItem>
+                                <asp:ListItem>3000000</asp:ListItem>
+                                <asp:ListItem>9000000</asp:ListItem>
+                            </asp:DropDownList>
+                       </p>
+                       <p style="text-align:center;"> 
+                            <asp:HyperLink ID="search_click" runat="server">
+                             <img src="Img/Images/icon/buttom_timkiem.png" />
+                            </asp:HyperLink>
+                       </p>
+					</div></div>
+				</div>
+                <div id="left"> <img src="Img/Images/mDT.png"/> 
+                    <div id="left-3">
+                    <asp:Repeater ID="listsx" runat="server">
+                        <ItemTemplate>
+                            <a href="sanpham.aspx?manu=<%# Eval("MaSX") %>"><%# Eval("TenSX") %></a> 
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    
+                    </div>
+                 </div>
+                <div id="left"> <img src="Img/Images/mPM.png"/>
+                    <div id="left-1">
+                    <img src="Img/Images/lichvietiphone3g.gif"/>
+                    <img src="Img/Images/vnsmart.gif"/>
+                    <img src="Img/Images/316688224left_lacviet.jpg"/>
+                    </div>
+                </div>
+                <div id="left"> <img src="Img/Images/mQC.png" />
+                	<div id="left-1">
+                        <img src="Img/Images/167180436left_wx260.jpg"/>
+                        <img src="Img/Images/983218269left_e156.jpg"/>
+                        <img src="Img/Images/1055063868left_unlockip4s.jpg"/>
+					</div>
+                </div>
+			</div> <!--Columnleft-->
+            <div id="columnright">
+                <div id="right"><img src="Img/Images/btn-mua-hang-tu-xa2.gif"/> </div>
+                <div id="right"> <img src="Img/Images/mQC.png"/>
+                    <div id="right-1">
+                    <img src="Img/Images/242.gif"/>
+                    <img src="Img/Images/1227170557samsung.gif"/>
+                    <img src="Img/Images/273.gif"/>
+                    <img src="Img/Images/1227170609w230.jpg"/>
+                    <img src="Img/Images/712379578left_bbxuan.jpg"/>
+                    <img src="Img/Images/9968871641301818963left_note.jpg"/>
+                    <img src="Img/Images/39868626left_tragop.jpg"/>
+                    </div>
+                </div>
+                <div id="right"> <img src="Img/Images/mLK.png"/>
+                    <div id="right-1">
+                    <img src="Img/Images/logoFU.png"/>
+                    <img src="Img/Images/onthi-logo.gif"/>
+                    </div>
+                </div>
+            </div> <!--Columnright-->
+            <div id="content">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    </form>
+            </div> <!--Content-->
+            
+        </div> <!--Main-->
+        <div id="bottom">
+			<img src="Img/Images/menu_main.png"/>
+            </br>Bản quyền thuộc về PKT Phone ® - Copyright By PKT Phone © 2012 </br>Thiết kế bởi PKT Team - Design by PKT Team
+            </br>Website Hiển thị tốt nhất khi mở bằng Firefox và Google Chrome
+		</div>
+    </div> <!--Wrapper-->
+
+</body>
+</html>

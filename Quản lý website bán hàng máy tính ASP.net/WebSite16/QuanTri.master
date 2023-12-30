@@ -1,0 +1,168 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="QuanTri.master.cs" Inherits="QuanTri" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <link href="Style/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="mainbody">
+    <div class="header">
+    <div class="headerleft">
+        <br />
+    </div>
+</div>
+<div id="menu">
+    <dl>
+        <dt>Trang chủ</dt>
+    </dl>
+    <dl>
+        <dt onmouseover="javascript:show('smenu1');" onmouseout="javascript:show('');">Giới thiệu</dt>
+        <dd id="smenu1" onmouseover="javascript:show('smenu1');" onmouseout="javascript:show('');">
+              <ul>
+                                        <li><a href="#">Công ty</a></li>
+                                        <li><a href="#">Hướng dẫn</a></li>
+              </ul>
+        </dd>
+         
+    </dl>
+    <dl>
+        <dt>Báo Giá </dt>
+    </dl>
+    <dl>
+        <dt onmouseover="javascript:show('smenu3');" onmouseout="javascript:show('');">Sản Phẩm</dt>
+        <dd id="smenu3" onmouseover="javascript:show('smenu3');" onmouseout="javascript:show('');">
+              <ul>
+                                        <li><a href="#">Máy Tính Để Bàn</a></li>
+                                        <li><a href="#">Lap Top</a></li>
+                                        <li><a href="#">Màn Hình Máy Tính</a></li>
+                                        <li><a href="#">Linh Kiện</a></li>
+              </ul>
+        </dd>
+    </dl>
+    <dl>
+          <dt onmouseover="javascript:show('smenu4');" onmouseout="javascript:show('');">Tin Tức</dt>
+        <dd id="smenu4" onmouseover="javascript:show('smenu4');" onmouseout="javascript:show('');">
+              <ul>
+                                        <li><a href="#">Tin Công Ty</a></li>
+                                        <li><a href="#">Tin Khuyến Mại</a></li>
+                                        <li><a href="#">Tin Tuyển Dụng</a></li>
+                                        <li><a href="#">Tin Công Nghệ</a></li>
+              </ul>
+        </dd>
+    </dl>
+    <dl>
+        <dt>Giỏ Hàng </dt>
+    </dl>
+    <div class="Search">
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Tìm kiếm:
+        <select id="Select">
+        </select>
+        <input type="text" id="SearchText" value="1" /> <input type="button" id="SearchButton" value="Tìm kiếm" />
+    </div>
+</div>
+    <div id="menudoc" > 
+ <dl>
+                               
+                <dt onmouseover="javascript:showdoc('smenu11');">Quản lý nhập hàng</dt>
+                        <dd id="smenu11" onmouseover="javascript:showdoc('smenu11');" onmouseout="javascript:showdoc('');">
+                                <ul>
+                                        <li><a href="QuanLySamPham.aspx">Nhập hàng</a></li>
+                                        <li><a href="QuanLyHoaDonNhap.aspx">Hóa đơn nhập</a></li>
+                                </ul>
+                        </dd>
+        
+        </dl>
+        <dl>
+        
+             
+                <dt onmouseover="javascript:showdoc('smenu12');">Quản lí mặt hàng</dt>
+
+                        <dd id="smenu12" onmouseover="javascript:showdoc('smenu12');" onmouseout="javascript:showdoc('');">
+                                <ul>
+                                        <li><a href="QuanTriNhapSanPham.aspx"> Sản phẩm</a></li>
+                                </ul>
+
+                        </dd>
+        
+        
+        
+                <dt onmouseover="javascript:showdoc('smenu13');">Quản lí khuyến mãi</dt>
+                        <dd id="smenu13" onmouseover="javascript:showdoc('smenu13');" onmouseout="javascript:showdoc('');">
+                                <ul> 
+                                        <li><a href="QuanLyKhuyenMai.aspx">khuyến mãi</a></li>
+                                </ul>
+                        </dd>
+        
+        
+                
+                <dt onmouseover=" javascript:showdoc('smenu14');"> Quản lí tài khoản </dt>
+
+                        <dd id="smenu14" onmouseover="javascript:showdoc('smenu14');"  onmouseout="javascript:showdoc('');">
+                                <ul>
+                                        <li><a href="QuanLyTaiKhoan.aspx">Cập nhập tài khoản</a></li>
+                                </ul>
+                        </dd>
+                        
+                        <dt onmouseover=" javascript:showdoc('smenu15');"> Quản lí nhà cung cấp </dt>
+
+                        <dd id="smenu15" onmouseover="javascript:showdoc('smenu15');"  onmouseout="javascript:showdoc('');">
+                                <ul>
+                                        <li><a href="QuanLyNhaCungCap.aspx">Cập nhập nhà sản xuất</a></li>
+                                </ul>
+                        </dd>
+                          <dt onmouseover=" javascript:showdoc('smenu17');"> Quản lý đơn hàng </dt>
+
+                        <dd id="smenu17" onmouseover="javascript:showdoc('smenu17');"  onmouseout="javascript:showdoc('');">
+                                <ul>
+                                        <li><a href="QuanLyDonHang.aspx">Quản lý đơn hàng</a></li>
+                                </ul>
+                        </dd>
+                        <dt onmouseover=" javascript:showdoc('smenu16');"> Thống kê </dt>
+
+                        <dd id="smenu16" onmouseover="javascript:showdoc('smenu16');"  onmouseout="javascript:showdoc('');">
+                                <ul>
+                                        <li><a href="#">Doanh thu</a></li>
+                                        <li><a href="#">Hàng tồn kho</a></li>
+                                        <li><a href="#">Hàng được đặt</a></li>
+                                </ul>
+                        </dd>
+
+
+        </dl>
+</div>
+
+
+<script type="text/javascript">
+  function show(id) {
+var d = document.getElementById(id);
+        for (var i = 1; i<=10; i++) {
+                if (document.getElementById('smenu'+i)) {document.getElementById('smenu'+i).style.display='none';}
+        }
+if (d) {d.style.display='block';}
+}
+  
+  function showdoc(id) {
+var d = document.getElementById(id);
+        for (var i = 11; i<=20; i++) {
+                if (document.getElementById('smenu'+i))
+                 {
+                document.getElementById('smenu'+i).style.display='none';
+                }
+                }
+       
+if (d) {d.style.display='block';}
+}
+  
+</script>
+    <div style=" position:absolute ; left:225px; top:181px; width:785px; height:400px">
+        <asp:ContentPlaceHolder  id="ContentPlaceHolder1" runat="server" >
+        
+        </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

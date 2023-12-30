@@ -1,0 +1,71 @@
+﻿body
+{
+}
+.menu_traiAD
+{
+	float: left;
+	width: 189px;
+	line-height: 2em;
+	font-size: 14px;
+	height: 911px;
+	border-left:solid thin Black;
+	background-color: #E6E6DC;
+	}
+
+/*Phần menu bên trái để chọn nhanh*/
+.menunhanh
+{
+	background-color: #E6E6DC;
+	font-weight: inherit;
+	text-align: left;
+	color: Black;
+	width: 185px;
+	font-family: Arial;
+	position: relative;
+	padding-left: 0px;
+	top: 0px;
+	left: 0px;
+	height: 23px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.menunhanh:hover
+{
+	background-color:#d4d3bf;
+	cursor: pointer;
+}
+.thanhngangAD
+{
+	text-align: center;
+	color: White;
+	font-weight: bold;
+	height: 34px;
+	width: 230px;
+	background-image: url( 'Anh/three_1.jpg' );
+}
+.noidungAD
+{
+	width:1004px;
+	background-color:White;
+	margin:0px 0px 0px 0px;
+	/*margin-left:180px;*/
+}
+
+/*Phần nội dung trogn các trang con của Admin*/
+#contentAD
+{
+	width: 797px;
+	float: left;
+	margin-top: 5px;
+	height: 129px;
+	margin-left:5px;
+}
+#contentAD div#mainContentAD
+{
+	float: left;
+	width: 791px;
+	height: 71px;
+	margin-top: 1px;
+	text-align: left;
+}

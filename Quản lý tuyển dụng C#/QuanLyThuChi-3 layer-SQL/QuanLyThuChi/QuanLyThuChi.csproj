@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{358E4B52-DCD7-4305-AF7C-9F5F94FFA438}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyThuChi</RootNamespace>
+    <AssemblyName>QuanLyThuChi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Design">
+      <HintPath>..\..\QuanLyTuyenDung\QLTuyenDungPresentation\bin\Debug\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard">
+      <HintPath>..\..\QuanLyTuyenDung\QLTuyenDungPresentation\bin\Debug\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule">
+      <HintPath>..\..\QuanLyTuyenDung\QLTuyenDungPresentation\bin\Debug\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid">
+      <HintPath>..\..\QuanLyTuyenDung\QLTuyenDungPresentation\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\..\QuanLyTuyenDung\QLTuyenDungPresentation\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>..\..\QuanLyTuyenDung\QLTuyenDungPresentation\bin\Debug\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.SuperGrid.Design">
+      <HintPath>..\..\QuanLyTuyenDung\QLTuyenDungPresentation\bin\Debug\DevComponents.SuperGrid.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX">
+      <HintPath>..\..\QuanLyTuyenDung\QLTuyenDungPresentation\bin\Debug\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnection.Designer.cs">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINF.Designer.cs">
+      <DependentUpon>MAINF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\CTKHOF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\CTKHOF.Designer.cs">
+      <DependentUpon>CTKHOF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\CTNHAPXUATF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\CTNHAPXUATF.Designer.cs">
+      <DependentUpon>CTNHAPXUATF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\DangKy.Designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\DANGNHAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\DANGNHAP.Designer.cs">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\HANGHOAF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\HANGHOAF.Designer.cs">
+      <DependentUpon>HANGHOAF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\InPhieuNhapXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\InPhieuNhapXuat.Designer.cs">
+      <DependentUpon>InPhieuNhapXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\InPhieuThuChiF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\InPhieuThuChiF.Designer.cs">
+      <DependentUpon>InPhieuThuChiF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\KHOF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\KHOF.Designer.cs">
+      <DependentUpon>KHOF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubForm\NHANVIENF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\NHANVIENF.Designer.cs">
+      <DependentUpon>NHANVIENF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\PHIEUNHAPXUATF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\PHIEUNHAPXUATF.Designer.cs">
+      <DependentUpon>PHIEUNHAPXUATF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\PHIEUTHUCHIF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\PHIEUTHUCHIF.Designer.cs">
+      <DependentUpon>PHIEUTHUCHIF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\TimHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\TimHangHoa.Designer.cs">
+      <DependentUpon>TimHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ultilities.cs" />
+    <EmbeddedResource Include="frmConnection.resx">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINF.resx">
+      <DependentUpon>MAINF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\Report1.rdlc" />
+    <EmbeddedResource Include="Report\Report2.rdlc" />
+    <EmbeddedResource Include="SubForm\CTKHOF.resx">
+      <DependentUpon>CTKHOF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\CTNHAPXUATF.resx">
+      <DependentUpon>CTNHAPXUATF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\DANGNHAP.resx">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\HANGHOAF.resx">
+      <DependentUpon>HANGHOAF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\InPhieuNhapXuat.resx">
+      <DependentUpon>InPhieuNhapXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\InPhieuThuChiF.resx">
+      <DependentUpon>InPhieuThuChiF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\KHOF.resx">
+      <DependentUpon>KHOF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\NHANVIENF.resx">
+      <DependentUpon>NHANVIENF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\PHIEUNHAPXUATF.resx">
+      <DependentUpon>PHIEUNHAPXUATF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\PHIEUTHUCHIF.resx">
+      <DependentUpon>PHIEUTHUCHIF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\TimHangHoa.resx">
+      <DependentUpon>TimHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{de7aac43-2f69-41ee-9f85-fba2cccd9106}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{e6b4cd50-54c2-4792-8b4e-0fff63a2da1c}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Very-Basic-link-broken-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Turn-Off-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-Male-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-Male-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male-user-search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magnifying-glass-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connection.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connection.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

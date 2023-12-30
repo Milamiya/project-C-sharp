@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Search.master.cs" Inherits="Search" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Website máy tính</title>
+    <link rel="SHORTCUT ICON " href="~/Image/iconmaytinh.ico" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="Css/Menungang.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">   
+     <div class="space">      
+        <%--Top--%>
+        <div class="spaceItem" style="margin-bottom:0px;">                   
+          <div class="top">
+            <div class="myLogo"></div> 
+            <div class="topItem">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            Ngôn ngữ:</td>
+                    </tr>
+                    <tr>
+                        <td align="left">                            
+                            <asp:ImageButton ID="ImageButton1" runat="server" 
+                                ImageUrl="~/Image/icon_002.gif" />                            
+                                 </td>
+                        <td align="left">
+                            <asp:ImageButton ID="ImageButton2" runat="server" 
+                                ImageUrl="~/Image/icon-01.png" />
+                            </td>
+                    </tr>
+                </table>
+              </div>
+            <div class="topItem">
+                <table>
+                    <tr>
+                        <td>
+                            Tiền thanh toán:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:DropDownList ID="DropDownList2" runat="server">
+                                <asp:ListItem>Việt Nam đồng</asp:ListItem>
+                                <asp:ListItem>Dolar Mỹ</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="topItem" style="padding-top:10px;">
+                <table>
+                    <tr>
+                        <td >
+                            <img src="Image/giohang.png" style="width: 41px; height: 33px" />
+                        </td>
+                        <td>
+                            <%--<asp:LinkButton ID="lblGioHang" runat="server" PostBackUrl="~/Cart.aspx">Giỏ hàng</asp:LinkButton>--%>
+                            <asp:Label ID="lblGioHang" runat="server"></asp:Label>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        Hiện đang có 0 sản phẩm.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+          </div>                   
+        </div>        
+        
+        <%--baner--%>
+        <div class="spaceItem">
+            <div class="header">            
+            </div>
+            <div class="header1"></div>
+            <div class="header3">
+                <div class="header2">
+                    <div>
+                        <div style="padding-left:15px;margin-top:10px;float:left;">
+                    <asp:TextBox ID="TextBox1" runat="server" Width="162px"></asp:TextBox>&nbsp;&nbsp;
+                    </div>    
+                    <div style="margin-top:10px; padding-top:10px; margin-left:10px;">
+                    <img alt="Tim kiem" src="Image/icon-timkiem.GIF" />
+                        </div>  
+                    </div>
+                </div>
+            </div>
+             
+        </div>        
+        <%--end banner--%>
+        <div style="width:100%; height:10px; clear:both;" ></div>
+        <%--middle--%>
+        <div class="spaceItem" style="height:800px">
+            <%--left    --%>
+                <div class="leftspace">                   
+                    <div class="menungang">
+                      <div class="meungangItem" style="padding-left:30px;">
+                        <a href="HomePage.aspx">Trang chủ</a>
+                      </div>
+                      <div class="meungangItem">
+                        <a href="Default.aspx">Giới thiệu</a>
+                      </div>
+                      <div class="meungangItem">
+                        <a href="HomePage.aspx">Laptop</a>
+                      </div>
+                      <div class="meungangItem">
+                        <a href="Components.aspx">Linh kiện máy tính</a>
+                      </div>
+                      <div class="meungangItem">
+                        <a href="Cart.aspx">Giỏ hàng</a>
+                      </div>
+                      <div class="meungangItem">
+                        <a href="News.aspx">Tin tức</a>
+                      </div>
+                    </div> 
+                    <div style="height:10px;"></div>
+                    <div class="menungang" style=" height:25px ; width:729px; padding-left:20px; margin-bottom:10px; padding-top:7px; border:solid 1px Gray;  background-image:none;">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                        <NodeStyle ForeColor="#0033CC" />
+                    </asp:SiteMapPath>
+                    </div>
+                     <div>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
+                    </asp:ContentPlaceHolder>
+                    </div>                                          
+               </div>
+                
+               
+            <%--end left--%>            
+            <%--right--%>
+                <div class="rightspace">
+                    
+                    <%--Tìm theo chủng loại--%>
+                    <div class="rightSpaceItem">
+                        <div class="rightspaceTitle">
+                            <div style="padding-top:5px;margin-left:10px">CHỦNG LOẠI</div>
+                        </div>
+                        <div class="rightspaceContent" style="height:70px;">
+                            <div style="text-align:center;padding-top:20px;">
+                            <asp:DropDownList ID="DropDownList1" runat="server" Width="140px">
+                                <asp:ListItem>------------Chọn--------------</asp:ListItem>
+                                <asp:ListItem>Bộ vi sử lý</asp:ListItem>
+                                <asp:ListItem>Ram</asp:ListItem>
+                                <asp:ListItem>Ổ cứng</asp:ListItem>
+                                <asp:ListItem>Hệ điều hành</asp:ListItem>
+                                <asp:ListItem>Màn hình</asp:ListItem>
+                                <asp:ListItem>Camera</asp:ListItem>
+                                <asp:ListItem>Card đồ họa</asp:ListItem>
+                                <asp:ListItem>Khối lượng máy</asp:ListItem>
+                            </asp:DropDownList>
+                            </div>
+                        </div>                    
+                    </div>                                        
+                    
+                    <%--Lọc tìm--%>
+                   <div class="rightSpaceItem">
+                        <div class="rightspaceTitle">
+                            <div style="padding-top:5px;margin-left:10px">HÃNG SẢN XUẤT</div>
+                        </div>
+                        <div class="rightspaceContent">
+                            <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+                                <ItemTemplate>
+                                <div>
+                                    <div class="rightspaceContentItem">                                   
+                                    <asp:LinkButton ID="LinkButton1" runat="server"
+                                        Text='<%# Eval("Manufacturer") %>' PostBackUrl='<%# "ProductbyManufacturer.aspx?Manufacturer=" +Eval("Manufacturer") %>'></asp:LinkButton>                                                                       
+                                    </div>
+                                </div>                                  
+                                </ItemTemplate>
+                            </asp:DataList>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                SelectCommand="SELECT DISTINCT Manufacturer FROM tbProduct">
+                            </asp:SqlDataSource>
+                        </div>                    
+                    </div>                    
+                    
+                    <%--Tìm theo giá--%>
+                    <div class="rightSpaceItem">
+                        <div class="rightspaceTitle">
+                            <div style="padding-top:5px;margin-left:10px">THEO GIÁ SẢN PHẨM</div>
+                        </div>
+                        <div class="rightspaceContent">                                                                                                                                                                                     
+                            <div class="rightspaceContentItem">
+                                <asp:LinkButton ID="LinkButton2" runat="server">Từ 7 ---> 10tr</asp:LinkButton>
+                            </div>
+                            <div class="rightspaceContentItem">
+                                <asp:LinkButton ID="LinkButton3" runat="server">Từ 10 ---> 15tr</asp:LinkButton>
+                            </div>
+                            <div class="rightspaceContentItem">
+                                <asp:LinkButton ID="LinkButton4" runat="server">Từ 15 ---> 20tr</asp:LinkButton>
+                            </div>
+                        </div>                    
+                    </div>                                        
+                    <%--Theo cấu hình--%>
+                    <div class="rightSpaceItem">
+                        <div class="rightspaceTitle">
+                            <div style="padding-top:5px; margin-left:10px">THEO CẤU HÌNH</div>
+                        </div>
+                        <div class="rightspaceContent">
+                            <div class="rightspaceContentItem"><a>CPU</a></div>                                
+                                <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2">
+                                    <ItemTemplate> 
+                                    <div style="padding-left:30px;padding-bottom:5px;">
+                                        <asp:LinkButton ID="MicroprocessorLabel" runat="server" Text='<%# Eval("Microprocessor") %>'>
+                                        </asp:LinkButton>                                       
+                                    </div>                                                                               
+                                    </ItemTemplate>
+                                </asp:DataList>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                    SelectCommand="SELECT DISTINCT Microprocessor FROM tbProduct">
+                                </asp:SqlDataSource>  
+                            <div class="rightspaceContentItem"><a>RAM</a></div>
+                                <div style="padding-left:35px;padding-bottom:5px;"><asp:LinkButton ID="LinkButton5" runat="server">>2 Gb</asp:LinkButton></div>
+                                <div style="padding-left:35px;padding-bottom:5px;"><asp:LinkButton ID="LinkButton6" runat="server">>3 Gb</asp:LinkButton></div>
+                                <div style="padding-left:35px;padding-bottom:5px;"><asp:LinkButton ID="LinkButton7" runat="server">>6 Gb</asp:LinkButton></div>
+                        </div>
+                    </div>                                     
+                </div>
+            <%--end Right--%>
+         </div>
+        <%--end Middle--%>       
+        <%--footer--%>
+        <%--<div class="spaceItem">
+            <div class="footer">
+            </div>
+        </div>--%>
+        <%--end footer--%>
+    </div>
+    </form>
+</body>
+</html>

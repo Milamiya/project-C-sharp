@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="hello_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Administrator</title>
+    <link rel="SHORTCUT ICON " href="~/images/businessman.ico" /> 
+    <link href="../Css/AdminStyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">    
+    <div class="space">
+        <%--Header--%>
+        <div class="header"> 
+        <img src="../images/hellobanner.jpg" 
+                style="float:left; width: 1000px;height:100%;" />        
+        </div>
+        <%--Menu--%>
+        <div class="menu">    
+            <ul>        
+            <li><a href="http://f5vietnam.com">Trang chủ</a></li>
+            <li><a href="http://f5vietnam.com">Quản lý user</a></li>
+            <li><a href="http://f5vietnam.com">Quản lý sản phẩm</a></li>
+            <li><a href="http://f5vietnam.com">Tin tức</a></li>
+            <li><a href="http://f5vietnam.com">Tìm kiếm</a></li>
+            <li><a href="http://f5vietnam.com">Thống kê</a>           
+            </li>
+            </ul>            
+        </div>
+        
+        <%--SpaceItem--%>
+        <div>
+        <div class="leftspaceItem">
+            <asp:TreeView ID="TreeView1" runat="server" Height="506px" Width="200px" 
+                ImageSet="Inbox">
+                <Nodes>
+                    <asp:TreeNode Text="Quản lý user" Value="Trang chủ" NavigateUrl="~/hello/ListUsers.aspx">
+                        <asp:TreeNode Text="Thêm user" Value="Laptop" NavigateUrl="~/hello/InsertUser.aspx">                            
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Đổi mật khẩu" Value="Đổi mật khẩu" NavigateUrl="~/hello/ChangePassword.aspx"></asp:TreeNode>                        
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="Quản lý sản phẩm" Value="Linh kiện máy tính" >
+                        <asp:TreeNode Text="Laptop" Value="Nhập linh kiện" NavigateUrl="~/hello/Product.aspx">
+                            <asp:TreeNode Text="Nhập sản phẩm" Value="Nhập sản phẩm" NavigateUrl="~/hello/ProductImport.aspx"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Linh kiện máy tính" Value="Linh kiện máy tính">
+                            <asp:TreeNode Text="Nhập sản phẩm" Value="Nhập sản phẩm"></asp:TreeNode>
+                        </asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="Tin tức" Value="Tin tức" NavigateUrl="~/hello/News.aspx">
+                        <asp:TreeNode Text="Đăng tin" Value="Nhập tin" 
+                            NavigateUrl="~/hello/NewsImport.aspx"></asp:TreeNode>
+                        <asp:TreeNode Text="Sửa tin" Value="Sửa tin" NavigateUrl="~/hello/NewsEdit.aspx"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="Tìm kiếm" Value="Tìm kiếm">
+                        <asp:TreeNode Text="Máy bàn &amp; Laptop" Value="Máy bàn &amp; Laptop" NavigateUrl="~/hello/ProductSearch.aspx">
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Linh kiện" Value="Linh kiện"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="Thống kê" Value="Thống kê">
+                        <asp:TreeNode Text="Sản phẩm bán chạy" Value="Sản phẩm bán chạy" NavigateUrl="~/hello/Statistics.aspx"></asp:TreeNode>
+                    </asp:TreeNode>
+                </Nodes>
+                <LeafNodeStyle Height="30px" />
+            </asp:TreeView>
+            </div>
+        <div class="spaceItem">
+            <div>
+                <a style="float:left;">Xin chào: <asp:Label ID="lblMaster" runat="server" 
+                    ForeColor="#0000CC"></asp:Label></a>
+            </div>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        </div>                    
+    </div>
+    </form>
+</body>
+</html>

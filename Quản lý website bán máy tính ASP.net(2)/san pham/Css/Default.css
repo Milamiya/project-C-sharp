@@ -1,0 +1,68 @@
+﻿/*a {
+	font-family:Tahoma;
+	font-size:13px;
+	text-decoration: none;
+ 	color:#696969;
+}
+a:hover {
+	font-size: 13px;
+ 	font-family: Tahoma;
+ 	border-bottom:1px solid #ADADAD;
+}*/
+
+/*Tooltip*/
+
+#osdhtmltooltip
+{
+	border: 1px solid #FF9900;	
+	font-size: 10pt;
+	z-index: 100;
+	left: -300px;
+	visibility: hidden;
+	width: 300px;
+	font-family: Arial;
+	position: absolute;
+	background-color: #FFF;
+	text-align: left;
+}
+#osdhtmltooltip img
+{
+	float: left;
+	padding: 3px;
+	border: solid 1px #FFF;
+	margin: 2px;
+}
+#osdhtmltooltip h3
+{
+	color: #000;
+	padding: 2px;
+	margin: 0px;
+	font-weight: bold;
+	text-transform: none;
+	text-decoration: none;
+}
+#osdhtmltooltip span
+{
+	color: #999;
+	font-style: italic;
+}
+#osdhtmltooltip div
+{
+	color: #000;
+}
+#osdhtmltooltip .Title
+{
+	width:100%;
+	background-color:#FF9900;
+	height:25px;
+	color:White;
+	font-weight:bold;
+	}
+
+#osdhtmlpointer
+{
+	z-index: 101;
+	left: -300px;
+	visibility: hidden;
+	position: absolute;
+}

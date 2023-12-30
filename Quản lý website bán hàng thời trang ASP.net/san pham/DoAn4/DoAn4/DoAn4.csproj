@@ -1,0 +1,527 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B949DE26-BCC0-4401-A5AF-D1BFD52922A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoAn4</RootNamespace>
+    <AssemblyName>DoAn4</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Thongbao.cs" />
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CapnhatHSX.aspx.cs">
+      <DependentUpon>CapnhatHSX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CapnhatHSX.aspx.designer.cs">
+      <DependentUpon>CapnhatHSX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CapnhatHTTT.aspx.cs">
+      <DependentUpon>CapnhatHTTT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CapnhatHTTT.aspx.designer.cs">
+      <DependentUpon>CapnhatHTTT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CapnhatHTVC.aspx.cs">
+      <DependentUpon>CapnhatHTVC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CapnhatHTVC.aspx.designer.cs">
+      <DependentUpon>CapnhatHTVC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CapnhatMaloai.aspx.cs">
+      <DependentUpon>CapnhatMaloai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CapnhatMaloai.aspx.designer.cs">
+      <DependentUpon>CapnhatMaloai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CapnhatNCC.aspx.cs">
+      <DependentUpon>CapnhatNCC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CapnhatNCC.aspx.designer.cs">
+      <DependentUpon>CapnhatNCC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CapnhatPC.aspx.cs">
+      <DependentUpon>CapnhatPC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CapnhatPC.aspx.designer.cs">
+      <DependentUpon>CapnhatPC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CapnhatSP.aspx.cs">
+      <DependentUpon>CapnhatSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CapnhatSP.aspx.designer.cs">
+      <DependentUpon>CapnhatSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChitietNhap.aspx.cs">
+      <DependentUpon>ChitietNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChitietNhap.aspx.designer.cs">
+      <DependentUpon>ChitietNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Nhaphang.aspx.cs">
+      <DependentUpon>Nhaphang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Nhaphang.aspx.designer.cs">
+      <DependentUpon>Nhaphang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemTaikhoan.aspx.cs">
+      <DependentUpon>ThemTaikhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemTaikhoan.aspx.designer.cs">
+      <DependentUpon>ThemTaikhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThongkeDoanhthu.aspx.cs">
+      <DependentUpon>ThongkeDoanhthu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThongkeDoanhthu.aspx.designer.cs">
+      <DependentUpon>ThongkeDoanhthu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThongkeNhaphang.aspx.cs">
+      <DependentUpon>ThongkeNhaphang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThongkeNhaphang.aspx.designer.cs">
+      <DependentUpon>ThongkeNhaphang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThongkeSP.aspx.cs">
+      <DependentUpon>ThongkeSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThongkeSP.aspx.designer.cs">
+      <DependentUpon>ThongkeSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThongkeSPbanchaynhat.aspx.cs">
+      <DependentUpon>ThongkeSPbanchaynhat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThongkeSPbanchaynhat.aspx.designer.cs">
+      <DependentUpon>ThongkeSPbanchaynhat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhsachHD.aspx.cs">
+      <DependentUpon>DanhsachHD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhsachHD.aspx.designer.cs">
+      <DependentUpon>DanhsachHD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TimkiemNCC.aspx.cs">
+      <DependentUpon>TimkiemNCC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TimkiemNCC.aspx.designer.cs">
+      <DependentUpon>TimkiemNCC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TimkiemSP.aspx.cs">
+      <DependentUpon>TimkiemSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TimkiemSP.aspx.designer.cs">
+      <DependentUpon>TimkiemSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Doimatkhau.aspx.cs">
+      <DependentUpon>Doimatkhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Doimatkhau.aspx.designer.cs">
+      <DependentUpon>Doimatkhau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThongtinHD.aspx.cs">
+      <DependentUpon>ThongtinHD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThongtinHD.aspx.designer.cs">
+      <DependentUpon>ThongtinHD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChitietHD.aspx.cs">
+      <DependentUpon>ChitietHD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChitietHD.aspx.designer.cs">
+      <DependentUpon>ChitietHD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Data.cs" />
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\GioHang.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Info.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Info.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.Master.cs">
+      <DependentUpon>TrangChu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Master.designer.cs">
+      <DependentUpon>TrangChu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.aspx.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrangChu.aspx.designer.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham.aspx.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SanPham.aspx.designer.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTiet.aspx.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiTiet.aspx.designer.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangNhap.aspx.designer.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SanPhamPC.aspx.cs">
+      <DependentUpon>SanPhamPC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SanPhamPC.aspx.designer.cs">
+      <DependentUpon>SanPhamPC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KetQuaTimKiem.aspx.cs">
+      <DependentUpon>KetQuaTimKiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KetQuaTimKiem.aspx.designer.cs">
+      <DependentUpon>KetQuaTimKiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu.aspx.cs">
+      <DependentUpon>GioiThieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu.aspx.designer.cs">
+      <DependentUpon>GioiThieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HangMoiVe.aspx.cs">
+      <DependentUpon>HangMoiVe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HangMoiVe.aspx.designer.cs">
+      <DependentUpon>HangMoiVe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dangky.aspx.cs">
+      <DependentUpon>Dangky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dangky.aspx.designer.cs">
+      <DependentUpon>Dangky.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnhSanPham\phong7.jpg" />
+    <Content Include="AnhSanPham\AoCuoi2.jpg" />
+    <Content Include="AnhSanPham\aocuoi8.jpg" />
+    <Content Include="AnhSanPham\Somi1.jpg" />
+    <Content Include="AnhSanPham\phong9.jpg" />
+    <Content Include="AnhSanPham\phong10.jpg" />
+    <Content Include="AnhSanPham\somi3.jpg" />
+    <Content Include="AnhSanPham\vest1.jpg" />
+    <Content Include="AnhSanPham\phong2.jpg" />
+    <Content Include="AnhSanPham\phong4.jpg" />
+    <Content Include="AnhSanPham\phong5.jpg" />
+    <Content Include="AnhSanPham\phong6.jpg" />
+    <Content Include="AnhSanPham\SoMi.jpg" />
+    <Content Include="AnhSanPham\Somi_CS1.jpg" />
+    <Content Include="AnhSanPham\Somi_CS4.jpg" />
+    <Content Include="AnhSanPham\Somi_CS5.jpg" />
+    <Content Include="AnhSanPham\Somi_CS3.jpg" />
+    <Content Include="AnhSanPham\vay3.jpg" />
+    <Content Include="AnhSanPham\vay4.jpg" />
+    <Content Include="AnhSanPham\vay5.jpg" />
+    <Content Include="AnhSanPham\Vaylien6.jpg" />
+    <Content Include="Anh\1300110156365375687_574_0.jpg" />
+    <Content Include="Anh\693_bootmuathu.jpg" />
+    <Content Include="Anh\arrow.gif" />
+    <Content Include="Anh\arrow_over.gif" />
+    <Content Include="Anh\thoitrang.jpg" />
+    <Content Include="Anh\three_0.gif" />
+    <Content Include="Anh\three_0a.gif" />
+    <Content Include="Anh\three_1.gif" />
+    <Content Include="Anh\three_1a.gif" />
+    <Content Include="App_Data\Database.mdf">
+    </Content>
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Banner\video5.swf" />
+    <Content Include="CSS\pro_dropdown_3.css" />
+    <Content Include="CSS\stuHover.js" />
+    <Content Include="TrangChu.Master" />
+    <Content Include="TrangChu.aspx" />
+    <Content Include="SanPham.aspx" />
+    <Content Include="ChiTiet.aspx" />
+    <Content Include="DangNhap.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnhSanPham\Aokieu1.jpg" />
+    <Content Include="AnhSanPham\Aokieu2.jpg" />
+    <Content Include="AnhSanPham\Aokieu3.jpg" />
+    <Content Include="AnhSanPham\Aokieu4.jpg" />
+    <Content Include="AnhSanPham\Aokieu5.jpg" />
+    <Content Include="AnhSanPham\Aokieu6.jpg" />
+    <Content Include="AnhSanPham\Aokieu7.jpg" />
+    <Content Include="AnhSanPham\quan4.jpg" />
+    <Content Include="AnhSanPham\quan9.jpg" />
+    <Content Include="AnhSanPham\QuanBo.jpg" />
+    <Content Include="AnhSanPham\QuanBo1.jpg" />
+    <Content Include="AnhSanPham\QuanJean.jpg" />
+    <Content Include="AnhSanPham\quanjeans.jpg" />
+    <Content Include="AnhSanPham\QuanJeanTrang.jpg" />
+    <Content Include="AnhSanPham\sooc3.jpg" />
+    <Content Include="AnhSanPham\vayngu2.jpg" />
+    <Content Include="AnhSanPham\Vayngu1.jpg" />
+    <Content Include="AnhSanPham\s_249_vaynguchomuathu.jpg" />
+    <Content Include="AnhSanPham\s_267_vaynguchomuathu.jpg" />
+    <Content Include="AnhSanPham\s_313_vaynguchomuathu.jpg" />
+    <Content Include="AnhSanPham\s_31_vaynguchomuathu.jpg" />
+    <Content Include="AnhSanPham\s_320_vaynguchomuathu.jpg" />
+    <Content Include="AnhSanPham\Vaylien.jpg" />
+    <Content Include="AnhSanPham\AoCuoi1.jpg" />
+    <Content Include="AnhSanPham\AoPhong2.jpg" />
+    <Content Include="AnhSanPham\Ao_Cuoi_2010_01_0018-01.jpg" />
+    <Content Include="AnhSanPham\Ao_Cuoi_2010_01_0018-06.jpg" />
+    <Content Include="AnhSanPham\Ao_Cuoi_2010_01_0018-10.jpg" />
+    <Content Include="AnhSanPham\Ao_Cuoi_2010_01_0018-11.jpg" />
+    <Content Include="AnhSanPham\vaylien2.jpg" />
+    <Content Include="AnhSanPham\vaylien1.jpg" />
+    <Content Include="AnhSanPham\vaylien3.jpg" />
+    <Content Include="AnhSanPham\vaylien14.jpg" />
+    <Content Include="AnhSanPham\vaylien4.jpg" />
+    <Content Include="AnhSanPham\vest2.jpg" />
+    <Content Include="AnhSanPham\phong19.jpg" />
+    <Content Include="AnhSanPham\somi5.jpg" />
+    <Content Include="AnhSanPham\vay0.jpg" />
+    <Content Include="AnhSanPham\vay8.jpg" />
+    <Content Include="AnhSanPham\Vest.jpg" />
+    <Content Include="AnhSanPham\vest11.jpg" />
+    <Content Include="AnhSanPham\Vest12.jpg" />
+    <Content Include="AnhSanPham\Vest13.jpg" />
+    <Content Include="AnhSanPham\vest5.jpg" />
+    <Content Include="AnhSanPham\vest6.jpg" />
+    <Content Include="Anh\bannerAD.gif" />
+    <Content Include="Anh\chittiet.png" />
+    <Content Include="Anh\loai.png" />
+    <Content Include="SanPhamPC.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Anh\2.gif" />
+    <Content Include="Anh\capnhat.jpg" />
+    <Content Include="Anh\muahang.jpg" />
+    <Content Include="Anh\new.jpeg" />
+    <Content Include="Anh\news.gif" />
+    <Content Include="Anh\quaylai.jpg" />
+    <Content Include="Anh\shop.jpg" />
+    <Content Include="Anh\star.ico" />
+    <Content Include="Anh\thanhtoan.jpg" />
+    <Content Include="Anh\thuphuong.png" />
+    <Content Include="Anh\tieptuc.jpg" />
+    <Content Include="Anh\tieptucmuahang.jpg" />
+    <Content Include="Anh\timkiem.jpg" />
+    <Content Include="Anh\xacnhanthanhtoan.jpg" />
+    <Content Include="CSS\Giaodien.css" />
+    <Content Include="GioHang.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="SL.txt" />
+    <Content Include="KetQuaTimKiem.aspx" />
+    <Content Include="GioiThieu.aspx" />
+    <Content Include="HangMoiVe.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Info.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\CapnhatHSX.aspx" />
+    <Content Include="Admin\CapnhatHTTT.aspx" />
+    <Content Include="Admin\CapnhatHTVC.aspx" />
+    <Content Include="Admin\CapnhatMaloai.aspx" />
+    <Content Include="Admin\CapnhatNCC.aspx" />
+    <Content Include="Admin\CapnhatPC.aspx" />
+    <Content Include="Admin\CapnhatSP.aspx" />
+    <Content Include="Admin\ChitietNhap.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Nhaphang.aspx" />
+    <Content Include="Admin\ThemTaikhoan.aspx" />
+    <Content Include="Admin\ThongkeDoanhthu.aspx" />
+    <Content Include="Admin\ThongkeNhaphang.aspx" />
+    <Content Include="Admin\ThongkeSP.aspx" />
+    <Content Include="Admin\ThongkeSPbanchaynhat.aspx" />
+    <Content Include="Admin\DanhsachHD.aspx" />
+    <Content Include="Admin\TimkiemNCC.aspx" />
+    <Content Include="Admin\TimkiemSP.aspx" />
+    <Content Include="Admin\Doimatkhau.aspx" />
+    <Content Include="Admin\ThongtinHD.aspx" />
+    <Content Include="Admin\ChitietHD.aspx" />
+    <Content Include="Banner\Anh Banner\banner.bmp" />
+    <Content Include="Banner\Anh Banner\banner1.bmp" />
+    <Content Include="Banner\Anh Banner\chan trang.bmp" />
+    <Content Include="Anh\dangky.jpg" />
+    <Content Include="Anh\dangnhap.jpg" />
+    <Content Include="Anh\vetrangchu.jpg" />
+    <Content Include="CSS\khung.css" />
+    <Content Include="Dangky.aspx" />
+    <Content Include="Admin\Admin.Master" />
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Info.dbml.layout">
+      <DependentUpon>Info.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57106</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,35 @@
+
+.preload1 {background: url('../Anh/three_0a.gif');}
+.preload2 {background: url('../Anh/three_1a.gif');}
+
+#nav
+{
+	padding: 0;
+	margin-left: 160px;
+	list-style: none;
+	height: 35px;
+	background: url('../Anh/three_0.gif') repeat-x;
+	position: none;
+	z-index: 500;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 168px;
+	left: 8px;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+#nav li.top {display:block; float:left;font-family: Arial, Helvetica, sans-serif;color:#ccc;font-size:15px; font-weight:bold;
+}
+#nav li a.top_link {display:block; float:left; height:35px; line-height:33px; color:#ccc; text-decoration:none; font-size:15px; font-weight:bold; padding:0 0 0 20px; cursor:pointer;background: url('../Anh/three_0.gif');
+}
+#nav li a.top_link span {float:left; display:block; padding:0 24px 0 15px; height:35px; background: url('../Anh/three_0.gif') right top no-repeat;
+}
+#nav li a.top_link span.down {float:left; display:block; padding:0 24px 0 12px; height:35px; background: url('../Anh/three_0a.gif') no-repeat right top;}
+
+#nav li:hover a.top_link {color:#fff; background: url('../Anh/three_1.gif') no-repeat;}
+#nav li:hover a.top_link span
+{
+	background: url( 'file:///C:/Documents and Settings/Administrator/Desktop/DoAn4/DoAn4/../Anh/three_1.gif' ) no-repeat right top;
+}
+#nav li:hover a.top_link span.down {background:url('../Anh/three_1a.gif') no-repeat right top; padding-bottom:3px;}

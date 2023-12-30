@@ -1,0 +1,434 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{637AB0B6-E629-4B47-8228-77E5959ECA90}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>School</RootNamespace>
+    <AssemblyName>School</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="%40class\cLsImageList.cs" />
+    <Compile Include="%40class\clsODBC.cs" />
+    <Compile Include="%40class\clsVariable.cs" />
+    <Compile Include="%40class\cls_myFunctions.cs" />
+    <Compile Include="%40forms\frmAboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmAboutUs.Designer.cs">
+      <DependentUpon>frmAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmAdminSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmAdminSet.Designer.cs">
+      <DependentUpon>frmAdminSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmAgreement.Designer.cs">
+      <DependentUpon>frmAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmAttEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmAttEmp.Designer.cs">
+      <DependentUpon>frmAttEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmAttStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmAttStu.Designer.cs">
+      <DependentUpon>frmAttStu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmClass.Designer.cs">
+      <DependentUpon>frmClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmExam.Designer.cs">
+      <DependentUpon>frmExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmExp.Designer.cs">
+      <DependentUpon>frmExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmExpDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmExpDetail.Designer.cs">
+      <DependentUpon>frmExpDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmFee.Designer.cs">
+      <DependentUpon>frmFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmFindExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmFindExp.Designer.cs">
+      <DependentUpon>frmFindExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmKey.Designer.cs">
+      <DependentUpon>frmKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmQaEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmQaEmp.Designer.cs">
+      <DependentUpon>frmQaEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmQclass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmQclass.Designer.cs">
+      <DependentUpon>frmQclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmQemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmQemployee.Designer.cs">
+      <DependentUpon>frmQemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmQexam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmQexam.Designer.cs">
+      <DependentUpon>frmQexam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmQexp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmQexp.Designer.cs">
+      <DependentUpon>frmQexp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmQexpD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmQexpD.Designer.cs">
+      <DependentUpon>frmQexpD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmQstudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmQstudent.Designer.cs">
+      <DependentUpon>frmQstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmQsubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmQsubject.Designer.cs">
+      <DependentUpon>frmQsubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmRegData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmRegData.Designer.cs">
+      <DependentUpon>frmRegData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmStudent.Designer.cs">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmSubject.Designer.cs">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frmUreg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frmUreg.Designer.cs">
+      <DependentUpon>frmUreg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\MDIParent.Designer.cs">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="%40forms\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="%40forms\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="%40forms\frmAboutUs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmAdminSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAdminSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmAgreement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmAttEmp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAttEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmAttStu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAttStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmClass.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmExam.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmExp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmExpDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmExpDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmFee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmFindExp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFindExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmKey.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmQaEmp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQaEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmQclass.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmQemployee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmQexam.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQexam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmQexp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQexp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmQexpD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQexpD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmQstudent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQstudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmQsubject.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQsubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmRegData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRegData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmStudent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmSubject.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frmUreg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUreg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\frm_login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\MDIParent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="%40forms\Welcome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\175_inpage-standing-woman.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginfinal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title form.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school management.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add record.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify record.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class title.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class title1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small form.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listshadow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exp head.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam detail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exp detail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subject small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp_att.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

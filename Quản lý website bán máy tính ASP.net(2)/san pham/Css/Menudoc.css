@@ -1,0 +1,39 @@
+﻿*{margin:0px; padding:0px}
+.menudoc{
+            width: 100%;            
+            text-align:left;                     
+        }
+        .active {
+            background: #3883cc url(../Image/right.png) no-repeat 5px center;
+        }
+        dl  {
+            width: 100%;            
+        }
+        
+        dt{
+            background: #3883cc url(../Image/down.png) no-repeat 5px center;
+            border-bottom: 1px solid white;
+            font-size: 14px; 
+            padding: 5px 0px;           
+        }
+        
+        dt a {
+            color: white;
+            text-decoration: none;
+            padding: 0px 18px;
+            margin-left:6px;			
+        }
+        
+        dd a {
+            color: black;			
+        }
+        
+        ul {
+            list-style: none; 
+            padding-left:20px;			
+        }
+        ul li
+        {
+        	margin:6px;
+        	}
+                       

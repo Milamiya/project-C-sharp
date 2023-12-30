@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TrangChu.Master.cs" Inherits="DoAn4.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ThuPhuong.com</title><link rel="shortcut icon" href="Anh/star.ico" type="image/x-icon"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/Giaodien.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/pro_dropdown_3.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/khung.css" rel="stylesheet" type="text/css" />
+    <script src="CSS/stuHover.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="noidung">
+        <center>
+            <div id="header">
+            </div>
+            <!--đòng header-->
+        </center>
+        <div id="ThanhMenu">
+            <span class="preload1"></span><span class="preload2"></span>
+            <ul id="nav">
+                <li class="top"><a href="TrangChu.aspx" class="top_link"><span>Trang chủ</span></a></li>
+                <li class="top"><a href="GioiThieu.aspx" class="top_link"><span>Giới thiệu</span></a></li>
+                <li class="top"><a href="GioHang.aspx" class="top_link"><span>Giỏ hàng</span></a></li>
+                <li class="top"><a href="Dangky.aspx" class="top_link"><span>Đăng kí</span></a></li>
+                <li class="top"><a class="top_link">
+                    <asp:LinkButton ID="LinkDangNhap" runat="server" Font-Underline="False" 
+                        ForeColor="White" Font-Bold="True" Font-Names="Arial" 
+                        onclick="LinkDangNhap_Click">LinkButton</asp:LinkButton></a></li>
+            </ul>
+        </div>
+        <div id="menu_trai">
+        <div class="khungmenu">
+            <div id="ddblueblockmenu" style="text-align: right; background-color: #333333;">
+                <div class="thanhngang">
+                    Sản phẩm
+                </div>
+                <div class="menutitle" style="text-align: left; width: 178px;">
+                <div style="background-color:#333333; width: 176px;">
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/HangMoiVe.aspx" 
+                        Width="111px">Quần áo mới về</asp:HyperLink>
+                    <asp:Image ID="Image4" runat="server" Height="16px" ImageUrl="~/Anh/news.gif" 
+                        Width="23px" />
+                        </div>
+                    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Width="175px">
+                        <ItemTemplate>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "SanPham.aspx?Type_ID="+Eval("Type_ID") %>'
+                                Text='<%# Eval("Type_Name") %>'></asp:HyperLink>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT * FROM [tbl_Type]"></asp:SqlDataSource>
+                </div>
+                <div class="thanhngang">
+                    Phong cách</div>
+                <div class="menutitle" style="text-align: left; width: 178px;">
+                    <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource4" Width="172px">
+                        <ItemTemplate>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "SanPhamPC.aspx?Style_ID="+Eval("Style_ID") %>'
+                             Text='<%# Eval("Style_Name") %>' 
+                                Width="158px" ></asp:HyperLink>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT * FROM [tbl_Style]"></asp:SqlDataSource>
+                </div>
+                </div>
+                </div>
+                <div class="khungmenu">
+                <div class="thanhngang">
+                Tìm kiếm</div>
+                <div style="margin: 2px; height: 150px; padding: 5px; width: 164px; text-align:left">
+                    <asp:DropDownList ID="DropLoai" runat="server" Height="20px" Style="margin-left: 0px;
+                        margin-bottom: 10px" Width="160px" DataSourceID="SqlDataSource2" DataTextField="Type_Name"
+                        DataValueField="Type_Name" onprerender="DropDownList4_PreRender">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT [Type_Name] FROM [tbl_Type]"></asp:SqlDataSource>
+                    <asp:DropDownList ID="DropNSX" runat="server" Height="20px" Style="margin-left: 0px;
+                        margin-bottom: 10px" Width="160px" DataSourceID="SqlDataSource3" DataTextField="Producer_Name"
+                        DataValueField="Producer_Name" onprerender="DropDownList1_PreRender">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT [Producer_Name] FROM [tbl_Producer]"></asp:SqlDataSource>
+                    <asp:DropDownList ID="DropGiaMin" runat="server" Height="20px" Style="margin-left: 0px;
+                        margin-bottom: 10px" Width="160px">
+                        <asp:ListItem>--Giá từ--</asp:ListItem>
+                        <asp:ListItem>50000</asp:ListItem>
+                        <asp:ListItem>100000</asp:ListItem>
+                        <asp:ListItem>200000</asp:ListItem>
+                        <asp:ListItem>300000</asp:ListItem>
+                        <asp:ListItem>500000</asp:ListItem>
+                        <asp:ListItem>800000</asp:ListItem>
+                        <asp:ListItem>1000000</asp:ListItem>
+                    </asp:DropDownList>
+                    <br />
+                    <asp:DropDownList ID="DropGiaMax" runat="server" Height="20px" Style="margin-left: 0px;
+                        margin-bottom: 10px" Width="160px" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged">
+                        <asp:ListItem>--Đến--</asp:ListItem>
+                        <asp:ListItem>100000</asp:ListItem>
+                        <asp:ListItem>200000</asp:ListItem>
+                        <asp:ListItem>300000</asp:ListItem>
+                        <asp:ListItem>500000</asp:ListItem>
+                        <asp:ListItem>1000000</asp:ListItem>
+                        <asp:ListItem>1500000</asp:ListItem>
+                    </asp:DropDownList>
+                    <div style="text-align:right; margin-right:3px">
+                    <asp:ImageButton ID="timkiem" runat="server" ImageUrl="Anh/timkiem.jpg" 
+                        Height="26px" Width="44px" onclick="timkiem_Click" /></div>
+                </div>
+                </div>
+                <div class="khungmenu">
+                <div class="thanhngang">
+                    Lượt truy cập</div>
+                <div style="margin: 2px; height: 70px; text-align: left; color: White">
+                    <asp:Label ID="lblsonguoitruycap" runat="server"></asp:Label>
+                    <br />
+                    <asp:Label ID="lbSoNguoiOnline" runat="server"></asp:Label>
+                </div>
+                </div>
+            <%--</div>--%>
+        </div>
+        <!--đóng menu trái-->
+        <div id="content">
+            <div id="mainContent">
+                <asp:ContentPlaceHolder ID="Con1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!--đóng mainContent-->
+            <div id="sidebar">
+            <div class="khungmenu">
+            <div class="thanhngang">Giỏ hàng
+            </div>
+            <div style="color:White; text-align:center">
+                <asp:Label ID="lbkohang" runat="server" Text="Hiện có: 0 mặt hàng"></asp:Label></div>
+            <asp:Panel ID="Panel1" runat="server">
+            <div style="text-align:center; color:black; background-color:White; margin-left:1px; margin-right:2px;">
+            <asp:Label ID="lbgiohang" runat="server" ></asp:Label><br />
+                <asp:Label ID="lbltongtien" runat="server" ></asp:Label>
+                <br />
+                </div>
+                <div style="text-align:center; color:White">
+                <asp:LinkButton ID="LinkXemGio" runat="server" Font-Underline="False" 
+                    ForeColor="White" PostBackUrl="~/GioHang.aspx">Xem giỏ</asp:LinkButton>&nbsp;
+                <asp:Label ID="gach" runat="server" Text="|"></asp:Label>&nbsp;
+                <asp:LinkButton ID="LinkThanhToan" runat="server" Font-Underline="False" 
+                    ForeColor="White" PostBackUrl="~/ThanhToan.aspx" onclick="LinkThanhToan_Click">Thanh toán</asp:LinkButton>
+                    
+            </div>
+            </asp:Panel>
+            </div>
+            <div class="khungmenu">
+                <div class="thanhngang">
+                  Quảng Cáo
+                </div>
+                <div style="margin: 5px; background-color: #333333; text-align: center">
+                    <a href="http://www.ohthoitrang.com/trang_suc/1615/" shape="rect" style="text-decoration: none"
+                        target="_blank">
+                        <asp:Image ID="Image1" runat="server" Height="170px" ImageUrl="~/Anh/693_bootmuathu.jpg"
+                            Width="170px" BorderColor="#FFCCFF" BorderStyle="Solid" BorderWidth="1px" />
+                        <asp:Label ID="Label1" runat="server" Text="Trang sức và phụ trang - Boot mùa thu"
+                            ForeColor="white" Font-Bold="False"></asp:Label>
+                    </a>
+                </div>
+                <div style="margin: 5px; background-color: #333333; text-align: center">
+                    <a href="http://muahieuqua.com/showthread.php/5535-Bo-suu-tap-trang-suc-Xuan-He-2011-"
+                        shape="rect" style="text-decoration: none" target="_blank">
+                        <asp:Image ID="Image3" runat="server" Height="255px" ImageUrl="~/Anh/1300110156365375687_574_0.jpg"
+                            Width="170px" BorderColor="#FFCCFF" BorderStyle="Solid" BorderWidth="1px" />
+                        <asp:Label ID="Label3" runat="server" Text="Bộ sưu tập trang sức Xuân Hè 2011 !"
+                            ForeColor="white" Font-Bold="False"></asp:Label>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <!--đóng sidebar-->
+            <div id="footder">
+                <address>
+                    CỬA HÀNG THỜI TRANG THU PHƯƠNG<br />
+                    Dân Tiến - Khoái Châu - Hưng Yên<br />
+                    Email: thuphuong@gmail.com<br />
+                </address>
+            </div>
+            <!--đóng footer-->
+        </div>
+        <!--đóng content-->
+    </div>
+    <!--đóng noi dung-->
+    </form>
+</body>
+</html>

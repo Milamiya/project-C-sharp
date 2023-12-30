@@ -1,0 +1,6 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Session_OnStart
+Session("MaKH")=0
+End sub
+</SCRIPT>
+
