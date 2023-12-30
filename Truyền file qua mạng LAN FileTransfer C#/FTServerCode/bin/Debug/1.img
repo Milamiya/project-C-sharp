@@ -1,0 +1,445 @@
+Hi, Now I’m far from socket now Im giving some code with .Net and SQL Server related code, that code will help any one to run stored procedure, very easyly with little code. Now follow these code.
+
+Create a table to test the stored procedure, I’m giving one example:
+
+CREATE TABLE [client](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](64)  NULL,
+	[jdate] [datetime] NULL
+) 
+
+Then insert some data into that table.
+
+INSERT INTO [client]([Name],[jdate])VALUES ('Taniya',getdate())
+INSERT INTO [client]([Name],[jdate])VALUES ('Jhuma',getdate())
+INSERT INTO [client]([Name],[jdate])VALUES ('Ganesh',getdate())
+
+
+Then create a stored procedure to test my class, here I’m creating a stored procedure (sp) to update some data based on client id. Here store procedure’s parameters are @nextName and @id. Code is giving here:
+
+create procedure UpdateName ( @nextName varchar(256), @id int )
+ as
+update client set [name]=@nextName where id=@id
+
+
+Now sql server data base related job is done. Now will to c# related code.
+
+First giving the code by that my class will be accessed to run that stored procedure. Just note that code, only that code will be required to run any stored procedure.
+
+public class RunSP
+{
+    /// <summary>
+    /// Run Store Procedure.
+    /// </summary>
+    /// <param name="cnnStr">Connection String of SQL server</param>
+    public static void RunSP(string cnnStr)
+    {
+        //Create a array list to store parameter(s) with 
+        //parameter name, value & data type.
+        ArrayList arLst = new ArrayList();
+        //Now send array list name, value & varchar, persingle 
+        //call of that function will create one stored parameter.
+        SP.spArgumentsCollection(arLst, "@nextName", "Suman Biswas", "varchar"); 
+        SP.spArgumentsCollection(arLst, "@id", "2", "int");
+        //Now run stored procedure.
+        SP.RunStoredProcedure(cnnStr, "UpdateName", arLst);
+    }
+}
+
+
+Here the actual class to run stored procedure,  you can make all dll file by that code and then easily use this. Codes are below:
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Collections;
+using System.Data;
+using System.Data.SqlClient;
+
+//That code has written by Suman Biswas, that code is running fine at my testing, 
+//if any one get any problem please inform me. My email is sumanbiswas@aol.in
+namespace StoredProcedureLib
+{
+    /// <summary>
+    /// This class helps to built SP argument. It can use directly to any SP. Created by Suman Biswas on 23rd Frb 2007.
+    /// </summary>
+    
+    public class SP
+    {
+
+        internal class SPArgBuild
+        {
+            internal string parameterName = "";
+            internal string parameterValue = "";
+            /// <summary>
+            /// Write full data type, such as SqlDBType.VarChar.
+            /// </summary>
+            internal string pramValueType = "";
+
+            /// <summary>
+            /// Use to create SP Argument Build conestruction.
+            /// </summary>
+            /// <param name="pramName">SP Argument Parameter Name.</param>
+            /// <param name="pramValue">SP Argument Parameter Value.</param>
+            internal SPArgBuild(string pramName, string pramValue, string pramValueType)
+            {
+                this.parameterName = pramName;
+                this.parameterValue = pramValue;
+                this.pramValueType = pramValueType;
+
+            }
+        }
+
+        /// <summary>
+        /// This function built an Array List, which is collection of some SP parameter's Name, Value and Data type.
+        /// </summary>
+        /// <param name="arrLst">Array List which will store all argument.</param>
+        /// <param name="spParmName">SP Argument Parameter Name.</param>
+        /// <param name="spParmValue">SP Argument Parameter Value.</param>
+        /// <param name="spPramValueType">Parameter value type EXACTLY same as SqlDBType. E.g. 'SqlDbType.BigInt' will 'BigInt'. </param>
+        /// <returns></returns>
+        public static ArrayList spArgumentsCollection(ArrayList arrLst, string spParmName, string spParmValue, string spPramValueType)
+        {
+            SPArgBuild spArgBuiltObj = new SPArgBuild(spParmName, spParmValue, spPramValueType);
+            arrLst.Add(spArgBuiltObj);
+            return arrLst;
+        }
+
+        /// <summary>
+        /// Run a stored procedure of Select SQL type.
+        /// </summary>
+        /// <param name="dbConnStr">Connection String to connect Sql Server</param>
+        /// <param name="ds">DataSet which will return after filling Data</param>
+        /// <param name="spName">Stored Procedure Name</param>
+        /// <param name="spPramArrList">Parameters in ArrayList</param>
+        /// <returns>Return DataSet after filing data by SQL.</returns>
+        public static DataSet RunStoredProcedure(string dbConnStr, DataSet ds, string spName, ArrayList spPramArrList)
+        {
+            SqlConnection conn = new SqlConnection(dbConnStr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conn;
+            cmd.CommandText = spName;
+
+            string spPramName = "";
+            string spPramValue = "";
+            string spPramDataType = "";
+            for (int i = 0; i < spPramArrList.Count; i++)
+            {
+                spPramName = ((SPArgBuild)spPramArrList[i]).parameterName;
+                spPramValue = ((SPArgBuild)spPramArrList[i]).parameterValue;
+                spPramDataType = ((SPArgBuild)spPramArrList[i]).pramValueType;
+                SqlParameter pram = null;
+                #region SQL DB TYPE AND VALUE ASSIGNMENT
+                switch (spPramDataType.ToUpper())
+                {
+                    case "BIGINT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.BigInt);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "BINARY":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Binary);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "BIT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Bit);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "CHAR":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Char);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "DATETIME":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.DateTime);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "DECIMAL":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Decimal);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "FLOAT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Float);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "IMAGE":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Image);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "INT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Int);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "MONEY":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Money);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "NCHAR":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.NChar);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "NTEXT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.NText);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "NVARCHAR":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.NVarChar);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "REAL":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Real);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "SMALLDATETIME":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.SmallDateTime);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "SMALLINT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.SmallInt);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "SMALLMONEY":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.SmallMoney);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "TEXT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Text);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "TIMESTAMP":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Timestamp);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "TINYINT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.TinyInt);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "UDT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Udt);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "UMIQUEIDENTIFIER":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.UniqueIdentifier);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "VARBINARY":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.VarBinary);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "VARCHAR":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.VarChar);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "VARIANT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Variant);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "XML":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Xml);
+                        pram.Value = spPramValue;
+                        break;
+                }
+                #endregion
+                pram.Direction = ParameterDirection.Input;
+            }
+
+            SqlDataAdapter adap = new SqlDataAdapter(cmd);
+
+            adap.Fill(ds);
+            return ds;
+
+        }
+
+        /// <summary>
+        /// Run a stored procedure which will execure some nonquery SQL.
+        /// </summary>
+        /// <param name="dbConnStr">Connection String to connect Sql Server</param>
+        /// <param name="spName">Stored Procedure Name</param>
+        /// <param name="spPramArrList">Parameters in a ArrayList</param>
+        public static void RunStoredProcedure(string dbConnStr, string spName, ArrayList spPramArrList)
+        {
+            SqlConnection conn = new SqlConnection(dbConnStr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conn;
+            cmd.CommandText = spName;
+
+            string spPramName = "";
+            string spPramValue = "";
+            string spPramDataType = "";
+            for (int i = 0; i < spPramArrList.Count; i++)
+            {
+                spPramName = ((SPArgBuild)spPramArrList[i]).parameterName;
+                spPramValue = ((SPArgBuild)spPramArrList[i]).parameterValue;
+                spPramDataType = ((SPArgBuild)spPramArrList[i]).pramValueType;
+                SqlParameter pram = null;
+                #region SQL DB TYPE AND VALUE ASSIGNMENT
+                switch (spPramDataType.ToUpper())
+                {
+                    case "BIGINT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.BigInt);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "BINARY":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Binary);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "BIT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Bit);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "CHAR":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Char);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "DATETIME":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.DateTime);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "DECIMAL":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Decimal);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "FLOAT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Float);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "IMAGE":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Image);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "INT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Int);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "MONEY":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Money);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "NCHAR":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.NChar);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "NTEXT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.NText);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "NVARCHAR":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.NVarChar);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "REAL":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Real);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "SMALLDATETIME":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.SmallDateTime);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "SMALLINT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.SmallInt);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "SMALLMONEY":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.SmallMoney);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "TEXT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Text);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "TIMESTAMP":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Timestamp);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "TINYINT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.TinyInt);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "UDT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Udt);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "UMIQUEIDENTIFIER":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.UniqueIdentifier);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "VARBINARY":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.VarBinary);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "VARCHAR":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.VarChar);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "VARIANT":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Variant);
+                        pram.Value = spPramValue;
+                        break;
+
+                    case "XML":
+                        pram = cmd.Parameters.Add(spPramName, SqlDbType.Xml);
+                        pram.Value = spPramValue;
+                        break;
+                }
+                #endregion
+                pram.Direction = ParameterDirection.Input;
+            }
+            cmd.ExecuteNonQuery();
+        }
+
+    }
+   
+
+}
+

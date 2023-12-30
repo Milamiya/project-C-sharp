@@ -1,0 +1,235 @@
+﻿<UserControl x:Class="SLCaroGame.Giaodien.Hinhnen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <UserControl.Resources>
+        <Storyboard x:Name="Wind">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="10.977"/>
+                <SplineDoubleKeyFrame KeySpline="0.550999999046326,0.114000000059605,0.428999990224838,0.929000020027161" KeyTime="00:00:01" Value="-12.042"/>
+                <SplineDoubleKeyFrame KeySpline="0.5,0.25900000333786,0.472000002861023,0.893999993801117" KeyTime="00:00:02.3000000" Value="11.505"/>
+                <SplineDoubleKeyFrame KeySpline="0.555000007152557,0.233999997377396,0.428999990224838,0.794000029563904" KeyTime="00:00:03.6000000" Value="25.366"/>
+                <SplineDoubleKeyFrame KeySpline="0.591000020503998,0.244000002741814,0.465000003576279,0.83899998664856" KeyTime="00:00:04.9000000" Value="21.012"/>
+                <SplineDoubleKeyFrame KeySpline="0.479999989271164,0.153999999165535,0.542999982833862,0.83899998664856" KeyTime="00:00:06.4000000" Value="-12.01"/>
+                <SplineDoubleKeyFrame KeySpline="0.504000008106232,0.17399999499321,0.460999995470047,0.833999991416931" KeyTime="00:00:07.7000000" Value="10.977"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="3.962"/>
+                <SplineDoubleKeyFrame KeySpline="0.550999999046326,0.114000000059605,0.428999990224838,0.929000020027161" KeyTime="00:00:01" Value="24.921"/>
+                <SplineDoubleKeyFrame KeySpline="0.5,0.25900000333786,0.472000002861023,0.893999993801117" KeyTime="00:00:02.3000000" Value="17.452"/>
+                <SplineDoubleKeyFrame KeySpline="0.555000007152557,0.233999997377396,0.428999990224838,0.794000029563904" KeyTime="00:00:03.6000000" Value="17.367"/>
+                <SplineDoubleKeyFrame KeySpline="0.591000020503998,0.244000002741814,0.465000003576279,0.83899998664856" KeyTime="00:00:04.9000000" Value="36.248"/>
+                <SplineDoubleKeyFrame KeySpline="0.479999989271164,0.153999999165535,0.542999982833862,0.83899998664856" KeyTime="00:00:06.4000000" Value="41.003"/>
+                <SplineDoubleKeyFrame KeySpline="0.504000008106232,0.17399999499321,0.460999995470047,0.833999991416931" KeyTime="00:00:07.7000000" Value="3.962"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="10.971"/>
+                <SplineDoubleKeyFrame KeySpline="0.219999998807907,0.0839999988675117,0.381999999284744,0.898999989032745" KeyTime="00:00:01.3000000" Value="-6.056"/>
+                <SplineDoubleKeyFrame KeySpline="0.444999992847443,0.333999991416931,0.437000006437302,0.828999996185303" KeyTime="00:00:02.5000000" Value="39.403"/>
+                <SplineDoubleKeyFrame KeySpline="0.59799998998642,0.108999997377396,0.479999989271164,0.903999984264374" KeyTime="00:00:04.3000000" Value="-9.576"/>
+                <SplineDoubleKeyFrame KeySpline="0.566999971866608,0.224000006914139,0.389999985694885,0.908999979496002" KeyTime="00:00:06" Value="3.621"/>
+                <SplineDoubleKeyFrame KeySpline="0.43299999833107,0.138999998569489,0.515999972820282,0.843999981880188" KeyTime="00:00:07.7000000" Value="10.971"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="3.964"/>
+                <SplineDoubleKeyFrame KeySpline="0.219999998807907,0.0839999988675117,0.381999999284744,0.898999989032745" KeyTime="00:00:01.3000000" Value="33.926"/>
+                <SplineDoubleKeyFrame KeySpline="0.444999992847443,0.333999991416931,0.437000006437302,0.828999996185303" KeyTime="00:00:02.5000000" Value="7.594"/>
+                <SplineDoubleKeyFrame KeySpline="0.59799998998642,0.108999997377396,0.479999989271164,0.903999984264374" KeyTime="00:00:04.3000000" Value="52.145"/>
+                <SplineDoubleKeyFrame KeySpline="0.566999971866608,0.224000006914139,0.389999985694885,0.908999979496002" KeyTime="00:00:06" Value="35.891"/>
+                <SplineDoubleKeyFrame KeySpline="0.43299999833107,0.138999998569489,0.515999972820282,0.843999981880188" KeyTime="00:00:07.7000000" Value="3.964"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="10.977"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="-4.042"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.8000000" Value="15.214"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04" Value="8.876"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05.1000000" Value="5.003"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:06.7000000" Value="-5.093"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:07.7000000" Value="10.977"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="3.984"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="31.964"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.8000000" Value="-4.434"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04" Value="20.118"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05.1000000" Value="29.988"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:06.7000000" Value="40.953"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:07.7000000" Value="3.984"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="10.974"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-0.05" KeySpline="0.444999992847443,0.13400000333786,0.527999997138977,0.859000027179718"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7000000" Value="25.579" KeySpline="0.527999997138977,0.25900000333786,0.444999992847443,0.879000008106232"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:03.1000000" Value="17.419" KeySpline="0.523999989032745,0.188999995589256,0.425000011920929,0.888999998569489"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04.4000000" Value="22.873" KeySpline="0.621999979019165,0.358999997377396,0.345999985933304,0.773999989032745"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05.9000000" Value="17.235" KeySpline="0.601999998092651,0.123999997973442,0.386000007390976,0.859000027179718"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:07.7000000" Value="10.974" KeySpline="0.441000014543533,0.224000006914139,0.504000008106232,0.888999998569489"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="3.982"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="23.961" KeySpline="0.444999992847443,0.13400000333786,0.527999997138977,0.859000027179718"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-1.307" KeySpline="0.527999997138977,0.25900000333786,0.444999992847443,0.879000008106232"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:03.1000000" Value="25.045" KeySpline="0.523999989032745,0.188999995589256,0.425000011920929,0.888999998569489"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04.4000000" Value="-5.657" KeySpline="0.621999979019165,0.358999997377396,0.345999985933304,0.773999989032745"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05.9000000" Value="17.963" KeySpline="0.601999998092651,0.123999997973442,0.386000007390976,0.859000027179718"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:07.7000000" Value="3.982" KeySpline="0.441000014543533,0.224000006914139,0.504000008106232,0.888999998569489"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeySpline="0.550999999046326,0.114000000059605,0.428999990224838,0.929000020027161" KeyTime="00:00:01" Value="7.166"/>
+                <SplineDoubleKeyFrame KeySpline="0.5,0.25900000333786,0.472000002861023,0.893999993801117" KeyTime="00:00:02.3000000" Value="-6.966"/>
+                <SplineDoubleKeyFrame KeySpline="0.555000007152557,0.233999997377396,0.428999990224838,0.794000029563904" KeyTime="00:00:03.6000000" Value="-10.145"/>
+                <SplineDoubleKeyFrame KeySpline="0.591000020503998,0.244000002741814,0.465000003576279,0.83899998664856" KeyTime="00:00:04.9000000" Value="-1.74"/>
+                <SplineDoubleKeyFrame KeySpline="0.504000008106232,0.17399999499321,0.460999995470047,0.833999991416931" KeyTime="00:00:07.7000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeySpline="0.219999998807907,0.0839999988675117,0.381999999284744,0.898999989032745" KeyTime="00:00:01.3000000" Value="3.736"/>
+                <SplineDoubleKeyFrame KeySpline="0.444999992847443,0.333999991416931,0.437000006437302,0.828999996185303" KeyTime="00:00:02.5000000" Value="-3.053"/>
+                <SplineDoubleKeyFrame KeySpline="0.59799998998642,0.108999997377396,0.479999989271164,0.903999984264374" KeyTime="00:00:04.3000000" Value="1.583"/>
+                <SplineDoubleKeyFrame KeySpline="0.566999971866608,0.224000006914139,0.389999985694885,0.908999979496002" KeyTime="00:00:06" Value="-1.829"/>
+                <SplineDoubleKeyFrame KeySpline="0.43299999833107,0.138999998569489,0.515999972820282,0.843999981880188" KeyTime="00:00:07.7000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="11.357"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.8000000" Value="3.191"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04" Value="10.354"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05.1000000" Value="16.13"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:07.7000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Leaves4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="7.086" KeySpline="0.444999992847443,0.13400000333786,0.527999997138977,0.859000027179718"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7000000" Value="1.498" KeySpline="0.527999997138977,0.25900000333786,0.444999992847443,0.879000008106232"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:03.1000000" Value="15.251" KeySpline="0.523999989032745,0.188999995589256,0.425000011920929,0.888999998569489"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04.4000000" Value="1.235" KeySpline="0.621999979019165,0.358999997377396,0.345999985933304,0.773999989032745"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05.9000000" Value="9.548" KeySpline="0.601999998092651,0.123999997973442,0.386000007390976,0.859000027179718"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:07.7000000" Value="0" KeySpline="0.441000014543533,0.224000006914139,0.504000008106232,0.888999998569489"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Canvas>
+        <Image Height="545.076" x:Name="Leaves1" Width="334.047" RenderTransformOrigin="0.5,0.5" Canvas.Left="-76.974" Canvas.Top="-64" Source="Anh/Leaves1.png" Stretch="Fill" d:IsLocked="True">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Height="513.072" x:Name="Leaves2" Width="416.058" RenderTransformOrigin="0.5,0.5" Canvas.Left="-188" Canvas.Top="74.986" Source="Anh/Leaves2.png" Stretch="Fill" d:IsLocked="True">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Height="224.031" x:Name="Leaves3" Width="329.046" RenderTransformOrigin="0.5,0.5" Canvas.Left="-11" Canvas.Top="28" Source="Anh/Leaves3.png" Stretch="Fill" d:IsLocked="True">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Height="250.035" x:Name="Leaves4" Width="374.052" RenderTransformOrigin="0.5,0.5" Canvas.Left="82.01" Canvas.Top="-31.983" Source="Anh/Leaves4.png" Stretch="Fill">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="337" Canvas.Top="-100" Height="317" Name="image1" RenderTransformOrigin="0.5,0.5" Source="Anh/Leaves4.png" Stretch="Fill" Width="353">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="1100" Canvas.Top="-53" Height="250.035" Name="image2" RenderTransformOrigin="0.5,0.5" Source="Anh/Leaves4.png" Stretch="Fill" Width="374.052">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="1217" Canvas.Top="-20" Height="250.035" Name="image3" RenderTransformOrigin="0.5,0.5" Source="Anh/Leaves4.png" Stretch="Fill" Width="374.052">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="667" Canvas.Top="-113" Height="260" Name="image4" RenderTransformOrigin="0.5,0.5" Source="Anh/Leaves4.png" Stretch="Fill" Width="513">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="1250" Canvas.Top="207" Height="250.035" Name="image5" RenderTransformOrigin="0.5,0.5" Source="Anh/Leaves4.png" Stretch="Fill" Width="374.052">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="368" Canvas.Top="515" Height="250.035" Name="image6" RenderTransformOrigin="0.5,0.5" Source="Anh/Leaves4.png" Stretch="Fill" Width="374.052">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="585" Canvas.Top="488" Height="250.035" Name="image7" RenderTransformOrigin="0.5,0.5" Source="Anh/Leaves4.png" Stretch="Fill" Width="374.052">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="922" Canvas.Top="512" Height="250.035" Name="image8" RenderTransformOrigin="0.5,0.5" Source="Anh/Leaves4.png" Stretch="Fill" Width="374.052">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Canvas>
+</UserControl>

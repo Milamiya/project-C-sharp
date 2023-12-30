@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB771F4B-2B14-4EB9-8E29-21C6B57C5973}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PKT</RootNamespace>
+    <AssemblyName>PKT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="baohanh.aspx" />
+    <Content Include="chitiet_sp.aspx" />
+    <Content Include="css\stickytooltip.css" />
+    <Content Include="css\style.css" />
+    <Content Include="dangky.aspx" />
+    <Content Include="data.xml" />
+    <Content Include="Data Image\dien-thoai-di-dong-nokia-lumina900-dienmay.com-l.jpg" />
+    <Content Include="dathang.aspx" />
+    <Content Include="giohang.aspx" />
+    <Content Include="gioithieu.aspx" />
+    <Content Include="gopy.aspx" />
+    <Content Include="Img\b1.jpg" />
+    <Content Include="banner_images\b1.jpg" />
+    <Content Include="banner_images\b2.jpg" />
+    <Content Include="banner_images\b3.jpg" />
+    <Content Include="banner_images\b4.jpg" />
+    <Content Include="banner_images\banner.swf" />
+    <Content Include="banner_images\swfobject.js" />
+    <Content Include="Img\Cac kieu.js" />
+    <Content Include="Img\data.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Img\Images\1055063868left_unlockip4s.jpg" />
+    <Content Include="Img\Images\1227170557samsung.gif" />
+    <Content Include="Img\Images\1227170609w230.jpg" />
+    <Content Include="Img\Images\167180436left_wx260.jpg" />
+    <Content Include="Img\Images\242.gif" />
+    <Content Include="Img\Images\273.gif" />
+    <Content Include="Img\Images\316688224left_lacviet.jpg" />
+    <Content Include="Img\Images\39868626left_tragop.jpg" />
+    <Content Include="Img\Images\712379578left_bbxuan.jpg" />
+    <Content Include="Img\Images\983218269left_e156.jpg" />
+    <Content Include="Img\Images\9968871641301818963left_note.jpg" />
+    <Content Include="Img\Images\apple.gif" />
+    <Content Include="Img\Images\ban.png" />
+    <Content Include="Img\Images\banner.jpg" />
+    <Content Include="Img\Images\bn.jpg" />
+    <Content Include="Img\Images\btn-mua-hang-tu-xa2.gif" />
+    <Content Include="Img\Images\dt.ico" />
+    <Content Include="Img\Images\ghachcam.png" />
+    <Content Include="Img\Images\htc.gif" />
+    <Content Include="Img\Images\icon-page.gif" />
+    <Content Include="Img\Images\icon\120.png" />
+    <Content Include="Img\Images\icon\123.png" />
+    <Content Include="Img\Images\icon\230.png" />
+    <Content Include="Img\Images\icon\231.png" />
+    <Content Include="Img\Images\icon\3G_icon.gif" />
+    <Content Include="Img\Images\icon\admincp.asp" />
+    <Content Include="Img\Images\icon\bgd_nav.gif" />
+    <Content Include="Img\Images\icon\Button Next_32.png" />
+    <Content Include="Img\Images\icon\Button Previous_32.png" />
+    <Content Include="Img\Images\icon\compare_icon.gif" />
+    <Content Include="Img\Images\icon\FM_icon.gif" />
+    <Content Include="Img\Images\icon\GPRS_icon.gif" />
+    <Content Include="Img\Images\icon\icon-first.gif" />
+    <Content Include="Img\Images\icon\icon-last.gif" />
+    <Content Include="Img\Images\icon\icon-next.gif" />
+    <Content Include="Img\Images\icon\icon-page.gif" />
+    <Content Include="Img\Images\icon\icon-prev.gif" />
+    <Content Include="Img\Images\icon\icon_bt.gif" />
+    <Content Include="Img\Images\icon\icon_cam.gif" />
+    <Content Include="Img\Images\icon\icon_GPS.gif" />
+    <Content Include="Img\Images\icon\icon_nhac.gif" />
+    <Content Include="Img\Images\icon\icon_wifi.gif" />
+    <Content Include="Img\Images\icon\images.jpg" />
+    <Content Include="Img\Images\icon\memoryCard_icon.gif" />
+    <Content Include="Img\Images\icon\record_icon.gif" />
+    <Content Include="Img\Images\icon\TwoSim_icon.gif" />
+    <Content Include="Img\Images\icon\videoCamera_icon.gif" />
+    <Content Include="Img\Images\lichvietiphone3g.gif" />
+    <Content Include="Img\Images\logo.png" />
+    <Content Include="Img\Images\logo1.ico" />
+    <Content Include="Img\Images\logoFU.png" />
+    <Content Include="Img\Images\m1.png" />
+    <Content Include="Img\Images\m2.png" />
+    <Content Include="Img\Images\m3.png" />
+    <Content Include="Img\Images\m4.png" />
+    <Content Include="Img\Images\m5.png" />
+    <Content Include="Img\Images\main-bg.gif" />
+    <Content Include="Img\Images\mDN.png" />
+    <Content Include="Img\Images\mDT.png" />
+    <Content Include="Img\Images\menu_main.png" />
+    <Content Include="Img\Images\menu_main1-1.png" />
+    <Content Include="Img\Images\menu_main1.png" />
+    <Content Include="Img\Images\menu_main2-1.png" />
+    <Content Include="Img\Images\menu_main2.png" />
+    <Content Include="Img\Images\menu_main3-1.png" />
+    <Content Include="Img\Images\menu_main3.png" />
+    <Content Include="Img\Images\menu_main4-1.png" />
+    <Content Include="Img\Images\menu_main4.png" />
+    <Content Include="Img\Images\menu_main5-1.png" />
+    <Content Include="Img\Images\menu_main5.png" />
+    <Content Include="Img\Images\menu_main6-1.png" />
+    <Content Include="Img\Images\menu_main6.png" />
+    <Content Include="Img\Images\menu_main7-1.png" />
+    <Content Include="Img\Images\menu_main7.png" />
+    <Content Include="Img\Images\mG.png" />
+    <Content Include="Img\Images\mG1.png" />
+    <Content Include="Img\Images\mG2.png" />
+    <Content Include="Img\Images\mLK.png" />
+    <Content Include="Img\Images\mmm.png" />
+    <Content Include="Img\Images\mmm1.png" />
+    <Content Include="Img\Images\mmm2.png" />
+    <Content Include="Img\Images\mmm3.png" />
+    <Content Include="Img\Images\mmm4.png" />
+    <Content Include="Img\Images\motorola.gif" />
+    <Content Include="Img\Images\mPM.png" />
+    <Content Include="Img\Images\mQC.png" />
+    <Content Include="Img\Images\mTK.png" />
+    <Content Include="Img\Images\nen2.png" />
+    <Content Include="Img\Images\nen_image.png" />
+    <Content Include="Img\Images\nen_image1.png" />
+    <Content Include="Img\Images\nokia.gif" />
+    <Content Include="Img\Images\o2.gif" />
+    <Content Include="Img\Images\onthi-logo.gif" />
+    <Content Include="Img\Images\samsung.gif" />
+    <Content Include="Img\Images\sonyericsson.gif" />
+    <Content Include="Img\Images\vnsmart.gif" />
+    <Content Include="Img\Source.js" />
+    <Content Include="Img\style.css" />
+    <Content Include="index.aspx" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\stickytooltip.js" />
+    <Content Include="khachhang_dangnhap.aspx" />
+    <Content Include="khachhang_home.aspx" />
+    <Content Include="khachhang_lichsu.aspx" />
+    <Content Include="khachhang_thaydoithongtin.aspx" />
+    <Content Include="sanpham.aspx" />
+    <Content Include="timkiem.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="xacnhan.aspx" />
+    <Content Include="xacnhan_thanhcong.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baohanh.aspx.cs">
+      <DependentUpon>baohanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baohanh.aspx.designer.cs">
+      <DependentUpon>baohanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chitiet_sp.aspx.cs">
+      <DependentUpon>chitiet_sp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chitiet_sp.aspx.designer.cs">
+      <DependentUpon>chitiet_sp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dangky.aspx.cs">
+      <DependentUpon>dangky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dangky.aspx.designer.cs">
+      <DependentUpon>dangky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dathang.aspx.cs">
+      <DependentUpon>dathang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dathang.aspx.designer.cs">
+      <DependentUpon>dathang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="giohang.aspx.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="giohang.aspx.designer.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gioithieu.aspx.cs">
+      <DependentUpon>gioithieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gioithieu.aspx.designer.cs">
+      <DependentUpon>gioithieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gopy.aspx.cs">
+      <DependentUpon>gopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gopy.aspx.designer.cs">
+      <DependentUpon>gopy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang_dangnhap.aspx.cs">
+      <DependentUpon>khachhang_dangnhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang_dangnhap.aspx.designer.cs">
+      <DependentUpon>khachhang_dangnhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang_home.aspx.cs">
+      <DependentUpon>khachhang_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang_home.aspx.designer.cs">
+      <DependentUpon>khachhang_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang_lichsu.aspx.cs">
+      <DependentUpon>khachhang_lichsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang_lichsu.aspx.designer.cs">
+      <DependentUpon>khachhang_lichsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang_thaydoithongtin.aspx.cs">
+      <DependentUpon>khachhang_thaydoithongtin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khachhang_thaydoithongtin.aspx.designer.cs">
+      <DependentUpon>khachhang_thaydoithongtin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sanpham.aspx.cs">
+      <DependentUpon>sanpham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sanpham.aspx.designer.cs">
+      <DependentUpon>sanpham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="timkiem.aspx.cs">
+      <DependentUpon>timkiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="timkiem.aspx.designer.cs">
+      <DependentUpon>timkiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xacnhan.aspx.cs">
+      <DependentUpon>xacnhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xacnhan.aspx.designer.cs">
+      <DependentUpon>xacnhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xacnhan_thanhcong.aspx.cs">
+      <DependentUpon>xacnhan_thanhcong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xacnhan_thanhcong.aspx.designer.cs">
+      <DependentUpon>xacnhan_thanhcong.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site1.Master" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_Browsers\BrowserFile1.browser">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Img\Cac kieu.js.bak" />
+    <None Include="Img\Images\icon.rar" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11085</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

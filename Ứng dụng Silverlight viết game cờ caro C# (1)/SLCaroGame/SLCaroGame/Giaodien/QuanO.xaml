@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="SLCaroGame.Giaodien.QuanO"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignHeight="26" d:DesignWidth="26">
+
+    <UserControl.Resources>
+
+        <Storyboard x:Name="Nhapnhay">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="path">
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="#FF68F50A"/>
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FF68F50A"/>
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FFF3D613"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="path">
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="#FF0D838B"/>
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FF0D838B"/>
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FFE44931"/>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:1" To="4" Storyboard.TargetProperty="(Shape.StrokeThickness)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="path">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="357.086"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Path x:Name="path" Data="M212,161.33333 C206.50493,165.11435 185.70511,175.80769 213.33333,181.33333 C216.73381,182.01343 216.79216,183.47353 220,180.66667 C222.94576,178.08913 223.12871,178.41585 222.66667,173.33333 C221.91087,165.01956 219.35092,166.13971 212,161.33333 z" HorizontalAlignment="Left" Height="24"  Stretch="Fill" StrokeThickness="3" UseLayoutRounding="False" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.5,0.5">
+        <Path.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Path.RenderTransform>
+        <Path.Stroke>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFE91C1C" Offset="0"/>
+                <GradientStop Color="#FFD4BD22" Offset="1"/>
+            </LinearGradientBrush>
+        </Path.Stroke>
+    </Path>
+</UserControl>

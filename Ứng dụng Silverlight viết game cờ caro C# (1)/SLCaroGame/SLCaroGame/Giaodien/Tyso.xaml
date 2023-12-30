@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="SLCaroGame.Giaodien.Tyso"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:giaodien="clr-namespace:SLCaroGame.Giaodien">
+     <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="40" />
+        <RowDefinition Height="40" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="40" />
+        <ColumnDefinition Width="80" />
+    </Grid.ColumnDefinitions>
+
+    <giaodien:QuanX Grid.Column="0" Grid.Row="0" />
+    <giaodien:QuanO Grid.Column="0" Grid.Row="1" />
+
+    <TextBlock x:Name="textblockX" Grid.Column="1" Grid.Row="0" FontSize="18" VerticalAlignment="Center" Text="Quân X thắng: " />
+    <TextBlock x:Name="textblockO" Grid.Column="1" Grid.Row="1" FontSize="18" VerticalAlignment="Center" Text="Quân O thắng: " />
+    </Grid>
+</UserControl>
+

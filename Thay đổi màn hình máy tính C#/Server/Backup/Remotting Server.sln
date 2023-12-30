@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remotting Server", "Remotting Server.csproj", "{F09B06F7-DEEF-4D1C-A0FF-718E267ACFEA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F09B06F7-DEEF-4D1C-A0FF-718E267ACFEA}.Debug.ActiveCfg = Debug|.NET
+		{F09B06F7-DEEF-4D1C-A0FF-718E267ACFEA}.Debug.Build.0 = Debug|.NET
+		{F09B06F7-DEEF-4D1C-A0FF-718E267ACFEA}.Release.ActiveCfg = Release|.NET
+		{F09B06F7-DEEF-4D1C-A0FF-718E267ACFEA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

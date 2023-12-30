@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E629FF96-19B0-4756-8AB6-72A5BACD78C5}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SLCaroGame</RootNamespace>
+    <AssemblyName>SLCaroGame</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>SLCaroGame.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>SLCaroGame.App</SilverlightAppEntry>
+    <TestPageFileName>SLCaroGameTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="PureMVC.Silverlight.20">
+      <HintPath>..\..\..\gamecaro2\CaroGame\Library\PureMVC.Silverlight.20.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationFacade.cs" />
+    <Compile Include="Dieukhienchay\Batdaugame.cs" />
+    <Compile Include="Dieukhienchay\Chonchedo.cs" />
+    <Compile Include="Dieukhienchay\Khoidong.cs" />
+    <Compile Include="Dieukhienchay\Maytinh.cs" />
+    <Compile Include="Dieukhienchay\Restart.cs" />
+    <Compile Include="Giaodien\Anh\ApplicationMediator.cs" />
+    <Compile Include="Giaodien\Banchoico.xaml.cs">
+      <DependentUpon>Banchoico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Giaodien\Chedochon.xaml.cs">
+      <DependentUpon>Chedochon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Giaodien\Hinhnen.xaml.cs">
+      <DependentUpon>Hinhnen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Giaodien\Khoidonglai.xaml.cs">
+      <DependentUpon>Khoidonglai.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Giaodien\ModeSelectPanelMediator.cs" />
+    <Compile Include="Giaodien\PieceboardMediator.cs" />
+    <Compile Include="Giaodien\QuanO.xaml.cs">
+      <DependentUpon>QuanO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Giaodien\QuanX.xaml.cs">
+      <DependentUpon>QuanX.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Giaodien\RestartPanelMediator.cs" />
+    <Compile Include="Giaodien\Tyso.xaml.cs">
+      <DependentUpon>Tyso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thaotac\AI.cs" />
+    <Compile Include="Thaotac\Khaibaobien.cs" />
+    <Compile Include="Thaotac\Kiemtrabanco.cs" />
+    <Compile Include="Thaotac\Kieuquan.cs" />
+    <Compile Include="Thaotac\KQthang.cs" />
+    <Compile Include="Thaotac\Luatchoi.cs" />
+    <Compile Include="Thaotac\Quanco.cs" />
+    <Compile Include="Thaotac\Thaotacvoiform.cs" />
+    <Compile Include="Thaotac\Thongbao.cs" />
+    <Compile Include="Thaotac\Vitri.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Giaodien\Banchoico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Giaodien\Chedochon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Giaodien\Hinhnen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Giaodien\Khoidonglai.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Giaodien\QuanO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Giaodien\QuanX.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Giaodien\Tyso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Giaodien\Anh\image0.png" />
+    <Resource Include="Giaodien\Anh\khung0.png" />
+    <Resource Include="Giaodien\Anh\khung1.png" />
+    <Resource Include="Giaodien\Anh\khung2.png" />
+    <Resource Include="Giaodien\Anh\khung3.png" />
+    <Resource Include="Giaodien\Anh\khung4.png" />
+    <Resource Include="Giaodien\Anh\khung5.png" />
+    <Resource Include="Giaodien\Anh\Leaves1.png" />
+    <Resource Include="Giaodien\Anh\Leaves2.png" />
+    <Resource Include="Giaodien\Anh\Leaves3.png" />
+    <Resource Include="Giaodien\Anh\Leaves4.png" />
+    <Resource Include="Giaodien\Anh\Leaves5.png" />
+    <Resource Include="Giaodien\Anh\Leaves6.png" />
+    <Resource Include="Giaodien\Anh\restart.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

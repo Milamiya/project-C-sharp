@@ -1,0 +1,6 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="SLCaroGame" EntryPointType="SLCaroGame.App" RuntimeVersion="4.0.50826.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="SLCaroGame" Source="SLCaroGame.dll" />
+    <AssemblyPart x:Name="PureMVC.Silverlight.20" Source="PureMVC.Silverlight.20.dll" />
+  </Deployment.Parts>
+</Deployment>
