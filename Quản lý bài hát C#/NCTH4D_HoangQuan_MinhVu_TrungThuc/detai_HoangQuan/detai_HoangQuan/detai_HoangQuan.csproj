@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84D449A0-9C35-4714-8620-DB0D9A99DA8E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>detai_HoangQuan</RootNamespace>
+    <AssemblyName>detai_HoangQuan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapNhatTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapNhatTheLoai.Designer.cs">
+      <DependentUpon>frmCapNhatTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapNhat_Album.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapNhat_Album.Designer.cs">
+      <DependentUpon>frmCapNhat_Album.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapNhat_BaiHat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapNhat_BaiHat.Designer.cs">
+      <DependentUpon>frmCapNhat_BaiHat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapnhat_Casi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapnhat_Casi.Designer.cs">
+      <DependentUpon>frmCapnhat_Casi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapNhat_HangSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapNhat_HangSX.Designer.cs">
+      <DependentUpon>frmCapNhat_HangSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapNhat_TacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapNhat_TacGia.Designer.cs">
+      <DependentUpon>frmCapNhat_TacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFlash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFlash.Designer.cs">
+      <DependentUpon>frmFlash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThem_Album.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThem_Album.Designer.cs">
+      <DependentUpon>frmThem_Album.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThem_BaiHat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThem_BaiHat.Designer.cs">
+      <DependentUpon>frmThem_BaiHat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThem_Casi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThem_Casi.Designer.cs">
+      <DependentUpon>frmThem_Casi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThem_NhaSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThem_NhaSanXuat.Designer.cs">
+      <DependentUpon>frmThem_NhaSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThem_TacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThem_TacGia.Designer.cs">
+      <DependentUpon>frmThem_TacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThem_TheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThem_TheLoai.Designer.cs">
+      <DependentUpon>frmThem_TheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapNhatTheLoai.resx">
+      <DependentUpon>frmCapNhatTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapNhat_Album.resx">
+      <DependentUpon>frmCapNhat_Album.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapNhat_BaiHat.resx">
+      <DependentUpon>frmCapNhat_BaiHat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapnhat_Casi.resx">
+      <DependentUpon>frmCapnhat_Casi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapNhat_HangSX.resx">
+      <DependentUpon>frmCapNhat_HangSX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapNhat_TacGia.resx">
+      <DependentUpon>frmCapNhat_TacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFlash.resx">
+      <DependentUpon>frmFlash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThem_Album.resx">
+      <DependentUpon>frmThem_Album.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThem_BaiHat.resx">
+      <DependentUpon>frmThem_BaiHat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThem_Casi.resx">
+      <DependentUpon>frmThem_Casi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThem_NhaSanXuat.resx">
+      <DependentUpon>frmThem_NhaSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThem_TacGia.resx">
+      <DependentUpon>frmThem_TacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThem_TheLoai.resx">
+      <DependentUpon>frmThem_TheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_Tier\BUS_Tier.csproj">
+      <Project>{46AEE14E-44DD-4D09-ACB2-1DF6504800ED}</Project>
+      <Name>BUS_Tier</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baihat1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\album.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amend.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanxuat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %283%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icon\baihat2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icon\Song2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

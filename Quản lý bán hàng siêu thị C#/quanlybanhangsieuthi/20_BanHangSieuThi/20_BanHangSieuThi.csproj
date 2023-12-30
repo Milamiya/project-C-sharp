@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3771A22F-E6DF-491C-AAEE-2EBF9D692F1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_20_BanHangSieuThi</RootNamespace>
+    <AssemblyName>20_BanHangSieuThi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DMCaLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMCaLam.Designer.cs">
+      <DependentUpon>DMCaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMCongDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMCongDung.Designer.cs">
+      <DependentUpon>DMCongDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMCongViec.Designer.cs">
+      <DependentUpon>DMCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMDonVi.Designer.cs">
+      <DependentUpon>DMDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMKhachHang.Designer.cs">
+      <DependentUpon>DMKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMNhanVien.Designer.cs">
+      <DependentUpon>DMNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMNhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMNhomHang.Designer.cs">
+      <DependentUpon>DMNhomHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMNoiSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMNoiSX.Designer.cs">
+      <DependentUpon>DMNoiSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMTheLoai.Designer.cs">
+      <DependentUpon>DMTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_BC_HH_BanChay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_BC_HH_BanChay.Designer.cs">
+      <DependentUpon>fr_BC_HH_BanChay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_BC_Nam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_BC_Nam.Designer.cs">
+      <DependentUpon>fr_BC_Nam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_BC_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_BC_Nhanvien.Designer.cs">
+      <DependentUpon>fr_BC_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_BC_Quy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_BC_Quy.Designer.cs">
+      <DependentUpon>fr_BC_Quy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDonBan.Designer.cs">
+      <DependentUpon>HoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="DMChatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMChatLieu.Designer.cs">
+      <DependentUpon>DMChatLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMHangHoa.Designer.cs">
+      <DependentUpon>DMHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DMNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMNhaCC.Designer.cs">
+      <DependentUpon>DMNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDonNhap.Designer.cs">
+      <DependentUpon>HoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapHang.Designer.cs">
+      <DependentUpon>NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DMCaLam.resx">
+      <DependentUpon>DMCaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMCongDung.resx">
+      <DependentUpon>DMCongDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMCongViec.resx">
+      <DependentUpon>DMCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMDonVi.resx">
+      <DependentUpon>DMDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMKhachHang.resx">
+      <DependentUpon>DMKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMNhanVien.resx">
+      <DependentUpon>DMNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMNhomHang.resx">
+      <DependentUpon>DMNhomHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMNoiSX.resx">
+      <DependentUpon>DMNoiSX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMTheLoai.resx">
+      <DependentUpon>DMTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_BC_HH_BanChay.resx">
+      <DependentUpon>fr_BC_HH_BanChay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_BC_Nam.resx">
+      <DependentUpon>fr_BC_Nam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_BC_Nhanvien.resx">
+      <DependentUpon>fr_BC_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_BC_Quy.resx">
+      <DependentUpon>fr_BC_Quy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDonBan.resx">
+      <DependentUpon>HoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMChatLieu.resx">
+      <DependentUpon>DMChatLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMHangHoa.resx">
+      <DependentUpon>DMHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMNhaCC.resx">
+      <DependentUpon>DMNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDonNhap.resx">
+      <DependentUpon>HoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapHang.resx">
+      <DependentUpon>NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\coca_cola.jpg" />
+    <Content Include="Images\cải bắp.jpg" />
+    <Content Include="Images\Hapro Mart 01.jpg" />
+    <Content Include="Images\hapro.jpg" />
+    <Content Include="Images\máy xay.jpg" />
+    <Content Include="Images\sửa rửa mặt.jpg" />
+    <Content Include="Images\váy đầm.jpg" />
+    <None Include="Resources\scroll_view.png" />
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

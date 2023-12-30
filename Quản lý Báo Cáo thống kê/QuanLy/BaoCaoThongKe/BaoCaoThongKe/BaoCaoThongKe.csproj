@@ -1,0 +1,972 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{489FCA21-A0C7-4606-8DBA-9869D1077D45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaoCaoThongKe</RootNamespace>
+    <AssemblyName>BaoCaoThongKe</AssemblyName>
+    <ApplicationIcon>eMac.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevComponents.DotNetBar2, Version=7.5.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.OfficeSkins.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Tutorials.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.Web.ASPxEditors.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxGridView.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxGridView.v7.3.Export, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v7.3.Compact, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v7.3.Linq, Version=7.3.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v7.3.Providers, Version=7.3.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v7.3.Providers.Compact, Version=7.3.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.XtraBars.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v7.3.UI, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v7.3.Web, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.XtraEditors.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.XtraGrid.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.XtraLayout.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.XtraNavBar.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v7.3.Core, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v7.3.Import, Version=7.3.4.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v7.3.Web, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichTextEdit.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.XtraScheduler.v7.3.Core, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912" />
+    <Reference Include="DevExpress.XtraScheduler.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v7.3.Extensions, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v7.3.OutlookExchange, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v7.3.VCalendarExchange, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v7.3.Core, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v7.3, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v7.3.Design, Version=7.3.4.0, Culture=neutral, PublicKeyToken=63213b87812c7912, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObject\BaoCaoChiTietCTVT_InFo.cs" />
+    <Compile Include="BusinessObject\BaoCaoDaiLyBuuDienVHX_InFo.cs" />
+    <Compile Include="BusinessObject\BaoCaoDaiLyBuuDien_InFo.cs" />
+    <Compile Include="BusinessObject\BaoCaoDaiLyInternet_InFo.cs" />
+    <Compile Include="BusinessObject\BaoCaoTHTHCLDV_InFo.cs" />
+    <Compile Include="BusinessObject\BaoCaoTHTHDT_InFo.cs" />
+    <Compile Include="BusinessObject\BaoCaoTKTHKD_InFo.cs" />
+    <Compile Include="BusinessObject\CongTrinhVienThong_InFo.cs" />
+    <Compile Include="BusinessObject\DaiLyBuuDienVHX_InFo.cs" />
+    <Compile Include="BusinessObject\DaiLyBuuDien_InFo.cs" />
+    <Compile Include="BusinessObject\DaiLyInternet_InFo.cs" />
+    <Compile Include="BusinessObject\DichVuBuuChinh_VienThong_InFo.cs" />
+    <Compile Include="BusinessObject\DonViTinh_InFo.cs" />
+    <Compile Include="BusinessObject\Huyen_Thi_InFo.cs" />
+    <Compile Include="BusinessObject\LoaiBaoCao_InFo.cs" />
+    <Compile Include="BusinessObject\LoaiCongTrinh_InFo.cs" />
+    <Compile Include="BusinessObject\LoaiDuAn_InFo.cs" />
+    <Compile Include="BusinessObject\MauBaoCaoDaiLyBuuDienVHX_InFo.cs" />
+    <Compile Include="BusinessObject\MauBaoCaoDaiLyBuuDien_InFo.cs" />
+    <Compile Include="BusinessObject\MauBaoCaoDaiLyInternet_InFo.cs" />
+    <Compile Include="BusinessObject\MauBaoCaoTHTHCLDV_InFo.cs" />
+    <Compile Include="BusinessObject\MauBaoCaoTHTHDT_InFo.cs" />
+    <Compile Include="BusinessObject\MauBaoCaoTKTHKD_InFo.cs" />
+    <Compile Include="BusinessObject\NguoiDung_InFo.cs" />
+    <Compile Include="BusinessObject\NhomThueBao_InFo.cs" />
+    <Compile Include="BusinessObject\QL_DoanhNghiep_InFo.cs" />
+    <Compile Include="BusinessObject\QL_DuAn_InFo.cs" />
+    <Compile Include="BusinessObject\TieuChuanChatLuong_InFo.cs" />
+    <Compile Include="BusinessObject\Xa_Phuong InFo.cs" />
+    <Compile Include="Controller\BaoCaoBuuDienVanHoaXa_Ctrl.cs" />
+    <Compile Include="Controller\BaoCaoChiTietCTVT_Ctrl.cs" />
+    <Compile Include="Controller\BaoCaoDaiLyBuuDien_Ctrl.cs" />
+    <Compile Include="Controller\BaoCaoDaiLyInternet_Ctrl.cs" />
+    <Compile Include="Controller\BaoCaoNamController.cs" />
+    <Compile Include="Controller\BaoCaoQuyController.cs" />
+    <Compile Include="Controller\BaoCaoThangController.cs" />
+    <Compile Include="Controller\BaoCaoTHTHCLDV_Ctrl.cs" />
+    <Compile Include="Controller\BaoCaoTHTHDT_Ctrl.cs" />
+    <Compile Include="Controller\BaoCaoTKTHKD_Ctrl.cs" />
+    <Compile Include="Controller\ChiTieuController.cs" />
+    <Compile Include="Controller\CongTrinhVienThong_Ctrl.cs" />
+    <Compile Include="Controller\DaiLyBuuDienVHX_Ctrl.cs" />
+    <Compile Include="Controller\DaiLyBuuDien_Ctrl.cs" />
+    <Compile Include="Controller\DaiLyInternet_Ctrl.cs" />
+    <Compile Include="Controller\Dangnhap_Ctrl.cs" />
+    <Compile Include="Controller\DichVuBuuChinhVT_Ctrl.cs" />
+    <Compile Include="Controller\DoanhNghiepController.cs" />
+    <Compile Include="Controller\Doimatkhau_Ctrl.cs" />
+    <Compile Include="Controller\DonViTinh_Ctrl.cs" />
+    <Compile Include="Controller\DuAn_Ctrl.cs" />
+    <Compile Include="Controller\Huyen_Thi_Ctrl.cs" />
+    <Compile Include="Controller\LoaiBaoCao_Ctrl.cs" />
+    <Compile Include="Controller\LoaiCongTrinh_Ctrl.cs" />
+    <Compile Include="Controller\LoaiDuAn_Ctrl.cs" />
+    <Compile Include="Controller\MauBaoCaoDaiLyBuuDienVHX_Ctrl.cs" />
+    <Compile Include="Controller\MauBaoCaoDaiLyBuuDien_Ctrl.cs" />
+    <Compile Include="Controller\MauBaoCaoDaiLyInternet_Ctrl.cs" />
+    <Compile Include="Controller\MauBaoCaoTHTHCLDV_Ctrl.cs" />
+    <Compile Include="Controller\MauBaoCaoTHTHDT_Ctrl.cs" />
+    <Compile Include="Controller\MauBaoCaoTKTHKD_Ctrl.cs" />
+    <Compile Include="Controller\NguoiDung_Ctrl.cs" />
+    <Compile Include="Controller\NhomThueBao_Ctrl.cs" />
+    <Compile Include="Controller\QL_DoanhNghiep_Ctrl.cs" />
+    <Compile Include="Controller\TieuChuanChatLuong_Ctrl.cs" />
+    <Compile Include="Controller\Xa_Phuong_CTrl.cs" />
+    <Compile Include="DataLayer\BaoCaoBuuDienVanHoaXa_Data.cs" />
+    <Compile Include="DataLayer\BaoCaoChiTietCTVT_Data.cs" />
+    <Compile Include="DataLayer\BaoCaoDaiLyBuuDien_Data.cs" />
+    <Compile Include="DataLayer\BaoCaoDaiLyInternet_Data.cs" />
+    <Compile Include="DataLayer\BaoCaoNamData.cs" />
+    <Compile Include="DataLayer\BaoCaoQuyData.cs" />
+    <Compile Include="DataLayer\BaoCaoThangData.cs" />
+    <Compile Include="DataLayer\BaoCaoTHTHCLDV_Data.cs" />
+    <Compile Include="DataLayer\BaoCaoTHTHDT_Data.cs" />
+    <Compile Include="DataLayer\BaoCaoTKTHKD_Data.cs" />
+    <Compile Include="DataLayer\ChiTieuData.cs" />
+    <Compile Include="DataLayer\CongTrinhVienThong_Data.cs" />
+    <Compile Include="DataLayer\DaiLyBuuDienVHX_Data.cs" />
+    <Compile Include="DataLayer\DaiLyBuuDien_Data.cs" />
+    <Compile Include="DataLayer\DaiLyInternet_Data.cs" />
+    <Compile Include="DataLayer\Dangnhap_Data.cs" />
+    <Compile Include="DataLayer\DichVuBuuChinhVT_Data.cs" />
+    <Compile Include="DataLayer\DoanhNghiepData.cs" />
+    <Compile Include="DataLayer\Doimatkhau_Data.cs" />
+    <Compile Include="DataLayer\DonViTinhData.cs" />
+    <Compile Include="DataLayer\DonViTinh_Data.cs" />
+    <Compile Include="DataLayer\DuAn_Data.cs" />
+    <Compile Include="DataLayer\Huyen_Thi_Data.cs" />
+    <Compile Include="DataLayer\LoaiBaoCao_Data.cs" />
+    <Compile Include="DataLayer\LoaiCongTrinh_Data.cs" />
+    <Compile Include="DataLayer\LoaiDuAn_Data.cs" />
+    <Compile Include="DataLayer\MauBaoCaoDaiLyBuuDienVHX_Data.cs" />
+    <Compile Include="DataLayer\MauBaoCaoDaiLyBuuDien_Data.cs" />
+    <Compile Include="DataLayer\MauBaoCaoDaiLyInternet_Data.cs" />
+    <Compile Include="DataLayer\MauBaoCaoTHTHCLDV_Data.cs" />
+    <Compile Include="DataLayer\MauBaoCaoTHTHDT_Data.cs" />
+    <Compile Include="DataLayer\MauBaoCaoTKTHKD_Data.cs" />
+    <Compile Include="DataLayer\NguoiDung_Data.cs" />
+    <Compile Include="DataLayer\NhomThueBao_Data.cs" />
+    <Compile Include="DataLayer\QL_DoanhNghiep_Data.cs" />
+    <Compile Include="DataLayer\TieuChuanChatLuong_Data.cs" />
+    <Compile Include="DataLayer\Xa_Phuong_Data.cs" />
+    <Compile Include="DataServices.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Desktop\BaoCaoHoatDongCungCapDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\BaoCaoHoatDongCungCapDichVu.Designer.cs">
+      <DependentUpon>BaoCaoHoatDongCungCapDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\DialogDoanhNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\DialogDoanhNghiep.Designer.cs">
+      <DependentUpon>DialogDoanhNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\DoiMatKhau.designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\frmChiTieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\frmChiTieu.Designer.cs">
+      <DependentUpon>frmChiTieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\frmDangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\frmDangnhap.Designer.cs">
+      <DependentUpon>frmDangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\frmDoimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\frmDoimatkhau.Designer.cs">
+      <DependentUpon>frmDoimatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoChiTietTKTHKD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoChiTietTKTHKD.Designer.cs">
+      <DependentUpon>LapBaoCaoChiTietTKTHKD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoDaiLyBuuDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoDaiLyBuuDien.Designer.cs">
+      <DependentUpon>LapBaoCaoDaiLyBuuDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoDaiLyBuuDienVHX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoDaiLyBuuDienVHX.Designer.cs">
+      <DependentUpon>LapBaoCaoDaiLyBuuDienVHX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoDaiLyInternet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoDaiLyInternet.Designer.cs">
+      <DependentUpon>LapBaoCaoDaiLyInternet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoTHTHCLDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoTHTHCLDV.Designer.cs">
+      <DependentUpon>LapBaoCaoTHTHCLDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoTHTHDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoTHTHDT.Designer.cs">
+      <DependentUpon>LapBaoCaoTHTHDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoTKTHKD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\LapBaoCaoTKTHKD.Designer.cs">
+      <DependentUpon>LapBaoCaoTKTHKD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\LienHe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\LienHe.Designer.cs">
+      <DependentUpon>LienHe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_CongTrinhVienThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_CongTrinhVienThong.Designer.cs">
+      <DependentUpon>QL_CongTrinhVienThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_DaiLyBuuDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_DaiLyBuuDien.Designer.cs">
+      <DependentUpon>QL_DaiLyBuuDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_DaiLyBuuDienVHX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_DaiLyBuuDienVHX.Designer.cs">
+      <DependentUpon>QL_DaiLyBuuDienVHX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_DaiLyInternet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_DaiLyInternet.Designer.cs">
+      <DependentUpon>QL_DaiLyInternet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_DichVu_BuuChinh_VT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_DichVu_BuuChinh_VT.Designer.cs">
+      <DependentUpon>QL_DichVu_BuuChinh_VT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_DoanhNghiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_DoanhNghiep.Designer.cs">
+      <DependentUpon>QL_DoanhNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_DonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_DonViTinh.Designer.cs">
+      <DependentUpon>QL_DonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_DuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_DuAn.Designer.cs">
+      <DependentUpon>QL_DuAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_Huyen_Thi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_Huyen_Thi.Designer.cs">
+      <DependentUpon>QL_Huyen_Thi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_LoaiBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_LoaiBaoCao.Designer.cs">
+      <DependentUpon>QL_LoaiBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_LoaiCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_LoaiCongTrinh.Designer.cs">
+      <DependentUpon>QL_LoaiCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_LoaiDuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_LoaiDuAn.Designer.cs">
+      <DependentUpon>QL_LoaiDuAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_NguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_NguoiDung.Designer.cs">
+      <DependentUpon>QL_NguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_NhomThueBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_NhomThueBao.Designer.cs">
+      <DependentUpon>QL_NhomThueBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_TieuChuan_CL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_TieuChuan_CL.Designer.cs">
+      <DependentUpon>QL_TieuChuan_CL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QL_Xa_Phuong_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QL_Xa_Phuong_.Designer.cs">
+      <DependentUpon>QL_Xa_Phuong_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoDaiLyBuuDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoDaiLyBuuDien.Designer.cs">
+      <DependentUpon>QuanLyBaoCaoDaiLyBuuDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoDaiLyBuuDienVHX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoDaiLyBuuDienVHX.Designer.cs">
+      <DependentUpon>QuanLyBaoCaoDaiLyBuuDienVHX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoDaiLyInternet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoDaiLyInternet.Designer.cs">
+      <DependentUpon>QuanLyBaoCaoDaiLyInternet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoTHTHCLDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoTHTHCLDV.Designer.cs">
+      <DependentUpon>QuanLyBaoCaoTHTHCLDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoTHTHDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoTHTHDT.Designer.cs">
+      <DependentUpon>QuanLyBaoCaoTHTHDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoTKTHKD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\QuanLyBaoCaoTKTHKD.Designer.cs">
+      <DependentUpon>QuanLyBaoCaoTKTHKD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\TimBuuDienVanHoaXa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop\TimBuuDienVanHoaXa.Designer.cs">
+      <DependentUpon>TimBuuDienVanHoaXa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Desktop\BaoCaoHoatDongCungCapDichVu.resx">
+      <DependentUpon>BaoCaoHoatDongCungCapDichVu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\DialogDoanhNghiep.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DialogDoanhNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\frmChiTieu.resx">
+      <DependentUpon>frmChiTieu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\frmDangnhap.resx">
+      <DependentUpon>frmDangnhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\frmDoimatkhau.resx">
+      <DependentUpon>frmDoimatkhau.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\LapBaoCaoChiTietTKTHKD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LapBaoCaoChiTietTKTHKD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\LapBaoCaoDaiLyBuuDien.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LapBaoCaoDaiLyBuuDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\LapBaoCaoDaiLyBuuDienVHX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LapBaoCaoDaiLyBuuDienVHX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\LapBaoCaoDaiLyInternet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LapBaoCaoDaiLyInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\LapBaoCaoTHTHCLDV.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LapBaoCaoTHTHCLDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\LapBaoCaoTHTHDT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LapBaoCaoTHTHDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\LapBaoCaoTKTHKD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LapBaoCaoTKTHKD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\LienHe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LienHe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_CongTrinhVienThong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_CongTrinhVienThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_DaiLyBuuDien.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_DaiLyBuuDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_DaiLyBuuDienVHX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_DaiLyBuuDienVHX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_DaiLyInternet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_DaiLyInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_DichVu_BuuChinh_VT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_DichVu_BuuChinh_VT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_DoanhNghiep.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_DoanhNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_DonViTinh.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_DonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_DuAn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_DuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_Huyen_Thi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_Huyen_Thi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_LoaiBaoCao.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_LoaiBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_LoaiCongTrinh.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_LoaiCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_LoaiDuAn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_LoaiDuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_NguoiDung.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_NguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_NhomThueBao.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_NhomThueBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_TieuChuan_CL.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_TieuChuan_CL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QL_Xa_Phuong_.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QL_Xa_Phuong_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QuanLyBaoCaoDaiLyBuuDien.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyBaoCaoDaiLyBuuDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QuanLyBaoCaoDaiLyBuuDienVHX.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyBaoCaoDaiLyBuuDienVHX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QuanLyBaoCaoDaiLyInternet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyBaoCaoDaiLyInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QuanLyBaoCaoTHTHCLDV.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyBaoCaoTHTHCLDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QuanLyBaoCaoTHTHDT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyBaoCaoTHTHDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\QuanLyBaoCaoTKTHKD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyBaoCaoTKTHKD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop\TimBuuDienVanHoaXa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimBuuDienVanHoaXa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.DangNhap.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.DialogDoanhNghiep.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.frmDangnhap.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.frmDoimatkhau.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.LapBaoCaoChiTietTKTHKD.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.LapBaoCaoDaiLyBuuDien.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.LapBaoCaoDaiLyBuuDienVHX.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.LapBaoCaoDaiLyInternet.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.LapBaoCaoTHTHCLDV.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.LapBaoCaoTHTHDT.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.LapBaoCaoTKTHKD.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.LienHe.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.MainForm.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_CongTrinhVienThong.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_DaiLyBuuDien.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_DaiLyBuuDienVHX.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_DaiLyInternet.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_DichVu_BuuChinh_VT.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_DoanhNghiep.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_DonViTinh.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_DuAn.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_Huyen_Thi.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_LoaiBaoCao.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_LoaiCongTrinh.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_LoaiDuAn.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_NguoiDung.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_NhomThueBao.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_TieuChuan_CL.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QL_Xa_Phuong_.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QuanLyBaoCaoDaiLyBuuDien.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QuanLyBaoCaoDaiLyBuuDienVHX.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QuanLyBaoCaoDaiLyInternet.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QuanLyBaoCaoTHTHCLDV.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QuanLyBaoCaoTHTHDT.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.QuanLyBaoCaoTKTHKD.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Desktop.TimBuuDienVanHoaXa.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Report.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Report.XtraReport1.resources" />
+    <EmbeddedResource Include="obj\Debug\BaoCaoThongKe.Report.XtraReport2.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThamSo.cs" />
+    <Compile Include="THONGKEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THONGKEDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network Service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huyen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loaijchitieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gloss PNGShutdown_Quit_Dock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown2221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loffof.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_update11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_comit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cal111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kexi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tieuchuan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disque-dur-partage-3D1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuration-Settings22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua_Atom11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AQUA-ICONS-APPLICATIONS-AFP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AQUA-ICONS-FOLDER-DIALUP1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network Connections.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network-Connecti11ons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AQUA ICONS SYSTEM SOFTWARE UPDATE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AQUA-ICONS-SYSTEM-SOFTWARE-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrative Tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifidaongn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homedoanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AQUA-ICONS-FILE-HTML-ICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Office.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\www2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEINS_QUANTUM_FOLDERS-MUSIC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quarantaine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AQUA-ICONS-SYSTEM-RECENT-DO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Candy-Vivian-Icon-61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world-wide-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Candy-Vivian-Icon-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEINS_QUANTUM_FOLDERS-NEWS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0145-task_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanly.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reeess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QLduan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dlbd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DLBDVHX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DLinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVBCVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DOANHNGHIEP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DUAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_HUYEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_ctvt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_dlbd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_DLBDVHX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_DLinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_DVBCVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_DOANHNGHIEP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_DVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_DUAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_LOAIBAOCAO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_LOAICONGTRINH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_LOAIDUAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_NHOMTHUEBAO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEN_TCCLDV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\BaoCaoThongKe.exe.config" />
+    <None Include="bin\Release\BaoCaoThongKe.exe.config" />
+    <None Include="bin\Release\BaoCaoThongKe.vshost.exe.config" />
+    <None Include="obj\Debug\BaoCaoThongKe.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\Release\build.force" />
+    <None Include="Resources\TEN_XA.png" />
+    <None Include="THONGKEDataSet.xsc">
+      <DependentUpon>THONGKEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="THONGKEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>THONGKEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="THONGKEDataSet.xss">
+      <DependentUpon>THONGKEDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\BaoCaoThongKe.exe" />
+    <Content Include="bin\Debug\BaoCaoThongKe.pdb" />
+    <Content Include="eMac.ico" />
+    <Content Include="Icon\add.png" />
+    <Content Include="Icon\Calendar_Large.bmp" />
+    <Content Include="Icon\category07.bmp" />
+    <Content Include="Icon\Report_Large.bmp" />
+    <Content Include="Icon\Tasks_Large.bmp" />
+    <Content Include="obj\BaoCaoThongKe.csproj.FileList.txt" />
+    <Content Include="obj\Debug\BaoCaoThongKe.exe" />
+    <Content Include="obj\Debug\BaoCaoThongKe.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\THONGKEDataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\THONGKEDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\Refactor\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

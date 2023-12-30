@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C8565F0-D74E-4EFC-B6C3-4F8A7FE12ABC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLiThuVien</RootNamespace>
+    <AssemblyName>QuanLiThuVien</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\Usc_TraCuuTheoTheloai_TuaSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Usc_TraCuuTheoTheloai_TuaSach.Designer.cs">
+      <DependentUpon>Usc_TraCuuTheoTheloai_TuaSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Usc_ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Usc_ThongKe.Designer.cs">
+      <DependentUpon>Usc_ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Usc_TraCuuTheoNXB_TacGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Usc_TraCuuTheoNXB_TacGia.Designer.cs">
+      <DependentUpon>Usc_TraCuuTheoNXB_TacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Usc_DanhMucSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Usc_DanhMucSach.Designer.cs">
+      <DependentUpon>Usc_DanhMucSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Usc_Muon_TraSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Usc_Muon_TraSach.Designer.cs">
+      <DependentUpon>Usc_Muon_TraSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Usc_DocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Usc_DocGia.Designer.cs">
+      <DependentUpon>Usc_DocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmInChiTietPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInChiTietPhieuMuon.Designer.cs">
+      <DependentUpon>frmInChiTietPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInDocGia.Designer.cs">
+      <DependentUpon>frmInDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInDanhMucSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInDanhMucSach.Designer.cs">
+      <DependentUpon>frmInDanhMucSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInNhaXuatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInNhaXuatBan.Designer.cs">
+      <DependentUpon>frmInNhaXuatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInTacGia.Designer.cs">
+      <DependentUpon>frmInTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInTheLoai.Designer.cs">
+      <DependentUpon>frmInTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiThuVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiThuVien.Designer.cs">
+      <DependentUpon>QuanLiThuVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThongTinThuVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinThuVien.Designer.cs">
+      <DependentUpon>ThongTinThuVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Control\Usc_DanhMucSach.resx">
+      <DependentUpon>Usc_DanhMucSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Usc_Muon_TraSach.resx">
+      <DependentUpon>Usc_Muon_TraSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Usc_ThongKe.resx">
+      <DependentUpon>Usc_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Usc_TraCuuTheoTheloai_TuaSach.resx">
+      <DependentUpon>Usc_TraCuuTheoTheloai_TuaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Usc_TraCuuTheoNXB_TacGia.resx">
+      <DependentUpon>Usc_TraCuuTheoNXB_TacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Usc_DocGia.resx">
+      <DependentUpon>Usc_DocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport6.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInChiTietPhieuMuon.resx">
+      <DependentUpon>frmInChiTietPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInDocGia.resx">
+      <DependentUpon>frmInDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInDanhMucSach.resx">
+      <DependentUpon>frmInDanhMucSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInNhaXuatBan.resx">
+      <DependentUpon>frmInNhaXuatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInTacGia.resx">
+      <DependentUpon>frmInTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInTheLoai.resx">
+      <DependentUpon>frmInTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiThuVien.resx">
+      <DependentUpon>QuanLiThuVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ThongTinThuVien.resx">
+      <DependentUpon>ThongTinThuVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\arrow_right_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\search_button_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\wallet_bills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\clipboard_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\slide-img5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{A8C07013-2C62-432A-A165-27D95C5CEAC3}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Hinh\Sach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbQUANLITHUVIEN.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
