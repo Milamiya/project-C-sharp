@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoko", "Sudoko.csproj", "{100AC03D-B01A-4575-AB83-ED5EDB1D476E}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{100AC03D-B01A-4575-AB83-ED5EDB1D476E}.Debug.ActiveCfg = Release|.NET
+		{100AC03D-B01A-4575-AB83-ED5EDB1D476E}.Debug.Build.0 = Release|.NET
+		{100AC03D-B01A-4575-AB83-ED5EDB1D476E}.Release.ActiveCfg = Release|.NET
+		{100AC03D-B01A-4575-AB83-ED5EDB1D476E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
