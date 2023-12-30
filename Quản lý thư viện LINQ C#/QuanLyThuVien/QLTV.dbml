@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="QLTV" Class="QLTVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=QLTV;Integrated Security=True" SettingsObjectName="QuanLyThuVien.Properties.Settings" SettingsPropertyName="QLTVConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbThe" Member="tbThes">
+    <Type Name="tbThe">
+      <Column Name="MaThe" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaDG" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayCap" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Han" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="tbThe_tbPhieuMuon" Member="tbPhieuMuons" OtherKey="MaThe" Type="tbPhieuMuon" />
+      <Association Name="tbDG_tbThe" Member="tbDG" ThisKey="MaDG" Type="tbDG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSach" Member="tbSaches">
+    <Type Name="tbSach">
+      <Column Name="MaSach" Type="System.String" DbType="NChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaDauSach" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="tbSach_tbPhieuMuon" Member="tbPhieuMuons" OtherKey="MaSach" Type="tbPhieuMuon" />
+      <Association Name="tbDauSach_tbSach" Member="tbDauSach" ThisKey="MaDauSach" Type="tbDauSach" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbPhieuMuon" Member="tbPhieuMuons">
+    <Type Name="tbPhieuMuon">
+      <Column Name="MaSach" Type="System.String" DbType="NChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaThe" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayMuon" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayTra" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Association Name="tbSach_tbPhieuMuon" Member="tbSach" ThisKey="MaSach" Type="tbSach" IsForeignKey="true" />
+      <Association Name="tbThe_tbPhieuMuon" Member="tbThe" ThisKey="MaThe" Type="tbThe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDG" Member="tbDGs">
+    <Type Name="tbDG">
+      <Column Name="MaDG" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenDG" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChucVu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lop" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Khoa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbDG_tbThe" Member="tbThes" OtherKey="MaDG" Type="tbThe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbUser" Member="tbUsers">
+    <Type Name="tbUser">
+      <Column Name="TenDN" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pass" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Quyen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbTG" Member="tbTGs">
+    <Type Name="tbTG">
+      <Column Name="MaTG" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTG" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="tbTG_tbDauSach" Member="tbDauSaches" OtherKey="MaTG" Type="tbDauSach" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDauSach" Member="tbDauSaches">
+    <Type Name="tbDauSach">
+      <Column Name="MaDauSach" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenSach" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaNXB" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTG" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="NamXuatBan" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ChuyenNganh" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbDauSach_tbSach" Member="tbSaches" OtherKey="MaDauSach" Type="tbSach" />
+      <Association Name="tbTG_tbDauSach" Member="tbTG" ThisKey="MaTG" Type="tbTG" IsForeignKey="true" />
+      <Association Name="tbNXB_tbDauSach" Member="tbNXB" ThisKey="MaNXB" Type="tbNXB" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbNXB" Member="tbNXBs">
+    <Type Name="tbNXB">
+      <Column Name="MaNXB" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNXB" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Association Name="tbNXB_tbDauSach" Member="tbDauSaches" OtherKey="MaNXB" Type="tbDauSach" />
+    </Type>
+  </Table>
+  <Function Name="dbo.uspThemNXb" Method="uspThemNXb">
+    <Parameter Name="Kieu" Parameter="kieu" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="MaNXB" Parameter="maNXB" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="TenNXB" Parameter="tenNXB" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DiaChi" Parameter="diaChi" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SDT" Parameter="sDT" Type="System.String" DbType="NChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CRUDTacGia" Method="CRUDTacGia">
+    <Parameter Name="Kieu" Parameter="kieu" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="MaTG" Parameter="maTG" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="TenTG" Parameter="tenTG" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DiaChi" Parameter="diaChi" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SDT" Parameter="sDT" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CRUDUser" Method="CRUDUser">
+    <Parameter Name="Kieu" Parameter="kieu" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="TenDN" Parameter="tenDN" Type="System.String" DbType="NChar(50)" />
+    <Parameter Name="pass" Type="System.String" DbType="NChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CRUDDauSach" Method="CRUDDauSach">
+    <Parameter Name="Kieu" Parameter="kieu" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="MaDauSach" Parameter="maDauSach" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="TenSach" Parameter="tenSach" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MaNXB" Parameter="maNXB" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="MaTG" Parameter="maTG" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="NamXuatBan" Parameter="namXuatBan" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="ChuyenNganh" Parameter="chuyenNganh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SoLuong" Parameter="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GhiChu" Parameter="ghiChu" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.uspGetMaNXB" Method="uspGetMaNXB">
+    <Parameter Name="TenNXB" Parameter="tenNXB" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MaNXB" Parameter="maNXB" Type="System.String" DbType="NChar(10)" Direction="InOut" />
+    <ElementType Name="uspGetMaNXBResult">
+      <Column Name="Column1" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CRUDPhieuMuon" Method="CRUDPhieuMuon">
+    <Parameter Name="Kieu" Parameter="kieu" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="MaSach" Parameter="maSach" Type="System.String" DbType="NChar(100)" />
+    <Parameter Name="MaThe" Parameter="maThe" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="NgayMuon" Parameter="ngayMuon" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="NgayTra" Parameter="ngayTra" Type="System.String" DbType="NChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CRUDThe" Method="CRUDThe">
+    <Parameter Name="Kieu" Parameter="kieu" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="MaThe" Parameter="maThe" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="MaDG" Parameter="maDG" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="NgayCap" Parameter="ngayCap" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="Han" Parameter="han" Type="System.String" DbType="NChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CRUDDocGia" Method="CRUDDocGia">
+    <Parameter Name="Kieu" Parameter="kieu" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="MaDG" Parameter="maDG" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="TenDG" Parameter="tenDG" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ChucVu" Parameter="chucVu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Lop" Parameter="lop" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="Khoa" Parameter="khoa" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NgaySinh" Parameter="ngaySinh" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="GioiTinh" Parameter="gioiTinh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="GhiChu" Parameter="ghiChu" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

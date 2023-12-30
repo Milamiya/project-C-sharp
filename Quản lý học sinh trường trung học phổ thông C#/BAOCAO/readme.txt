@@ -1,0 +1,2 @@
+- Ban can phai cai dat MySQL Server 5. tro len
+- Tiep theo, ban phai cai .NET 2.0 tro len moi chay duoc.

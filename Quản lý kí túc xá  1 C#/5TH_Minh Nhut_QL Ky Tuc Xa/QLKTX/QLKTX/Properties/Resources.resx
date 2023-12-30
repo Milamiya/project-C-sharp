@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Ngang32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ngang32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TraCuuDay32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TraCuuDay32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TonGiao24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TonGiao24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaoLuu32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaoLuu32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XoaSinhVien32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XoaSinhVien32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TroGiup32_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TroGiup32_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DangXuat32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DangXuat32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChuyenPhong16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChuyenPhong16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Xoa16_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Xoa16_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KTX32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KTX32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuanLy32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuanLy32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="important" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\important.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThongKeSinhVien32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongKeSinhVien32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Xoa16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Xoa16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tab32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Next32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Next32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DangNhap32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DangNhap32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Full32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Full32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sua161" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sua161.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThongKeDay32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongKeDay32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SuaPhong32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SuaPhong32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TraCuuPhong32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TraCuuPhong32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThuPhi32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThuPhi32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chung16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chung16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XoaPhong32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XoaPhong32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DanhGia32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DanhGia32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="themsv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\themsv.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Down16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Down16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NguoiDung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NguoiDung.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Thoat32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thoat32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TonGiao16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TonGiao16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SuaSinhVien32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SuaSinhVien32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nen_nhut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nen_nhut.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThemPhong32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThemPhong32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TonGiaoDanToc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TonGiaoDanToc.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaoLuu16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaoLuu16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XepLoai32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XepLoai32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Them16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Them16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DiemDanhSinhVien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DiemDanhSinhVien.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lich32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lich32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QLSinhVien32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QLSinhVien32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThuPhi16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThuPhi16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Doc32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doc32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TimDay16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TimDay16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Main.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlashScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlashScreen.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sua32_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sua32_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HienThi32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HienThi32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SuaDay32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SuaDay32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XoaSinhVien321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XoaSinhVien321.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luu32_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luu32_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThongTinDanhGia32png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongTinDanhGia32png.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeThong32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeThong32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TimSinhVien16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TimSinhVien16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Them32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Them32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="capnhat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capnhat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TroGiup32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TroGiup32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThemDay32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThemDay32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QLDay32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QLDay32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThongKe32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongKe32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DanhMuc32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DanhMuc32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Xoa32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Xoa32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="luu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\luu.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TraCuu32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TraCuu32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sua16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sua16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThemSinhVien32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThemSinhVien321.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XoaDay32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XoaDay32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Them32_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Them32_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Back32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TimPhong16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TimPhong16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TraCuuSinhVien32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TraCuuSinhVien32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Normal32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Normal32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThongKePhong32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThongKePhong32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Xoa32_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Xoa32_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QLPhong32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QLPhong32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flashgreen_nhut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flashgreen_nhut.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sua16_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sua16_1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luu32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luu32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PhucHoi32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PhucHoi32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Down32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Down32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  
+</root>

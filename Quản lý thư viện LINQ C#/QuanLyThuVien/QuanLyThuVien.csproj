@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60266343-A556-4124-B47D-11E68A7D0D67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyThuVien</RootNamespace>
+    <AssemblyName>QuanLyThuVien</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="DevComponents.DotNetBar2, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKi.Designer.cs">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInPhieuMuon.Designer.cs">
+      <DependentUpon>frmInPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLDauSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLDauSach.Designer.cs">
+      <DependentUpon>frmQLDauSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQlDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQlDocGia.Designer.cs">
+      <DependentUpon>frmQlDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQlMuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQlMuonSach.Designer.cs">
+      <DependentUpon>frmQlMuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLThe.Designer.cs">
+      <DependentUpon>frmQLThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLTraSach.Designer.cs">
+      <DependentUpon>frmQLTraSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLUser.Designer.cs">
+      <DependentUpon>frmQLUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSach.Designer.cs">
+      <DependentUpon>frmSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchSach.Designer.cs">
+      <DependentUpon>frmSearchSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTin.Designer.cs">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinNXB.Designer.cs">
+      <DependentUpon>frmThongTinNXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinTG.Designer.cs">
+      <DependentUpon>frmThongTinTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTKDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTKDocGia.Designer.cs">
+      <DependentUpon>frmTKDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDangKi.resx">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInPhieuMuon.resx">
+      <DependentUpon>frmInPhieuMuon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLDauSach.resx">
+      <DependentUpon>frmQLDauSach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQlDocGia.resx">
+      <DependentUpon>frmQlDocGia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQlMuonSach.resx">
+      <DependentUpon>frmQlMuonSach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLThe.resx">
+      <DependentUpon>frmQLThe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLTraSach.resx">
+      <DependentUpon>frmQLTraSach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLUser.resx">
+      <DependentUpon>frmQLUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSach.resx">
+      <DependentUpon>frmSach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchSach.resx">
+      <DependentUpon>frmSearchSach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTin.resx">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinNXB.resx">
+      <DependentUpon>frmThongTinNXB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinTG.resx">
+      <DependentUpon>frmThongTinTG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKDocGia.resx">
+      <DependentUpon>frmTKDocGia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain_1.resx">
+      <DependentUpon>frmMain_1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInPhieuMuon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInPhieuMuon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="QLTV.dbml.layout">
+      <DependentUpon>QLTV.dbml</DependentUpon>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QLTV.cs">
+      <DependentUpon>QLTV.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="QLTV.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTV.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\tbNXB.cs" />
+    <Compile Include="frmMain_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain_1.Designer.cs">
+      <DependentUpon>frmMain_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptInPhieuMuon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInPhieuMuon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th_A013-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="QLTV.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLTV.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\th_A093.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol-Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open-Folder-Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOff-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1301231640_system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1301234278_window-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome-color-browser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft_Office_Publisher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green RSS reader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences-contact-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book cd vide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_loans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torrents_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1301240336_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contents1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green RSS reader1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trinity-college-library-dub.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trinity-college-library-dub1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cathedral-library-kalocsa1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\local-library-tip-lg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1301337343_document-print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1301412111_start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1301412273_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1301412276_previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1301489092_Magnifier2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

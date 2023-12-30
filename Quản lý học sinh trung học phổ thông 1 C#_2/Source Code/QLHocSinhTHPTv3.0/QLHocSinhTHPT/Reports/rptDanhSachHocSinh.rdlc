@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>024b4ed4-8826-4633-ae25-00be8e897f4c</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2cm</BottomMargin>
+  <RightMargin>2cm</RightMargin>
+  <PageWidth>29.7cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="TenTruong">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>TenTruong</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DiaChiTruong">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>DiaChiTruong</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="NgayLap">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>NgayLap</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>29.7cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="tblHocSinh">
+        <Left>0.026cm</Left>
+        <DataSetName>QLHocSinhTHPT_Bussiness_HocSinhInfo</DataSetName>
+        <Top>2.985cm</Top>
+        <ZIndex>4</ZIndex>
+        <Width>25.63cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="STT">
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=RowNumber(Nothing)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="HoTen">
+                      <rd:DefaultName>HoTen</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=Fields!HoTen.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="GioiTinh">
+                      <rd:DefaultName>GioiTinh</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=IIf(Fields!GioiTinh.Value, "Nu", "Nam")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NgaySinh">
+                      <rd:DefaultName>NgaySinh</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=FormatDateTime(Fields!NgaySinh.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NoiSinh">
+                      <rd:DefaultName>NoiSinh</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=Fields!NoiSinh.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="DanToc">
+                      <rd:DefaultName>DanToc</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=Fields!DanToc.Value.TenDanToc</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TonGiao">
+                      <rd:DefaultName>TonGiao</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=Fields!TonGiao.Value.TenTonGiao</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="HoTenCha">
+                      <rd:DefaultName>HoTenCha</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=Fields!HoTenCha.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="HoTenMe">
+                      <rd:DefaultName>HoTenMe</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>=Fields!HoTenMe.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.635cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox05">
+                      <ZIndex>17</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>STT</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox06">
+                      <ZIndex>16</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>HỌ VÀ TÊN</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox07">
+                      <ZIndex>15</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>GIỚI TÍNH</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox08">
+                      <ZIndex>14</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>NGÀY SINH</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox09">
+                      <ZIndex>13</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>NƠI SINH</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <ZIndex>12</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>DÂN TỘC</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <ZIndex>11</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>TÔN GIÁO</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>HỌ TÊN CHA</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>3pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <Value>HỌ TÊN MẸ</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.635cm</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.25cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.35cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.25cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.28cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.50006in</Height>
+      </Table>
+      <Textbox Name="textbox04">
+        <Left>20.45cm</Left>
+        <Top>2.289cm</Top>
+        <ZIndex>3</ZIndex>
+        <Width>5.2cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <Height>0.635cm</Height>
+        <Value>="Ngày lập: " &amp; Parameters!NgayLap.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox03">
+        <Left>5.35cm</Left>
+        <Top>1.288cm</Top>
+        <ZIndex>2</ZIndex>
+        <Width>15cm</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>20pt</FontSize>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <Height>1cm</Height>
+        <Value>DANH SÁCH HỌC SINH</Value>
+      </Textbox>
+      <Textbox Name="textbox02">
+        <Top>0.645cm</Top>
+        <ZIndex>1</ZIndex>
+        <Width>9.75cm</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <Height>0.64cm</Height>
+        <Value>="Địa chỉ: " &amp; Parameters!DiaChiTruong.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox01">
+        <Width>9.75cm</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <Height>0.64cm</Height>
+        <Value>="Trường " &amp; Parameters!TenTruong.Value</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>4.28cm</Height>
+  </Body>
+  <rd:ReportID>8f189f29-8d92-4e12-96af-00dd72589031</rd:ReportID>
+  <LeftMargin>2cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="QLHocSinhTHPT_Bussiness_HocSinhInfo">
+      <rd:DataSetInfo>
+        <rd:DataSetName>QLHocSinhTHPT.Bussiness</rd:DataSetName>
+        <rd:ObjectDataSourceType>QLHocSinhTHPT.Bussiness.HocSinhInfo, QLHocSinhTHPT, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>HocSinhInfo</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="DanToc">
+          <rd:TypeName>QLHocSinhTHPT.Bussiness.DanTocInfo</rd:TypeName>
+          <DataField>DanToc</DataField>
+        </Field>
+        <Field Name="GioiTinh">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>GioiTinh</DataField>
+        </Field>
+        <Field Name="HoTen">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HoTen</DataField>
+        </Field>
+        <Field Name="HoTenCha">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HoTenCha</DataField>
+        </Field>
+        <Field Name="HoTenMe">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>HoTenMe</DataField>
+        </Field>
+        <Field Name="MaHocSinh">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MaHocSinh</DataField>
+        </Field>
+        <Field Name="NgaySinh">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgaySinh</DataField>
+        </Field>
+        <Field Name="NNghiepCha">
+          <rd:TypeName>QLHocSinhTHPT.Bussiness.NgheNghiepInfo</rd:TypeName>
+          <DataField>NNghiepCha</DataField>
+        </Field>
+        <Field Name="NNghiepMe">
+          <rd:TypeName>QLHocSinhTHPT.Bussiness.NgheNghiepInfo</rd:TypeName>
+          <DataField>NNghiepMe</DataField>
+        </Field>
+        <Field Name="NoiSinh">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NoiSinh</DataField>
+        </Field>
+        <Field Name="TonGiao">
+          <rd:TypeName>QLHocSinhTHPT.Bussiness.TonGiaoInfo</rd:TypeName>
+          <DataField>TonGiao</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>25.7cm</Width>
+  <InteractiveHeight>21cm</InteractiveHeight>
+  <TopMargin>2cm</TopMargin>
+  <PageHeight>21cm</PageHeight>
+</Report>

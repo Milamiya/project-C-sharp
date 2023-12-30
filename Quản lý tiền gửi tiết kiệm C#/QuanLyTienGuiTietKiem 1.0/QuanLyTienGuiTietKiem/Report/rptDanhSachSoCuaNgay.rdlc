@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>e032b7f6-5643-446e-b2c2-e62fec94e086</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <ReportParameters>
+    <ReportParameter Name="Ngay">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ngay</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Table Name="table1">
+        <Left>0.625in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuLuuTienGuiInfo</DataSetName>
+        <Top>1.125in</Top>
+        <ZIndex>2</ZIndex>
+        <Width>10.875in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=RowNumber(nothing)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="SoTietKiem">
+                      <rd:DefaultName>SoTietKiem</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!SoTietKiem.Value.MaSoTietKiem</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="KhachHang">
+                      <rd:DefaultName>KhachHang</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!KhachHang.Value.HoTen</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="LoaiTietKiem">
+                      <rd:DefaultName>LoaiTietKiem</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!LoaiTietKiem.Value.TenLoaiTietKiem</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="LaiSuatTietKiem">
+                      <rd:DefaultName>LaiSuatTietKiem</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!LaiSuatTietKiem.Value.MucLaiSuat</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ChiTietPhatSinhGD">
+                      <rd:DefaultName>ChiTietPhatSinhGD</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <Format>#,###0</Format>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ChiTietPhatSinhGD.Value.SoTien</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="SoDuTietKiem">
+                      <rd:DefaultName>SoDuTietKiem</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <Format>#,###0</Format>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!SoDuTietKiem.Value.SoDu</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="DMLoaiTien">
+                      <rd:DefaultName>DMLoaiTien</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!DMLoaiTien.Value.LoaiTien</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <ZIndex>15</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>STT</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <ZIndex>14</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Sổ tiết kiệm</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <ZIndex>13</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Tên khách hàng</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <ZIndex>12</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Tên loại tiết kiệm</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <ZIndex>11</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>lãi suất</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Gửi vào</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Số dư có</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Loại tiền</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.125in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+        </TableColumns>
+      </Table>
+      <Textbox Name="textbox2">
+        <Left>10.375in</Left>
+        <Top>0.375in</Top>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <Format>dd/MM/yy</Format>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Parameters!Ngay.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>18pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.375in</Height>
+        <Value>DANH SÁCH SỔ TIẾT KIỆM ĐƯỢC LẬP TRONG NGÀY</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1.625in</Height>
+  </Body>
+  <rd:ReportID>745fd145-b33c-4826-a5e6-436610d5edee</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="QuanLyTienGuiTietKiem_Bussiness_InPhieuLuuTienGuiInfo">
+      <rd:DataSetInfo>
+        <rd:DataSetName>QuanLyTienGuiTietKiem.Bussiness</rd:DataSetName>
+        <rd:ObjectDataSourceType>QuanLyTienGuiTietKiem.Bussiness.InPhieuLuuTienGuiInfo, QuanLyTienGuiTietKiem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>InPhieuLuuTienGuiInfo</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ChiTietPhatSinhGD">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.ChiTietPhatSinhGDInfo</rd:TypeName>
+          <DataField>ChiTietPhatSinhGD</DataField>
+        </Field>
+        <Field Name="DMLoaiTien">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.DMLoaiTienInfo</rd:TypeName>
+          <DataField>DMLoaiTien</DataField>
+        </Field>
+        <Field Name="KhachHang">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.KhachHangInfo</rd:TypeName>
+          <DataField>KhachHang</DataField>
+        </Field>
+        <Field Name="LaiSuatTietKiem">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.LaiSuatTietKiemInfo</rd:TypeName>
+          <DataField>LaiSuatTietKiem</DataField>
+        </Field>
+        <Field Name="LoaiTietKiem">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.LoaiTietKiemInfo</rd:TypeName>
+          <DataField>LoaiTietKiem</DataField>
+        </Field>
+        <Field Name="SoDuTietKiem">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.SoDuTietKiemInfo</rd:TypeName>
+          <DataField>SoDuTietKiem</DataField>
+        </Field>
+        <Field Name="SoTietKiem">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.SoTietKiemInfo</rd:TypeName>
+          <DataField>SoTietKiem</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>12in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

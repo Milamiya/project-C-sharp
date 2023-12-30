@@ -1,0 +1,217 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48A787A8-5DBB-4F31-A464-164306DA6275}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyLuong</RootNamespace>
+    <AssemblyName>QuanLyLuong</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoMatPhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoMatPhanQuyen.Designer.cs">
+      <DependentUpon>BaoMatPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BienTC.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaoMatPhanQuyen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaoMatPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTienLuong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanLyTienLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuanTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhToan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTienLuong.Designer.cs">
+      <DependentUpon>QuanLyTienLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri.Designer.cs">
+      <DependentUpon>QuanTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanhToan.Designer.cs">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75438448.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="QuanLyTienLuongDataSet.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet.xss">
+      <DependentUpon>QuanLyTienLuongDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet1.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet1.xss">
+      <DependentUpon>QuanLyTienLuongDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet2.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet2.xss">
+      <DependentUpon>QuanLyTienLuongDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet3.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet3.xss">
+      <DependentUpon>QuanLyTienLuongDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet4.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet4.xss">
+      <DependentUpon>QuanLyTienLuongDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\rapport2002_391.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

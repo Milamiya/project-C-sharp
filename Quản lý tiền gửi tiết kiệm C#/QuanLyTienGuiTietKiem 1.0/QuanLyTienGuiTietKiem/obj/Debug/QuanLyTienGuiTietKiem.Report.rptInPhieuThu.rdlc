@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>e2bd218d-3de9-43ea-896c-91b5cd35d81e</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <ReportParameters>
+    <ReportParameter Name="Ngay">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ngay</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BangChu">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>BangChu</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Table Name="table10">
+        <Left>6.25in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>1.875in</Top>
+        <ZIndex>24</ZIndex>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox27">
+                      <rd:DefaultName>textbox27</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###0</Format>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ChiTietPhatSinhGD.Value.SoTien</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="DMLoaiTien">
+                      <rd:DefaultName>DMLoaiTien</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!DMLoaiTien.Value.LoaiTien</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontWeight>900</FontWeight>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.5in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Table Name="table8">
+        <Left>6.25in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>1.625in</Top>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Số tiền</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>2in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Table Name="table3">
+        <Left>1.5in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>1.125in</Top>
+        <ZIndex>22</ZIndex>
+        <Width>2.29167in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="KhachHang">
+                      <rd:DefaultName>KhachHang</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Dotted</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!KhachHang.Value.HoTen</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontWeight>900</FontWeight>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>2.29167in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Table Name="table2">
+        <Left>0.5in</Left>
+        <Top>1.125in</Top>
+        <ZIndex>21</ZIndex>
+        <Width>1in</Width>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox26">
+                      <rd:DefaultName>textbox26</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Người nộp:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Table Name="table1">
+        <Left>6.25in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>1.125in</Top>
+        <ZIndex>20</ZIndex>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="KhachHang_1">
+                      <rd:DefaultName>KhachHang_1</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <rd:DefaultName>textbox24</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <UnicodeBiDi>Embed</UnicodeBiDi>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Tài khoản</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>2in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.5in</Height>
+      </Table>
+      <Textbox Name="textbox3">
+        <Top>0.625in</Top>
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>17pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.375in</Height>
+        <Value>PHIẾU THU</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <Top>0.25in</Top>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <ZIndex>18</ZIndex>
+        <Width>4in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>248 Trần Hưng Đạo - TP.Long Xuyên - An Giang</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <ZIndex>17</ZIndex>
+        <Width>4in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>11pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>NGÂN HÀNG TMCP MỸ XUYÊN - CN LONG XUYÊN</Value>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <Left>0.5in</Left>
+        <Top>1.375in</Top>
+        <ZIndex>16</ZIndex>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Địa chỉ :</Value>
+      </Textbox>
+      <Textbox Name="textbox8">
+        <Left>0.5in</Left>
+        <Top>1.625in</Top>
+        <ZIndex>15</ZIndex>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Số CMT/HC :</Value>
+      </Textbox>
+      <Textbox Name="textbox10">
+        <Left>0.5in</Left>
+        <Top>1.875in</Top>
+        <ZIndex>14</ZIndex>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Tên TK có :</Value>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <Left>0.5in</Left>
+        <Top>2.125in</Top>
+        <ZIndex>13</ZIndex>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Nội dung :</Value>
+      </Textbox>
+      <Textbox Name="textbox17">
+        <Left>6.125in</Left>
+        <ZIndex>12</ZIndex>
+        <Width>0.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Ngày lập:</Value>
+      </Textbox>
+      <Textbox Name="textbox19">
+        <Left>1.25in</Left>
+        <Top>3in</Top>
+        <ZIndex>11</ZIndex>
+        <Width>0.75in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>Người nộp</Value>
+      </Textbox>
+      <Textbox Name="textbox20">
+        <Left>2.75in</Left>
+        <Top>3in</Top>
+        <ZIndex>10</ZIndex>
+        <Width>0.625in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>Thủ quỹ</Value>
+      </Textbox>
+      <Textbox Name="textbox21">
+        <Left>4in</Left>
+        <Top>3in</Top>
+        <ZIndex>9</ZIndex>
+        <Width>0.625in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>Kế toán</Value>
+      </Textbox>
+      <Textbox Name="textbox22">
+        <Left>5.25in</Left>
+        <Top>3in</Top>
+        <ZIndex>8</ZIndex>
+        <Width>0.75in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>Kiểm soát</Value>
+      </Textbox>
+      <Textbox Name="textbox23">
+        <Left>6.5in</Left>
+        <Top>3in</Top>
+        <ZIndex>7</ZIndex>
+        <Width>0.75in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>Giám đốc</Value>
+      </Textbox>
+      <Table Name="table4">
+        <Left>1.5in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>1.375in</Top>
+        <ZIndex>6</ZIndex>
+        <Width>2.29167in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Dotted</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!KhachHang.Value.DiaChi</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>2.29167in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Table Name="table5">
+        <Left>1.5in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>1.625in</Top>
+        <ZIndex>5</ZIndex>
+        <Width>2.29167in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Dotted</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!KhachHang.Value.CMND</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>2.29167in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Table Name="table6">
+        <Left>1.5in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>1.875in</Top>
+        <ZIndex>4</ZIndex>
+        <Width>3.25in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Dotted</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>3.25in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Table Name="table7">
+        <Left>1.5in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>2.125in</Top>
+        <ZIndex>3</ZIndex>
+        <Width>3.25in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="SoTietKiem_1">
+                      <rd:DefaultName>SoTietKiem_1</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Dotted</Bottom>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>="Gửi tiết kiệm : " &amp; " " &amp;Fields!SoTietKiem.Value.MaSoTietKiem</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>3.25in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Table Name="table9">
+        <Left>1.875in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Top>2.5in</Top>
+        <ZIndex>2</ZIndex>
+        <Width>5.5in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Parameters!BangChu.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>5.5in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+      <Textbox Name="textbox13">
+        <Left>0.5in</Left>
+        <Top>2.5in</Top>
+        <ZIndex>1</ZIndex>
+        <Width>1.375in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Times New Roman</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Số tiền bằng chữ :</Value>
+      </Textbox>
+      <Table Name="table11">
+        <Left>6.875in</Left>
+        <DataSetName>QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo</DataSetName>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Parameters!Ngay.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.375in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.25in</Height>
+      </Table>
+    </ReportItems>
+    <Height>3.25in</Height>
+  </Body>
+  <rd:ReportID>9b461550-5f67-4df9-928e-22c718cf2533</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="QuanLyTienGuiTietKiem_Bussiness_InPhieuThuInfo">
+      <rd:DataSetInfo>
+        <rd:DataSetName>QuanLyTienGuiTietKiem.Bussiness</rd:DataSetName>
+        <rd:ObjectDataSourceType>QuanLyTienGuiTietKiem.Bussiness.InPhieuThuInfo, QuanLyTienGuiTietKiem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>InPhieuThuInfo</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="CMND">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.KhachHangInfo</rd:TypeName>
+          <DataField>CMND</DataField>
+        </Field>
+        <Field Name="DiaChi">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.KhachHangInfo</rd:TypeName>
+          <DataField>DiaChi</DataField>
+        </Field>
+        <Field Name="DienThoai">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DienThoai</DataField>
+        </Field>
+        <Field Name="HoTen">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.KhachHangInfo</rd:TypeName>
+          <DataField>HoTen</DataField>
+        </Field>
+        <Field Name="MaKH">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MaKH</DataField>
+        </Field>
+        <Field Name="NgayCap">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>NgayCap</DataField>
+        </Field>
+        <Field Name="NoiCap">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NoiCap</DataField>
+        </Field>
+        <Field Name="NgayGiaoDich">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.PhatSinhTietKiemInfo</rd:TypeName>
+          <DataField>NgayGiaoDich</DataField>
+        </Field>
+        <Field Name="SoButToan">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.PhatSinhTietKiemInfo</rd:TypeName>
+          <DataField>SoButToan</DataField>
+        </Field>
+        <Field Name="SoGiaoDich">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SoGiaoDich</DataField>
+        </Field>
+        <Field Name="SoHieuTaiKhoanCo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SoHieuTaiKhoanCo</DataField>
+        </Field>
+        <Field Name="SoHieuTaiKhoanNo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SoHieuTaiKhoanNo</DataField>
+        </Field>
+        <Field Name="SoTien">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.ChiTietPhatSinhGDInfo</rd:TypeName>
+          <DataField>SoTien</DataField>
+        </Field>
+        <Field Name="ChiTietPhatSinhGD">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.ChiTietPhatSinhGDInfo</rd:TypeName>
+          <DataField>ChiTietPhatSinhGD</DataField>
+        </Field>
+        <Field Name="KhachHang">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.KhachHangInfo</rd:TypeName>
+          <DataField>KhachHang</DataField>
+        </Field>
+        <Field Name="NoiDung">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>NoiDung</DataField>
+        </Field>
+        <Field Name="PhanQuyen">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.PhanQuyenInfo</rd:TypeName>
+          <DataField>PhanQuyen</DataField>
+        </Field>
+        <Field Name="TaiKhoan">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.DMTaiKhoanInfo</rd:TypeName>
+          <DataField>TaiKhoan</DataField>
+        </Field>
+        <Field Name="SoHieuTaiKhoan">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.DMTaiKhoanInfo</rd:TypeName>
+          <DataField>SoHieuTaiKhoan</DataField>
+        </Field>
+        <Field Name="TenTaiKhoan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TenTaiKhoan</DataField>
+        </Field>
+        <Field Name="TinhChatSoDu">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TinhChatSoDu</DataField>
+        </Field>
+        <Field Name="SoTietKiem">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.SoTietKiemInfo</rd:TypeName>
+          <DataField>SoTietKiem</DataField>
+        </Field>
+        <Field Name="DMTaiKhoan">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.DMTaiKhoanInfo</rd:TypeName>
+          <DataField>DMTaiKhoan</DataField>
+        </Field>
+        <Field Name="DMLoaiTien">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.DMLoaiTienInfo</rd:TypeName>
+          <DataField>DMLoaiTien</DataField>
+        </Field>
+        <Field Name="LoaiTietKiem">
+          <rd:TypeName>QuanLyTienGuiTietKiem.Bussiness.LoaiTietKiemInfo</rd:TypeName>
+          <DataField>LoaiTietKiem</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>8.25in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>
