@@ -1,0 +1,305 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E4ABFBF-12A4-4B3E-83D5-D85B2914FC27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chess_Programming</RootNamespace>
+    <AssemblyName>Chess Programming</AssemblyName>
+    <ApplicationIcon>Chess-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=8.0.0.0, Culture=neutral, PublicKeyToken=5fd520d36328f741, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsEncoding.cs" />
+    <Compile Include="clsImage.cs" />
+    <Compile Include="clsOptions.cs" />
+    <Compile Include="ClsPC.cs" />
+    <Compile Include="clsProfile.cs" />
+    <Compile Include="clsSavedGame.cs" />
+    <Compile Include="clsSendMail.cs" />
+    <Compile Include="clsTrainingDatabase.cs" />
+    <Compile Include="clsTrainingExercise.cs" />
+    <Compile Include="clsXMLProcess.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnalysisBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnalysisBoard.Designer.cs">
+      <DependentUpon>frmAnalysisBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFeedBack.Designer.cs">
+      <DependentUpon>frmFeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindGame.designer.cs">
+      <DependentUpon>frmFindGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLanGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLanGame.designer.cs">
+      <DependentUpon>frmLanGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageProfile.Designer.cs">
+      <DependentUpon>frmManageProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGameOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGameOptions.designer.cs">
+      <DependentUpon>frmGameOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadGame.Designer.cs">
+      <DependentUpon>frmLoadGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectGame.Designer.cs">
+      <DependentUpon>frmSelectGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTraining.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraining.Designer.cs">
+      <DependentUpon>frmTraining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainingDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainingDatabase.designer.cs">
+      <DependentUpon>frmTrainingDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainingOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainingOptions.Designer.cs">
+      <DependentUpon>frmTrainingOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrainingResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrainingResult.Designer.cs">
+      <DependentUpon>frmTrainingResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewProfile.Designer.cs">
+      <DependentUpon>frmViewProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewProfile.Designer.cs">
+      <DependentUpon>frmNewProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnalysisBoard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAnalysisBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFeedBack.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindGame.resx">
+      <DependentUpon>frmFindGame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLanGame.resx">
+      <DependentUpon>frmLanGame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageProfile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmManageProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGameOptions.resx">
+      <DependentUpon>frmGameOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadGame.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLoadGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectGame.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraining.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrainingDatabase.resx">
+      <DependentUpon>frmTrainingDatabase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrainingOptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTrainingOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrainingResult.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTrainingResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewProfile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmViewProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewProfile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNewProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcProfile .resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcProfile .cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UcProfile .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcProfile .Designer.cs">
+      <DependentUpon>UcProfile .cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chess Usercontrol\Chess Library.csproj">
+      <Project>{C7A0ABD1-84FB-4644-883E-D1F3FAF66E71}</Project>
+      <Name>Chess Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Chess-icon.ico" />
+    <None Include="Resources\NewGame.wav" />
+    <None Include="Resources\logoBW.jpg" />
+    <None Include="Resources\Undo.png" />
+    <None Include="Resources\Monitors.png" />
+    <None Include="Resources\Editpage.png" />
+    <None Include="Resources\Exit1.png" />
+    <None Include="Resources\Apply.png" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\contact.png" />
+    <None Include="Resources\address.png" />
+    <None Include="Resources\Chess_Titans_Icon.png" />
+    <None Include="Resources\vista_help_icon_by_thoosje.png" />
+    <None Include="Resources\chess_icon.jpg" />
+    <None Include="Resources\Wrong.ico" />
+    <None Include="Resources\Save data.ico" />
+    <None Include="Resources\Pinion.ico" />
+    <None Include="Resources\White_N_2.png" />
+    <None Include="Resources\New file.ico" />
+    <None Include="Resources\Stop.ico" />
+    <None Include="Resources\Left-right.ico" />
+    <None Include="Resources\Cancel.ico" />
+    <None Include="Resources\Black R.png" />
+    <None Include="Resources\1156.jpg" />
+    <None Include="Resources\Image-Capture-icon.png" />
+    <None Include="Resources\4203.png" />
+    <None Include="Resources\physical_education_save_256.png" />
+    <None Include="Resources\physical_education_256.png" />
+    <None Include="Resources\DigitClock.jpg" />
+    <None Include="Resources\White N.png" />
+    <None Include="Resources\Black N.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

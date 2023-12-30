@@ -1,0 +1,294 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7A0ABD1-84FB-4644-883E-D1F3FAF66E71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chess_Usercontrol</RootNamespace>
+    <AssemblyName>Chess Usercontrol</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cifre.cs" />
+    <Compile Include="clsBishop.cs" />
+    <Compile Include="clsFEN.cs" />
+    <Compile Include="clsImageProcess.cs" />
+    <Compile Include="clsKing.cs" />
+    <Compile Include="clsKnight.cs" />
+    <Compile Include="clsMove.cs" />
+    <Compile Include="clsChessEngine.cs" />
+    <Compile Include="clsPawn.cs" />
+    <Compile Include="clsQueen.cs" />
+    <Compile Include="clsRook.cs" />
+    <Compile Include="frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromotion.Designer.cs">
+      <DependentUpon>frmPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UcCapturedPieces.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcCapturedPieces.Designer.cs">
+      <DependentUpon>UcCapturedPieces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcChessBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcChessBoard.Designer.cs">
+      <DependentUpon>UcChessBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcChessCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcChessCell.Designer.cs">
+      <DependentUpon>UcChessCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcChessPiece.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcChessPiece.Designer.cs">
+      <DependentUpon>UcChessPiece.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UcMovesHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcMovesHistory.Designer.cs">
+      <DependentUpon>UcMovesHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcCountDownTimer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmMessageBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromotion.resx">
+      <DependentUpon>frmPromotion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcCapturedPieces.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcCapturedPieces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcChessBoard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcChessBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcChessCell.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcChessCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcChessPiece.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcChessPiece.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcMovesHistory.resx">
+      <DependentUpon>UcMovesHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcCountDownTimer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcCountDownTimer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black Q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\White Q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_C_2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black_C_1_Possible.png" />
+    <None Include="Resources\Black_C_1_Last.png" />
+    <None Include="Resources\Black_B_4.png" />
+    <None Include="Resources\Black_B_3.png" />
+    <None Include="Resources\Black_B_2.png" />
+    <None Include="Resources\Black_C_1.png" />
+    <None Include="Resources\Black_C_2.jpeg" />
+    <None Include="Resources\Black_C_1_Possible.jpg" />
+    <None Include="Resources\Black_C_1_Last.jpg" />
+    <None Include="Resources\Black_C_0.png" />
+    <None Include="Resources\Black_B_5.png" />
+    <Content Include="Resources\Black_C_2.PNG" />
+    <None Include="Resources\White_P_5.png" />
+    <None Include="Resources\White_N_5.png" />
+    <None Include="Resources\White_K_5.png" />
+    <None Include="Resources\White_B_5.png" />
+    <None Include="Resources\Black_R_5.png" />
+    <None Include="Resources\Black_Q_5.png" />
+    <None Include="Resources\Black_P_5.png" />
+    <None Include="Resources\Black_N_5.png" />
+    <None Include="Resources\Black_K_5.png" />
+    <None Include="Resources\White_R_5.png" />
+    <None Include="Resources\White_Q_5.png" />
+    <None Include="Resources\White_C_6_Last.jpg" />
+    <None Include="Resources\White_C_5_Last.jpg" />
+    <None Include="Resources\White_C_4_Last.jpg" />
+    <None Include="Resources\White_C_3_Last.jpg" />
+    <None Include="Resources\Black_C_7_Last.jpg" />
+    <None Include="Resources\Black_C_6_Last.jpg" />
+    <None Include="Resources\Black_C_5_Last.jpg" />
+    <None Include="Resources\Black_C_4_Last.jpg" />
+    <None Include="Resources\Black_C_3_Last.jpg" />
+    <None Include="Resources\White_C_7_Last.jpg" />
+    <None Include="Resources\White_C_4_Possible.jpg" />
+    <None Include="Resources\White_C_3_Possible.jpg" />
+    <None Include="Resources\Black_C_7_Possible.jpg" />
+    <None Include="Resources\Black_C_6_Possible.jpg" />
+    <None Include="Resources\Black_C_5_Possible.jpg" />
+    <None Include="Resources\Black_C_4_Possible.jpg" />
+    <None Include="Resources\Black_C_3_Possible.jpg" />
+    <None Include="Resources\White_C_7_Possible.jpg" />
+    <None Include="Resources\White_C_6_Possible.jpg" />
+    <None Include="Resources\White_C_5_Possible.jpg" />
+    <None Include="Resources\White_C_6.jpg" />
+    <None Include="Resources\White_C_5.jpg" />
+    <None Include="Resources\White_C_4.jpg" />
+    <None Include="Resources\White_C_3.jpg" />
+    <None Include="Resources\Black_C_7.JPG" />
+    <None Include="Resources\Black_C_6.jpg" />
+    <None Include="Resources\Black_C_5.jpg" />
+    <None Include="Resources\Black_C_4.jpg" />
+    <None Include="Resources\Black_C_3.jpg" />
+    <None Include="Resources\White_C_7.JPG" />
+    <None Include="Resources\White_C_1_Last.jpg" />
+    <None Include="Resources\Black_C_2_Last.jpg" />
+    <None Include="Resources\White_C_2_Last.jpg" />
+    <None Include="Resources\White_C_1_Possible.jpg" />
+    <None Include="Resources\Black_C_2_Possible.jpg" />
+    <None Include="Resources\White_C_2_Possible.jpg" />
+    <None Include="Resources\White_C_1.png" />
+    <None Include="Resources\Black_Q_2.png" />
+    <None Include="Resources\Black_K_2.png" />
+    <None Include="Resources\White_B_2.png" />
+    <None Include="Resources\Black_P_2.png" />
+    <None Include="Resources\Black_N_2.png" />
+    <None Include="Resources\Black_R_2.png" />
+    <None Include="Resources\White_N_2.png" />
+    <None Include="Resources\White_K_2.png" />
+    <None Include="Resources\White_R_2.png" />
+    <None Include="Resources\White_Q_2.png" />
+    <None Include="Resources\White_P_2.png" />
+    <None Include="Resources\White_R_3.png" />
+    <None Include="Resources\White_Q_3.png" />
+    <None Include="Resources\White_N_3.png" />
+    <None Include="Resources\White_K_3.png" />
+    <None Include="Resources\White_B_3.png" />
+    <None Include="Resources\Black_R_3.png" />
+    <None Include="Resources\Black_N_3.png" />
+    <None Include="Resources\Black_P_3.png" />
+    <None Include="Resources\Black_Q_3.png" />
+    <None Include="Resources\Black_K_3.png" />
+    <None Include="Resources\White_P_3.png" />
+    <None Include="Resources\White_Q_4.png" />
+    <None Include="Resources\White_P_4.png" />
+    <None Include="Resources\White_N_4.png" />
+    <None Include="Resources\White_K_4.png" />
+    <None Include="Resources\White_B_4.png" />
+    <None Include="Resources\Black_R_4.png" />
+    <None Include="Resources\Black_Q_4.png" />
+    <None Include="Resources\Black_P_4.png" />
+    <None Include="Resources\Black_N_4.png" />
+    <None Include="Resources\Black_K_4.png" />
+    <None Include="Resources\White_R_4.png" />
+    <None Include="Resources\White_C_2_Last.png" />
+    <None Include="Resources\White_C_1_Last.png" />
+    <None Include="Resources\Black_C_2_Last.png" />
+    <None Include="Resources\White_C_2_Possible.png" />
+    <None Include="Resources\White_C_1_Possible.png" />
+    <None Include="Resources\Black_C_2_Possible.png" />
+    <None Include="Resources\Say_check.wav" />
+    <None Include="Resources\Move.WAV" />
+    <None Include="Resources\Capture.WAV" />
+    <None Include="Resources\Say_checkmate.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess", "Chess.csproj", "{158467A2-DF66-4481-B7A9-4092894BDEAF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessItem", "..\ChessItem\ChessItem.csproj", "{A62456FF-2B33-4F23-83BD-CD4DD49E44B4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IChess", "..\IChess\IChess.csproj", "{6E307100-0972-4CB4-A2C1-9719A4A7870A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{158467A2-DF66-4481-B7A9-4092894BDEAF}.Debug.ActiveCfg = Debug|.NET
+		{158467A2-DF66-4481-B7A9-4092894BDEAF}.Debug.Build.0 = Debug|.NET
+		{158467A2-DF66-4481-B7A9-4092894BDEAF}.Release.ActiveCfg = Release|.NET
+		{158467A2-DF66-4481-B7A9-4092894BDEAF}.Release.Build.0 = Release|.NET
+		{A62456FF-2B33-4F23-83BD-CD4DD49E44B4}.Debug.ActiveCfg = Debug|.NET
+		{A62456FF-2B33-4F23-83BD-CD4DD49E44B4}.Debug.Build.0 = Debug|.NET
+		{A62456FF-2B33-4F23-83BD-CD4DD49E44B4}.Release.ActiveCfg = Release|.NET
+		{A62456FF-2B33-4F23-83BD-CD4DD49E44B4}.Release.Build.0 = Release|.NET
+		{6E307100-0972-4CB4-A2C1-9719A4A7870A}.Debug.ActiveCfg = Debug|.NET
+		{6E307100-0972-4CB4-A2C1-9719A4A7870A}.Debug.Build.0 = Debug|.NET
+		{6E307100-0972-4CB4-A2C1-9719A4A7870A}.Release.ActiveCfg = Release|.NET
+		{6E307100-0972-4CB4-A2C1-9719A4A7870A}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
