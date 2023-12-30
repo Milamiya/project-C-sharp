@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE0230CD-6F97-4A29-9CFA-79BB07F17A9E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PhanMemBanVeXe_Full.My.MyApplication</StartupObject>
+    <RootNamespace>PhanMemBanVeXe_Full</RootNamespace>
+    <AssemblyName>PhanMemBanVeXe_Full</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PhanMemBanVeXe_Full.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PhanMemBanVeXe_Full.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DotNetBar\Bin\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DotNetBar\Bin\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DotNetBar\Bin\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\Form_Cap_pass.Designer.vb">
+      <DependentUpon>Form_Cap_pass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Cap_pass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_ChiTietTuyen.Designer.vb">
+      <DependentUpon>Form_ChiTietTuyen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_ChiTietTuyen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Login.Designer.vb">
+      <DependentUpon>Form_Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Phan_Quyen.Designer.vb">
+      <DependentUpon>Form_Phan_Quyen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Phan_Quyen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Xe_16_Cho.Designer.vb">
+      <DependentUpon>Form_Xe_16_Cho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Xe_16_Cho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Xe_25_Cho.Designer.vb">
+      <DependentUpon>Form_Xe_25_Cho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Xe_25_Cho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Xe_30_Cho.Designer.vb">
+      <DependentUpon>Form_Xe_30_Cho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Xe_30_Cho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Xe_45_Cho.Designer.vb">
+      <DependentUpon>Form_Xe_45_Cho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Xe_45_Cho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_Xe_7_Cho.Designer.vb">
+      <DependentUpon>Form_Xe_7_Cho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Xe_7_Cho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Infomation.Designer.vb">
+      <DependentUpon>Infomation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Infomation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library\Ban_ve.vb" />
+    <Compile Include="Library\Chuyen_xe.vb" />
+    <Compile Include="Library\Ket_noi.vb" />
+    <Compile Include="Library\Nguoi_dung.vb" />
+    <Compile Include="Library\Thoi_diem.vb" />
+    <Compile Include="Library\Tuyen_xe.vb" />
+    <Compile Include="Library\Update_he_thong.vb" />
+    <Compile Include="Library\Xe.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Form\Form_Main.Designer.vb">
+      <DependentUpon>Form_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\Form_Cap_pass.resx">
+      <DependentUpon>Form_Cap_pass.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_ChiTietTuyen.resx">
+      <DependentUpon>Form_ChiTietTuyen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Login.resx">
+      <DependentUpon>Form_Login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Phan_Quyen.resx">
+      <DependentUpon>Form_Phan_Quyen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Xe_16_Cho.resx">
+      <DependentUpon>Form_Xe_16_Cho.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Xe_25_Cho.resx">
+      <DependentUpon>Form_Xe_25_Cho.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Xe_30_Cho.resx">
+      <DependentUpon>Form_Xe_30_Cho.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Xe_45_Cho.resx">
+      <DependentUpon>Form_Xe_45_Cho.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Xe_7_Cho.resx">
+      <DependentUpon>Form_Xe_7_Cho.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Infomation.resx">
+      <DependentUpon>Infomation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Login.vi-VN.resx">
+      <DependentUpon>Form_Login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_Main.resx">
+      <DependentUpon>Form_Main.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editdelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phanquyen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phanquyen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cap_pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fermer-session.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter-bus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter-bus-purple-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GanXe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GanXe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_comit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hanh_khach.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

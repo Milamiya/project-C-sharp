@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tetris", "Tetris.csproj", "{70119E03-2B8F-4F12-B664-F4E7F5F1FB68}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{70119E03-2B8F-4F12-B664-F4E7F5F1FB68}.Debug.ActiveCfg = Debug|.NET
+		{70119E03-2B8F-4F12-B664-F4E7F5F1FB68}.Debug.Build.0 = Debug|.NET
+		{70119E03-2B8F-4F12-B664-F4E7F5F1FB68}.Release.ActiveCfg = Release|.NET
+		{70119E03-2B8F-4F12-B664-F4E7F5F1FB68}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rp_TKTienLoiThang" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dee499af-718e-4cca-b390-458996d413ea">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="131"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT SACH.MASACH,TENSACH,IFNULL((SUM(TONGTIEN)-SUM(CHITIETHOADON.SOLUONG*GIAMUA)),0) AS TIENLOI
+FROM (HOADON INNER JOIN CHITIETHOADON
+ON HOADON.MAHOADON = CHITIETHOADON.MAHOADON) RIGHT OUTER JOIN SACH
+ON CHITIETHOADON.MASACH = SACH.MASACH
+WHERE (YEAR(NGAYLAP)= YEAR(CURDATE()) OR YEAR(NGAYLAP) IS NULL) AND (MONTH(NGAYLAP)= MONTH(CURDATE()) OR MONTH(NGAYLAP) IS NULL)
+GROUP BY SACH.MASACH]]>
+	</queryString>
+	<field name="MASACH" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TENSACH" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TIENLOI" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<frame>
+				<reportElement uuid="09528155-5086-4a92-afdb-b67fd00bb9ff" mode="Opaque" x="2" y="0" width="802" height="66" backcolor="#000000"/>
+				<staticText>
+					<reportElement uuid="8334a024-000d-4278-a88f-e1488a8aa308" style="Title" x="0" y="0" width="334" height="66"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Thống kê]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="d73cecbb-c57b-44eb-9215-0cc664f057bc" style="SubTitle" x="352" y="37" width="448" height="29"/>
+					<textElement textAlignment="Left">
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Số tiền lời thu được từ mỗi cuốn sách trong tháng]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="8539cb40-e525-423c-a213-c385eb1d8bed" mode="Opaque" x="2" y="66" width="802" height="32" forecolor="#000000" backcolor="#CC0000"/>
+				<textField pattern="MMMMM-yy">
+					<reportElement uuid="4cb929ed-6902-41d8-8cc0-2abf5011164a" x="649" y="12" width="144" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d4763600-0be2-4511-83eb-91fcddf373bd" style="Column header" x="0" y="0" width="117" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mã sách]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9ef6861d-00c6-43f0-85fe-c1ebfc88a6e4" style="Column header" x="143" y="0" width="444" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tên sách]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c72753d6-d01f-46a5-9759-0fe76e03a9a9" style="Column header" x="616" y="0" width="179" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tiền lời]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="b996a52b-4cc5-4251-b51a-83d8ffb6eea7" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="9c509480-d17a-42ca-95e3-25fd5ffb06b1" style="Detail" positionType="Float" x="0" y="0" width="117" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MASACH}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="f9266183-d042-4ea6-a19d-68bad7981fef" style="Detail" positionType="Float" x="143" y="0" width="444" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TENSACH}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="c868d4d1-cc15-4e2e-950c-8fbeba87b0a1" style="Detail" positionType="Float" x="616" y="0" width="179" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TIENLOI}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="6e408794-1df2-405c-b741-27720d574576" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="19c38417-6280-4d23-9e66-b6078e7f8592" mode="Opaque" x="0" y="0" width="802" height="25" forecolor="#D0B48E" backcolor="#000000"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="96a1cf1e-d5d9-491c-b63f-78850ed81b06" style="Column header" x="757" y="3" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="10291631-b625-4c23-ac64-1cfccc57feca" style="Column header" x="677" y="3" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="fddcbba9-3bc8-4371-9a0f-5d1975ef58a4" style="Column header" x="2" y="3" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

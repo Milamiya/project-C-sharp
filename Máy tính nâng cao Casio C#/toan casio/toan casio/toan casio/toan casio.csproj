@@ -1,0 +1,162 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C5AB83E-F06A-44B3-A611-8ED46BB49997}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>toan casio</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giaithua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="giaithua.Designer.cs">
+      <DependentUpon>giaithua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="he_ptb1_2an.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="he_ptb1_2an.Designer.cs">
+      <DependentUpon>he_ptb1_2an.cs</DependentUpon>
+    </Compile>
+    <Compile Include="he_ptb1_3an.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="he_ptb1_3an.Designer.cs">
+      <DependentUpon>he_ptb1_3an.cs</DependentUpon>
+    </Compile>
+    <Compile Include="khaican.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="khaican.Designer.cs">
+      <DependentUpon>khaican.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loglncs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loglncs.Designer.cs">
+      <DependentUpon>loglncs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="luonggiac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="luonggiac.Designer.cs">
+      <DependentUpon>luonggiac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="luythua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="luythua.Designer.cs">
+      <DependentUpon>luythua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giaithua.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>giaithua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="he_ptb1_2an.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>he_ptb1_2an.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="he_ptb1_3an.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>he_ptb1_3an.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khaican.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>khaican.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loglncs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>loglncs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="luonggiac.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>luonggiac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="luythua.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>luythua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ptbac2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ptbac2.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ptbac2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ptbac2.Designer.cs">
+      <DependentUpon>ptbac2.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="toan1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

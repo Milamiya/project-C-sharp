@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rp_TkSachTheoNam" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d6d59e01-8847-4c7f-b40a-5e9443e99990">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT SACH.MASACH, TENSACH, SUM(NHATKINHAPSACH.SOLUONG) AS SOLUONGNHAP,IFNULL(SUM(CHITIETHOADON.SOLUONG), 0) AS SOLUONGBAN
+FROM (HOADON INNER JOIN CHITIETHOADON
+ON HOADON.MAHOADON = CHITIETHOADON.MAHOADON) RIGHT OUTER JOIN SACH
+ON CHITIETHOADON.MASACH = SACH.MASACH INNER JOIN NHATKINHAPSACH ON NHATKINHAPSACH.MASACH = SACH.MASACH
+WHERE  (YEAR(NGAYLAP)=YEAR(CURDATE()) OR YEAR(NGAYLAP) IS NULL) AND YEAR(NGAYNHAP) =YEAR(CURDATE())
+GROUP BY SACH.MASACH]]>
+	</queryString>
+	<field name="MASACH" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TENSACH" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SOLUONGNHAP" class="java.math.BigDecimal"/>
+	<field name="SOLUONGBAN" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<frame>
+				<reportElement uuid="c68e6cfa-eaa0-4bc8-be31-e945117262be" mode="Opaque" x="0" y="0" width="802" height="66" backcolor="#000000"/>
+				<staticText>
+					<reportElement uuid="5050e426-d8f0-47d7-8e2f-e6f8c80fed97" style="Title" x="0" y="0" width="438" height="66"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Báo cáo thống kê]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="5a55dab1-c664-4891-9afa-f258d6d97dea" style="SubTitle" x="438" y="37" width="358" height="29"/>
+					<textElement textAlignment="Right">
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Số lượng sách nhập và bán ra trong năm]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="04b3c21d-7bd2-43cd-9566-6e7a089fb4e6" mode="Opaque" x="0" y="66" width="802" height="32" forecolor="#000000" backcolor="#CC0000"/>
+				<textField pattern="MMMMM-yy">
+					<reportElement uuid="bbf215c6-7c26-4cf7-bf06-b84bb73a7a1a" x="652" y="12" width="144" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="80145a8b-e204-4e7c-a3d7-cc13bce2dafc" style="Column header" x="0" y="0" width="124" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mã sách]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1884fb1b-44a5-4136-9e68-d07f90337376" style="Column header" x="124" y="0" width="446" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tên sách]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1f4845fc-6f95-443f-b4a5-7763d0e5d261" style="Column header" x="583" y="0" width="94" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Số lượng nhập]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bfa0152e-6571-437d-a346-3123b7cd3792" style="Column header" x="704" y="0" width="92" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Số lượng bán]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="af4bba00-325b-421f-9cab-f683c9ca4c2e" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="826d8e5c-3d0e-4694-abb2-6512e7f4101d" style="Detail" positionType="Float" x="0" y="0" width="124" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MASACH}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="166f84c7-cac9-4789-841e-27989ee1cd59" style="Detail" positionType="Float" x="124" y="0" width="446" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TENSACH}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="ee428537-ddb1-4765-ad22-622f7c3ccd2b" style="Detail" positionType="Float" x="583" y="0" width="94" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{SOLUONGNHAP}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="965f6144-182a-47cd-8fe7-f60f2fbc0cf3" style="Detail" positionType="Float" x="704" y="0" width="92" height="18"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{SOLUONGBAN}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="0297f209-ead0-4f58-9242-8e2a34dcf5df" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="835e0a68-f756-474a-beb0-b32ab94d268f" mode="Opaque" x="0" y="0" width="802" height="25" forecolor="#D0B48E" backcolor="#000000"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="8612fbdf-8d00-4864-8406-e533cbc4b0bf" style="Column header" x="757" y="3" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="0cb4c282-f24f-4714-a225-bc6af70e7458" style="Column header" x="677" y="3" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="d9a38ede-c479-46da-a361-07afc7ebb1a4" style="Column header" x="2" y="3" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
