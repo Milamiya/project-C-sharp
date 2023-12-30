@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master_Admin.master.cs" Inherits="admin_Master_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../img_button/soc.ico" type="image/x-icon" />
+<link rel="icon" href="../img_button/soc.ico" type="image/x-icon" />
+    <style type="text/css">
+        .Footer
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Header"><a>ADMINISTRATOR TOLL</a></div>
+    <div class="content">   
+    <div class="left">
+    <p> 
+    <ul>
+    <li>Xin Chào: <a href=""><%=Session["DangNhap"]%></a></li>
+        <li><a href="../logout.aspx">Logout</a></li>
+    </ul>
+    </p>
+    <ul>
+        <li><a href="Admin.aspx">Home</a></li>
+        <li><a href="QL_User.aspx">User</a></li>
+        <li><a href="QL_Music.aspx">Music</a></li>
+        <li><a href="QL_Video.aspx">Video</a></li>
+        <li><a href="QL_CaSi.aspx">Ca Sĩ</a></li>
+        <li><a href="QL_NhacSi.aspx">Nhạc Sĩ</a></li>
+        <li><a href="QL_TheLoai.aspx">Thể Loại</a></li>
+    </ul>
+    </div>
+    <div class="right">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </div>
+    <div class="Footer">
+    <img src="../img_button/nenduoi.gif" width="100%" />
+    <br /> CopyRight @ Tam Anh . Version 2.0 
+    <br /> Quản Trị Viên : Lê Văn Tuấn Anh || Nguyễn Ánh Minh Ngân || Lý Vĩnh Bảo Linh
+    </div>
+    </form>
+</body>
+</html>        

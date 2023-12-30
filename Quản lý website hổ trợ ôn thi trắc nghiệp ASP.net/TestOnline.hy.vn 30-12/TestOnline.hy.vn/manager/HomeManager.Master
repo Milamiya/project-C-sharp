@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeManager.master.cs"
+    Inherits="TestOnline.hy.vn.Quản_trị.HomeManager" %>
+
+<%@ Register Src="../Control/Manager/ucMenu.ascx" TagName="ucMenu" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .banner_banner
+        {
+            width: 980px;
+            height:150px;
+        }
+       
+        .homepage_content
+        {
+        	width:980px;
+        	}
+    </style>
+</head>
+<body>
+<center>
+    <form id="form1" runat="server">
+    <div style=" margin-left:auto; margin-right:auto">
+       <table>
+       <tr><td class="banner_banner">
+           <uc1:ucMenu ID="ucMenu1" runat="server" />
+           </td></tr>
+       <tr><td class="homepage_content"><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder></td></tr>
+       </table>
+    </div>
+    </form>
+    </center>
+</body>
+</html>

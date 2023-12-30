@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NguoiDung.master.cs" Inherits="UserControl_NguoiDung" %>
+
+<%@ Register src="Menungang.ascx" tagname="Menungang" tagprefix="uc1" %>
+<%@ Register src="MenuTrai.ascx" tagname="MenuTrai" tagprefix="uc2" %>
+<%@ Register src="KhungPhai.ascx" tagname="KhungPhai" tagprefix="uc3" %>
+<%@ Register src="Footer.ascx" tagname="Footer" tagprefix="uc4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../CSS/ShopOnline.css" rel="Stylesheet" type="text/css" />
+    <link href="../CSS/Menu.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JS/jquery-1.5.1.js" type="text/javascript"></script>
+    
+
+   <%-- <script src="../GiaoDien/JScript.js" type="text/javascript"></script>--%>
+
+    <script src="../JS/JScript.js" type="text/javascript"></script>
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width:980px;margin:0 auto;">
+        <div style="background-color:#fcdfff;width:980px;float:left;border:1px solid #333">
+         
+            <uc1:Menungang ID="Menungang1" runat="server" />
+         
+        </div>
+        <div style="width:200px;float:left; margin:5px auto 0 auto;">
+            <uc2:MenuTrai ID="MenuTrai1" runat="server" />
+            
+        </div>
+        <div id="khungchinh">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
+                
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <div style="width:200px; float:right; margin-top:5px;font-size:16px;">
+            <uc3:KhungPhai ID="KhungPhai1" runat="server" />
+        </div>
+        
+       </div> 
+       <div style="border:1px solid #1589ff;float:left "><uc4:Footer ID="Footer1" runat="server" />  </div>       
+  </form>
+</body>
+</html>

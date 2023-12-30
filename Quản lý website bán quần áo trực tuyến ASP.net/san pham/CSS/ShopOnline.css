@@ -1,0 +1,148 @@
+﻿*{padding:0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+body {
+}
+.footer 
+{
+	width:980px;
+	height:auto;
+	text-align:left;
+	padding-left:5px;
+	padding-top :2px;
+	margin-bottom:5px;
+	border:1 solid #1589ff;
+	
+	
+	
+}
+.footer p{ font-size:16px; font-style:italic;
+           }
+#box{float:right;
+     width:200px;}
+     
+     
+    /*khung phải*/
+.m{width:200px;
+       
+       float:right;
+       border:1px solid #333333;
+       margin:0 auto 5px 0;
+       background-color:#fcdfff;
+       -moz-border-radius:5px 5px 0 0;}
+.m_title{width:200px;
+         height:25px;
+         padding:5px 0 5px 0;
+         text-align:justify;
+         -moz-border-radius:5px 5px 0 0;
+         font-size:16px;
+         text-transform:capitalize;
+         border-bottom:thin solid #cccccc;
+         color:#fff;
+         font-weight:bold;
+         background-color:#1589ff;
+         }
+.m_box{text-align:center;line-height:16px;}
+#Gio{width :16px;
+     float:left;
+}
+#tintuc{height:100px}
+/*end_khung phai*/
+
+
+/*Khung chính*/
+#khungchinh{float:left; width:570px;margin:5px 5px 5px 5px;}
+
+/*end_khungchinh*/
+/*slideshow8*/
+
+ .slideshow {position:relative; width:560px; height:244px;
+             border:2px solid #4a4344;} 
+ .slideshow img{position:absolute;left:0; width:480px; height:234px; margin:5px 35px 5px 35px;
+               border:1px solid #347235}  
+               
+               
+               
+/*khung giữa*/
+#khunggiua{float:left; width:560px;margin:5px 5px 5px 5px;}
+.title-giua{width:555px;
+            height:30px;
+            background-color:#4CC417;
+            -moz-border-radius:0 25px 0 0;
+            margin-top:0px;
+            float:left;
+            font-size:16px;
+            font-weight:bold;
+            color:#fff;
+            padding-left:5px;
+}
+.box-sp-moi{width:560px;
+            height:100px;
+            border:1px solid #333;
+            float:left;}
+            /*chitietsp*/
+       .pictrue{width:250;
+                height:150;
+                float:left;
+                margin:5px auto auto 5px;
+                }
+                .clear-fix{
+ display:block; height:0;
+}
+*html .clearfix{
+ height:1%;
+}
+*+html .clearfix{
+ height:1%;
+}
+.clearfix{ float:left;}
+
+/*end_khunggiua*/
+
+.khung-giua{width:560px;
+            height:auto;
+            font-size:15px;
+            margin:5px auto auto 5px;
+            border:1px solid #747170;
+            padding-bottom:5px;
+            float:left;}
+.khung-giua table{width:433px;
+					margin:auto;
+}
+.khung-giua table tr{height:25px;}
+
+.title-giua-top{padding:5px;margin:0 auto 5px 0;color:#000;background-color:#f7f7f7;height:25px; border:1px solid #f7f7f7;}
+
+.dong{font-size:16px;}
+  
+/* Gio hàng*/
+
+.title-GH
+{ text-align:center;
+
+
+	}
+	
+	
+	
+#cot1 img:hover
+{
+	width: 300px;
+	height: 300px;
+	float: left;
+	position: absolute;
+	border: 5px ridge #FFFFFF;
+}
+
+#cot1 img
+{
+	border: 3px ridge #FFFFFF;
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+	
+	
+	

@@ -1,0 +1,309 @@
+#multi-level
+{
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-top: 0 solid #000;
+	border-bottom: 0 solid #000;
+	height: 30px;
+	width: 900px;
+	position: relative;
+	z-index: 100;
+	background: #fff url('../Picture/Thietke/image_drop_back.gif') repeat-x;
+	padding-left:0px;
+	margin: 0 auto;
+	top: 0px;
+	left: 0px;
+}
+
+/* The menu styling */
+/* Remove the padding, margins and bullets from the lists */
+
+.menu, .menu ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	height: 30px;
+}
+
+/* Set up the size of the list items and float left to place inline */
+.menu li.top
+{
+	display: block;
+	float: left;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	height: 29px;
+}
+
+/* Style and position the table so it takes no part in the menu function. The font size is necessary for IE5.5 */
+.menu table
+{
+	border-collapse: collapse;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Default link styling */
+.menu li.top a.top_link
+{
+	display: block;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	color: #fff;
+	background: url('../Picture/Thietke/image_drop_1a.gif');
+	padding: 0;
+}
+.menu li.top a.top_link span.span_top
+{
+	display: block;
+	float: left;
+	height: 30px;
+	background: url('../Picture/Thietke/image_drop_1a.gif') right top;
+	padding: 0 15px 0 0;
+}
+.menu li.top a.top_link b.b_top
+{
+	display: block;
+	float: left;
+	height: 30px;
+	width: 26px;
+}
+
+.menu li.top a.top_link span.drop
+{
+	background: url('../Picture/Thietke/image_drop_0a.gif') right top;
+	padding: 0 25px 0 0;
+}
+
+.menu li a#home b.b_top
+{
+	background: transparent url('../Picture/Thietke/home.gif') no-repeat center center;
+}
+.menu li a#products b.b_top
+{
+	background: transparent url('../Picture/Thietke/page.gif') no-repeat center center;
+}
+.menu li a#services b.b_top
+{
+	background: transparent url('../Picture/Thietke/monitor.gif') no-repeat center center;
+}
+.menu li a#contacts b.b_top
+{
+	background: transparent url('../Picture/Thietke/links.gif') no-repeat center center;
+}
+.menu li a#shop b.b_top
+{
+	background: transparent url('../Picture/Thietke/info.gif') no-repeat center center;
+}
+.menu li a#privacy b.b_top
+{
+	background: transparent url('../Picture/Thietke/page.gif') no-repeat center center;
+}
+
+/* Style the list OR link hover. Depends on which browser is used */
+.menu a:hover
+{
+	visibility: visible;
+	cursor: pointer;
+	position: relative;
+}
+.menu li:hover
+{
+	position: relative;
+	z-index: 200;
+}
+
+/* Style the top level links */
+.menu li.top a.top_link:hover, .menu li.top:hover a.top_link
+{
+	background: url('../Picture/Thietke/image_drop_1b.gif');
+}
+.menu li.top a.top_link:hover span.span_top, .menu li.top:hover a.top_link span.span_top
+{
+	background: url('../Picture/Thietke/image_drop_1b.gif') right top;
+}
+.menu li.top a.top_link:hover span.drop, .menu li.top:hover a.top_link span.drop
+{
+	background: url('../Picture/Thietke/image_drop_0b.gif') right top;
+}
+
+/* keep the 'next' level invisible by placing it off screen. */
+.menu ul, .menu ul ul, .menu :hover ul :hover ul ul, .menu :hover ul :hover ul :hover ul ul, .menu :hover ul :hover ul :hover ul :hover ul ul
+{
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+	width: 0;
+	height: 0;
+}
+
+/* Style the drop down sub level links */
+.menu :hover ul.sub
+{
+	left: 0;
+	top: 30px;
+	background: transparent url('../Picture/Thietke/transparent.gif');
+	padding: 3px 0 0 0;
+	white-space: nowrap;
+	width: 200px;
+	height: auto;
+}
+.menu :hover ul.sub li
+{
+	display: block;
+	float: left;
+	width: 200px;
+}
+.menu :hover ul.sub li a
+{
+	display: block;
+	float: left;
+	height: 25px;
+	width: 200px;
+	line-height: 25px;
+	color: #000;
+	text-decoration: none;
+	padding: 0;
+	background: url('../Picture/Thietke/dropa_0.gif') no-repeat;
+}
+
+/* All this lot is for IE6, believe it or not, to style the fly outs */
+.menu :hover ul.sub li a span, .menu :hover ul.sub li a.fly:hover ul li a span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a span
+{
+	display: block;
+	float: left;
+	background: url('../Picture/Thietke/drop_0.gif') right top;
+	height: 25px;
+	width: 150px;
+	padding: 0 10px 0 5px;
+	font-weight: normal;
+	color: #000;
+}
+
+.menu :hover ul.sub li a.fly span, .menu :hover ul.sub li a.fly:hover ul li a.fly span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a.fly span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a.fly span
+{
+	background: url('../Picture/Thietke/dropb_0.gif') right top;
+	color: #000;
+}
+
+.menu :hover ul.sub li a:hover, .menu :hover ul.sub li a:hover ul li a:hover, .menu :hover ul.sub li a:hover ul li a:hover ul li a:hover, .menu :hover ul.sub li a:hover ul li a:hover ul li a:hover ul li a:hover, .menu :hover ul.sub li a:hover ul li a:hover ul li a:hover ul li a:hover ul li a:hover
+{
+	background: url('../Picture/Thietke/dropba_1.gif') no-repeat;
+	color: #fff;
+}
+
+.menu :hover ul.sub li a:hover span, .menu :hover ul.sub li a.fly:hover ul li a:hover span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a:hover span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a:hover span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a:hover span
+{
+	background: url('../Picture/Thietke/drop_1.gif') right top;
+	color: #fff;
+}
+
+.menu :hover ul.sub li a.fly:hover span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a.fly:hover span, .menu :hover ul.sub li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a.fly:hover ul li a.fly:hover span
+{
+	background: url('../Picture/Thietke/dropb_1.gif') right top;
+	color: #fff;
+}
+
+/* the next two lines keep the menu trail :hover state for IE7 and non-IE browsers */
+.menu :hover ul li:hover > a.fly
+{
+	background: url('../Picture/Thietke/dropba_1.gif') no-repeat;
+	color: #fff;
+}
+.menu :hover ul li:hover > a.fly span
+{
+	background: url('../Picture/Thietke/dropb_1.gif') right top;
+	color: #fff;
+}
+
+/* Style the images to the left of each link */
+.menu ul.sub b
+{
+	display: block;
+	float: left;
+	background: transparent url('../Picture/Thietke/book.gif') no-repeat center center;
+	height: 25px;
+	width: 25px;
+}
+.menu ul.sub b.key
+{
+	background: transparent url('../Picture/Thietke/key.gif') no-repeat center center;
+}
+.menu ul.sub b.cog
+{
+	background: transparent url('../Picture/Thietke/cog.gif') no-repeat center center;
+}
+.menu ul.sub b.folder
+{
+	background: transparent url('../Picture/Thietke/folder.gif') no-repeat center center;
+}
+.menu ul.sub b.monitor
+{
+	background: transparent url('../Picture/Thietke/monitor.gif') no-repeat center center;
+}
+.menu ul.sub b.paint
+{
+	background: transparent url('../Picture/Thietke/paint.gif') no-repeat center center;
+}
+.menu ul.sub b.house
+{
+	background: transparent url('../Picture/Thietke/house.gif') no-repeat center center;
+}
+.menu ul.sub b.people
+{
+	background: transparent url('../Picture/Thietke/people.gif') no-repeat center center;
+}
+.menu ul.sub b.info
+{
+	background: transparent url('../Picture/Thietke/info.gif') no-repeat center center;
+}
+.menu ul.sub b.shop
+{
+	background: transparent url('../Picture/Thietke/shop.gif') no-repeat center center;
+}
+.menu ul.sub b.email
+{
+	background: transparent url('../Picture/Thietke/email.gif') no-repeat center center;
+}
+.menu ul.sub b.world
+{
+	background: transparent url('../Picture/Thietke/world.gif') no-repeat center center;
+}
+.menu ul.sub b.text
+{
+	background: transparent url('../Picture/Thietke/text.gif') no-repeat center center;
+}
+.menu ul.sub b.qmark
+{
+	background: transparent url('../Picture/Thietke/qmark.gif') no-repeat center center;
+}
+.menu ul.sub b.stop
+{
+	background: transparent url('../Picture/Thietke/stop.gif') no-repeat center center;
+}
+.menu ul.sub b.edit
+{
+	background: transparent url('../Picture/Thietke/edit.gif') no-repeat center center;
+}
+
+/* Position the flyouts */
+.menu :hover ul :hover ul, .menu :hover ul :hover ul :hover ul, .menu :hover ul :hover ul :hover ul :hover ul, .menu :hover ul :hover ul :hover ul :hover ul :hover ul
+{
+	left: 107px;
+	top: 0;
+	background: transparent url('../Picture/Thietke/transparent.gif');
+	padding: 5px 5px 5px 0;
+	white-space: nowrap;
+	width: 120px;
+	z-index: 200;
+	height: auto;
+}

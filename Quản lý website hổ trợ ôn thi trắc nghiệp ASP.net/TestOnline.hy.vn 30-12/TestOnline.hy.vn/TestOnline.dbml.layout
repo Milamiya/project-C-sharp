@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 13.625" name="TestOnline">
+  <DataContextMoniker Name="/TestOnlineDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a0735f36-1f69-4fd4-97f2-6a7cbf1e8f40" absoluteBounds="8.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/TestOnlineDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75415d51-9bca-4983-9384-adb48e2d0782" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="236022f3-0dea-4373-9505-91b053a3a442" absoluteBounds="6.25, 5.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblThreadsOnline" />
+      <nestedChildShapes>
+        <elementListCompartment Id="603bd87e-3675-4d09-bd50-bede2e24cfee" absoluteBounds="6.265, 6.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a7398ed-8fb3-456c-a040-3a9e3c36e822" absoluteBounds="8.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblAcount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9feae0f-ded3-44cd-9314-b6fa58607453" absoluteBounds="8.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e4a078e-4455-4625-b933-d046ca145c5f" absoluteBounds="6.25, 11.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblCommand" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3033015-e269-4335-ba7a-8eae4c01c284" absoluteBounds="6.265, 12.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="323c4184-a43e-4873-b806-d97468c3c865" absoluteBounds="3.5, 1.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblQuestion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0198b825-3ed3-4908-ac5c-1f5c7ec07ab5" absoluteBounds="3.515, 1.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4197393d-bbf0-437e-be56-eef062383496" absoluteBounds="8.75, 6.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblRegulation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7280602c-5ff0-4fdb-9eeb-09e927af65e2" absoluteBounds="8.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e11d09d-0174-4a1c-80e5-56522b89198a" absoluteBounds="9, 11.875, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblRespon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f97001c9-728a-446a-8632-31b8ae97da5d" absoluteBounds="9.015, 12.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bf2fd163-b3b1-4614-b8dc-9c90478d843b" absoluteBounds="6.25, 8.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblResultsID" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c76b415-8308-4f7d-9f01-2b234eb393d3" absoluteBounds="6.265, 9.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c23af1cd-094e-4bb1-8d5a-3bd89eec9219" absoluteBounds="3.5, 9.375, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblStudent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eed2bd16-5c6f-481c-befb-847bcea6fcbd" absoluteBounds="3.515, 9.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a1d9767-2286-4794-96da-06a5e380e7b0" absoluteBounds="0.75, 4.125, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblSubject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a810a20b-bd77-4482-bb3b-64de6e56fc63" absoluteBounds="0.765, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28c8a9fd-db13-49e9-9c78-b6b95bee495f" absoluteBounds="6.25, 3.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblThreadQuestion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a128077c-50c4-4bdb-8834-3be39746a532" absoluteBounds="6.265, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5c5e728-053b-492d-a567-a32e002f6027" absoluteBounds="3.5, 5, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/TestOnlineDataContext/tblThread" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73aebec0-4855-4541-a573-bb51b74c9eed" absoluteBounds="3.515, 5.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 12.5681469726562); (9 : 12.5681469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblCommand/tblCommand_tblRespon" />
+      <nodes>
+        <classShapeMoniker Id="7e4a078e-4455-4625-b933-d046ca145c5f" />
+        <classShapeMoniker Id="4e11d09d-0174-4a1c-80e5-56522b89198a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 11.7228011067708); (4.5 : 12.5392976888021); (6.25 : 12.5392976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblStudent/tblStudent_tblCommand" />
+      <nodes>
+        <classShapeMoniker Id="c23af1cd-094e-4bb1-8d5a-3bd89eec9219" />
+        <classShapeMoniker Id="7e4a078e-4455-4625-b933-d046ca145c5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.88544840494792); (6.25 : 9.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblStudent/tblStudent_tblResultsID" />
+      <nodes>
+        <classShapeMoniker Id="c23af1cd-094e-4bb1-8d5a-3bd89eec9219" />
+        <classShapeMoniker Id="bf2fd163-b3b1-4614-b8dc-9c90478d843b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.125); (1.75 : 2.8124995); (3.5 : 2.8124995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblSubject/tblSubject_tblQuestion" />
+      <nodes>
+        <classShapeMoniker Id="7a1d9767-2286-4794-96da-06a5e380e7b0" />
+        <classShapeMoniker Id="323c4184-a43e-4873-b806-d97468c3c865" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.67870198567708); (6.25 : 3.67870198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblQuestion/tblQuestion_tblThreadQuestion" />
+      <nodes>
+        <classShapeMoniker Id="323c4184-a43e-4873-b806-d97468c3c865" />
+        <classShapeMoniker Id="28c8a9fd-db13-49e9-9c78-b6b95bee495f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.47199625651042); (6.25 : 6.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblThread/tblThread_tblThreadsOnline" />
+      <nodes>
+        <classShapeMoniker Id="c5c5e728-053b-492d-a567-a32e002f6027" />
+        <classShapeMoniker Id="236022f3-0dea-4373-9505-91b053a3a442" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.1170068359375); (5.875 : 8.4920068359375); (5.875 : 8.2486387716847); (6.2513612283153 : 8.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblThread/tblThread_tblResultsID" />
+      <nodes>
+        <classShapeMoniker Id="c5c5e728-053b-492d-a567-a32e002f6027" />
+        <classShapeMoniker Id="bf2fd163-b3b1-4614-b8dc-9c90478d843b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5); (5.875 : 4.625); (5.875 : 4.8862939453125); (6.25 : 4.5112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblThread/tblThread_tblThreadQuestion" />
+      <nodes>
+        <classShapeMoniker Id="c5c5e728-053b-492d-a567-a32e002f6027" />
+        <classShapeMoniker Id="28c8a9fd-db13-49e9-9c78-b6b95bee495f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.31899251302083); (1.75 : 6.71800017447917); (3.5 : 6.71800017447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TestOnlineDataContext/tblSubject/tblSubject_tblThread" />
+      <nodes>
+        <classShapeMoniker Id="7a1d9767-2286-4794-96da-06a5e380e7b0" />
+        <classShapeMoniker Id="c5c5e728-053b-492d-a567-a32e002f6027" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

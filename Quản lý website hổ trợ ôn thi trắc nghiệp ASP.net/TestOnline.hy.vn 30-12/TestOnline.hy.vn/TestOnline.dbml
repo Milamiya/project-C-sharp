@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="onthitracnghiemOL" Class="TestOnlineDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=onthitracnghiemOL;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="onthitracnghiemOLConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Categories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="CategoryID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblThreadsOnline" Member="tblThreadsOnlines">
+    <Type Name="tblThreadsOnline">
+      <Column Name="ThreadsID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblThread_tblThreadsOnline" Member="tblThread" ThisKey="ThreadsID" Type="tblThread" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAcount" Member="tblAcounts">
+    <Type Name="tblAcount">
+      <Column Name="AcountID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pass" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brithday" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCommand" Member="tblCommands">
+    <Type Name="tblCommand">
+      <Column Name="CommandID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CommandName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tblCommand_tblRespon" Member="tblRespons" OtherKey="CommandID" Type="tblRespon" />
+      <Association Name="tblStudent_tblCommand" Member="tblStudent" ThisKey="StudentID" Type="tblStudent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblQuestions" Member="tblQuestions">
+    <Type Name="tblQuestion">
+      <Column Name="QuestionsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SubjectID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ChocieA" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ChocieB" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ChocieC" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ChocieD" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Answer" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblQuestion_tblThreadQuestion" Member="tblThreadQuestions" OtherKey="QuestionsID" Type="tblThreadQuestion" />
+      <Association Name="tblSubject_tblQuestion" Member="tblSubject" ThisKey="SubjectID" Type="tblSubject" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblRegulations" Member="tblRegulations">
+    <Type Name="tblRegulation">
+      <Column Name="RegulationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Titile" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblRespon" Member="tblRespons">
+    <Type Name="tblRespon">
+      <Column Name="CommandID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResponCommandID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ResponInformation" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="tblCommand_tblRespon" Member="tblCommand" ThisKey="CommandID" Type="tblCommand" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblResultsID" Member="tblResultsIDs">
+    <Type Name="tblResultsID">
+      <Column Name="ThreadsID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StudentID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ResultsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="tblStudent_tblResultsID" Member="tblStudent" ThisKey="StudentID" Type="tblStudent" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="tblThread_tblResultsID" Member="tblThread" ThisKey="ThreadsID" Type="tblThread" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblStudent" Member="tblStudents">
+    <Type Name="tblStudent">
+      <Column Name="StudentID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StudentName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Birthday" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nativevilage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblStudent_tblCommand" Member="tblCommands" OtherKey="StudentID" Type="tblCommand" />
+      <Association Name="tblStudent_tblResultsID" Member="tblResultsIDs" OtherKey="StudentID" Type="tblResultsID" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSubject" Member="tblSubjects">
+    <Type Name="tblSubject">
+      <Column Name="SubjectID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubjectName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="tblSubject_tblQuestion" Member="tblQuestions" OtherKey="SubjectID" Type="tblQuestion" />
+      <Association Name="tblSubject_tblThread" Member="tblThreads" OtherKey="SubjectID" Type="tblThread" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblThreadQuestions" Member="tblThreadQuestions">
+    <Type Name="tblThreadQuestion">
+      <Column Name="ThreadQuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuestionsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThreadsID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="tblQuestion_tblThreadQuestion" Member="tblQuestion" ThisKey="QuestionsID" Type="tblQuestion" IsForeignKey="true" />
+      <Association Name="tblThread_tblThreadQuestion" Member="tblThread" ThisKey="ThreadsID" Type="tblThread" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblThreads" Member="tblThreads">
+    <Type Name="tblThread">
+      <Column Name="ThreadsID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubjectID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxScores" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DateTest" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TheadName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumberQuestions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Hour" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Minute" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HitCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblThread_tblThreadsOnline" Member="tblThreadsOnline" OtherKey="ThreadsID" Type="tblThreadsOnline" Cardinality="One" />
+      <Association Name="tblThread_tblResultsID" Member="tblResultsIDs" OtherKey="ThreadsID" Type="tblResultsID" />
+      <Association Name="tblThread_tblThreadQuestion" Member="tblThreadQuestions" OtherKey="ThreadsID" Type="tblThreadQuestion" />
+      <Association Name="tblSubject_tblThread" Member="tblSubject" ThisKey="SubjectID" Type="tblSubject" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,185 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Siêu thị vật liệu xây dựng</title>
+    <link href="Styles/Main_20110211.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Other.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="giohang">
+        <ul>
+            <li>
+                <asp:LinkButton ID="btnThoat" runat="server" OnClick="btnThoat_Click">Thoát</asp:LinkButton></li>
+            <li>
+                <asp:LinkButton ID="btnDangKy" PostBackUrl="~/DangKy.aspx" runat="server">Đăng ký</asp:LinkButton></li>
+            <li>
+                <asp:LinkButton ID="btnDangNhap" runat="server" Font-Bold="False" OnClick="btnDangNhap_Click">Đăng nhập</asp:LinkButton></li>
+            <li>
+                <asp:LinkButton ID="btnTaiKhoan" runat="server" Font-Bold="True">Tài khoản</asp:LinkButton></li>
+            <li>
+                <asp:LinkButton ID="btnGioHang" runat="server" PostBackUrl="~/GioHang.aspx">Giỏ hàng</asp:LinkButton></li>
+        </ul>
+    </div>
+    <div class="header">
+    </div>
+    <div class="nav">
+        <ul class="ulNav">
+            <li><a href="Default.aspx"><span>Trang chủ</span></a></li>
+            <li><a href="News.aspx"><span>Tin tức</span></a> </li>
+            <li><a href="TimKiem.aspx"><span>Tìm kiếm</span></a> </li>
+            <li><a href="LienHe.aspx"><span>Liên hệ</span></a> </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="leftContent">
+            <div class="navLeft">
+                <div class="LC-box">
+                    <div class="LR-box-L">
+                    </div>
+                    <div class="LR-box-C">
+                        <span>Danh mục</span></div>
+                    <div class="LR-box-R">
+                    </div>
+                </div>
+                <div class="event">
+                    <div id="mainNav">
+                        <ul id="nav">
+                            <asp:Repeater ID="rptDanhMuc1" runat="server" OnItemDataBound="rptDanhMuc1_ItemDataBound">
+                                <ItemTemplate>
+                                    <asp:Label ID="lbma" runat="server" Visible="false" Text='<%#Eval("CategoryID")%>'></asp:Label>
+                                    <li><a href="#"><span>
+                                        <%#Eval("CategoryName") %></span></a>
+                                        <ul>
+                                            <asp:Repeater ID="rptDanhMuc2" runat="server">
+                                                <ItemTemplate>
+                                                    <li><a href="Products.aspx?id=<%#Eval("SmallProductCategoryID")%>"><span>
+                                                        <%#Eval("SmallProductCategoryName")%></span></a></li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </ul>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </div>
+                    <!--End #mainNav-->
+                    <%--<ul class="danhmuc">
+                        <asp:Repeater ID="rptDanhMuc" runat="server">
+                            <ItemTemplate>
+                                <li><a href="Products.aspx?id=<%#Eval("SmallProductCategoryID")%>"><span>
+                                    <%#Eval("SmallProductCategoryName")%></span></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>--%>
+                </div>
+            </div>
+            <div class="news" style="margin-top: 3px">
+                <div class="LC-box">
+                    <div class="LR-box-L">
+                    </div>
+                    <div class="LR-box-C">
+                        <span>Tin tức</span></div>
+                    <div class="LR-box-R">
+                    </div>
+                </div>
+                <div class="event">
+                    <ul class="News">
+                        <asp:Repeater ID="rptNews" runat="server">
+                            <ItemTemplate>
+                                <li><a href="NewDetail.aspx?idNew=<%#Eval("NewID")%>"><span>
+                                    <%#Eval("Title")%></span></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+            </div>
+            <div class="HoTro" style="margin-top: 3px">
+                <div class="LC-box">
+                    <div class="LR-box-L">
+                    </div>
+                    <div class="LR-box-C">
+                        <span>Danh mục</span></div>
+                    <div class="LR-box-R">
+                    </div>
+                </div>
+                <div class="event">
+                    <div style="padding-left: 20px; margin-top: 8px">
+                        <a href="ymsgr:sendIM?bientho88&m=Nhập vào gửi tới Đỗ Hương">
+                            <img alt="Yahoo!Status (Online/Offline)" src="http://opi.yahoo.com/online?u=bientho88&m=g&t=2"
+                                border="0" /></a>
+                        <div>
+                            Chức vụ: Kinh doanh 1</div>
+                        <div>
+                            Số ĐT: 0988928282</div>
+                    </div>
+                    <div style="padding-left: 20px; margin-top: 8px">
+                        <a href="ymsgr:sendIM?bientho88&m=Nhập vào gửi tới Đỗ Hương">
+                            <img alt="Yahoo!Status (Online/Offline)" src="http://opi.yahoo.com/online?u=bientho88&m=g&t=2"
+                                border="0" /></a>
+                        <div>
+                            Chức vụ: Kinh doanh 1</div>
+                        <div>
+                            Số ĐT: 0988928282</div>
+                    </div>
+                    <div style="padding-left: 20px; margin-top: 8px">
+                        <a href="ymsgr:sendIM?bientho88&m=Nhập vào gửi tới Đỗ Hương">
+                            <img alt="Yahoo!Status (Online/Offline)" src="http://opi.yahoo.com/online?u=bientho88&m=g&t=2"
+                                border="0" /></a>
+                        <div>
+                            Chức vụ: Kinh doanh 1</div>
+                        <div>
+                            Số ĐT: 0988928282</div>
+                    </div>
+                    <div style="padding-left: 20px; margin-top: 8px">
+                        <a href="ymsgr:sendIM?sanhdieusieungo&m=Nhập vào gửi tới Khương Hương">
+                            <img alt="Yahoo!Status (Online/Offline)" src="http://opi.yahoo.com/online?u=sanhdieusieungo&m=g&t=2"
+                                border="0" /></a>
+                        <div>
+                            Chức vụ: Kinh doanh 1</div>
+                        <div>
+                            Số ĐT: 0988928282</div>
+                    </div>
+                </div>
+            </div>
+            <div class="truycap" style="margin-top: 3px">
+                <div class="LC-box">
+                    <div class="LR-box-L">
+                    </div>
+                    <div class="LR-box-C">
+                        <span>Thống kê</span></div>
+                    <div class="LR-box-R">
+                    </div>
+                </div>
+                <div class="event">
+                    <p>
+                        Số lượt đã truy cập :
+                        <asp:Label ID="lbDa" runat="server"></asp:Label></p>
+                    <p>
+                        Số lượt đang truy cập :
+                        <asp:Label ID="lbDang" runat="server"></asp:Label></p>
+                </div>
+            </div>
+        </div>
+        <div class="rightContent">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h3>
+            Giấy phép hoạt động Đoàn trường Đại Học SPKT Hưng Yên Internet số 1050/GP - BTTTT
+            Hưng Yên,<br />
+            ngày 15-07-2011. Yên Lịch - Dân Tiến - Khoái Châu - Hưng Yên Điện thoại:<br />
+            0321-9829222. Fax: 0321-9829222 Email: info@vatlieuxaydung.com.vn. Website: http://www.vatlieuxaydung.com.vn
+        </h3>
+    </div>
+    </form>
+</body>
+</html>

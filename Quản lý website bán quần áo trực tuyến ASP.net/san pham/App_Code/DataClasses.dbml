@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="D:\STUDY\PROJECT4\SHOPONLINEMOI\APP_DATA\SHOPONLINE.MDF" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=D:\STUDY\PROJECT4\SHOPONLINEMOI\APP_DATA\SHOPONLINE.MDF;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="D__STUDY_PROJECT4_SHOPONLINEMOI_APP_DATA_SHOPONLINE_MDFConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Banners" Member="Banners">
+    <Type Name="Banner">
+      <Column Name="BannerID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BannertName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Images" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserName" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pass" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.String" DbType="NChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Association Name="User_Order" Member="Orders" OtherKey="UserName" Type="Order" />
+      <Association Name="Role_User" Member="Role" ThisKey="RoleID" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetailOrders" Member="DetailOrders">
+    <Type Name="DetailOrder">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Order_DetailOrder" Member="Order" ThisKey="OrderID" Type="Order" IsForeignKey="true" />
+      <Association Name="Product_DetailOrder" Member="Product" ThisKey="ProductID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Manufactures" Member="Manufactures">
+    <Type Name="Manufacture">
+      <Column Name="ManufactureID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ManufactureName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Logo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Manufacture_Product" Member="Products" OtherKey="ManufactureID" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Order">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateSet" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateDelivery" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentID" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="RecipientName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_DetailOrder" Member="DetailOrders" OtherKey="OrderID" Type="DetailOrder" />
+      <Association Name="Paymnet_Order" Member="Paymnet" ThisKey="PaymentID" Type="Paymnet" IsForeignKey="true" />
+      <Association Name="User_Order" Member="User" ThisKey="UserName" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paymnets" Member="Paymnets">
+    <Type Name="Paymnet">
+      <Column Name="PaymentID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PaymentName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Paymnet_Order" Member="Orders" OtherKey="PaymentID" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductGroups" Member="ProductGroups">
+    <Type Name="ProductGroup">
+      <Column Name="ProductGroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductGroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductGroup_Product" Member="Products" OtherKey="ProductGroupID" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Images" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ManufactureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descriptions" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="Product_DetailOrder" Member="DetailOrders" OtherKey="ProductID" Type="DetailOrder" />
+      <Association Name="Product_Promotional" Member="Promotionals" OtherKey="ProductID" Type="Promotional" />
+      <Association Name="Manufacture_Product" Member="Manufacture" ThisKey="ManufactureID" Type="Manufacture" IsForeignKey="true" />
+      <Association Name="ProductGroup_Product" Member="ProductGroup" ThisKey="ProductGroupID" Type="ProductGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Promotionals" Member="Promotionals">
+    <Type Name="Promotional">
+      <Column Name="PromotionalID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Promotional" Member="Product" ThisKey="ProductID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Roles" Member="Roles">
+    <Type Name="Role">
+      <Column Name="RoleID" Type="System.String" DbType="NChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Descriptions" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Association Name="Role_User" Member="Users" OtherKey="RoleID" Type="User" />
+    </Type>
+  </Table>
+</Database>

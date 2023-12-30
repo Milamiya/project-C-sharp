@@ -1,0 +1,90 @@
+#lightbox {
+	Z-INDEX: 100; LEFT: 0px; WIDTH: 100%; LINE-HEIGHT: 0; POSITION: absolute; TEXT-ALIGN: center
+}
+#lightbox A IMG {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+#outerImageContainer {
+	MARGIN: 0px auto; WIDTH: 250px; POSITION: relative; HEIGHT: 250px; BACKGROUND-COLOR: #fff
+}
+#imageContainer {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+#loading {
+	LEFT: 0%; WIDTH: 100%; LINE-HEIGHT: 0; POSITION: absolute; TOP: 40%; HEIGHT: 25%; TEXT-ALIGN: center
+}
+#hoverNav {
+	Z-INDEX: 10; LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 100%
+}
+#imageContainer > #hoverNav {
+	LEFT: 0px
+}
+#hoverNav A {
+	outline: none
+}
+#prevLink {
+	DISPLAY: block; BACKGROUND: url(../lib/lightbox/images/blank.gif) no-repeat; WIDTH: 49%; HEIGHT: 100%
+}
+#nextLink {
+	DISPLAY: block; BACKGROUND: url(../lib/lightbox/images/blank.gif) no-repeat; WIDTH: 49%; HEIGHT: 100%
+}
+#prevLink {
+	LEFT: 0px; FLOAT: left
+}
+#nextLink {
+	RIGHT: 0px; FLOAT: right
+}
+#prevLink:hover {
+	BACKGROUND: url(../lib/lightbox/images/prevlabel.gif) no-repeat left 15%
+}
+#prevLink:hover:visited {
+	BACKGROUND: url(../lib/lightbox/images/prevlabel.gif) no-repeat left 15%
+}
+#nextLink:hover {
+	BACKGROUND: url(../lib/lightbox/images/nextlabel.gif) no-repeat right 15%
+}
+#nextLink:hover:visited {
+	BACKGROUND: url(../lib/lightbox/images/nextlabel.gif) no-repeat right 15%
+}
+#imageDataContainer {
+	MARGIN: 0px auto; FONT: 10px/1.4em Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #fff
+}
+#imageData {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; COLOR: #666; PADDING-TOP: 0px
+}
+#imageData #imageDetails {
+	FLOAT: left; WIDTH: 70%; TEXT-ALIGN: left
+}
+#imageData #caption {
+	FONT-WEIGHT: bold
+}
+#imageData #numberDisplay {
+	CLEAR: left; DISPLAY: block; PADDING-BOTTOM: 1em
+}
+#imageData #bottomNavClose {
+	FLOAT: right; PADDING-BOTTOM: 0.7em; WIDTH: 66px
+}
+#overlay {
+	Z-INDEX: 90; LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 500px; BACKGROUND-COLOR: #000
+}
+.lbWidth {
+	MIN-WIDTH: 790px; LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px
+}
+* HTML .lbContent {
+	MARGIN-LEFT: -790px; POSITION: relative
+}
+* HTML .lbMinWidth {
+	PADDING-LEFT: 790px
+}
+.clearfix:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.clearfix {
+	DISPLAY: inline-block
+}
+* HTML .clearfix {
+	HEIGHT: 1%
+}
+.clearfix {
+	DISPLAY: block
+}

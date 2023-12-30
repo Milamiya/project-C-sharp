@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master_Home.master.cs" Inherits="Master_Home" %>
+
+<%@ Register src="control/TheLoai.ascx" tagname="TheLoai" tagprefix="uc1" %>
+
+<%@ Register src="control/Casi.ascx" tagname="Casi" tagprefix="uc2" %>
+
+<%@ Register src="control/TopMusic.ascx" tagname="TopMusic" tagprefix="uc3" %>
+
+<%@ Register src="control/TopVideo.ascx" tagname="TopVideo" tagprefix="uc4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">    
+<link rel="shortcut icon" href="../img_button/soc.ico" type="image/x-icon" />
+<link rel="icon" href="img_button/soc.ico" type="image/x-icon" />
+    <link href="css/Style.css" rel="stylesheet" type="text/css" />
+    <link href="css/1024px.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .footer
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="Web" runat="server" method="post">
+        <%--Download source code tai Sharecode.vn--%>
+<div id="right_ads_float">
+<marquee height="590" direction="up" scrolldelay="5" scrollamount="2" onmouseover="this.stop()" onmouseout="this.start()"> 
+<a target="_blank"><img src="img_QuangCao/chaytudong/biahanoi.jpg" border="1" width="180px" height="150px"></a>
+<a target="_blank"><img src="img_QuangCao/chaytudong/ford.jpg" border="1" width="180px" height="150px"></a>
+<a target="_blank"><img src="img_QuangCao/chaytudong/fpt.jpg" border="1" width="180px" height="150px"></a>
+<a target="_blank"><img src="img_QuangCao/chaytudong/hp.jpg" border="1" width="180px" height="150px"></a>
+<a target="_blank"><img src="img_QuangCao/chaytudong/htc.jpg" border="1" width="180px" height="150px"></a>
+<a target="_blank"><img src="img_QuangCao/chaytudong/lambogini.jpg" border="1" width="180px" height="150px"></a>
+<a target="_blank"><img src="img_QuangCao/chaytudong/motorola.jpg" border="1" width="180px" height="150px"></a>
+<a target="_blank"><img src="img_QuangCao/chaytudong/pepsi.jpg" border="1" width="180px" height="150px"></a>
+<a target="_blank"><img src="img_QuangCao/chaytudong/saporo.jpg" border="1" width="180px" height="150px"></a>
+</marquee>
+</div>
+    <div class="Top_Banner">
+    <div class="Header">
+    <div class="left"></div>
+    <div class="mid">
+    <a href="Home.aspx">
+            <asp:Image ID="Image4" runat="server" Height="20px" 
+                ImageUrl="~/img_button/mp3.gif" Width="70px" /></a>
+    &nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="txt_tim" runat="server" Font-Size="13px" CssClass="Search" 
+            ForeColor="#666666" Height="22px" placeholder='Tìm.....' Width="208px"></asp:TextBox>
+        <asp:Button ID="btn_tim" runat="server" Text="Tìm" onclick="btn_tim_Click" />
+    </div>
+    <div class="right">
+    <ul>
+        <li><a href="Home.aspx">
+            <asp:Image ID="Image1" runat="server" Height="20px" 
+                ImageUrl="~/img_button/MP3_logo.png" Width="70px" /></a></li>
+        <li><a href="#">
+            <asp:Image ID="Image2" runat="server" Height="20px" 
+                ImageUrl="~/img_button/Video.jpg" Width="70px" /></a></li>
+        <li><a href="#">
+            <asp:Image ID="Image3" runat="server" Height="20px" 
+                ImageUrl="~/img_button/Radio.jpg" Width="70px" /></a></li>
+        </ul>
+        <div class="right_dangnhap" id="Hello" runat="server"></div>
+    </div>    
+</div>
+    <div class="Menu"> 
+    <div class="left"></div>
+    <div class="right">
+    <ul>
+    <li><a href="Home.aspx">
+            <asp:Image ID="Image5" runat="server" Height="18px" 
+                ImageUrl="~/img_button/Home.jpg" Width="40px" /></a></li>
+        <li><a href="ThongTin.aspx?TT=Album" id="active-li">AlBum</a></li>
+        <li><a href="ThongTin.aspx?TT=Music" id="active-li">Nhạc</a></li>
+        <li><a href="ThongTin.aspx?TT=Video" id="active-li" >Video</a></li>
+        <li><a href="ThongTin.aspx?TT=NgheSi" id="active-li">Nghệ Sĩ</a></li>  
+        <li>||</li>               
+        <li><a>BXH</a>
+        <div class="menu_down">
+        <div class="menu_down_d">
+        <p class=menu_d><a href="Top.aspx?T=Album">Top Album</a></p>
+        <p class=menu_d><a href="Top.aspx?T=Video">Top Video</a></p>
+        <p class=menu_d><a href="Top.aspx?T=Music">Top Music</a></p>       
+        </div></div>
+        </li>
+        <li><a>New</a>
+        <div class="menu_down">
+        <div class="menu_down_d">
+        <p class=menu_d><a href="New.aspx?T=Album">New Album</a></p>
+        <p class=menu_d><a href="New.aspx?T=Video">New Video</a></p>
+        <p class=menu_d><a href="New.aspx?T=Music">New Music</a></p>
+        </div></div>
+        </li>
+        <li>||</li>
+        <li><a href="Chat.aspx" id="a1">Room Chat</a></li>
+        </ul>
+    <div class="right__">
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="30px"  Width="90px"
+            ImageUrl="~/img_button/upload.png" /> </div>
+    </div>
+    </div>
+    </div>
+    <div class="content">
+    <div class="left"></div>
+    <div class="right">
+    <div class="left">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+    <div class="right">
+    <div class="ChuDe">
+        <uc1:TheLoai ID="TheLoai1" runat="server" />
+        </div>
+    <div class="VietNam">
+        <uc2:Casi ID="Casi1" runat="server" />
+        </div>
+    <div class="Music">
+        <uc3:TopMusic ID="TopMusic1" runat="server" />
+        </div>
+        <div class="Video">
+
+            <uc4:TopVideo ID="TopVideo1" runat="server" />
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+<%--Download source code tai Sharecode.vn--%>
+    <div style="height: 150px;" id="fl813691">
+    <div id="eb951855">
+    <div id="cob263512">
+        <div id="coh963846">Sảng Khoái Quá ............
+            <ul id="coc67178">
+                <li id="pf204652hide"><a class="min" href="javascript:pf204652clickhide();" title="Hide this window">Hide this window</a></li>
+				
+                <li id="pf204652show" style="display: none;"><a class="max" href="javascript:pf204652clickshow();" title="Show this window">Show this window</a></li>
+                <li id="pf204652close"><a class="close" href="javascript:pf204652clickclose();" title="Close this window">Close this window</a></li>
+            </ul>
+       </div>
+<div id="co453569">
+        <a href="http://cocacola.com" target="buidoi.net"><img src="img_QuangCao/QC_cocacola.gif" width="400px"  border="0"></a>
+</div></div></div></div>
+<script>
+    pf204652bottomLayer = document.getElementById('fl813691');
+    var pf204652IntervalId = 0;
+    var pf204652maxHeight = 230;
+    var pf204652minHeight = 20;
+    var pf204652curHeight = 0;
+    function pf204652show() {
+        pf204652curHeight += 2;
+        if (pf204652curHeight > pf204652maxHeight) {
+            clearInterval(pf204652IntervalId);
+        }
+        pf204652bottomLayer.style.height = pf204652curHeight + 'px';
+    }
+    function pf204652hide() {
+        pf204652curHeight -= 3;
+        if (pf204652curHeight < pf204652minHeight) {
+            clearInterval(pf204652IntervalId);
+        }
+        pf204652bottomLayer.style.height = pf204652curHeight + 'px';
+    }
+    pf204652IntervalId = setInterval('pf204652show()', 5);
+    setTimeout("pf204652clickhide()", 12000);
+    function pf204652clickhide() {
+        document.getElementById('pf204652hide').style.display = 'none';
+        document.getElementById('pf204652show').style.display = 'inline';
+        pf204652IntervalId = setInterval('pf204652hide()', 5);
+    }
+    function pf204652clickshow() {
+        document.getElementById('pf204652hide').style.display = 'inline';
+        document.getElementById('pf204652show').style.display = 'none';
+        pf204652IntervalId = setInterval('pf204652show()', 5);
+    }
+    function pf204652clickclose() {
+        document.body.style.marginBottom = '0px';
+        pf204652bottomLayer.style.display = 'none';
+    }
+</script>
+<div class="footer" >
+    <img src="img_button/nenduoi.gif" width="100%" />
+    <br /> CopyRight @ Tam Anh . Version 2.0 
+    <br /> Quản Trị Viên : Lê Văn Tuấn Anh 
+    
+</div>
+    </form>
+</body>
+</html>

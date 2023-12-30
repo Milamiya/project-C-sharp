@@ -1,0 +1,214 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TrangChu.master.cs" Inherits="TrangChu" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register src="ucThongKe.ascx" tagname="ucThongKe" tagprefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Wed Tin tuc</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+    <link type="text/css" rel="stylesheet" media="all" href="Css/style.css" />
+    <%--<link type="text/css" rel="stylesheet" media="all" href="Css/smartmenu.css" />--%>
+    <link href="Stylesheet1.css" rel="stylesheet" type="text/css" />
+    
+    <script src="Css/scriptwitch.js" type="text/javascript"></script>
+    <script src="Css/jquery-ui.min.js" type="text/javascript"></script>
+     <script type="text/javascript" src="Css/smartmenu-min.js"></script>
+    <script type="text/javascript" src="Css/script.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+    $("#sm_frm1").hide();
+
+    });
+    </script>
+     <script type="text/javascript"> 
+    $(document).ready(function(){
+        $("#featured > ul").tabs({
+            fx: {
+                opacity: "toggle"
+            }
+        }).tabs("rotate", 10000, true);
+    });
+    </script>
+</head>
+<body class="sidebars" >
+    <form id="form1" runat="server">
+        <div id="header" style="background-color:White">
+            <div id="head-logo">
+                <div><p style="float: right;margin-top:0px">
+                    <a class="link" href="#" target="_top">Giới thiệu</a>&nbsp;&nbsp; <a class="link"
+                        href="#" target="_top">Đăng nhập</a>&nbsp;&nbsp; <a class="link" href="#" target="_top">
+                            Đăng ký</a></p></div>
+                          
+                <div class="logo" style="margin-top:20px; float:left; width:30%">
+                   
+                    <img src="images/logo.png" />
+                    
+                   
+                    
+                </div>
+                <div id="search-box" style="height:24px">
+                    <a href="#">
+                    
+                      <asp:Button ID="butSeach" runat="server" Text="" CssClass="ButSerchNews" 
+                        Height="24px" Width="73px" onclick="butSeach_Click"/>
+                    <div id="search-text-wrap" style="">
+                        <asp:TextBox ID="txtSearch" runat="server" Text=""
+                            CssClass="search-text" Height="24px"></asp:TextBox>
+                    </div>
+                </div>
+         
+         
+               
+            
+            </div>
+        </div>
+         <!--phanmenu-->
+    
+      <div id="nav" style="width:1000px;">
+                    <div class="wrap">
+                        <ul id="menu-navigation" class="nav superfish">
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Giới thiệu</a>
+                                <li><a href="#">Liên hệ</a></li>
+                                <li><a href="#">Tin tức</a>
+                                    <ul>
+                                        <li><a href="#">Tin công nghệ</a></li>
+                                        <li><a href="#">Tin giáo dục</a></li>
+                                        <li><a href="#">Tin Kinh tế - Tài chính</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Công nghệ thông tin</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Asp.net - Csharp</a></li>
+                                        <li><a href="#">Lập trình với Ajax</a></li>
+                                        <li><a href="#">Javscript - Css - Html</a></li>
+                                        <li><a href="#">Cơ sở dữ liệu</a></li>
+                                        <li><a href="#">Văn phòng</a></li>
+                                        <li><a href="#">Thủ thuật</a></li>
+                                        <li><a href="#">Thế giới website</a></li>
+                                        <li><a href="#">Đồ họa</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Học tập</a>
+                                    <ul>
+                                        <li><a href="#">Giải tích 12</a></li>
+                                        <li><a href="#">Hình học 12</a></li>
+                                        <li><a href="#">Luyện thi</a></li>
+                                        <li><a href="#">Học tiếng anh</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Giải trí</a>
+                                    <ul>
+                                        <li><a href="#">Chuyện ngắn</a></li>
+                                        <li><a href="#">Chuyện cười</a></li>
+                                        <li><a href="#">Video clip</a></li>
+                                        <li><a href="#">Đọc và suy ngẫm</a></li>
+                                        <li><a href="#">Mini Games</a></li>
+                                        <li><a href="#">Tâm lý, nghệ thuật sống</a></li>
+                                        <li><a href="#">Lãng mạn</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Sơ đồ trang</a></li>
+                                <li><a href="#">Diễn đàn</a></li>
+                        </ul>
+                    </div>
+                </div>
+       
+         <!--KT phan menu-->
+ <div style="margin-top:auto;">
+    
+    <div id="content">
+                    <div id="main-content">
+                        <div class="box_top">
+                        </div>
+                        <div class="box_body">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="box_bottom">
+                        </div>
+                    </div>
+                    <div id="left-content">
+                    <div id="menuNgang">
+                        <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                        </cc1:ToolkitScriptManager>
+                        <cc1:Accordion ID="Accordion1" runat="server" Wzidth="200" AutoSize="None" HeaderCssClass="accoditionHeader"
+                            HeaderSelectedCssClass="divframe_headSelected" FadeTransitions="true" SuppressHeaderPostbacks="true"
+                            ContentCssClass="accoditionContent">
+                        </cc1:Accordion>
+                    </div>
+                    <div style="height: 5px">
+                    </div>
+                    <div style="height: 5px">
+                    </div>
+                    <div class="divframe">
+                                <div class="divframe_head">
+                                    Tiêu Điểm
+                                </div>
+                        <div style="padding-left: 4px">
+                            <asp:DataList ID="DataList2" runat="server" CellPadding="0">
+                                <ItemTemplate>
+                                <div>
+                                    <img alt=""
+                                        src="images/mgod_tintuc_arrow.gif" / >&nbsp
+                                    <asp:HyperLink ID="HyperLink2" runat="server" Text='<%# Eval("Title") %>' 
+                                        CssClass="a" NavigateUrl='<%# "Chitiet.aspx?idNews="+ Eval("idNews") %>'></asp:HyperLink>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:DataList>
+                        </div>
+                    </div>
+                    <div style="height: 5px">
+                    </div>
+                    <div class="divframe">
+                        <div class="divframe_head">
+                            Liên kết
+                        </div>
+                        <div style="padding-left: 4px" align="center" >
+                            
+                            <asp:DataList ID="DataList3" runat="server">
+                                <ItemTemplate>
+                                <a href="<%#Eval("Link") %>" target="_blank">
+                                     <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("ImageUrl") %>' 
+                                        ToolTip='<%# Eval("BannerName") %>' ImageAlign="Middle" />
+                                          </a>
+                                    
+                 
+                                </ItemTemplate>
+                            </asp:DataList>
+                            
+                        </div>
+                    </div>
+                    <div style="height: 5px">
+                    </div>
+                    <div class="divframe">
+                        <div class="divframe_head" align="left">
+                            Thống kê
+                      </div>
+                        <div style="padding-left: 0px" align="center">
+                            <uc1:ucThongKe ID="ucThongKe1" runat="server" />
+                        </div>
+                    </div>
+                </div>  
+                 </div>
+                
+                <br clear="all" />
+                <br clear="all" />
+                <br clear="all" />
+                 <div   >
+                       <center> 
+                        <div style="width:100%; height:200px; background-color:LightBlue; text-align:center; margin-bottom:20px;">
+                       <p style=" padding-bottom:20px">  Nhóm sinh viên thực hiện:Trần Thị Dung- Chu Việt Dũng- Nguyễn Quang Hiệp</p>
+                        </div></center>
+                    </div>
+    </div>
+    
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,168 @@
+﻿body 
+{
+	padding: 0px;
+	text-align: left;
+	margin:0px;
+	background-repeat:repeat-x; 
+	background: #EFEFEF;
+	font: 10pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+a {
+	font-family:Tahoma;
+	font-size:13px;
+	text-decoration: none;
+ 	color:#303030;
+}
+a:hover {
+	font-size: 13px;
+	COLOR:Maroon;
+ 	font-family: Tahoma;
+ 	border-bottom:1px solid #ddd;
+}
+
+.TableCenter
+{
+	width:400px;
+	margin-left:auto;
+	border: 1px solid #DDD;
+	margin-right:auto;
+	background-color:#fff;
+}
+.divtopnavleft
+{
+	width:500px;
+	float:left;
+}
+.divtopnavright
+{
+	width:500px;
+	float:right;
+}
+.divframe
+{
+	position:relative;
+	border: 1px solid #CCC;
+	padding:1px;
+	margin: 0px 0px 0px 0px;
+}
+.divframe_head
+{
+	background: #fff url("Title_bg.jpg");
+	line-height:24px;
+	height:25px;
+	border-bottom: 1px solid #CCC;
+	margin: 0px 0px 0px 0px;
+	font-weight:bold;
+}
+.textboxLogin
+{
+	color:Gray;
+	font-size:11px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.buttonLogin{
+	font: 11pt tahoma;
+	background: #fff url("Title_bg.jpg");
+	border:1px solid #AFC4D5;
+	color:#000000;
+	height:26px;
+	text-decoration:none;
+	cursor: hand;
+	 
+}
+.TableCenterMaster
+{
+	width:1000px;
+	margin-left:auto;
+	border: 1px solid #DDD;
+	margin-right:auto;
+	background-color:#fff;
+}
+.Login
+{
+	background: #fff url("headselected.png");
+	line-height:24px;
+	height:25px;
+	text-align:center;
+	border-bottom: 1px solid #CCC;
+	margin: 0px 0px 0px 0px;
+	font-weight:bold;
+	padding-left:10px;
+	}
+.divframe_headSelected
+{
+	background: #fff url("headselected.png");
+	line-height:24px;
+	height:25px;
+	text-align:left;
+	border-bottom: 1px solid #CCC;
+	margin: 0px 0px 0px 0px;
+	font-weight:bold;
+	padding-left:10px;
+}
+.accoditionContent
+{
+	border: 1px dashed #CCC;
+	border-top: none;
+    padding: 5px;
+    line-height:25px;
+    padding-top: 10px;
+}
+.accoditionHeader
+{
+	background: #fff url("Title_bg.jpg");
+	line-height:24px;
+	height:25px;
+	text-align:left;
+	border: 1px solid #CCC;
+	margin: 0px 0px 0px 0px;
+	font-weight:bold;
+	padding-left:10px;
+}
+.hmwebdiv
+{
+    padding: 0px;
+    border: 1px solid gray;
+    font: normal 12px Verdana;
+    line-height: 22px;
+    background-color: #FFFFFF;
+}
+#TableGrid th 
+{
+    font: bold 12px , Tahoma;
+    color: #4f6b72;
+    border: 1px solid #C1DAD7;
+    
+   
+    text-align: left;
+    padding: 6px 6px 6px 12px;
+    line-height:13px;
+    background: #fff url("headselected.png");
+   
+}
+#TableGrid td {
+     border: 1px solid #C1DAD7;
+    background: #fff;
+    padding: 2px 4px 1px 8px;
+    color: #4f6b72;
+}
+
+.TextBox
+{
+	font-family:Tahoma;
+	font-size:11px;
+}
+#footer-bar{height:28px;background-color:#0060af;margin:auto;}
+#footer-text{
+width:960px;
+margin:auto;
+padding-top:6px;
+text-align:center; 
+letter-spacing:27px;
+color:#ADC9DF;
+font-family:times New Roman;
+font-size:12px;
+}
+#footer{height:100px;background-color:#074d87;}

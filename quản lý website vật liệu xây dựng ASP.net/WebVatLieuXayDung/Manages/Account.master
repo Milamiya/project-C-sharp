@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Manages/MasterPageM.master" AutoEventWireup="false"
+    CodeFile="Account.master.cs" Inherits="Manages_Account" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphMasterPageManages" runat="Server">
+    <link href="StyleAccount/MasterPageAccount.css" rel="stylesheet" type="text/css" />
+    <div class="contentMLeft">
+        <asp:ContentPlaceHolder ID="ContentPlaceBody" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="contentMRight">
+        <h3>
+            <span>Danh mục</span>
+        </h3>
+        <ul>
+            <li><a href="QuanLyTaiKhoan.aspx"><span>Quản lý tài khoản</span></a></li>
+            <li><a href="ThemTaiKhoan.aspx"><span>Thêm tài khoản</span></a></li>
+        </ul>
+    </div>
+</asp:Content>

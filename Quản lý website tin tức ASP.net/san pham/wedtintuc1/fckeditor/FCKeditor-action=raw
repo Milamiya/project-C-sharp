@@ -1,0 +1,74 @@
+#acl All:read
+#format wiki
+#language en
+
+Welcome to the wiki site of FCKeditor. This site is not intended to replace our [http://www.fckeditor.net official web site], but aims to be the place to find references, technical information and the documentation about the editor.
+
+== Few words about the project ==
+FCKeditor is an Open Source (see ["License"]) HTML text editor that brings many of the powerful functionality of known desktop editors like Word to the web.
+
+It's really lightweight and doesn't require any kind of installation on the client computer.
+
+== Table of Contents ==
+ * General Info
+  * ["License"]
+  * ["Support"]
+  * ["Performance"]
+  * ["Donations"]
+ * Developer's Guide
+  * [:Developer's Guide/Installation: Installation]
+  * Integration
+   * [:Developer's Guide/Integration/Javascript: JavaScript]
+   * [:Developer's Guide/Integration/ASP: ASP]
+   * [:Developer's Guide/Integration/ASP.Net: ASP.Net]
+   * [:Developer's Guide/Integration/ColdFusion: ColdFusion]
+   * [:Developer's Guide/Integration/Java: Java]
+   * [:Developer's Guide/Integration/PHP: PHP]
+   * [:Developer's Guide/Integration/Other: Other]
+  * Configuration
+   * [:Developer's Guide/Configuration/Configurations File: Configurations File]
+   * [:Developer's Guide/Configuration/Toolbar: Toolbar]
+   * [:Developer's Guide/Configuration/Styles: Styles]
+   * [:Developer's Guide/Configuration/Templates: Templates]
+   * [:Developer's Guide/Configuration/Spell Checker: Spell Checker]
+   * [:Developer's Guide/Configuration/Built in File Browser: Built in File Browser]
+  * Customization
+   * [:Developer's Guide/Customization/Plug-ins: Plug-ins]
+   * [:Developer's Guide/Customization/Scripts Compression: Scripts Compression]
+   * [:Developer's Guide/Customization/Skins: Skins]
+   * [:Developer's Guide/Customization/Custom File Browser: Custom File Browser]
+   * [:Developer's Guide/Customization/Debugging: Debugging]
+  * [:Developer's Guide/Javascript API: FCKeditor JavaScript API]
+  * [:Developer's Guide/Names and Concepts: Names and Concepts]
+   * [:Developer's Guide/Names and Concepts/Commands: Commands]
+  * [:Developer's Guide/Code Overview: Code Overview]
+  * Participating
+   * [:Developer's Guide/Participating/Server Side Integration: Server Side Integration]
+   * [:Developer's Guide/Participating/Localization: Localization] - interface translation
+   * [:Developer's Guide/Participating/Documentation: Documentation]
+ * [:UsersGuide: User's Guide]
+ * ["FAQ"] - Frequently Asked Questions
+ * ["Troubleshooting"]
+ * WikiToDo - what should be done here
+
+----
+
+Interesting Wiki system pages:
+ * RecentChanges: see where people are currently working
+ * WikiSandBox: feel free to change this page and experiment with editing
+ * FindPage: search or browse the database in various ways
+ * SyntaxReference: quick access to wiki syntax
+ * SiteNavigation: get an overview over this site and what it contains
+ * CategoryCategory: organize pages by category
+
+== How to use this site ==
+
+A Wiki is a collaborative site, anyone can contribute and share:
+ * Edit any page by pressing '''[[GetText(Edit)]]''' at the top or the bottom of the page
+ * Create a link to another page with joined capitalized words (like WikiSandBox) or with {{{["quoted words in brackets"]}}}
+ * Search for page titles or text within pages using the search box at the top of any page
+ * See HelpForBeginners to get you going, HelpContents for all help pages.
+
+To learn more about what a WikiWikiWeb is, read about MoinMoin:WhyWikiWorks and the MoinMoin:WikiNature. Also, consult the MoinMoin:WikiWikiWebFaq.
+
+This wiki is powered by MoinMoin.

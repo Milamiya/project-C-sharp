@@ -1,0 +1,229 @@
+	A.BeginLink:link
+	{
+		color : #FF00FF; 
+		text-decoration: none
+	}
+	A.Visited:visited
+	{
+		color: #FF00FF;
+		text-decoration: none
+	}
+	A.HoVer:hover
+	{
+		color: Green;
+		text-decoration: underline 
+	}
+
+	A.Active:active
+	{
+		color: #FF00FF;
+		text-decoration: none
+	}
+	
+A:link
+{
+	color : #FF00FF; 
+	text-decoration: none
+}
+A:hover
+{
+	color:Green;
+	text-decoration: underline;
+	font-weight: bold;
+}
+A:active
+{
+	color: #FF00FF;
+}
+A:visited
+{
+	color: #FF00FF;
+}
+/*-------------------------------------------Header---------------------------------------------*/
+.header
+{
+	width:950px;
+	height:176px;
+	margin:auto;
+	background:url(images/header_bg.jpg) no-repeat;
+}
+/*-------------------------------------------Main---------------------------------------------*/
+  #main_content
+{
+	width:950px;
+	height: auto;
+	margin: 0px;
+	padding: 0px 0 0 0px;
+}
+.Main
+{
+	width:950px;
+	height:auto;
+	margin:auto;
+	background-image:url(images/contenttxtbg.jpg);
+	background-repeat: repeat-y;
+}
+/*-------------------------------------------Foodter---------------------------------------------*/
+#footer
+{
+	margin-top:5px;
+	width:950px;
+	height:127px;
+	background-image:url(images/footer_bg.jpg);
+}
+.center_footer
+{
+	color:#4d59f8;
+	font-size:10px;
+	font-weight:bold;
+	width:550px;
+	padding:35px;
+	text-align:center;
+	float:left;
+}
+.copyright
+{
+	float:left;
+	padding:22px 10px 10px 30px;
+}
+/*-------------------------------------------Logo---------------------------------------------*/
+#logo
+{
+	padding:0px 0px 0px 0px;	
+	float:left;
+	border:0px;
+}
+/*-------------------------------------------Menu-------------------------------------------------------------------------------------*/
+.MenuNgang
+{
+	border: 0px solid #FF9933;
+	padding: 2px 0px 2px 0px;
+	margin: 0px 0px 1px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	width: 950px;
+	height: 27px;
+	float: left;
+	font-size: 14px;
+	background-color: #666666;
+	text-align: right;
+	cursor: crosshair;
+	
+}
+#menu
+{
+	width:520px;
+	height:35px;
+	float:right;
+	color: RED;
+	font-weight: bold;
+	padding:39px 12px 0px 0;
+}
+#menu ul
+{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	display:block; 
+	font-weight:bold;
+}
+#menu ul li
+{
+	list-style:none;
+	display:inline;
+	float:left;
+	width:96px;
+	height:35px;
+	padding:0px;
+	line-height:35px;
+	font-size:13px;
+	margin:0 3px 0 3px;
+}
+#menu ul li a
+{
+	height:35px; 
+	width:96px;
+	float:left;
+	text-decoration:none;
+	padding:0px;
+	margin:0px;
+	color:#6c7b83;
+	text-align:center; 
+	background:url(images/menu_bt.gif) no-repeat center;
+}
+#menu ul li a:hover
+{
+	height:35px;
+	width:96px;
+	text-decoration:none;
+	color: #68C2EF;
+}
+#menu ul li a.current
+{
+	height:35px;
+	width:96px;
+	float:left;
+	text-decoration:none;
+	padding:0px;
+	margin:0px;
+	color: #68C2EF;
+	background:url(images/menu_bt.gif) no-repeat center;
+}
+#tdMainmenu:hover
+
+#tdMainmenu.mouseover 
+{
+	background-image: url('Images/menu_bg_selected.jpg');
+}
+#tdMainmenu.selected 
+{
+	background-image: url('Images/menu_bg_selected.jpg');
+}
+#tMainMenu td
+{
+	padding:0px 25px 0px 25px; 
+	color:white;
+	width:800px; 
+	height:39px; 
+	font-size:15px; 
+	cursor:pointer;
+}
+#tMainMenu .item a:visited
+{
+	color:#ffffff;	
+	text-decoration: none;
+	font-weight: bold; 
+	text-indent: 7px;
+}
+#tMainMenu .item a:hover
+{
+	color: #ffffff;
+}
+#tMainMenu .item a:active
+{
+	color: #ffffff;
+}
+#tMainMenu .item a:link
+{
+	color:#ffffff;	
+	text-decoration: none;
+	font-weight: bold; 
+	text-indent: 7px;
+}
+#tMainMenu .item
+{
+	height:29px;
+	padding-top:10px
+}
+#tMainMenu .split
+{
+	padding:0px;
+}
+
+#mainMenu
+{
+	background-image:url('Images/menu_bg.jpg');
+	height:39px;
+	width:950px; 
+	text-align:center;
+}

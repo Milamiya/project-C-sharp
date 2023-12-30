@@ -1,0 +1,38 @@
+.shadetabs1 {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 1px; PADDING-LEFT: 0px; FONT-SIZE: 11px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 4px; MARGIN-LEFT: 0px; TEXT-TRANSFORM: uppercase; COLOR: #ffffff; PADDING-TOP: 4px; FONT-FAMILY: Tahoma; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+.shadetabs1 LI {
+	DISPLAY: inline; MARGIN: 0px
+}
+.shadetabs1 LI A {
+	BORDER-RIGHT: #778 0px solid; PADDING-RIGHT: 0px; BORDER-TOP: #778 0px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 3px; BORDER-LEFT: #778 0px solid; COLOR: #fff; MARGIN-RIGHT: 2px; PADDING-TOP: 3px; BORDER-BOTTOM: #778 0px solid; BACKGROUND-COLOR: #a3a03a; TEXT-DECORATION: none
+}
+.shadetabs1 LI A:visited {
+	COLOR: #fff
+}
+.shadetabs1 LI A:hover {
+	COLOR: #2d2b2b; TEXT-DECORATION: underline
+}
+.shadetabs1 LI.selected {
+	POSITION: relative; TOP: 1px
+}
+.shadetabs1 LI.selected A {
+	BACKGROUND: #567596; BORDER-BOTTOM-COLOR: white
+}
+.shadetabs1 LI.selected A:hover {
+	TEXT-DECORATION: none
+}
+.tabcontentstyle {
+	BORDER-RIGHT: gray 0px solid; PADDING-RIGHT: 10px; BORDER-TOP: #567596 6px solid; PADDING-LEFT: 10px; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 10px; BORDER-LEFT: gray 0px solid; WIDTH: 95%; PADDING-TOP: 10px; BORDER-BOTTOM: gray 0px solid
+}
+.tabcontent1 {
+	DISPLAY: none
+}
+
+@media Print    
+{
+.tabcontent1 {
+	DISPLAY: block! important
+}
+
+}

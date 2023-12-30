@@ -1,0 +1,319 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Website bán điện thoại di động</title>
+    <link href="Hover.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            height: 94px;
+        }
+        .style2
+        {
+            height: 1108px;
+        }
+        .style3
+        {
+            width: 195px;
+            color: #fff;
+            background-image: url(Images/t_tab_s_bg.gif);
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0px;
+            text-align: center;
+            padding: 0px;
+            height:33px;
+        }
+        .style4
+        {
+            width: 202px;
+            height: 201px;
+        }
+        .style5
+        {
+            height: 94px;
+            width: 193px;
+        }
+        .style6
+        {
+            height: 640px;
+            width: 199px;
+        }
+    </style>
+</head>
+<body style="font-size: 12pt">
+    <form id="form1" runat="server">
+    <div align="center" class="Main">
+    <div id="main_content">
+        <table style="width: 948px; height: 628px; background-color: white;" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="3" style="height: 20px" valign="top" align="center">
+                    <table>
+                        <tr>
+                            <td>
+                                  <div class="header">
+                                    <div id="logo">
+                                        <a href="Default.aspx">
+                                            <img src="images/logos.png" alt="" title="Chào mừng bạn đến với Thế Giới Mobile" style="width: 200px; height: 180px; border: 0px;" /></a>
+                                    </div>
+                                    <div>
+                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="750px" height="180px">
+                                            <param name="movie" value="Images/banner.swf" />
+                                            <param name="quality" value="high" />
+                                            <param name="wmode" value="opaque" />
+                                            <embed src="Images/banner.swf" quality="high" wmode="opaque" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+                                                type="application/x-shockwave-flash" width="750px" height="176px"></embed>
+                                        </object>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+             <tr>
+                <td colspan="3">
+                    <table cellpadding="0" cellspacing="0" style="width: 950px; height: 27px; border: 1px">
+                        <tr>
+                            <td align="right" style="vertical-align: top; font-weight: bold; text-decoration: none;background-color: white">
+                                <b><a href="Default.aspx" style="color: black" shape="rect">Trang Chủ</a></b>&nbsp; &nbsp; &nbsp; 
+                                <a href="GioiThieu.aspx" style="color: black"><b>Giới Thiệu</b></a>&nbsp; &nbsp; &nbsp; 
+                                <a href="GioHang.aspx" style="color: black"><b>Giỏ Hàng</b></a> &nbsp; &nbsp; &nbsp; 
+                                <a href="HuongDanMuaHangOnline.aspx" style="color: black"><b>Hướng dẫn mua hàng online</b></a>&nbsp; &nbsp; &nbsp; 
+                                <a href="dangky.aspx" title="Đăng Ký User" style="color: black"><b>Đăng Kí</b></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" style="background-color: #FFFFFF;" valign="top" align="left" class="style6">
+                    <table cellpadding="0" cellspacing="0" style="border: thin groove #0000FF; width: 190px; height: 124px" bgcolor="white">
+                        <tr>
+                            <td align="center" valign="middle" class="style3">ĐIỆN THOẠI DI ĐỘNG
+                              
+                            </td>
+                        </tr>
+                        <tr style="font-size: 12pt">
+                            <td align="left" style="width: 190px; height: 157px; text-align: left" valign="top">
+                                <%--<asp:Image ID="Image2" runat="server" ImageUrl="~/Images/blue_arrow.gif" />--%>
+                                <%-- <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/index.aspx" 
+                                    BackColor="#3366CC" BorderColor="#3366CC" BorderStyle="None" 
+                                    EnableTheming="True" Height="16px" CssClass="HoVer" >Trang Chủ</asp:HyperLink>--%>
+                                <asp:Menu ID="Menu1" runat="server" Width="185px" ForeColor="Black">
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="border: thin groove #0000FF; font-size: 12pt; width: 195px; height: 76px">
+                        <tr>
+                            <td align="center" valign="middle" class="style3">
+                                 TÌM THEO TÊN
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="background-color: #ffffff; text-align: center" valign="top" class="style5">
+                                <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                                </cc1:ToolkitScriptManager>
+                                &nbsp;<br />
+                                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                <cc1:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender2" runat="server" TargetControlID="TextBox3" WatermarkText="NOKIA">
+                                </cc1:TextBoxWatermarkExtender>
+                                <asp:Button ID="Button1" runat="server" Text="Tìm điện thoại" CommandName="timKiem" OnCommand="timKiem" />&nbsp;<br />
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border: thin groove #0000FF;
+                        background-color: #FFFFFF; width: 195px;">
+                        <tr>
+                            <td align="center" valign="middle" class="style3">
+                                TÌM THEO GIÁ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="style4" style="text-align: left; color: Black" valign="top">
+                                <asp:Menu ID="Menu5" runat="server" Width="190px" ForeColor="Black">
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="TABLE1" border="0" cellpadding="0" cellspacing="0" onclick="return TABLE1_onclick()"
+                        style="border: thin groove #0000FF; width: 195px;">
+                        <tr>
+                            <td align="center" valign="middle" class="style3">
+                                THEO PHONG CÁCH
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="width: 195px; height: 159px; text-align: left" valign="top">
+                                <asp:Menu ID="Menu6" runat="server" ForeColor="Black">
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border: thin groove #0000FF;width: 195px">
+                        <tr>
+                            <td align="center"valign="top" class="style3">
+                                <h4>TÌM THEO KIỂU DÁNG</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="width: 195px; height: 114px; background-color: #FFFFFF;text-align: left" valign="top">
+                                <asp:Menu ID="Menu7" runat="server" Width="193px" ForeColor="Black">
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    <table cellpadding="0" cellspacing="0" style="border: thin groove #0000FF; width: 195px">
+                        <tr>
+                            <td align="center" valign="middle" class="style3">
+                                THỐNG KÊ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="width: 195px; height: 70px; background-color: #FFFFFF;text-align: left" valign="top">
+                                <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Bạn là vị khách thứ: "></asp:Label>
+                                <asp:Label ID="lblslkhach" runat="server" ForeColor="Blue" Text="Label"></asp:Label><br />
+                                <asp:Label ID="Label4" runat="server" ForeColor="Black" Text="Số người online: "></asp:Label>
+                                <asp:Label ID="lbltructuyen" runat="server" ForeColor="Blue" Text="Label"></asp:Label>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 700px; height: 640px; background-color: white; font-size: medium;"valign="top" align="left">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td style="width: 81px; height: 640px; background-color: #FFFFFF; font-size: 12pt; text-align: center;" valign="top" align="center">
+                    <table style="border-style: none; width: 192px; height: 500px" align="right">
+                        <tr>
+                            <td style="text-align: center;" valign="top" class="style2">
+                                <table border="0" cellpadding="0" cellspacing="0" style="border: thin groove #008080; width: 192px; height: 76px; font-size: 12pt">
+                                    <tr>
+                                        <td align="center" valign="middle" class="style3">
+                                            ĐĂNG NHẬP
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;" valign="top" align="center" class="style1">
+                                            <asp:TextBox ID="txtemail" runat="server" Width="123px"></asp:TextBox>
+                                            <br />
+                                            <cc1:TextBoxWatermarkExtender ID="T2" runat="server" TargetControlID="txtemail" WatermarkText="Email cua ban">
+                                            </cc1:TextBoxWatermarkExtender>
+                                            <asp:TextBox ID="txtpass" runat="server" Width="125px" TextMode="Password"></asp:TextBox>
+                                            <br />
+                                            <cc1:TextBoxWatermarkExtender ID="T3" runat="server" TargetControlID="txtpass" WatermarkText="password">
+                                            </cc1:TextBoxWatermarkExtender>
+                                            <asp:HyperLink ID="HyperLink2" runat="server" Font-Size="Smaller" ForeColor="Black"
+                                                NavigateUrl="dangky.aspx" Width="141px" Height="16px">Đăng ký tài khoản mới </asp:HyperLink><br />
+                                            <asp:HyperLink ID="HyperLink1" runat="server" Font-Size="Smaller" ForeColor="Black"
+                                                NavigateUrl="~/quenmatkhau.aspx">Quên mật khẩu</asp:HyperLink><br />
+                                            <asp:Button ID="btndangnhap" runat="server" Text="Đăng nhập" OnClick="btndangnhap_Click" />&nbsp;<br />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table style="border: thin groove #008080; width: 195px; height: 32px" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="center" valign="middle" class="style3">
+                                            GIỎ HÀNG CỦA BẠN
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 195px; height: 90px; text-align: center; color: Black" align="center"valign="top">
+                                            <asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/giohang.aspx" 
+                                                ForeColor="Black">Giỏ Hàng</asp:HyperLink>
+                                            <br />
+                                            <asp:HyperLink ID="HyperLink7" runat="server" ImageUrl="~/Images/edithang.gif" Target="_blank" NavigateUrl="~/giohang.aspx"></asp:HyperLink><br />
+                                            <asp:HyperLink ID="HyperLink8" runat="server" ImageUrl="~/dienthoai/checkout1.gif" Target="_blank"></asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table style="border: thin groove #008080; width: 192px;" border="0" cellpadding="0"
+                                    cellspacing="0">
+                                    <tr>
+                                        <td align="center" valign="middle" class="style3">
+                                            SẢN PHẨM BÁN CHẠY
+                                        </td>
+                                    </tr>
+                                    <tr align="center" valign="middle">
+                                        <td style="width: 225px; height: 278px; text-align: center; background-color: #ffffff;" align="center" valign="middle">
+                                            <asp:DataList ID="DataList1" runat="server" DataSourceID="AccessDataSource1" Width="184px">
+                                                <ItemTemplate>
+                                                    <table style="border: 1px solid black; width: 186px; height: 154px; background-color: #ffffff">
+                                                        <tr>
+                                                            <td align="left" style="width: 28px; height: 17px; text-align: left" valign="middle">
+                                                                <img src="dienthoai/hot.jpg" style="width: 38px" alt="" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" style="width: 225px; height: 100px; text-align: center" valign="top">
+                                                                <asp:Image ID="Image1" runat="server" Height="104px" ImageUrl='<%# "dienthoai/"+Eval("anh") %>' />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" style="width: 100px" valign="top">
+                                                                <div align="center" style="font-size: 12px; width: 173px; color: #cc0000; font-family: Tahoma">
+                                                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("gia") %>'></asp:Label>
+                                                                    VND</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 100px; height: 18px" valign="top">
+                                                                <asp:HyperLink ID="HyperLink3" runat="server" Font-Size="Smaller" Text='<%# Eval("masp") %>'
+                                                                    Width="174px" NavigateUrl='<%# Eval("chitiet") %>'></asp:HyperLink>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </ItemTemplate>
+                                            </asp:DataList>
+                                            <asp:AccessDataSource ID="AccessDataSource1" runat="server" DataFile="~/App_Data/dienthoaididong.mdb"
+                                                SelectCommand="SELECT tblsanpham.masp,'chitiet.aspx?tensp='+tensp as chitiet, tblsanpham.mahang, tblsanpham.tensp, tblsanpham.gia, tblsanpham.dacdiem, tblsanpham.baohanh, tblsanpham.khuyenmai, tblsanpham.kieudang, tblsanpham.phongcach, tblsanpham.anh, tblhoadontt.gia AS Expr1, tblhoadontt.cuoc, tblhoadontt.ghichu, tblhoadontt.soluong, tblhoadontt.masp AS Expr2, tblhoadontt.maddh FROM (tblsanpham INNER JOIN tblhoadontt ON tblsanpham.masp = tblhoadontt.masp) WHERE (tblhoadontt.soluong &gt;= 10)">
+                                            </asp:AccessDataSource>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table style="border: thin groove #008080; width:195px; font-family: Times New Roman;"border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="center" valign="middle" class="style3">
+                                            THƯƠNG HIỆU NỔI BẬT
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 195px; height: 126px; text-align: center; background-color: #ffffff;"align="center" valign="top">
+                                            <asp:HyperLink ID="HyperLink9" runat="server" ImageUrl="~/dienthoai/96.jpg" NavigateUrl="sanpham.aspx?mahang=bq"></asp:HyperLink><br />
+                                            <asp:HyperLink ID="HyperLink10" runat="server" ImageUrl="~/dienthoai/95.jpg" NavigateUrl="sanpham.aspx?mahang=sn"></asp:HyperLink><br />
+                                            <asp:HyperLink ID="HyperLink11" runat="server" ImageUrl="~/dienthoai/94.jpg" NavigateUrl="sanpham.aspx?mahang=ss"></asp:HyperLink><br />
+                                            <asp:HyperLink ID="HyperLink12" runat="server" ImageUrl="~/dienthoai/93.jpg" NavigateUrl="sanpham.aspx?mahang=nk">HyperLink</asp:HyperLink><br />
+                                            <asp:HyperLink ID="HyperLink13" runat="server" ImageUrl="~/dienthoai/92.jpg" NavigateUrl="sanpham.aspx?mahang=mt">HyperLink</asp:HyperLink><br />
+                                            <asp:HyperLink ID="HyperLink14" runat="server" ImageUrl="~/dienthoai/91.jpg" NavigateUrl="sanpham.aspx?mahang=lg"></asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="font-size: 12pt; font-family: Times New Roman;">
+                <td style="height: 21px; width: 901px; background-color: #FFFFFF;" align="center" colspan="3">
+                    <div id="footer">
+                        <div class="copyright">
+                            <img src="images/footer_logo.png" alt="" title="Copyright by TheGioiMobile" />
+                        </div>
+                        <div class="center_footer" style="width: 480px">
+                            <b style="font-size: 13pt">WEBSITE BÁN ĐIỆN THOẠI DI ĐỘNG</b>
+                            <div>
+                                <span style="font-size: 10pt">Copyrights ©2011. Design by : Nguyễn Văn Tôn-Mai Văn Phong-Lê Thị Duyên<br />
+                                    Lớp TK6.1<br />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

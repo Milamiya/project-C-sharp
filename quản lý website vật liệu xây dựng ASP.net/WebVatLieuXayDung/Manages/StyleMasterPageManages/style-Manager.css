@@ -1,0 +1,51 @@
+﻿*
+{
+	margin: 0;
+	padding: 0;
+}
+
+.menutrai ul li
+{
+	margin-left: 0px;
+	margin-top: 1px;
+	height: 25px;
+	background-image: url('../Picture/Thietke/menuTrai.gif');
+	padding-left: 7px;
+	width: 198px;
+}
+.menutrai ul li a
+{
+	color: #3578db;
+	font-size: 13pt;
+	text-decoration: none;
+}
+
+.bannerManager
+{
+	border: thin solid #e1e1e1;
+	width: 100%;
+	margin: 0px auto 4px auto;
+	text-align: right;
+	padding-right: 0px;
+	height: 57px;
+}
+.danhmuc
+{
+	width: 100%;
+	height: auto;
+	margin: 10px auto;
+	border: thin solid #e1e1e1;
+}
+.menutop
+{
+	float: right;
+	height: 55px;
+	text-align: center;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+.menutop a
+{
+	text-decoration: none;
+}
+

@@ -1,0 +1,62 @@
+* {margin: 0; padding: 0}
+
+div#wraper {
+width: 500px;
+margin: 40px auto;
+line-height: 2em;
+font-family: helvetica, arial, tahoma;
+font-size: 12px;
+height:30px;
+}
+
+div#mainNav {
+width: 200px;
+}
+
+div#mainNav h1 {
+font-size: 14px;
+  background-image:url('../Images/Control/ucMenuLeft/left_heading_img.jpg');
+color: white;
+text-align: center;
+-moz-border-radius: 5px 5px 0px 0px;
+}
+div#mainNav head
+{
+    	 width :216px;
+    	 background-image:url('../Images/Control/ucMenuLeft/left_heading_img.jpg');
+    	 height:37px;
+    	 text-align:center;
+    	 color:White;
+    	
+	}
+div#mainNav ul {
+list-style: none;
+border: 1px solid #bccbd8;
+}
+
+div#mainNav ul li {
+position: relative;
+border-bottom: 1px solid #bccbd8;
+}
+
+div#mainNav ul li a {
+color: #1e5b7e;
+text-decoration: none;
+padding: 5px;
+}
+
+div#mainNav ul li a:hover {
+text-decoration: underline;
+}
+
+div#mainNav ul li ul {
+position: absolute;
+top: -1px;
+left: 198px;
+display: none;
+}
+
+div#mainNav ul li:hover ul {
+display: block;
+width: 100%;
+}

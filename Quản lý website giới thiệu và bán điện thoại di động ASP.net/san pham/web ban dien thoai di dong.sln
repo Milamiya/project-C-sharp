@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web ban dien thoai di dong", ".", "{D062A8EA-EB13-49B9-9558-3A37380ACE5A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/web ban dien thoai di dong"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\Nhom10_Dao-Khang-Tuan1\web ban dien thoai di dong\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\web ban dien thoai di dong\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/web ban dien thoai di dong"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\Nhom10_Dao-Khang-Tuan1\web ban dien thoai di dong\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\web ban dien thoai di dong\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1111"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D062A8EA-EB13-49B9-9558-3A37380ACE5A}.Debug|.NET.ActiveCfg = Debug|.NET
+		{D062A8EA-EB13-49B9-9558-3A37380ACE5A}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

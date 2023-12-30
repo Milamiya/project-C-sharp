@@ -1,0 +1,109 @@
+﻿.TieuDeTin
+{
+	height: 25px;
+	width: 100%;
+}
+.TieuDeTin h3
+{
+	height: 100%;
+	margin: 0;
+	padding: 8px;
+	width: 100%;
+	color: #0299D2;
+}
+#ctl00_ContentPlaceHolder1_lbMoTa
+{
+	margin: 0px;
+	margin-left: 8px;
+}
+#ctl00_ContentPlaceHolder1_lbMoTa p
+{
+	margin: 0;
+	font: 500 12px Arial;
+}
+.MoTa
+{
+	width: 100%;
+	margin-top: 8px;
+}
+.MoTa h3
+{
+	margin: 0;
+	width: 98%;
+	margin-left: 8px;
+	font: 500 12px Arial;
+	font-weight: bold;
+}
+.ChiTiet
+{
+	width: 100%;
+	font: 500 12px Arial;
+}
+.ChiTiet h3
+{
+	width: 98%;
+	font: 500 12px Arial;
+	margin-left: 8px;
+}
+.TrichDan
+{
+	width: 100%;
+}
+.TrichDan h3
+{
+	width: 96%;
+	margin-left: 8px;
+	text-align: right;
+	padding-right: 8px;
+}
+.TinCu
+{
+	width: 100%;
+	border: solid 3px #EEEEEE;
+	height: 180px;
+}
+.TinCu ul
+{
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	margin-top: 8px;
+}
+.TinCu ul li
+{
+	float: left;
+	width: 90%;
+	background: url(  "../Images/Design/DeMucTin.gif" ) no-repeat 8px 10px;
+}
+.TinCu ul li a
+{
+	width: 100%;
+	float: left;
+}
+.TinCu ul li a span
+{
+	margin-top: 4px;
+	margin-bottom: 4px;
+	float: left;
+	margin-left: 20px;
+}
+.khung
+{
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.DangNhap
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+}
+.dangky
+{
+	border: thin solid #F0F0F0;
+	margin: 100px auto 0;
+	width: 60%;
+}
+#ctl00_ContentPlaceHolder1_rdoGioiTinh
+{float:left;}

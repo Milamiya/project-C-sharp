@@ -1,0 +1,579 @@
+﻿@media screen and (max-width: 980px)
+{
+
+#ContentPlaceHolder1
+{ background-color:White;}    
+.Top_Banner
+{ width:100%;}
+.Top_Banner .Header
+{ width:100%;  
+  background-image: url('../img_button/head.gif'); 
+  height:32px;
+  position: relative;
+  list-style:none;
+  padding:0px;
+}
+  .Top_Banner .Header #txt_tim
+{ 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+   margin:4px 5px 2px 20px;
+   background-color:#f0e4cc;
+   color:Black;
+}
+  .Top_Banner .Header #btn_tim
+{ 
+    -webkit-border-radius: 5px;
+    background-color:#f0e4cc;
+    margin:0 -50px;
+    height:25px;
+}
+  .Search
+{  
+margin:1px 0 0 0;
+outline:none;
+
+} 
+.Top_Banner .Header .left ,.Top_Banner .Menu .left
+{
+    float:left;
+    width:15%;
+    height:32px;
+}
+.Top_Banner .Header .mid
+{
+    float:left;
+    width:40%;
+    height:32px;
+}
+.Top_Banner .Header .right
+{
+    margin-top:5px;
+    float:right;
+    width:45%;
+    height:32px;
+}
+.Top_Banner .Header .right ul{
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	list-style-type:none;
+	width:auto;
+	}
+
+
+.Top_Banner .Header .right ul li{
+	display:block;
+	float:left;
+	margin:0;
+	}
+
+.Top_Banner .Header .right ul li a
+{
+    padding: 0 20px;
+}
+.Top_Banner .Header .right .right_dangnhap
+{
+    float:right;
+    width:42%;
+}
+.Top_Banner .Header .right .right_dangnhap a
+{
+    margin:2px 5px 0px 10px;
+    color:Orange;
+    font-size:13px;
+}
+.Top_Banner .Header .right .right_dangnhap a:hover
+{
+    font-size:15px;
+    color:Blue;
+    text-decoration:none;
+}
+.Top_Banner .Menu
+{ width:100%;  
+  background-image: url('../img_button/bg_title.png'); 
+  height:32px;
+  position: relative;
+  list-style:none;
+  padding:0px;
+  float: left;
+    top: 1px;
+    left: 0px;
+}
+.Top_Banner .Menu .left
+{
+    float:left;
+    width:15%;
+    height:32;
+}
+.Top_Banner .Menu .right
+{
+    margin-top:5px;
+    float:right;
+    width:85%;
+    height:32px;
+    margin-bottom: 0px;
+}
+.Top_Banner .Menu .right .right__
+{
+    margin-top:-5px;
+    float:right;
+    width:30%;
+    height:26px;
+}
+.Top_Banner .Menu .right ul{
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	list-style-type:none;
+	width:auto;
+	}
+
+
+.Top_Banner .Menu .right ul li{
+	display:block;
+	float:left;
+	margin:0;
+}
+.Top_Banner .Menu .right ul li:hover
+{
+    background:White;
+}
+.Top_Banner .Menu .right ul li:hover #active-li
+{background:White;}
+	
+.Top_Banner .Menu .right ul li a
+{
+    padding: 0 20px;
+    text-decoration:none;
+    color:Black;
+    font-size:15px/2.5em;
+    font-style:normal;
+}
+.menu_down
+{
+    display:none;/* ẩn menu con */
+    position:absolute;
+    text-align:left;
+}
+.menu_down_d a
+{
+    font: bold 15px/1.5em arial;
+    float:left;
+    width: 85px;
+    border:1px solid #2d2d2d;
+    background:#CCFFCC;
+    margin-top:5px;
+}
+.menu_down_d a:hover
+{
+    background:#663300;
+}
+
+.Top_Banner .Menu .right ul li:hover .menu_down 
+{
+    display:block;
+}
+.Top_Banner .Menu .right ul li:hover .menu_down a
+{
+    
+}
+.content
+{
+    width:100%;
+}
+.content .left
+{
+    float:left;
+    width:15%;
+}
+.content .right
+{
+     float:right;
+    width:85%;
+}
+.content .right .right
+{
+       display:none;
+}
+.content .right .left
+{  
+    width:79%;
+}
+
+#right_ads_float
+{
+    display:none;
+}
+#right_ads_float a 
+{
+display: block;
+margin: 0 auto;
+margin-bottom: 10px;
+}
+
+/*--------------------------------------------*/
+.Music_Hot
+{
+    width:100%;
+}
+.TieuDe__
+{
+    font: bold 18px/1.5em arial;
+    background-image: url('../img_button/bg_main.jpg'); 
+     background-repeat: no-repeat;
+     width:100%;
+}
+#gachchan
+{
+   border-bottom:1px solid #2d2d2d;
+}
+#TenAlbum 
+{
+    margin-top:-20px;
+}
+#TenAlbum a
+{
+     background:darkseagreen;
+}
+
+.Than_Cac_Phan
+{
+    width: 100%;
+      background-color:#f0e4cc;
+}
+.TieuDeWebControl
+{
+    background-color:#f0e4cc;
+    background-image: url('../img_button/bg_title_left.jpg');
+    background-repeat: no-repeat;
+    height: 28px;
+    font-size: 16px;
+    font-family: arial;
+    padding:5px 0px 2px 30px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -khtml-border-radius: 5px 5px 0px 0px;
+    margin-top: 0px;
+}
+
+.play_
+{
+    width:100%;
+}
+.play_ .left_play
+{
+    width:60%;
+    float:left;
+}
+.play_ .right_play
+{
+    width:40%;
+    float:right;
+    padding: 10px 0;
+}
+.play_ .right_play a
+{
+    padding:10px;
+}
+.play_ .left_playvideo
+{
+    width:75%;
+    float:left; 
+    padding:10px 100px;  
+}
+.play_ .menu_play
+{ padding:10px 0;}
+.__ThongTinBH
+{
+    background-image: url( '../img_button/content_bannenxemgi.png' );
+    background-repeat:repeat-y;
+    background-position:top center; 
+    width:100%; 
+}
+.TraiClear
+{
+    height: 25px;
+    vertical-align: middle;
+    padding-right: 5px;
+    font-family: arial;
+    font-size: 12px;
+    color: #99CC00;
+}
+.PhaiClear
+{
+    width: 55%;
+    height: 25px;
+    vertical-align: middle;
+    color:Orange;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+
+.List
+{
+    height: 25px;
+    background-image: url('../img_button/li_hover.jpg' );
+    background-repeat:repeat-x;
+    background-position:center;      
+}
+.List a
+{
+    color: #FF9933;
+    font-size: 18px;
+    margin-right: 80px;
+}
+.List a:hover
+{
+    color:Red;
+}
+/*------------------------------------ control -----------------------------------------*/
+.theloai , .Xoay
+{ width:100%;}
+.tieude
+{ 
+    width:100%;
+    background-image: url('../img_button/li_hover.jpg');
+    height:35px;
+}
+.tieude .aa
+{ 
+    margin-top:1px;
+    padding-top: 6px;
+    color:White;
+}
+.noidung .ChuDe__
+{
+    padding: 0 10px;
+}
+
+.menu1 
+{
+	width:100%;
+     padding-top:10px;
+     margin-left:20px;
+}
+
+	
+
+/*------------------------------------rerister--------login--------------------------------*/
+.Top_one
+{
+    width:100%;
+    background:Black;
+}
+.Con__
+{ width:100%;}
+.Con__ .Con__left
+{ width:40%; float:left;}
+.Con__ .Con__right
+{ width:60%; float:right; margin-top:15px;}
+.Con__ .Con__right .Con__right__ ul
+{    
+	margin:0;
+	padding:0 20px;
+	padding-top:0px;
+	list-style-type:none;
+	width:auto;
+}.Con__ .Con__right .Con__right___ 
+{    
+    margin-top:90px;
+}
+.Con__ .Con__right .Con__right__ ul li
+{
+    
+    border:1px solid #2d2d2d;
+	display:block;
+	float:left;
+	margin:0 15px;
+}
+
+.txt__txt
+{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+   margin:4px 5px 2px 20px;
+   background-color:#f0e4cc;
+   color:Black;
+}
+
+.login
+{
+    width:300px;
+    margin: 10px auto;
+}
+
+._tieude
+{
+    width:100%;
+    height:30px;
+    background-image: url('../img_button/bg_menu.jpg');
+    text-align:center;
+    color:White;
+    border-top-right-radius:3em ;
+    border-top-left-radius: 3em;
+}
+.buttom input
+{
+    border-top-right-radius:1em ;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius:1em ;
+    border-bottom-left-radius:1em;
+}
+._noidung
+{
+    border-bottom-right-radius:0.8em ;
+    border-bottom-left-radius:0.8em;
+    background-image: url('../img_button/banner_content.jpg');
+}
+
+	
+.gachchan
+{
+   border-bottom:3px solid #FFFFFF ;
+}
+/*---------------------------------*/
+
+/*---------------------------------*/
+.__Top
+{ width:100%}
+.__Top .Top_XepHang
+{ width:100%;}
+ .Top_XepHang_left
+{ 
+    width:15%;
+    float:left;
+}
+.Top_XepHang_right
+{ 
+    width:85%;
+    float:right;
+}
+/*------------------------------------------*/
+.Foo__
+{
+    text-align:center;
+}
+/*-------------------------------------------------*/
+.CaSi_Left
+{
+    float:left;
+    width:40%;
+}
+.CaSi_Left .thongtincasi
+{
+     padding:10px;
+}
+.CaSi_Right
+{
+    float:right;
+    width:60%;
+}
+
+.user_left_top
+{ border:1px solid #2d2d2d;
+  width:200px;
+  height:150px;
+  margin: 20px auto;
+}
+.user_noidung
+{ width:90%;  margin: 10px auto; padding:10px;height: 13px;}
+.user_noidung .user_noidung_left
+{
+    width:70%;
+    float:left;
+}
+.user_noidung .user_noidung_left .d_left
+{
+    float:left;
+    text-align:right;
+    width:30%;
+}
+.user_noidung .user_noidung_left .d_mid
+{
+    width:70%
+}
+.user_noidung .d_right
+{
+    float:right;
+    text-align:right;
+    width:20%;
+}
+.user_noidung_li
+{
+    display:none;
+}
+.user_noidung_li
+{ width:100%;}
+.user_noidung_li .user_noidung_left
+{
+    width:80%;
+    float:left;
+}
+.user_noidung_li .user_noidung_left .d_left
+{
+    float:left;
+    text-align:right;
+    width:32%;
+    height: 19px;
+}
+.user_noidung_li .user_noidung_left .d_mid
+{
+    width:65%
+}
+.user_noidung_li .d_right
+{
+    float:right;
+    text-align:left;
+    width:20%;
+}
+#active
+{
+    margin: 20px;
+    padding:10px;
+    display:block;
+}
+#Sua_Hinh
+{
+    display:none;
+}
+#eb951855
+{
+    display:none;
+}
+
+/*----------------------------------------------------------*/
+.Binh_luan
+{
+    background:White;
+}
+.NoidungBinhLuan
+{
+    background-image:url('../img_button/chat.jpg');
+    border:1px solid #fff;
+}
+
+
+.chatleft
+{
+    float:left;
+    width:100%;
+}
+.chatright
+{
+    float:right;
+    width:20%;
+}
+
+.gioithieu
+{
+    width:80%;
+    height:120px;
+    border:solid 5px #cccccc;
+    margin:10px auto;
+    background-color:White;
+}
+.Content_home
+{ background-color:darkkhaki;}
+}

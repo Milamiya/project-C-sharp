@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master_Log.master.cs" Inherits="Master_Log" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="shortcut icon" href="../img_button/soc.ico" type="image/x-icon" />
+<link rel="icon" href="../img_button/soc.ico" type="image/x-icon" />
+    <link href="css/Style.css" rel="stylesheet" type="text/css" />
+    <link href="css/StyleContent.css" rel="stylesheet" type="text/css" />
+    <link href="video-js/video-js.css" rel="stylesheet" type="text/css" />
+    <script src="video-js/video.js"></script>
+  <script>
+      videojs.options.flash.swf = "video-js.swf";
+  </script>
+</head>
+<body>
+    <form id="form1" runat="server" method="post">
+    <div class="Top_one"><marquee  
+            style="color: #FFFFFF; font-weight: 700; font-style: italic">Thưởng Thức Âm nhạc, Khơi Nguồn Sáng Tạo</marquee>
+    </div>
+    <div class="Con__">
+    <div class="Con__left">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="Con__right">
+    <div class="Con__right__">
+    <ul>
+        <li><a href="Home.aspx">
+            <asp:Image ID="Image1" runat="server" Height="70px" 
+                ImageUrl="~/img_button/MP3_logo.png" Width="200px" /></a></li>
+        <li><a href="#">
+            <asp:Image ID="Image2" runat="server" Height="70px" 
+                ImageUrl="~/img_button/Video.jpg" Width="200px" /></a></li>
+        <li><a href="#">
+            <asp:Image ID="Image3" runat="server" Height="70px" 
+                ImageUrl="~/img_button/Radio.jpg" Width="200px" /></a></li>
+        </ul>
+    </div>
+    <div class="Con__right___"><strong><center> Thì Ra Là Vậy, Không Về Được Rồi....Khổ Thân Rồi.</center></strong>
+    <p></p>
+    <a href="#" target="_blank"><img border="0" src="img_QuangCao/diabay.jpg" width="100%" height="250px" /></a>  
+    </div>
+    <p></p>
+    <div class="Con__right____" id="Play__" runat="server" >
+    </div>
+    </div>
+    </div>
+    <div class="Foo__" >
+    <br />
+    <a>
+        <img src="img_button/nenduoi.gif" style="margin-bottom: 0px" width="100%" /> </a>
+        Copyright © TamAnh <br /> Quản Trị Viên :  Lê Văn Tuấn Anh     || Nguyễn Ánh Minh Ngân     || Lý Vĩnh Bảo Linh
+    </div>
+    </form>
+</body>
+</html>

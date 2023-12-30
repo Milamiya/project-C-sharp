@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="BuildingMaterials" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=VITCON-PC\SQLEXPRESS;Initial Catalog=BuildingMaterials;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BuildingMaterialsConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AccountProduct" Member="AccountProducts">
+    <Type Name="AccountProduct">
+      <Column Name="AcountName" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Accounts1_AccountProduct" Member="Accounts1" ThisKey="AcountName" Type="Accounts1" IsForeignKey="true" />
+      <Association Name="Product_AccountProduct" Member="Product" ThisKey="ProductID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Suppliers" Member="Suppliers">
+    <Type Name="Supplier">
+      <Column Name="SuppliersID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="suppliersName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HomeTown" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Supplier_Product" Member="Products" OtherKey="SuppliersID" Type="Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Accounts1" Member="Accounts1s">
+    <Type Name="Accounts1">
+      <Column Name="AcountName" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pass" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HomeTown" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Accounts1_AccountProduct" Member="AccountProducts" OtherKey="AcountName" Type="AccountProduct" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountsBank" Member="AccountsBanks">
+    <Type Name="AccountsBank">
+      <Column Name="AccountBankID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccountName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Money" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HomeTown" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Category_ProductCategory" Member="ProductCategories" OtherKey="CategoryID" Type="ProductCategory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommentNew" Member="CommentNews">
+    <Type Name="CommentNew">
+      <Column Name="CommenNewID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NewID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="New_CommentNew" Member="New" ThisKey="NewID" Type="New" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comments" Member="Comments">
+    <Type Name="Comment">
+      <Column Name="CommenID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Product_Comment" Member="Product" ThisKey="ProductID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Manages" Member="Manages">
+    <Type Name="Manage">
+      <Column Name="AccountID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccountPass" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Powers" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.News" Member="News">
+    <Type Name="New">
+      <Column Name="NewID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="SubTitle" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Detail" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="KeyWord" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TotalView" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsPost" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PostDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Account" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="New_CommentNew" Member="CommentNews" OtherKey="NewID" Type="CommentNew" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductCategory" Member="ProductCategories">
+    <Type Name="ProductCategory">
+      <Column Name="SmallProductCategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SmallProductCategoryCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SmallProductCategoryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsDisplay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ProductCategory_Product" Member="Products" OtherKey="SmallProductCategoryID" Type="Product" />
+      <Association Name="Category_ProductCategory" Member="Category" ThisKey="CategoryID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubTitle" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Detail" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SmallProductCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Production" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SuppliersID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Money" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IsDisplay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TotalView" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Origin" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Maker" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Goods" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Features" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Product_AccountProduct" Member="AccountProducts" OtherKey="ProductID" Type="AccountProduct" />
+      <Association Name="Product_Comment" Member="Comments" OtherKey="ProductID" Type="Comment" />
+      <Association Name="ProductCategory_Product" Member="ProductCategory" ThisKey="SmallProductCategoryID" Type="ProductCategory" IsForeignKey="true" />
+      <Association Name="Supplier_Product" Member="Supplier" ThisKey="SuppliersID" Type="Supplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,123 @@
+﻿*{margin:0px;padding:0px;}
+body { font-size:62.5%;
+}
+#menungang
+{ width:980px;background-color:#1589ff;}
+
+ul{ list-style:none}
+
+ul#top
+{
+	float:left;
+	width:980px;
+	position: relative;
+	font-size:1.8em;
+	height:30px;
+	text-transform:capitalize;
+	top:0px;
+	left:0px;
+	background-color:#1589ff;
+	
+}
+ul#top li
+{
+	float:left;
+	height:30px;
+	padding:0px;
+	border-right:none;
+	display:inline;
+}
+ul#top li a
+{
+	padding:5px 10px 5px 10px;
+	display:block;
+	color:#ffffff;
+	text-decoration:none;
+	height:8px;
+}
+ul#top li:hover {
+background-color:#ebdde2;
+-moz-border-radius:5px 5px 5px 5px;
+
+}
+ul#top li a:hover
+{
+	color:#000;
+	
+}
+
+ul#top li ul.down {
+float: left;
+height: 25px;
+line-height: 25px;
+padding: 0px;
+position: absolute;
+left: 0px; top: 30px;
+display: none;
+width: 980px;
+font-size:15px;
+font-weight:bold;
+
+}
+
+ul#top li ul.down li {
+border: none;
+}
+
+ul#top li:hover ul {
+display: block;
+}
+
+ul#top li ul a {
+display: inline;
+color:#4033CB;
+}
+
+ul#top li ul a:hover {
+text-decoration:none;
+color:#EA151E;
+}
+
+ul#topnav li ul li:hover {
+background: none;
+}
+/*menu trái*/
+.menutrai{float:left;
+          width:200px;}
+.box{width:200px;float:left;border:1px solid #333333;
+     -moz-border-radius:5px 5px 0 0;}
+.box_title{width:195px;
+           height:25px;
+           font-size:16px;
+           padding:5px 0 5px 5px;
+           font-weight:bold;
+           background-color:#1589ff;
+           border-bottom:thin solid #cccccc;
+           color:#fff;
+           -moz-border-radius:5px 5px 0 0;
+           }
+.box_1{list-style:none;
+       float:left;
+       margin:0;
+       padding:0;
+       top:0;
+       left:0;
+       width:200px;
+       color:#ffffff}
+.box_1 li{margin:0;
+          border-bottom:1px solid #2b60de;
+          height:25px;
+          padding:5px 0px 5px 5px;
+          background-color:#fcdfff;}
+.box_1 li a{text-decoration:none;
+            font-size:15px;color:#000;}
+.box_1 li a:hover{color:#000;}
+.box_1 li:hover{background-color:#4aa02c;}
+#nam{margin-top:5px;}
+#QC{margin-top:5px;}
+#Khach-truy-cap{margin-top:10px;}
+
+/*timkiem*/
+#timkiem{float:left;height:30px;margin:5px 0 5px 0; width:980px;}
+
+

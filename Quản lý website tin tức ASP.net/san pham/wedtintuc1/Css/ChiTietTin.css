@@ -1,0 +1,100 @@
+﻿body {
+}
+.header-article {
+   /* background: url("../images/bg-header-article.gif") repeat-x scroll left top transparent;*/
+    height: 21px;
+    margin: 0 0 5px;
+    padding: 5px 0;
+}
+.header-article .left {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: block;
+    float: left;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-top: 3px;
+    width: auto;
+    color: #F47D21;
+    font-size: 12px;
+    font-weight: bold;
+    height: 17px;
+}
+.Box_Button {
+    border-bottom: 1px solid #DDDDDD;
+    color: #E66D1B;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 25px;
+    padding-left: 5px;
+    padding-top: 5px;
+    position: relative;
+    text-transform: uppercase;
+}
+.Anh {
+    border: 1px solid #CCCCCC;
+    margin-right: 4px;
+    padding: 2px;
+}
+.divTextContent {
+    color: Black;
+    font-family: Tahoma;
+    font-size: 13px;
+    line-height: 24px;
+    padding-left: 5px;
+    text-align: justify;
+}
+.divTacGia {
+    font-family: Tahoma;
+    font-size: 13px;
+    padding-top: 10px;
+    text-align: right;
+}
+.divCuoiBai {
+    border-top: 1px solid #ADADAD;
+    color: #303030;
+    font-family: Tahoma;
+    font-size: 13px;
+    line-height: 25px;
+    padding-bottom: 10px;
+    text-align: right;
+}
+.Box 
+{
+	 border-top: 1px solid #ADADAD;
+    color: #303030;
+    font-family: Tahoma;
+    font-size: 13px;
+    line-height: 25px;
+    padding-bottom: 10px;
+  
+   /* border-color: #ADADAD #ADADAD #ADADAD -moz-use-text-color;
+  text-align: right;
+  border-top: 1px solid #ADADAD;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px 0;
+    font-family: Tahoma;
+    font-size: 13px;
+    margin: 0;
+    padding: 1px 5px 1px 1px;
+    position: relative;
+*/
+}
+.tdDescription {
+    font-family: Verdana;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    text-align: justify;
+}
+.DivCha .tdDescription 
+{
+	color: Black;
+	font-family: Verdana;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    text-align: justify;
+}

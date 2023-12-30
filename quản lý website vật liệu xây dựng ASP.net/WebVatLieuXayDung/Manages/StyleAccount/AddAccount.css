@@ -1,0 +1,31 @@
+﻿#divAccountInfo, #divPersonalInfo
+{
+	padding: 8px;
+	border: solid 1px #686;
+	width:96.7%;
+}
+#contentbutton
+{
+	border: solid 1px #686;
+	padding: 10px 10px;
+}
+.tdleft, .tdcenter2
+{
+	text-align: left;
+	width: 20%;
+}
+.tdcenter1, .tdright
+{
+	text-align: left;
+	width: 29%;
+}
+.tdleftforPersonalInfo
+{
+	width: 20%;
+	text-align: right;
+}
+.tdrightforPersonalInfo
+{
+	text-align: left;
+	width: 50%;
+}

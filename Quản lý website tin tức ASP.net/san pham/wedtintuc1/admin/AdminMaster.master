@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs"
+    Inherits="admin_AdminMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>wed quản trị</title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <%-- <asp:ScriptManager runat="server">
+    </asp:ScriptManager>--%>
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </cc1:ToolkitScriptManager>
+    <div>
+        <table cellpadding="0" cellspacing="0" class="TableCenterMaster">
+        <tr>
+                <td colspan="2">
+                  <embed src="Images/anhbanner.swf" width="1000px"; height="200px">
+        </embed>
+        
+               
+               
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 50px">
+                   <p style="text-align:center; color:DarkBlue ; font-size:larger "> QUẢN TRỊ WEBSITE HỆ THỐNG</p>
+                    <hr />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 220" align="left">
+                    <cc1:Accordion ID="Accordion1" Width="220" Height="300px" AutoSize="None" HeaderCssClass="accoditionHeader"
+                        HeaderSelectedCssClass="divframe_headSelected" FadeTransitions="true" SuppressHeaderPostbacks="true"
+                        ContentCssClass="accoditionContent" runat="server">
+                        <Panes>
+                            <cc1:AccordionPane ID="AccordionPane1" runat="server">
+                                <Header>
+                                    Quản Trị Hệ Thống</Header>
+                                <Content>
+                                    <a href="ThongTinCaNhan.aspx">
+                                        <img src="Images/MenuItem1.gif" border="0" />
+                                        Thông tin cá nhân</a><br />
+                                    <%--Thay đổi thông tin cá nhân--%>
+                                    <a href="QuanTriChuyenMuc.aspx">
+                                        <img src="Images/MenuItem1.gif" border="0" />
+                                        Quản lý các chuyên mục</a><br />
+                                    
+                                    <a href="QuanTriNguoiDung.aspx">
+                                        <img src="Images/MenuItem1.gif" border="0" />
+                                        Quản trị người dùng</a><br />
+                                    
+                                   
+                                   
+                                </Content>
+                            </cc1:AccordionPane>
+                            <cc1:AccordionPane ID="AccordionPane2" runat="server">
+                                <Header>
+                                    Quản lý bài viết</Header>
+                                <Content>
+                                    <a href="BVChoDang.aspx">
+                                        <img src="Images/MenuItem1.gif" border="0" />
+                                        Danh sách các bài viết chờ đăng</a><br />
+                                    <a href="VBChoDuyet.aspx">
+                                        <img src="Images/MenuItem1.gif" border="0" />
+                                        Danh sách các bài viết chờ duyệt</a><br />
+                                    <a href="VBDaDang.aspx">
+                                        <img src="Images/MenuItem1.gif" border="0" />
+                                        Danh sách các bài viết đã đăng</a>
+                                </Content>
+                            </cc1:AccordionPane>
+                        </Panes>
+                    </cc1:Accordion>
+                </td>
+                <td style="width: 780; padding-left: 10px" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageM.master.cs"
+    Inherits="Manages_MasterPageM" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleMasterPageManages/MasterPageManages.css" rel="stylesheet" type="text/css" />
+    <link href="StyleMasterPageManages/style-Manager-Menu.css" rel="stylesheet" type="text/css" />
+    <link href="StyleMasterPageManages/style-Manager.css" rel="stylesheet" type="text/css" />
+    <link href="StyleAccount/MasterPageAccount.css" rel="stylesheet" type="text/css" />
+    <link href="StyleAccount/pageManageNews.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="bodyM">
+        <div style="width: 900px; margin: 0 auto; text-align: right">
+            <asp:Label runat="server" ID="lblPersonPostNewCode"></asp:Label>
+            <asp:HyperLink runat="server" ID="hlLogin" NavigateUrl="~/Manages/DangNhap.aspx">Đăng nhập</asp:HyperLink>&nbsp;
+            <asp:HyperLink runat="server" ID="hlRegister" NavigateUrl="~/Manages/ThemTaiKhoan.aspx">Đăng ký</asp:HyperLink>&nbsp;
+            <asp:HyperLink runat="server" ID="hlMyAccountInfo">Tài khoản bản thân</asp:HyperLink>&nbsp;
+            <asp:LinkButton runat="server" ID="lbSightOut" OnClick="lbSightOut_Click">Đăng xuất</asp:LinkButton>
+        </div>
+        <div class="headerM">
+        </div>
+        <div class="content">
+            <div class="nav" style="margin-top: 1px">
+                <div class="LC-box">
+                    <div class="LR-box-L">
+                    </div>
+                    <div class="LR-box-C">
+                        <ul>
+                            <li><a href="Default.aspx"><span>Trang chủ</span></a></li>
+                            <li><a href="QuanLyTaiKhoan.aspx"><span>Quản lý tài khoản</span></a></li>
+                            <li><a href="QuanLyBaiViet.aspx"><span>Quản lý bài viết</span></a></li>
+                            <%--<li><a href="#"><span>Quản lý sản phẩm</span></a></li>--%>
+                        </ul>
+                    </div>
+                    <div class="LR-box-R">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentM">
+            <asp:ContentPlaceHolder ID="cphMasterPageManages" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="bottomM" 
+            style="background-image: url('/D:/Project (QuanTrong)/WebVatLieuXayDung/Picture/Thietke/bottom.png')">
+            <p>
+                Bản quyền thuộc về&nbsp; trường ĐH SPKT Hưng Yên<br />
+                Được phát triển bởi nhóm đồ án:<b> Chu Việt Dũng - Lê Thị Duyên : Lớp
+                    TK6.1</b></p>
+        </div>
+        <%-- --%>
+    </div>
+    </form>
+</body>
+</html>

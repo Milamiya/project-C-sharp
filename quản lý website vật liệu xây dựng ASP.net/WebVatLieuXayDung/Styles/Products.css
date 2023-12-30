@@ -1,0 +1,34 @@
+﻿.sanpham
+{
+	width: 160px;
+	padding: 3px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-image:url('../Images/Design/bg710x238.png');
+	background-position:right center;
+	border:solid thin #F0F0F0;
+	height:230px;
+}
+.imageSP
+{
+	height:137px;
+}
+.imageSP img
+{
+	width: 100%;
+	height:129px;
+}
+.imageSP a
+{
+	float: left;
+	height: 22px;
+	width: 100%;
+	font: 500 12px Arial;
+	font-weight: bold;
+	text-decoration: none;
+}
+.imageSP a span
+{
+	float: left;
+	margin: 5px;
+}

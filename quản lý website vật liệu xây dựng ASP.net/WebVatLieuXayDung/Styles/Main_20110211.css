@@ -1,0 +1,414 @@
+﻿body
+{
+	color: #000000;
+	font: 500 12px Arial;
+}
+.header
+{
+	width: 1004px;
+	height: 130px;
+	margin: 0 auto;
+	border: solid thin #0299D2;
+	background: #000000 url(                     "../Images/Design/banner.png" ) no-repeat;
+	position: relative;
+}
+.nav
+{
+	width: 1004px;
+	height: 30px;
+	margin: 0 auto;
+	border: solid thin #0299D2;
+	border-bottom: none;
+	background-image: url(                          "../Images/Design/imgNavEstore.gif" );
+	background-repeat: repeat;
+	background-position: top left;
+	position: relative;
+}
+.ulNav
+{
+	list-style: none outside none;
+	float: left;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+}
+.ulNav li
+{
+	float: left;
+	height: 100%;
+	width: auto;
+	background-image: url(                          "../Images/Design/h.gif" );
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.ulNav li a
+{
+	background-image: url(                          "../Images/Design/h.gif" );
+	background-repeat: no-repeat;
+	background-position: left center;
+	float: left;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+	height: 100%;
+	background-attachment: scroll;
+}
+.ulNav li a:hover
+{
+	background-image: url(                  "../Images/Design/aHover.gif" );
+	background-repeat: repeat-x;
+	background-position: left center;
+}
+.ulNav li a span
+{
+	float: left;
+	padding: 0 8px;
+	padding-top: 6px;
+}
+.ulNav ul
+{
+	list-style: none;
+	margin: 0;
+	position: relative;
+}
+.ulNav ul li
+{
+	float: left;
+	float: none;
+	height: 28px;
+	background-image: url(                 "../Images/Design/imgNavEstore.gif" );
+	background-repeat: repeat-x;
+	background-position: top left;
+}
+/*.nav ul li ul li a
+{
+	float: left;
+	height:28px;
+	width:100%;
+	background-image: url("../Images/Design/imgNavEstore.gif" );
+	background-repeat: repeat-x;
+	background-position: top left;
+}
+.nav ul li ul li a span
+{float:left;
+ width:73px;
+}*/
+.content
+{
+	width: 1004px;
+	margin: 0 auto;
+	border: solid thin #EEEEEE;
+	border-bottom: none;
+	border-top: none;
+	position: relative;
+	overflow: hidden;
+}
+.footer
+{
+	margin: 0 auto;
+	width: 1004px;
+	height: 80px;
+	background: url(         "../Images/Design/bottom.gif" ) repeat-x;
+	text-align: center;
+	font: 500 12px Arial;
+	padding-top: 20px;
+	font-weight: normal;
+}
+.footer h3
+{
+	font: 500 12px Arial;
+}
+
+.leftContent
+{
+	float: left;
+	width: 25%;
+}
+.rightContent
+{
+	float: right;
+	width: 74.9%;
+}
+.LR-box-L
+{
+	background-position: left center;
+	width: 8px;
+	height: 28px;
+	float: left;
+	overflow: hidden;
+	background-image: url(                      '../Images/design/200-Left.gif' );
+	background-repeat: no-repeat;
+}
+.LC-box
+{
+	width: 100%;
+	height: 28px;
+	background-position: left center;
+	background-image: url(                      '../Images/design/200-Center.gif' );
+	background-repeat: repeat-x;
+}
+.LR-box-C
+{
+	float: left;
+	height: 100%;
+	background: url(                '../Images/design/newnew.gif' ) no-repeat 3px center;
+}
+.LR-box-C span
+{
+	margin-top: 7px;
+	float: left;
+	margin-left: 35px;
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 15px;
+}
+.LR-box-R
+{
+	background-position: left center;
+	width: 8px;
+	height: 28px;
+	float: right;
+	overflow: hidden;
+	background-image: url(                    '../Images/Design/200-Right.gif' );
+	background-repeat: no-repeat;
+}
+.event
+{
+	border: solid 2px #0299D2;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	width: 247px;
+	position: relative;
+}
+.danhmuc
+{
+	list-style: none;
+	margin-top: 0;
+	padding: 0;
+	overflow: hidden;
+	margin: 0;
+}
+.danhmuc li
+{
+	float: left;
+	background-image: url(                "../Images/Design/IconMenu.gif" );
+	background-repeat: no-repeat;
+	background-position: -5px 4px;
+	text-align: justify;
+	width: 100%;
+}
+.danhmuc li a span:hover
+{
+	color: White;
+	background-image: url(                  "../Images/Design/aHover.gif" );
+	background-repeat: repeat-x;
+	background-position: left center;
+}
+.danhmuc li a
+{
+	text-decoration: none;
+	color: #004175;
+	text-align: justify;
+	padding-left: 21px;
+	float: left;
+	width: 93%;
+}
+.danhmuc li a span
+{
+	width: 98%;
+	float: left;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+}
+.News
+{
+	list-style: none;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	padding: 0;
+	margin: 0px;
+}
+.News li
+{
+	float: left;
+	background-image: url(                "../Images/Design/icon_arrow.gif" );
+	background-repeat: no-repeat;
+	background-position: 8px 10px;
+	text-align: justify;
+	width: 100%;
+}
+.News li a
+{
+	text-decoration: none;
+	color: #004175;
+	text-align: justify;
+	padding-left: 16px;
+	float: left;
+	width: 96%;
+}
+.News li a:hover
+{
+	color: Red;
+}
+.News li a span
+{
+	width: 96%;
+	float: left;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.spBanChay
+{
+	width: 100%;
+	height: 110px;
+	padding: 3px;
+	border: solid thin #f0f0f0;
+}
+.oneSP
+{
+	width: 110px;
+	height: 110px;
+	float: left;
+	margin-left: 8px;
+}
+.oneSP img
+{
+	width: 100%;
+	height:80px;
+}
+.oneSP a
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-top: 3px;
+}
+div#wraper
+{
+	width: 500px;
+	margin: 40px auto;
+	line-height: 2em;
+	font-family: helvetica, arial, tahoma;
+	font-size: 12px;
+}
+
+div#mainNav
+{
+	width: 100%;
+}
+
+div#mainNav h1
+{
+	font-size: 14px;
+	background: #3883cc;
+	color: white;
+	text-align: center;
+	-moz-border-radius: 5px 5px 0px 0px;
+}
+
+div#mainNav ul
+{
+	list-style: none;
+	border: 1px solid #bccbd8;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+div#mainNav ul li
+{
+	position: relative;
+	border-bottom: 1px solid #bccbd8;
+	margin: 4px;
+	margin-right: 0;
+}
+
+div#mainNav ul li a
+{
+	color: #1e5b7e;
+	text-decoration: none;
+	padding: 5px;
+}
+
+div#mainNav ul li a:hover
+{
+	text-decoration: underline;
+}
+
+div#mainNav ul li ul
+{
+	position: absolute;
+	top: -4px;
+	left: 244px;
+	background-color: #0299d2;
+	display: none;
+}
+div#mainNav ul li ul a
+{
+	color: White;
+}
+div#mainNav ul li:hover ul
+{
+	display: block;
+	width: 100%;
+}
+.gianhang_left_new
+{
+	background-image: url(   "../images/build_left1.gif" );
+	float: left;
+	height: 34px;
+	width: 48px;
+}
+.gianhang_right
+{
+	background-image: url(  "../images/build_right1.gif" );
+	float: right;
+	height: 34px;
+	width: 14px;
+}
+.gianhang_center_new
+{
+	color: #2C2E36;
+	display: block;
+	float: left;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	height: 34px;
+	line-height: 34px;
+	text-decoration: none;
+	text-indent: 8px;
+	width: 80%;
+}
+.new_giahang_new2
+{
+    background-image: url("../Images/Design/build_cneter1.gif");
+    background-repeat: repeat-x;
+    float: left;
+    height: 34px;
+    width: 99.8%;
+}
+
+.giohang
+{
+	width:1004px;
+	height:20px;
+	margin:0 auto;
+	}
+	.giohang ul
+	{
+		list-style:none;
+		margin:0;
+		padding:0;
+		}
+		.giohang ul li
+		{
+			float:right;
+			margin-right:8px;
+			}

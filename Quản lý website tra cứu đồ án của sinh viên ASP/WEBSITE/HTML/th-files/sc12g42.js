@@ -1,0 +1,1 @@
+vb12g42n=xppr('12g42_0.gif');vb12g42o=xppr('12g42_1.gif');vb12g42c=xppr('12g42_2.gif');var btIdPref='vb';function xppr(im){var i=new Image();i.src='th-files/bt'+im;return i;};function xpe(id){x=id.substring(0,id.length-1);if(document[btIdPref+x])document[btIdPref+x].src=eval(btIdPref+id+'.src');return false;};

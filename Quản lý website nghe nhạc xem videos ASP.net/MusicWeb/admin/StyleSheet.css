@@ -1,0 +1,102 @@
+﻿body 
+{
+    font-family:arial;
+    font-size:13px/1.5em;
+    font-style:normal;
+    background-color:#dfdfdf;
+    
+}
+a
+{
+    text-decoration: none;
+}
+.Header
+{   margin:0 auto;
+    padding-top:50px;
+    text-align:center;
+    width:980px;
+    height:100px;
+    background-image:url('../img_button/bodyj.jpg');
+}
+.Header a
+{
+    font-size:40px;
+    font-style:oblique;
+      
+    color:White;
+}
+.Admin__
+{
+    float:right;
+    width:200px;
+}
+.content
+{ width:980px;margin:0 auto;}
+.content .left
+{
+    float:left;
+    width:13%;
+}
+.content .left ul
+{    
+     width:80%;
+     padding:5px 10px;
+     text-align:center;
+     list-style-type:none;
+}
+.content .left ul li
+{
+    background:darkgoldenrod;
+    margin:3px;
+    padding:5px;
+}
+.content .left ul li:hover
+{
+    background:red;
+}
+.content .left ul li a:hover
+{
+    color:White;
+}
+.content .right
+{
+    width:87%;
+}
+
+.menu
+{
+position:relative;
+width:100%;
+margin:5px 5px;
+display:block;
+}
+.menu ul{
+padding:0;
+margin:0;
+}
+.menu ul li
+{
+    text-align:center;
+width:120px;
+height:18px;
+display:inline-block;
+padding:5px;
+margin:auto 40px;
+background:darkgoldenrod;
+}
+.menu ul li:hover
+{
+background:red;
+}
+.menu ul li a:hover
+{
+ color:White;
+}
+
+.Xoa
+{ 
+   border-bottom:1px;
+   border-bottom-color:Black;
+   padding:3px;
+   margin:3px;
+}

@@ -1,0 +1,62 @@
+﻿.lw50h200
+{
+	border-left: thin solid #eaf5fb;
+	border-right: thin solid #eaf5fb;
+	border-bottom: thin solid #eaf5fb;
+	border-top: none;
+	width: 100%;
+	height: 230px;
+	float: left;
+}
+.lw50h200New
+{
+	width: 100%;
+}
+
+.sanpham
+{
+	width: 160px;
+	padding: 3px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-image:url('../Images/Design/bg710x238.png');
+	background-position:right center;
+	border:solid thin #F0F0F0;
+	height:230px;
+}
+.imageSP
+{
+	height:147px;
+}
+.imageSP img
+{
+	width: 100%;
+	height:132px;
+}
+.imageSP a
+{
+	float: left;
+	height: 22px;
+	width: 100%;
+	font: 500 12px Arial;
+	font-weight: bold;
+	text-decoration: none;
+}
+.imageSP a span
+{
+	float: left;
+	margin: 5px;
+}
+.giaban
+{
+	float: left;
+	margin-top: 8px;
+	width: 100%;
+}
+.giaban p
+{
+	float: left;
+	margin-top: 2px;
+	margin-bottom: 3px;
+	width:100%;
+}

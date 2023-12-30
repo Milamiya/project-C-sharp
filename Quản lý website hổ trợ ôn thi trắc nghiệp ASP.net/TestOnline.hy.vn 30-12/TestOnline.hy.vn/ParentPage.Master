@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ParentPage.master.cs"
+    Inherits="TestOnline.hy.vn.ParentPage" %>
+
+<%@ Register Src="Control/Banner.ascx" TagName="Banner" TagPrefix="uc1" %>
+<%@ Register Src="Control/ucFooter.ascx" TagName="ucFooter" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Style/style.css" rel="stylesheet" type="text/css" />
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .HomePage
+        {
+            padding-top: 10px;
+            width: 1000px;
+            height: 320px;
+        }
+        .Footer
+        {
+            padding-top: 10px;
+            width: 960px;
+        }
+        .Content
+        {
+            width: 960px;
+            height: 900px;
+            background-color: White;
+            margin-top: -10px;
+        }
+        .Conten_left
+        {
+            width: 222px;
+            height: 900px;
+            float: left;
+            margin-top: 1px;
+            padding-left: 4px;
+        }
+        .COnten_Giua
+        {
+            width: 731px;
+            height: 900px;
+            float: left;
+            padding-top: 17px;
+        }
+        .Conten_Right
+        {
+            width: 222px;
+            height: 900px;
+            float: right;
+        }
+    </style>
+</head>
+<center>
+    <form id="cd" runat="server" style="background-color: #000066; margin-left: auto;
+    margin-right: auto">
+    <div class="HomePage">
+        <uc1:Banner ID="Banner1" runat="server" />
+    </div>
+    <div class="Content">
+        <div class="Conten_left">
+        </div>
+        <div class="COnten_Giua">
+            <div>
+               
+            <%--<hr style="color: Gray; margin-left: 10px; margin-right: 10px; border-bottom-width: thin" />--%>
+            <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+            </asp:contentplaceholder>
+        </div>
+        </div>
+    </div>
+    <div>
+    </div>
+    <div class="Footer">
+        <uc2:ucFooter ID="ucFooter1" runat="server" />
+    </div>
+    </form>
+</center>
+</body>
+</html>

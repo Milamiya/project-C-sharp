@@ -1,0 +1,119 @@
+
+.smartmenu, .smartmenufloaty {
+    
+    color:#FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+.smartmenufloaty a {
+color:#074D87 !important;
+font-size:12px !important;
+font-weight:bold;
+}
+.smartmenuie6 {
+    height: 30px;
+}
+li.parent-menu-w{ color:#EAFFED !important;}
+.smartmenu a, 
+.smartmenufloaty a {
+    color:#EAFFED  ;
+display:block;
+padding:9px 26px;
+text-decoration:none;
+white-space:nowrap;
+ font-size: 14pt;
+     
+}
+
+.smartmenu a.last {
+    border: none;
+}
+
+.smartmenu a:hover {
+     
+    background-color:#E8E8E8;
+color:#074D87;
+}
+
+.smartmenu ul, .smartmenufloaty ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.smartmenu ul li, .smartmenufloaty li {
+    float:right;
+font-size:18px;
+padding-left:0;
+padding-right:0;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.smartmenu li ul {
+    display: none;
+}
+
+.smartmenufloaty {
+    background: transparent;
+    position: absolute;
+    border: none;
+    width: auto;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    top:187px !important;
+}
+
+.smartmenufloaty .tip {
+    background: url("../themes/floatytip.png") no-repeat;
+    font-size: 0px; 
+    height: 20px;
+    width: 50px;
+    margin: 0px;
+    overflow: hidden;
+    display: block;
+}
+
+.smartmenufloaty .tipIE6 { 
+    background: url("../themes/floatytip.gif");
+}
+
+.smartmenufloaty .padder {
+    background: url("../themes/floatybg.png");
+    padding: 0px 8px; 
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+
+.smartmenufloaty .padderIE6 {
+    background: url("../themes/floatybg.gif");
+}
+
+.smartmenufloaty li {
+    float: none ;
+    border-bottom: 1px dotted #FFF;
+    padding: 5px 8px; 
+}
+ 
+.smartmenufloaty li.last {
+    border: none;
+}
+
+.smartmenufloaty a {
+    border: none;
+    padding: 0px;
+}
+
+.smartmenufloaty a:hover {
+    color: #222;
+}
